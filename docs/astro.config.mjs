@@ -7,7 +7,7 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [
     starlight({
-      title: "Flojoy Blocks",
+      title: "Flojoy Docs",
       customCss: [
         // Path to your Tailwind base styles:
         "./src/tailwind.css",
@@ -17,19 +17,15 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "Guides",
-          items: [
-            // Each item here is one entry in the navigation menu.
-            {
-              label: "Example Guide",
-              link: "/guides/example/",
-            },
-          ],
+          label: "Studio",
+          autogenerate: {
+            directory: "studio",
+          },
         },
         {
-          label: "Reference",
+          label: "Blocks",
           autogenerate: {
-            directory: "reference",
+            directory: "blocks",
           },
         },
       ],
@@ -40,4 +36,3 @@ export default defineConfig({
     }),
   ],
 });
-
