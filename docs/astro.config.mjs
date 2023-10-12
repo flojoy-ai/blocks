@@ -29,6 +29,20 @@ export default defineConfig({
           },
         },
       ],
+      defaultLocale: "root",
+      locales: {
+        root: {
+          lang: "en",
+          label: "English",
+        },
+        fr: {
+          label: "Français",
+        },
+        "zh-cn": {
+          label: "简体中文",
+          lang: "zh-CN",
+        },
+      },
     }),
     tailwind({
       // Disable the default base styles:
