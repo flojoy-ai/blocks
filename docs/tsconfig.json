@@ -4,10 +4,10 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
 
-    "baseUrl": ".",
+    "baseUrl": "..",
     "paths": {
-      "@/*": ["./src/*"],
-      "@blocks/*": ["../blocks/*"]
+      "@/*": ["./docs/src/*"],
+      "@blocks/*": ["/blocks/*"]
     }
   }
 }

@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
-
+import path from "path";
 import react from "@astrojs/react";
 
 // https://astro.build/config
@@ -53,8 +53,10 @@ export default defineConfig({
     react(),
   ],
   vite: {
-    build: {
-      rollupOptions: {},
+    resolve: {
+      alias: {
+        "@blocks": path.resolve("../blocks/"),
+      },
     },
   },
 });
