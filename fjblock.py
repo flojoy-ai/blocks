@@ -41,6 +41,18 @@ This is the Markdown file for {block_name}
 
 @app.command()
 def sync():
+    keep_files = ["intro.md"]
+
+    print(f"Cleaning the blocks section except all the {keep_files} files.")
+    for root, _, files in os.walk(docs_folder_prefix, topdown=False):
+        # Remove files except for "intro.md"
+        for file in files:
+            if file in keep_files:
+                continue
+            file_path = os.path.join(root, file)
+            os.remove(file_path)
+
+    print("Populating the blocks section...")
     for root, _, files in os.walk(blocks_folder_prefix):
         for file in files:
             folder_name = os.path.basename(root)
@@ -53,9 +65,6 @@ def sync():
                     block_folder_path + ".md"
                 )
 
-                print(target_md_file)
-                print("creating: ", os.path.dirname(target_md_file))
-
                 os.makedirs(os.path.dirname(target_md_file), exist_ok=True)
 
                 with open(target_md_file, "w") as f:
@@ -65,6 +74,14 @@ def sync():
                             block_name=file_name, block_folder_path=block_folder_path
                         )
                     )
+
+    # Remove all empty folders
+    print("Almost done! Doing some housekeeping...")
+    for dirpath, dirnames, filenames in os.walk(docs_folder_prefix):
+        if (
+            not filenames and not dirnames
+        ):  # Check if the directory has no files or subdirectories
+            os.rmdir(dirpath)  # Remove the directory
 
 
 @app.command()
