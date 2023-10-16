@@ -41,7 +41,7 @@ This is the Markdown file for {block_name}
 
 @app.command()
 def sync():
-    keep_files = ["intro.md"]
+    keep_files = ["overview.md"]
 
     print(f"Cleaning the blocks section except all the {keep_files} files.")
     for root, _, files in os.walk(docs_folder_prefix, topdown=False):
