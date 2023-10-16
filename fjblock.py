@@ -33,7 +33,7 @@ layout: "@/layouts/block-docs-layout.astro"
 title: {block_name}
 ---
 
-import docstring from "^/{block_folder_path}/docstring.json"
+import docstring from "@blocks/{block_folder_path}/docstring.json"
 
 {{JSON.stringify(docstring, null, 2)}}
 
