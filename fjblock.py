@@ -12,8 +12,8 @@ app = typer.Typer()
 err_string = "[bold red]Error![/bold red]"
 
 
-docs_folder_prefix = "docs/src/content/docs/blocks"
-blocks_folder_prefix = "blocks"
+docs_folder_prefix = "docs/src/content/docs/blocks/"
+blocks_folder_prefix = "blocks/"
 
 
 block_template = """\
@@ -29,17 +29,42 @@ def {block_name}(
 
 docs_template = """\
 ---
+layout: "@/layouts/block-docs-layout.astro"
 title: {block_name}
+block_folder_path: {block_folder_path}
 ---
 
-Here you can write the docs for your {block_name} block.
+This is the Markdown file for {block_name}
 
 """
 
 
 @app.command()
 def sync():
-    pass
+    for root, _, files in os.walk(blocks_folder_prefix):
+        for file in files:
+            folder_name = os.path.basename(root)
+            file_name = os.path.splitext(file)[0]
+
+            if file_name == folder_name:
+                # Create the markdown file in another directory
+                block_folder_path = root.split("blocks", 1)[1].strip("/")
+                target_md_file = docs_folder_prefix + os.path.join(
+                    block_folder_path + ".md"
+                )
+
+                print(target_md_file)
+                print("creating: ", os.path.dirname(target_md_file))
+
+                os.makedirs(os.path.dirname(target_md_file), exist_ok=True)
+
+                with open(target_md_file, "w") as f:
+                    # Write the content of the markdown file
+                    f.write(
+                        docs_template.format(
+                            block_name=file_name, block_folder_path=block_folder_path
+                        )
+                    )
 
 
 @app.command()

@@ -1,0 +1,15 @@
+---
+const { title } = Astro.props;
+
+console.log(Astro.props)
+
+const json = await import("~/AI_ML/CLASSIFICATION/ACCURACY/docstring.json")
+
+console.log(JSON.stringify(json))
+---
+<!-- -->
+<h1>{title}</h1>
+<slot />
+<!-- your content is injected here -->
+<p>LMAO</p>
+<!-- -->
