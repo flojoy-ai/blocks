@@ -31,8 +31,11 @@ docs_template = """\
 ---
 layout: "@/layouts/block-docs-layout.astro"
 title: {block_name}
-block_folder_path: {block_folder_path}
 ---
+
+import docstring from "^/{block_folder_path}/docstring.json"
+
+{{JSON.stringify(docstring, null, 2)}}
 
 This is the Markdown file for {block_name}
 
@@ -62,7 +65,7 @@ def sync():
                 # Create the markdown file in another directory
                 block_folder_path = root.split("blocks", 1)[1].strip("/")
                 target_md_file = docs_folder_prefix + os.path.join(
-                    block_folder_path + ".md"
+                    block_folder_path + ".mdx"
                 )
 
                 os.makedirs(os.path.dirname(target_md_file), exist_ok=True)
