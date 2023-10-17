@@ -39,6 +39,10 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={{docstring}} />
 
+```python
+{python_code}
+```
+
 [Source Code]({github_link})
 
 ## Example
@@ -65,6 +69,9 @@ def sync():
             file_name = os.path.splitext(file)[0]
 
             if file_name == folder_name:
+                with open(os.path.join(root, file), "r") as f:
+                    python_code = f.read()
+
                 # Create the markdown file in another directory
                 block_folder_path = root.split("blocks", 1)[1].strip("/")
                 target_md_file = docs_folder_prefix + os.path.join(
@@ -79,6 +86,7 @@ def sync():
                         docs_template.format(
                             block_name=file_name,
                             block_folder_path=block_folder_path,
+                            python_code=python_code,
                             github_link=github_base.format(
                                 block_name=file_name,
                                 block_folder_path=block_folder_path,

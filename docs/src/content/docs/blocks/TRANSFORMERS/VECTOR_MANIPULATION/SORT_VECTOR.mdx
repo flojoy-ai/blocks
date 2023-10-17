@@ -8,6 +8,36 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+```python
+from flojoy import flojoy, Vector
+
+
+@flojoy
+def SORT_VECTOR(
+    default: Vector,
+    reverse: bool = False,
+) -> Vector:
+    """The SORT_VECTOR node returns the input Vector that is sorted
+
+    Inputs
+    ------
+    default : Vector
+        The input vector
+
+    Parameters
+    ----------
+    reverse : bool
+        If False, sort in ascending order. If True, descending order.
+
+    Returns
+    -------
+    Vector
+        Sorted input vector
+    """
+    return Vector(v=sorted(default.v, reverse=reverse))
+
+```
+
 [Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/VECTOR_MANIPULATION/SORT_VECTOR/SORT_VECTOR.py)
 
 ## Example

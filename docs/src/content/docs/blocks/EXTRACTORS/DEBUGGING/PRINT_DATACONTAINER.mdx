@@ -8,6 +8,28 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+```python
+from flojoy import flojoy, DataContainer, TextBlob
+
+
+@flojoy()
+def PRINT_DATACONTAINER(
+    default: DataContainer,
+) -> TextBlob:
+    """The PRINT_DATACONTAINER node returns a TextBlob containing input DataContainer information.
+
+    Must use the TEXT_VIEW node to view the text.
+
+    Returns
+    -------
+    DataContainer
+        TextBlob: Input datacontainer information
+    """
+
+    return TextBlob(text_blob=str(default))
+
+```
+
 [Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/EXTRACTORS/DEBUGGING/PRINT_DATACONTAINER/PRINT_DATACONTAINER.py)
 
 ## Example

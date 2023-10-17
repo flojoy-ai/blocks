@@ -8,6 +8,33 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+```python
+from flojoy import TextBlob, flojoy, DataContainer
+from typing import Optional
+
+
+@flojoy
+def TEXT(
+    _: Optional[DataContainer] = None,
+    value: str = "Hello World!",
+) -> TextBlob:
+    """The TEXT node returns a TextBlob DataContainer.
+
+    Parameters
+    ----------
+    value : str
+        The value set in Parameters.
+
+    Returns
+    -------
+    TextBlob
+        Return the value being set in Parameters.
+    """
+
+    return TextBlob(text_blob=value)
+
+```
+
 [Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/GENERATORS/SIMULATIONS/TEXT/TEXT.py)
 
 ## Example

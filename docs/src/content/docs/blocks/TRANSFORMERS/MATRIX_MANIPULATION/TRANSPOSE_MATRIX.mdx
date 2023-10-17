@@ -8,6 +8,30 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+```python
+from numpy import transpose
+from flojoy import flojoy, Matrix
+
+
+@flojoy
+def TRANSPOSE_MATRIX(default: Matrix) -> Matrix:
+    """The TRANSPOSE_MATRIX node takes an input 2D matrix and transposes it.
+
+    Inputs
+    ------
+    a : Matrix
+        The input matrix to be transposed
+
+    Returns
+    -------
+    Matrix
+        The transposed matrix
+    """
+
+    return Matrix(m=transpose(default.m, (1, 0)))
+
+```
+
 [Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/MATRIX_MANIPULATION/TRANSPOSE_MATRIX/TRANSPOSE_MATRIX.py)
 
 ## Example

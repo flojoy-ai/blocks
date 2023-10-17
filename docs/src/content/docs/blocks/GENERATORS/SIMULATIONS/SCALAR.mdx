@@ -8,6 +8,33 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+```python
+from flojoy import flojoy, Scalar, DataContainer
+from typing import Optional
+
+
+@flojoy
+def SCALAR(
+    _: Optional[DataContainer] = None,
+    value: float = 3.0,
+) -> Scalar:
+    """The SCALAR node returns a single Scalar value.
+
+    Parameters
+    ----------
+    value : float
+        The value set in Parameters
+
+    Returns
+    -------
+    Scalar
+        c: return the value being set in Parameters
+    """
+
+    return Scalar(c=value)
+
+```
+
 [Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/GENERATORS/SIMULATIONS/SCALAR/SCALAR.py)
 
 ## Example
