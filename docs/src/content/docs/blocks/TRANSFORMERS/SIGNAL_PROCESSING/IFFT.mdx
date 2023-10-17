@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 from scipy import fft
 from flojoy import flojoy, OrderedPair, DataFrame
@@ -50,7 +52,8 @@ def IFFT(default: DataFrame, real_signal: bool = True) -> OrderedPair:
     return OrderedPair(x=x, y=result)
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/SIGNAL_PROCESSING/IFFT/IFFT.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/SIGNAL_PROCESSING/IFFT/IFFT.py)
 
 ## Example

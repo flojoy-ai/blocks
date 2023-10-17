@@ -39,11 +39,14 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={{docstring}} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 {python_code}
 ```
+[Find this Flojoy Block on GitHub]({github_link})
+</details>
 
-[Source Code]({github_link})
 
 ## Example
 """

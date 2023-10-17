@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 from flojoy import flojoy, OrderedPair
 from time import sleep
@@ -86,7 +88,8 @@ def SERIAL_TIMESERIES(
     return OrderedPair(x=times, y=readings)
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/PROTOCOLS/SERIAL/SERIAL_TIMESERIES/SERIAL_TIMESERIES.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/PROTOCOLS/SERIAL/SERIAL_TIMESERIES/SERIAL_TIMESERIES.py)
 
 ## Example

@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 from flojoy import flojoy, NodeReference, OrderedPair, SmallMemory
 import numpy as np
@@ -48,7 +50,8 @@ def DS_LOAD(default: OrderedPair, referred_node: NodeReference) -> OrderedPair:
         return default
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/LOADERS/INTERNAL_MEMORY/DS_LOAD/DS_LOAD.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/LOADERS/INTERNAL_MEMORY/DS_LOAD/DS_LOAD.py)
 
 ## Example

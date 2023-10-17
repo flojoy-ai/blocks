@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 from flojoy import flojoy, OrderedPair
 from typing import Optional
@@ -58,7 +60,8 @@ def READ_N_PINS(
     return OrderedPair(x=sensor_num, y=voltage)
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/INSTRUMENTS/DAQ_BOARDS/PHIDGET/INTERFACEKIT/BASIC/READ_N_PINS/READ_N_PINS.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/INSTRUMENTS/DAQ_BOARDS/PHIDGET/INTERFACEKIT/BASIC/READ_N_PINS/READ_N_PINS.py)
 
 ## Example

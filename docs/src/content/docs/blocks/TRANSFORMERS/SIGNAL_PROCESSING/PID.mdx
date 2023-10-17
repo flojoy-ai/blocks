@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 from numpy import zeros, append, ndarray
 from flojoy import flojoy, Scalar, DefaultParams, SmallMemory
@@ -90,7 +92,8 @@ def PID(
     return Scalar(c=output_signal)
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/SIGNAL_PROCESSING/PID/PID.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/SIGNAL_PROCESSING/PID/PID.py)
 
 ## Example

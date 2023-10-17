@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 from flojoy import flojoy, OrderedPair, Vector
 import numpy as np
@@ -63,7 +65,8 @@ def INTEGRATE(default: OrderedPair | Vector) -> OrderedPair:
     return OrderedPair(x=input_x, y=integrate)
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/CALCULUS/INTEGRATE/INTEGRATE.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/CALCULUS/INTEGRATE/INTEGRATE.py)
 
 ## Example

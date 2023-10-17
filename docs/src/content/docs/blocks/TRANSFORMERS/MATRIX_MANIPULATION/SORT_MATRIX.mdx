@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 from numpy import sort
 from flojoy import flojoy, Matrix
@@ -38,7 +40,8 @@ def SORT_MATRIX(a: Matrix, axis: int = -1) -> Matrix:
     return Matrix(m=sortedMatrix)
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/MATRIX_MANIPULATION/SORT_MATRIX/SORT_MATRIX.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/MATRIX_MANIPULATION/SORT_MATRIX/SORT_MATRIX.py)
 
 ## Example

@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 from flojoy import flojoy, DataContainer, Scalar, TextBlob
 import time, can, traceback
@@ -58,7 +60,8 @@ def TINYMOVR_SET_VELOCITY(default: Scalar) -> TextBlob:
     return TextBlob(text_blob=tb)
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/MOTION/MOTOR_DRIVERS/BLDC/TINYMOVR/TINYMOVR_SET_VELOCITY/TINYMOVR_SET_VELOCITY.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/MOTION/MOTOR_DRIVERS/BLDC/TINYMOVR/TINYMOVR_SET_VELOCITY/TINYMOVR_SET_VELOCITY.py)
 
 ## Example

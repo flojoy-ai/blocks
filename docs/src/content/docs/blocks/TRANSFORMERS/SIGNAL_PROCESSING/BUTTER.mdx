@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 from scipy import signal
 from flojoy import flojoy, OrderedPair
@@ -63,7 +65,8 @@ def BUTTER(
     return OrderedPair(x=default.x, y=filtered)
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/SIGNAL_PROCESSING/BUTTER/BUTTER.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/SIGNAL_PROCESSING/BUTTER/BUTTER.py)
 
 ## Example

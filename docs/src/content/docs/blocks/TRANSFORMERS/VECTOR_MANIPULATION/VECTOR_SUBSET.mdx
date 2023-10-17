@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 from numpy import any, array, arange, take
 from flojoy import flojoy, Vector, Array
@@ -56,7 +58,8 @@ def VECTOR_SUBSET(default: Vector, indices: Array, length: int = 1) -> Vector:
     return Vector(v=v)
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/VECTOR_MANIPULATION/VECTOR_SUBSET/VECTOR_SUBSET.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/VECTOR_MANIPULATION/VECTOR_SUBSET/VECTOR_SUBSET.py)
 
 ## Example

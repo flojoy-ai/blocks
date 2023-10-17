@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 from flojoy import flojoy, OrderedPair, DataFrame, Matrix, Image, Plotly
 import plotly.graph_objects as go
@@ -103,7 +105,8 @@ def ARRAY_VIEW(default: OrderedPair | Matrix | DataFrame | Image) -> Plotly:
     return Plotly(fig=fig)
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/VISUALIZERS/DATA_STRUCTURE/ARRAY_VIEW/ARRAY_VIEW.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/VISUALIZERS/DATA_STRUCTURE/ARRAY_VIEW/ARRAY_VIEW.py)
 
 ## Example

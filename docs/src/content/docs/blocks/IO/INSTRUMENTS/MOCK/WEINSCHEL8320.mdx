@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 from flojoy import flojoy, Scalar, DataContainer
 from qcodes.instrument_drivers.weinschel import Weinschel8320
@@ -54,7 +56,8 @@ def WEINSCHEL8320(
     return Scalar(c=attenuation_value)
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/INSTRUMENTS/MOCK/WEINSCHEL8320/WEINSCHEL8320.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/INSTRUMENTS/MOCK/WEINSCHEL8320/WEINSCHEL8320.py)
 
 ## Example

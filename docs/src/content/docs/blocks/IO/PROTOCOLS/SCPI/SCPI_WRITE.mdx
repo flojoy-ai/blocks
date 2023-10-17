@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 import serial
 from flojoy import flojoy, SerialConnection, TextBlob, Scalar, DataContainer
@@ -58,7 +60,8 @@ def SCPI_WRITE(
     return Scalar(resp)
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/PROTOCOLS/SCPI/SCPI_WRITE/SCPI_WRITE.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/PROTOCOLS/SCPI/SCPI_WRITE/SCPI_WRITE.py)
 
 ## Example

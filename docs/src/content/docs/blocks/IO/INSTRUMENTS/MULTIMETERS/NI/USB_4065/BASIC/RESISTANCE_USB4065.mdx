@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 from flojoy import flojoy, DataContainer, Scalar
 from flojoy.connection_manager import DeviceConnectionManager
@@ -69,7 +71,8 @@ def RESISTANCE_USB4065(
     return Scalar(c=reading)
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/INSTRUMENTS/MULTIMETERS/NI/USB_4065/BASIC/RESISTANCE_USB4065/RESISTANCE_USB4065.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/INSTRUMENTS/MULTIMETERS/NI/USB_4065/BASIC/RESISTANCE_USB4065/RESISTANCE_USB4065.py)
 
 ## Example

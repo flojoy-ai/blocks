@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 import os
 from flojoy import DataContainer, flojoy, get_env_var, node_preflight, FlojoyCloud
@@ -60,7 +62,8 @@ def FLOJOY_CLOUD_DOWNLOAD(
     return cloud.to_dc(cloud.fetch_dc(data_container_id))
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/LOADERS/CLOUD_DATABASE/FLOJOY_CLOUD_DOWNLOAD/FLOJOY_CLOUD_DOWNLOAD.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/LOADERS/CLOUD_DATABASE/FLOJOY_CLOUD_DOWNLOAD/FLOJOY_CLOUD_DOWNLOAD.py)
 
 ## Example

@@ -8,6 +8,8 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
+<details>
+<summary>Python Code</summary>
 ```python
 import pandas as pd
 from flojoy import flojoy, DataFrame, Matrix
@@ -34,7 +36,8 @@ def DF_2_NP(default: DataFrame) -> Matrix:
     return Matrix(m=df_to_numpy)
 
 ```
+[Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/TYPE_CASTING/DF_2_NP/DF_2_NP.py)
+</details>
 
-[Source Code](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/TYPE_CASTING/DF_2_NP/DF_2_NP.py)
 
 ## Example
