@@ -38,7 +38,7 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={{docstring}} />
 
-This is the Markdown file for {block_name}
+## Example
 """
 
 
