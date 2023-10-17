@@ -11,6 +11,7 @@ app = typer.Typer()
 
 err_string = "[bold red]Error![/bold red]"
 
+github_base = "https://github.com/flojoy-ai/blocks/blob/main/blocks/{block_folder_path}/{block_name}.py"
 
 docs_folder_prefix = "docs/src/content/docs/blocks/"
 blocks_folder_prefix = "blocks/"
@@ -37,6 +38,8 @@ import docstring from "@blocks/{block_folder_path}/docstring.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
 <PythonDocsDisplay docstring={{docstring}} />
+
+[Source Code]({github_link})
 
 ## Example
 """
@@ -74,7 +77,12 @@ def sync():
                     # Write the content of the markdown file
                     f.write(
                         docs_template.format(
-                            block_name=file_name, block_folder_path=block_folder_path
+                            block_name=file_name,
+                            block_folder_path=block_folder_path,
+                            github_link=github_base.format(
+                                block_name=file_name,
+                                block_folder_path=block_folder_path,
+                            ),
                         )
                     )
 
