@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: CONNECTION_33510B
 ---
 
-import docstring from "@blocks/IO/INSTRUMENTS/FUNCTION_GENERATORS/KEYSIGHT/33XXX/BASIC/CONNECTION_33510B/docstring.json"
+import docstring from "@blocks/IO/INSTRUMENTS/FUNCTION_GENERATORS/KEYSIGHT/33XXX/BASIC/CONNECTION_33510B/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for CONNECTION_33510B
-

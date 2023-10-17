@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: REMOVE_DUPLICATES_VECTOR
 ---
 
-import docstring from "@blocks/TRANSFORMERS/VECTOR_MANIPULATION/REMOVE_DUPLICATES_VECTOR/docstring.json"
+import docstring from "@blocks/TRANSFORMERS/VECTOR_MANIPULATION/REMOVE_DUPLICATES_VECTOR/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for REMOVE_DUPLICATES_VECTOR
-

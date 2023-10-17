@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: TORCHSCRIPT_CLASSIFIER
 ---
 
-import docstring from "@blocks/AI_ML/CLASSIFICATION/TORCHSCRIPT_CLASSIFIER/docstring.json"
+import docstring from "@blocks/AI_ML/CLASSIFICATION/TORCHSCRIPT_CLASSIFIER/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for TORCHSCRIPT_CLASSIFIER
-

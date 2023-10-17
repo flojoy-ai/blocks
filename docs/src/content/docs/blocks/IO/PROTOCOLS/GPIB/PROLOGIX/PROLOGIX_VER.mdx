@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: PROLOGIX_VER
 ---
 
-import docstring from "@blocks/IO/PROTOCOLS/GPIB/PROLOGIX/PROLOGIX_VER/docstring.json"
+import docstring from "@blocks/IO/PROTOCOLS/GPIB/PROLOGIX/PROLOGIX_VER/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for PROLOGIX_VER
-

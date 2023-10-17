@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: TRANSPOSE_MATRIX
 ---
 
-import docstring from "@blocks/TRANSFORMERS/MATRIX_MANIPULATION/TRANSPOSE_MATRIX/docstring.json"
+import docstring from "@blocks/TRANSFORMERS/MATRIX_MANIPULATION/TRANSPOSE_MATRIX/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for TRANSPOSE_MATRIX
-

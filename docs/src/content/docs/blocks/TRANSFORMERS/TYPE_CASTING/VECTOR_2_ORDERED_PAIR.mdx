@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: VECTOR_2_ORDERED_PAIR
 ---
 
-import docstring from "@blocks/TRANSFORMERS/TYPE_CASTING/VECTOR_2_ORDERED_PAIR/docstring.json"
+import docstring from "@blocks/TRANSFORMERS/TYPE_CASTING/VECTOR_2_ORDERED_PAIR/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for VECTOR_2_ORDERED_PAIR
-

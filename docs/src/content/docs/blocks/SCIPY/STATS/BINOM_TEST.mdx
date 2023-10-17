@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: BINOM_TEST
 ---
 
-import docstring from "@blocks/SCIPY/STATS/BINOM_TEST/docstring.json"
+import docstring from "@blocks/SCIPY/STATS/BINOM_TEST/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for BINOM_TEST
-

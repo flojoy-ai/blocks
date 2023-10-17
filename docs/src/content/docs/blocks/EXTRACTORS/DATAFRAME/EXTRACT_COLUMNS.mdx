@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: EXTRACT_COLUMNS
 ---
 
-import docstring from "@blocks/EXTRACTORS/DATAFRAME/EXTRACT_COLUMNS/docstring.json"
+import docstring from "@blocks/EXTRACTORS/DATAFRAME/EXTRACT_COLUMNS/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for EXTRACT_COLUMNS
-

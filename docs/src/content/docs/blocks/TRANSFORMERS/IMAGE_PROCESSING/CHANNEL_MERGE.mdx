@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: CHANNEL_MERGE
 ---
 
-import docstring from "@blocks/TRANSFORMERS/IMAGE_PROCESSING/CHANNEL_MERGE/docstring.json"
+import docstring from "@blocks/TRANSFORMERS/IMAGE_PROCESSING/CHANNEL_MERGE/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for CHANNEL_MERGE
-

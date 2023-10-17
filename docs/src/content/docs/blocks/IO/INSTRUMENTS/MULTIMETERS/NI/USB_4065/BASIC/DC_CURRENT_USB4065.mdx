@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: DC_CURRENT_USB4065
 ---
 
-import docstring from "@blocks/IO/INSTRUMENTS/MULTIMETERS/NI/USB_4065/BASIC/DC_CURRENT_USB4065/docstring.json"
+import docstring from "@blocks/IO/INSTRUMENTS/MULTIMETERS/NI/USB_4065/BASIC/DC_CURRENT_USB4065/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for DC_CURRENT_USB4065
-

@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: PROPHET_COMPONENTS
 ---
 
-import docstring from "@blocks/VISUALIZERS/PLOTLY/PROPHET_COMPONENTS/docstring.json"
+import docstring from "@blocks/VISUALIZERS/PLOTLY/PROPHET_COMPONENTS/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for PROPHET_COMPONENTS
-

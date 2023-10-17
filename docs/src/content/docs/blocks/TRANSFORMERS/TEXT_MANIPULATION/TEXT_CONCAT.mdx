@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: TEXT_CONCAT
 ---
 
-import docstring from "@blocks/TRANSFORMERS/TEXT_MANIPULATION/TEXT_CONCAT/docstring.json"
+import docstring from "@blocks/TRANSFORMERS/TEXT_MANIPULATION/TEXT_CONCAT/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for TEXT_CONCAT
-

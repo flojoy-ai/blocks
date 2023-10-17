@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: ADD
 ---
 
-import docstring from "@blocks/TRANSFORMERS/ARITHMETIC/ADD/docstring.json"
+import docstring from "@blocks/TRANSFORMERS/ARITHMETIC/ADD/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for ADD
-

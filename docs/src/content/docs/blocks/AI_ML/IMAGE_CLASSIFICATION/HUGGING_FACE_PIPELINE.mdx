@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: HUGGING_FACE_PIPELINE
 ---
 
-import docstring from "@blocks/AI_ML/IMAGE_CLASSIFICATION/HUGGING_FACE_PIPELINE/docstring.json"
+import docstring from "@blocks/AI_ML/IMAGE_CLASSIFICATION/HUGGING_FACE_PIPELINE/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for HUGGING_FACE_PIPELINE
-

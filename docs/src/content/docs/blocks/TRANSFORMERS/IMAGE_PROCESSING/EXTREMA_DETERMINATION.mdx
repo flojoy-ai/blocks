@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: EXTREMA_DETERMINATION
 ---
 
-import docstring from "@blocks/TRANSFORMERS/IMAGE_PROCESSING/EXTREMA_DETERMINATION/docstring.json"
+import docstring from "@blocks/TRANSFORMERS/IMAGE_PROCESSING/EXTREMA_DETERMINATION/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for EXTREMA_DETERMINATION
-

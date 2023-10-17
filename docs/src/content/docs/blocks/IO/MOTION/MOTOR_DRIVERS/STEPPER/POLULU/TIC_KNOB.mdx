@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: TIC_KNOB
 ---
 
-import docstring from "@blocks/IO/MOTION/MOTOR_DRIVERS/STEPPER/POLULU/TIC_KNOB/docstring.json"
+import docstring from "@blocks/IO/MOTION/MOTOR_DRIVERS/STEPPER/POLULU/TIC_KNOB/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for TIC_KNOB
-

@@ -33,12 +33,12 @@ layout: "@/layouts/block-docs-layout.astro"
 title: {block_name}
 ---
 
-import docstring from "@blocks/{block_folder_path}/docstring.json"
+import docstring from "@blocks/{block_folder_path}/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{{JSON.stringify(docstring, null, 2)}}
+<PythonDocsDisplay docstring={{docstring}} />
 
 This is the Markdown file for {block_name}
-
 """
 
 

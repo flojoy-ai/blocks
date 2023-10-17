@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: BASIC_OSCILLATOR
 ---
 
-import docstring from "@blocks/GENERATORS/SIMULATIONS/BASIC_OSCILLATOR/docstring.json"
+import docstring from "@blocks/GENERATORS/SIMULATIONS/BASIC_OSCILLATOR/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for BASIC_OSCILLATOR
-

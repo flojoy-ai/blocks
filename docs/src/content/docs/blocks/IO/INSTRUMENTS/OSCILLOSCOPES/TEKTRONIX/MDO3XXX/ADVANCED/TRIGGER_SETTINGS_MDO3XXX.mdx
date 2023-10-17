@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: TRIGGER_SETTINGS_MDO3XXX
 ---
 
-import docstring from "@blocks/IO/INSTRUMENTS/OSCILLOSCOPES/TEKTRONIX/MDO3XXX/ADVANCED/TRIGGER_SETTINGS_MDO3XXX/docstring.json"
+import docstring from "@blocks/IO/INSTRUMENTS/OSCILLOSCOPES/TEKTRONIX/MDO3XXX/ADVANCED/TRIGGER_SETTINGS_MDO3XXX/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for TRIGGER_SETTINGS_MDO3XXX
-

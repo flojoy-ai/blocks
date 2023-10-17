@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: ATTENUATION_LDA602
 ---
 
-import docstring from "@blocks/IO/INSTRUMENTS/ATTENUATORS/LDA/LDA602/ATTENUATION_LDA602/docstring.json"
+import docstring from "@blocks/IO/INSTRUMENTS/ATTENUATORS/LDA/LDA602/ATTENUATION_LDA602/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for ATTENUATION_LDA602
-

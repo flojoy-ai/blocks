@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: SERIAL_SINGLE_MEASUREMENT
 ---
 
-import docstring from "@blocks/IO/PROTOCOLS/SERIAL/SERIAL_SINGLE_MEASUREMENT/docstring.json"
+import docstring from "@blocks/IO/PROTOCOLS/SERIAL/SERIAL_SINGLE_MEASUREMENT/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for SERIAL_SINGLE_MEASUREMENT
-

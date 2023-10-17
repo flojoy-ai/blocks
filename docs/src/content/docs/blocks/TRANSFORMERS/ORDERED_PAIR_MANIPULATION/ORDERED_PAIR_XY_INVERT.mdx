@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: ORDERED_PAIR_XY_INVERT
 ---
 
-import docstring from "@blocks/TRANSFORMERS/ORDERED_PAIR_MANIPULATION/ORDERED_PAIR_XY_INVERT/docstring.json"
+import docstring from "@blocks/TRANSFORMERS/ORDERED_PAIR_MANIPULATION/ORDERED_PAIR_XY_INVERT/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for ORDERED_PAIR_XY_INVERT
-

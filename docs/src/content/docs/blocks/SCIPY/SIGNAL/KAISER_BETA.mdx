@@ -3,9 +3,9 @@ layout: "@/layouts/block-docs-layout.astro"
 title: KAISER_BETA
 ---
 
-import docstring from "@blocks/SCIPY/SIGNAL/KAISER_BETA/docstring.json"
+import docstring from "@blocks/SCIPY/SIGNAL/KAISER_BETA/docstring.json";
+import PythonDocsDisplay from "@/components/python-docs-display.astro";
 
-{JSON.stringify(docstring, null, 2)}
+<PythonDocsDisplay docstring={docstring} />
 
 This is the Markdown file for KAISER_BETA
-
