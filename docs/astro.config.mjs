@@ -28,6 +28,7 @@ export default defineConfig({
         },
         {
           label: "Flojoy Blocks",
+          collapsed: false,
           autogenerate: {
             directory: "blocks",
             collapsed: true,
