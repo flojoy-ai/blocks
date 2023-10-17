@@ -12,6 +12,7 @@ export default defineConfig({
       title: "Flojoy Docs",
       customCss: [
         // Path to your Tailwind base styles:
+        "./src/index.css",
         "./src/tailwind.css",
       ],
       social: {

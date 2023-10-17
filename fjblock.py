@@ -16,7 +16,6 @@ github_base = "https://github.com/flojoy-ai/blocks/blob/main/blocks/{block_folde
 docs_folder_prefix = "docs/src/content/docs/blocks/"
 blocks_folder_prefix = "blocks/"
 
-
 block_template = """\
 from flojoy import flojoy, DataContainer
 
@@ -35,9 +34,12 @@ title: {block_name}
 ---
 
 import docstring from "@blocks/{block_folder_path}/docstring.json";
+import app from "@blocks/{block_folder_path}/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={{docstring}} />
+<AppDisplay app={{app}} />
 
 <details>
 <summary>Python Code</summary>

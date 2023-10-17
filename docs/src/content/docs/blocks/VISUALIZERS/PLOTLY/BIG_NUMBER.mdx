@@ -4,9 +4,12 @@ title: BIG_NUMBER
 ---
 
 import docstring from "@blocks/VISUALIZERS/PLOTLY/BIG_NUMBER/docstring.json";
+import app from "@blocks/VISUALIZERS/PLOTLY/BIG_NUMBER/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
+<AppDisplay app={app} />
 
 <details>
 <summary>Python Code</summary>

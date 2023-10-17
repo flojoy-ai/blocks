@@ -1,4 +1,5 @@
 // tailwind.config.cjs
+const defaultTheme = require("tailwindcss/defaultTheme");
 const starlightPlugin = require("@astrojs/starlight-tailwind");
 const colors = require("tailwindcss/colors");
 
@@ -12,10 +13,17 @@ module.exports = {
         accent: colors.indigo,
         // Your preferred gray scale. Zinc is closest to Starlight’s defaults.
         gray: colors.zinc,
+        accent1: {
+          DEFAULT: "rgb(var(--color-accent1) / <alpha-value>)",
+          hover: "rgb(var(--color-accent1-hover) / <alpha-value>)",
+        },
+        accent2: "rgb(var(--color-accent2) / <alpha-value>)",
+        accent3: "rgb(var(--color-accent3) / <alpha-value>)",
+        accent4: "rgb(var(--color-accent4) / <alpha-value>)",
       },
       fontFamily: {
         // Your preferred text font. Starlight uses a system font stack by default.
-        sans: ['"Atkinson Hyperlegible"'],
+        sans: ['"Open Sans"', "sans-serif", ...defaultTheme.fontFamily.sans],
         // Your preferred code font. Starlight uses system monospace fonts by default.
         mono: ['"IBM Plex Mono"'],
       },
