@@ -18,15 +18,22 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "Studio",
+          label: "Flojoy Studio",
           autogenerate: {
             directory: "studio",
           },
         },
         {
-          label: "Blocks",
+          label: "Flojoy Blocks",
           autogenerate: {
             directory: "blocks",
+            collapsed: true,
+          },
+        },
+        {
+          label: "Instruments Database",
+          autogenerate: {
+            directory: "instruments",
             collapsed: true,
           },
         },

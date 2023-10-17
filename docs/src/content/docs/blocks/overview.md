@@ -1,5 +1,5 @@
 ---
-title: Blocks Introduction
+title: Blocks Overview
 description: Welcome to Flojoy's standard blocks library!
 sidebar:
   order: 1
