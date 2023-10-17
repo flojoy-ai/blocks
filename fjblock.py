@@ -89,7 +89,7 @@ def sync():
 
 @app.command()
 def add(block: str):
-    # TODO: Uodate the add command once everything else is done
+    # TODO: Update the add command once everything else is done
 
     # first we verify if the block name is valid
     parts = block.split(".")
