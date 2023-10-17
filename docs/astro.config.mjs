@@ -16,6 +16,7 @@ export default defineConfig({
       ],
       social: {
         github: "https://github.com/flojoy-ai",
+        discord: "https://discord.gg/7HEBr7yG8c",
       },
       lastUpdated: true,
       sidebar: [
