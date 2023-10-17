@@ -6,6 +6,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://blocks.flojoy.ai",
   integrations: [
     starlight({
       title: "Flojoy Docs",
@@ -16,6 +17,7 @@ export default defineConfig({
       social: {
         github: "https://github.com/flojoy-ai",
       },
+      lastUpdated: true,
       sidebar: [
         {
           label: "Flojoy Studio",
