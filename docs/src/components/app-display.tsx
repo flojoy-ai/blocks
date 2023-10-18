@@ -5,6 +5,7 @@ import { Download } from "lucide-react";
 
 type AppDisplayProps = {
   app: any;
+  blockName: string;
 };
 
 const FlowMiniMap = () => {
@@ -23,7 +24,7 @@ const FlowMiniMap = () => {
   );
 };
 
-const AppDisplay = ({ app }: AppDisplayProps) => {
+const AppDisplay = ({ app, blockName }: AppDisplayProps) => {
   const appObject = app["rfInstance"];
   const nodes = appObject["nodes"];
   const edges = appObject["edges"];
@@ -35,7 +36,7 @@ const AppDisplay = ({ app }: AppDisplayProps) => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "app.json";
+    a.download = `${blockName.toLowerCase()}_example.fj`;
     a.click();
 
     URL.revokeObjectURL(url);
