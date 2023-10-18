@@ -59,7 +59,7 @@ const AppDisplay = ({ app }: AppDisplayProps) => {
               proOptions={{ hideAttribution: true }}
             >
               <FlowMiniMap />
-              <Background className="bg-gray-50" />
+              <Background />
               <Controls />
             </ReactFlow>
           </div>
