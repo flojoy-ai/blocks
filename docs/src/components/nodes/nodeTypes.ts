@@ -18,6 +18,7 @@ export default {
   LOADERS: DefaultNode,
   ARITHMETIC: ArithmeticNode,
   IO: IONode,
+  INSTRUMENTS: IONode,
   LOGIC_GATES: LogicNode,
   CONDITIONALS: ConditionalNode,
   SCIPY: ScipyNode,
