@@ -29,7 +29,7 @@ const AppDisplay = ({ app }: AppDisplayProps) => {
 
   return (
     <div className="flex justify-center">
-      <div style={{ width: 500, height: 400 }} className="not-content">
+      <div style={{ width: "100vw", height: 400 }} className="not-content">
         <ReactFlow
           nodes={nodes}
           nodeTypes={nodeTypes}
