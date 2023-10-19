@@ -21,6 +21,10 @@
   --color-accent2: 123 97 255;
   --color-accent3: 255 201 63;
   --color-accent4: 240 95 168;
+  --controls: 0 0% 15%;
+  --controls-hover: 0 0% 20%;
+  --controls-border: 0 0% 40%;
+  --foreground: 210 40% 98%;
 }
 /* Light mode colors. */
 :root[data-theme="light"] {
@@ -41,4 +45,8 @@
   --color-accent2: 46 131 255;
   --color-accent3: 255 169 39;
   --color-accent4: 240 95 168;
+  --controls: 0 0% 100%;
+  --controls-hover: 0 0% 90%;
+  --controls-border: 0 0% 80%;
+  --foreground: 222.2 84% 4.9%;
 }
