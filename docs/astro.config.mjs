@@ -4,6 +4,9 @@ import tailwind from "@astrojs/tailwind";
 import path from "path";
 import react from "@astrojs/react";
 
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://blocks.flojoy.ai",
@@ -20,6 +23,18 @@ export default defineConfig({
         discord: "https://discord.gg/7HEBr7yG8c",
       },
       lastUpdated: true,
+      head: [
+        {
+          tag: "link",
+          attrs: {
+            rel: "stylesheet",
+            href: "https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.css",
+            integrity:
+              "sha384-WsHMgfkABRyG494OmuiNmkAOk8nhO1qE+Y6wns6v+EoNoTNxrWxYpl5ZYWFOLPCM",
+            crossorigin: "anonymous",
+          },
+        },
+      ],
       sidebar: [
         {
           label: "Flojoy Studio",
@@ -76,6 +91,8 @@ export default defineConfig({
       // Enable word wrap to prevent horizontal scrolling
       wrap: true,
     },
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex],
   },
   vite: {
     resolve: {
