@@ -62,6 +62,7 @@ const AppDisplay = ({ app, blockName }: AppDisplayProps) => {
           </div>
         </div>
       </div>
+      <div className="py-2" />
       <button
         className="flex items-center rounded p-2 justify-center gap-2"
         onClick={download}
