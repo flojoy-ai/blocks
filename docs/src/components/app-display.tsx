@@ -64,7 +64,7 @@ const AppDisplay = ({ app, blockName }: AppDisplayProps) => {
       </div>
       <div className="py-2" />
       <button
-        className="flex items-center rounded p-2 justify-center gap-2"
+        className="flex items-center rounded p-2 justify-center gap-2 bg-gray-100 dark:bg-gray-800"
         onClick={download}
       >
         <div>Download this Flojoy App</div>
