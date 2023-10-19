@@ -67,10 +67,10 @@ export default defineConfig({
         fr: {
           label: "Français",
         },
-        "zh-cn": {
-          label: "简体中文",
-          lang: "zh-CN",
-        },
+        // "zh-cn": {
+        //   label: "简体中文",
+        //   lang: "zh-CN",
+        // },
       },
     }),
     tailwind({
