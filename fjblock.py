@@ -51,6 +51,8 @@ import AppDisplay from "@/components/app-display.tsx";
 ## Example
 
 <AppDisplay app={{app}} blockName="{block_name}" client:visible />
+
+{example}
 """
 
 
@@ -76,6 +78,8 @@ def sync():
             if file_name == folder_name:
                 with open(os.path.join(root, file), "r") as f:
                     python_code = f.read()
+                with open(os.path.join(root, "example.md"), "r") as f:
+                    example = f.read()
 
                 # Create the markdown file in another directory
                 block_folder_path = root.split("blocks", 1)[1].strip("/")
@@ -96,6 +100,7 @@ def sync():
                                 block_name=file_name,
                                 block_folder_path=block_folder_path,
                             ),
+                            example=example,
                         )
                     )
 
