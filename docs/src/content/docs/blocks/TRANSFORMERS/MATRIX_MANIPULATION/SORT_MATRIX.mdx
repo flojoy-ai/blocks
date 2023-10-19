@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="SORT_MATRIX" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -46,5 +45,6 @@ def SORT_MATRIX(a: Matrix, axis: int = -1) -> Matrix:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/MATRIX_MANIPULATION/SORT_MATRIX/SORT_MATRIX.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="SORT_MATRIX" client:visible />

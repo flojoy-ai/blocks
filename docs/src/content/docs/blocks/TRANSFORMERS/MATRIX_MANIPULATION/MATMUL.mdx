@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="MATMUL" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -41,5 +40,6 @@ def MATMUL(a: Matrix, b: Matrix) -> Matrix:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/MATRIX_MANIPULATION/MATMUL/MATMUL.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="MATMUL" client:visible />

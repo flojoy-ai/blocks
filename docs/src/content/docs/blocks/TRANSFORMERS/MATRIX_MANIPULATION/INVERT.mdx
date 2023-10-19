@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="INVERT" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -71,5 +70,6 @@ def INVERT(default: OrderedPair | Matrix, rcond: float = 1.0) -> OrderedPair | M
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/MATRIX_MANIPULATION/INVERT/INVERT.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="INVERT" client:visible />

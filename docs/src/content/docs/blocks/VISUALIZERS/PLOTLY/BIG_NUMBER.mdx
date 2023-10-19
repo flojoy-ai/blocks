@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="BIG_NUMBER" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -106,5 +105,6 @@ def BIG_NUMBER(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/VISUALIZERS/PLOTLY/BIG_NUMBER/BIG_NUMBER.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="BIG_NUMBER" client:visible />

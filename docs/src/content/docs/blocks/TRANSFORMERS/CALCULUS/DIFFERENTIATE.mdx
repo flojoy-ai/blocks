@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="DIFFERENTIATE" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -62,5 +61,6 @@ def DIFFERENTIATE(default: OrderedPair | Vector) -> OrderedPair:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/CALCULUS/DIFFERENTIATE/DIFFERENTIATE.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="DIFFERENTIATE" client:visible />

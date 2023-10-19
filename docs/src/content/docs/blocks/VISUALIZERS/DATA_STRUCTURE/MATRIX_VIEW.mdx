@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="MATRIX_VIEW" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -140,5 +139,6 @@ def MATRIX_VIEW(default: OrderedPair | Matrix) -> Plotly:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/VISUALIZERS/DATA_STRUCTURE/MATRIX_VIEW/MATRIX_VIEW.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="MATRIX_VIEW" client:visible />

@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="HEATMAP" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -226,5 +225,6 @@ def HEATMAP(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/VISUALIZERS/PLOTLY/HEATMAP/HEATMAP.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="HEATMAP" client:visible />

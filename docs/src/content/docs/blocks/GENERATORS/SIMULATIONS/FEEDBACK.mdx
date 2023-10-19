@@ -9,18 +9,18 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="FEEDBACK" client:visible />
 
 <details>
 <summary>Python Code</summary>
 ```python
-from typing import Optional, Any
+from typing import Any, Optional
+
 from flojoy import (
-    flojoy,
     DataContainer,
-    get_job_result,
-    NodeReference,
     JobResultBuilder,
+    NodeReference,
+    flojoy,
+    get_job_result,
 )
 
 
@@ -52,5 +52,6 @@ def FEEDBACK(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/GENERATORS/SIMULATIONS/FEEDBACK/FEEDBACK.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="FEEDBACK" client:visible />

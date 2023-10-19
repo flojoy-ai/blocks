@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="OPEN_MATLAB" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -64,5 +63,6 @@ def OPEN_MATLAB(file_path: str = "") -> DataFrame:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/LOADERS/LOCAL_FILE_SYSTEM/OPEN_MATLAB/OPEN_MATLAB.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="OPEN_MATLAB" client:visible />

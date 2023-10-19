@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="SHIFT_VECTOR" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -45,5 +44,6 @@ def SHIFT_VECTOR(default: Vector, shift: int = 1) -> Vector:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/VECTOR_MANIPULATION/SHIFT_VECTOR/SHIFT_VECTOR.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="SHIFT_VECTOR" client:visible />

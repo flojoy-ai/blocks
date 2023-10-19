@@ -3,7 +3,8 @@ const { docstring } = Astro.props;
 ---
 
 <span class="flex flex-col gap-2">
-  <span>{docstring.description}</span>
+  <span>{docstring.short_description}</span>
+  <span>{docstring.long_description}</span>
 
   <span class="flex gap-2">
     <span class="w-24 shrink-0 font-bold">Params:</span>

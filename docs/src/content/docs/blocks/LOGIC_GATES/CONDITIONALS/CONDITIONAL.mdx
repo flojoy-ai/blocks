@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="CONDITIONAL" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -96,5 +95,6 @@ def compare_values(first_value: Any, second_value: Any, operator: str):
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/LOGIC_GATES/CONDITIONALS/CONDITIONAL/CONDITIONAL.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="CONDITIONAL" client:visible />

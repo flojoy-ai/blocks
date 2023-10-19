@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="TORCHSCRIPT_CLASSIFIER" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -88,5 +87,6 @@ def TORCHSCRIPT_CLASSIFIER(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/AI_ML/CLASSIFICATION/TORCHSCRIPT_CLASSIFIER/TORCHSCRIPT_CLASSIFIER.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="TORCHSCRIPT_CLASSIFIER" client:visible />

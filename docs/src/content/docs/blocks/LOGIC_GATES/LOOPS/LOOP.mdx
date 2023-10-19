@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="LOOP" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -157,5 +156,6 @@ def build_result(inputs: list[DataContainer], is_loop_finished: bool):
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/LOGIC_GATES/LOOPS/LOOP/LOOP.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="LOOP" client:visible />

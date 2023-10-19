@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="LOOP_INDEX" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -64,5 +63,6 @@ def LOOP_INDEX(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/LOGIC_GATES/LOOP_TOOLS/LOOP_INDEX/LOOP_INDEX.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="LOOP_INDEX" client:visible />

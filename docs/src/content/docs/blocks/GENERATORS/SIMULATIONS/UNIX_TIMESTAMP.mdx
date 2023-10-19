@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="UNIX_TIMESTAMP" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -59,5 +58,6 @@ def UNIX_TIMESTAMP(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/GENERATORS/SIMULATIONS/UNIX_TIMESTAMP/UNIX_TIMESTAMP.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="UNIX_TIMESTAMP" client:visible />

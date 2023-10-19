@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="PLOTLY_DATASET" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -53,5 +52,6 @@ def PLOTLY_DATASET(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/GENERATORS/SAMPLE_DATASETS/PLOTLY_DATASET/PLOTLY_DATASET.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="PLOTLY_DATASET" client:visible />

@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="MOVE_POSE" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -67,5 +66,6 @@ def MOVE_POSE(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/ROBOTICS/ARMS/MECADEMIC/MOVE_POSE/MOVE_POSE.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="MOVE_POSE" client:visible />

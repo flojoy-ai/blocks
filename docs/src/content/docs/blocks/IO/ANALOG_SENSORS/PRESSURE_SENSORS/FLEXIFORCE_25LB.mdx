@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="FLEXIFORCE_25LB" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -47,5 +46,6 @@ def FLEXIFORCE_25LB(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/ANALOG_SENSORS/PRESSURE_SENSORS/FLEXIFORCE_25LB/FLEXIFORCE_25LB.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="FLEXIFORCE_25LB" client:visible />

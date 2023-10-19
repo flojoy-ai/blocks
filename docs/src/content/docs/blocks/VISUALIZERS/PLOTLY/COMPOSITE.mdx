@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="COMPOSITE" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -238,5 +237,6 @@ def add_scatter_trace(fig: go.Figure, dc: OrderedPair | Matrix | DataFrame | Vec
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/VISUALIZERS/PLOTLY/COMPOSITE/COMPOSITE.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="COMPOSITE" client:visible />

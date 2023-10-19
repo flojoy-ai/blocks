@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="BATCH_PROCESSOR" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -133,5 +132,6 @@ def BATCH_PROCESSOR(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/LOADERS/LOCAL_FILE_SYSTEM/BATCH_PROCESSOR/BATCH_PROCESSOR.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="BATCH_PROCESSOR" client:visible />

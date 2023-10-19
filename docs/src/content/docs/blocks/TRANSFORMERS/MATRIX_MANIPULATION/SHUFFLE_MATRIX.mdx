@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="SHUFFLE_MATRIX" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -56,5 +55,6 @@ def SHUFFLE_MATRIX(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/MATRIX_MANIPULATION/SHUFFLE_MATRIX/SHUFFLE_MATRIX.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="SHUFFLE_MATRIX" client:visible />

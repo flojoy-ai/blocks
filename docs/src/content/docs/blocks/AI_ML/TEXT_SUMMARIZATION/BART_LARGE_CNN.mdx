@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="BART_LARGE_CNN" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -105,5 +104,6 @@ def BART_LARGE_CNN(default: DataFrame) -> DataFrame:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/AI_ML/TEXT_SUMMARIZATION/BART_LARGE_CNN/BART_LARGE_CNN.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="BART_LARGE_CNN" client:visible />

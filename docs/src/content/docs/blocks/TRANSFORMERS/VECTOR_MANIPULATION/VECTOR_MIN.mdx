@@ -9,21 +9,20 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="VECTOR_MIN" client:visible />
 
 <details>
 <summary>Python Code</summary>
 ```python
 import numpy as np
-from flojoy import flojoy, Vector, Scalar
+from flojoy import Scalar, Vector, flojoy
 
 
 @flojoy
 def VECTOR_MIN(default: Vector) -> Scalar:
     """The VECTOR_MIN node returns the minimum value from the Vector
 
-    Inputs
-    ------
+    Parameters
+    ----------
     v : Vector
         The input vector to use min peration
 
@@ -39,5 +38,6 @@ def VECTOR_MIN(default: Vector) -> Scalar:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/VECTOR_MANIPULATION/VECTOR_MIN/VECTOR_MIN.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="VECTOR_MIN" client:visible />

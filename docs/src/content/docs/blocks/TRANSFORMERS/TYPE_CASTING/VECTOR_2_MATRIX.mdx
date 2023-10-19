@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="VECTOR_2_MATRIX" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -49,5 +48,6 @@ def VECTOR_2_MATRIX(default: Vector, row: int, col: int) -> Matrix:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/TYPE_CASTING/VECTOR_2_MATRIX/VECTOR_2_MATRIX.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="VECTOR_2_MATRIX" client:visible />

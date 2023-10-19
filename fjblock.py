@@ -39,7 +39,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={{docstring}} />
-<AppDisplay app={{app}} blockName="{block_name}" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -49,8 +48,9 @@ import AppDisplay from "@/components/app-display.tsx";
 [Find this Flojoy Block on GitHub]({github_link})
 </details>
 
-
 ## Example
+
+<AppDisplay app={{app}} blockName="{block_name}" client:visible />
 """
 
 
@@ -80,7 +80,8 @@ def sync():
                 # Create the markdown file in another directory
                 block_folder_path = root.split("blocks", 1)[1].strip("/")
                 target_md_file = docs_folder_prefix + os.path.join(
-                    block_folder_path + ".mdx")
+                    block_folder_path + ".mdx"
+                )
 
                 os.makedirs(os.path.dirname(target_md_file), exist_ok=True)
 
@@ -95,13 +96,15 @@ def sync():
                                 block_name=file_name,
                                 block_folder_path=block_folder_path,
                             ),
-                        ))
+                        )
+                    )
 
     # Remove all empty folders
     print("Almost done! Doing some housekeeping...")
     for dirpath, dirnames, filenames in os.walk(docs_folder_prefix):
-        if (not filenames and not dirnames
-            ):  # Check if the directory has no files or subdirectories
+        if (
+            not filenames and not dirnames
+        ):  # Check if the directory has no files or subdirectories
             os.rmdir(dirpath)  # Remove the directory
 
 
@@ -116,7 +119,8 @@ def add(block: str):
     for part in parts:
         if part == "":
             err_console.print(
-                f"{err_string} you cannot have empty part in your block name!")
+                f"{err_string} you cannot have empty part in your block name!"
+            )
             sys.exit(1)
 
         match = re.match(pattern, part)
@@ -131,14 +135,14 @@ def add(block: str):
     # let's first start with the docs
 
     docs_target_path = os.path.dirname(
-        os.path.join(docs_folder_prefix, block.replace(".", "/")))
+        os.path.join(docs_folder_prefix, block.replace(".", "/"))
+    )
     os.makedirs(docs_target_path, exist_ok=True)
     with open(os.path.join(docs_target_path, f"{block_name}.md"), "w+") as f:
         f.write(docs_template.format(block_name=block_name))
 
     # lastly we finish with the python block code
-    blocks_target_path = os.path.join(blocks_folder_prefix,
-                                      block.replace(".", "/"))
+    blocks_target_path = os.path.join(blocks_folder_prefix, block.replace(".", "/"))
     os.makedirs(blocks_target_path, exist_ok=True)
     with open(os.path.join(blocks_target_path, f"{block_name}.py"), "w+") as f:
         f.write(block_template.format(block_name=block_name))

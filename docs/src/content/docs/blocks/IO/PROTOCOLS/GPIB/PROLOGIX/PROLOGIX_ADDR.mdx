@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="PROLOGIX_ADDR" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -61,5 +60,6 @@ def PROLOGIX_ADDR(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/PROTOCOLS/GPIB/PROLOGIX/PROLOGIX_ADDR/PROLOGIX_ADDR.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="PROLOGIX_ADDR" client:visible />

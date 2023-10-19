@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="VECTOR_LENGTH" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -39,5 +38,6 @@ def VECTOR_LENGTH(default: Vector) -> Scalar:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/VECTOR_MANIPULATION/VECTOR_LENGTH/VECTOR_LENGTH.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="VECTOR_LENGTH" client:visible />

@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="VECTOR_SUBSET" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -64,5 +63,6 @@ def VECTOR_SUBSET(default: Vector, indices: Array, length: int = 1) -> Vector:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/VECTOR_MANIPULATION/VECTOR_SUBSET/VECTOR_SUBSET.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="VECTOR_SUBSET" client:visible />

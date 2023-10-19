@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="PROPHET_PREDICT" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -146,5 +145,6 @@ def PROPHET_PREDICT(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/AI_ML/PREDICT_TIME_SERIES/PROPHET_PREDICT/PROPHET_PREDICT.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="PROPHET_PREDICT" client:visible />

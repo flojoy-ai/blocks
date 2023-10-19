@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="DC_CONTENT_TYPE" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -65,5 +64,6 @@ def DC_CONTENT_TYPE(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/EXTRACTORS/DEBUGGING/DC_CONTENT_TYPE/DC_CONTENT_TYPE.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="DC_CONTENT_TYPE" client:visible />

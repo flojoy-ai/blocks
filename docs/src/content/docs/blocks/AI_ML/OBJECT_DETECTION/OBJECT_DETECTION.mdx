@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="OBJECT_DETECTION" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -76,5 +75,6 @@ def OBJECT_DETECTION(default: Image) -> Image:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/AI_ML/OBJECT_DETECTION/OBJECT_DETECTION/OBJECT_DETECTION.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="OBJECT_DETECTION" client:visible />

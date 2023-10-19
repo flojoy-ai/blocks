@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="VECTOR_INSERT" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -58,5 +57,6 @@ def VECTOR_INSERT(default: Vector, index: int = 0, value: int = 0) -> Vector:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/VECTOR_MANIPULATION/VECTOR_INSERT/VECTOR_INSERT.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="VECTOR_INSERT" client:visible />

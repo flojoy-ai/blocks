@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="ON_OFF_33510B" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -61,5 +60,6 @@ def ON_OFF_33510B(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/INSTRUMENTS/FUNCTION_GENERATORS/KEYSIGHT/33XXX/BASIC/ON_OFF_33510B/ON_OFF_33510B.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="ON_OFF_33510B" client:visible />

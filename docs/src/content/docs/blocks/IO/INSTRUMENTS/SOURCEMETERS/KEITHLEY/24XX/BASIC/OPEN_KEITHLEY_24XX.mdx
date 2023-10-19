@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="OPEN_KEITHLEY_24XX" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -53,5 +52,6 @@ def OPEN_KEITHLEY_24XX(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/INSTRUMENTS/SOURCEMETERS/KEITHLEY/24XX/BASIC/OPEN_KEITHLEY_24XX/OPEN_KEITHLEY_24XX.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="OPEN_KEITHLEY_24XX" client:visible />

@@ -9,14 +9,14 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="LIST_VISA" client:visible />
 
 <details>
 <summary>Python Code</summary>
 ```python
-from flojoy import flojoy, DataContainer, TextBlob
-import pyvisa
 from typing import Optional
+
+import pyvisa
+from flojoy import DataContainer, TextBlob, flojoy
 
 
 @flojoy(
@@ -31,6 +31,11 @@ def LIST_VISA(
     default: Optional[DataContainer] = None,
 ) -> Optional[DataContainer]:
     """The LIST_VISA node lists all VISA instruments available.
+
+    Parameters
+    ----------
+    default : DataContainer
+        the input data container
 
     Returns
     -------
@@ -49,5 +54,6 @@ def LIST_VISA(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/INSTRUMENTS/QCODES/LIST_VISA/LIST_VISA.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="LIST_VISA" client:visible />

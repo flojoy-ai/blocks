@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="AC_CURRENT_USB4065" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -74,5 +73,6 @@ def AC_CURRENT_USB4065(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/INSTRUMENTS/MULTIMETERS/NI/USB_4065/BASIC/AC_CURRENT_USB4065/AC_CURRENT_USB4065.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="AC_CURRENT_USB4065" client:visible />

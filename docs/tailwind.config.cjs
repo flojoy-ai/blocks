@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       colors: {
         // Your preferred accent color. Indigo is closest to Starlight’s defaults.
-        accent: colors.indigo,
+        accent: "var(--sl-color-accent)",
         // Your preferred gray scale. Zinc is closest to Starlight’s defaults.
         gray: colors.zinc,
         accent1: {

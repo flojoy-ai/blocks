@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="MEASUREMENTS_MDO3XXX" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -97,5 +96,6 @@ def MEASUREMENTS_MDO3XXX(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/INSTRUMENTS/OSCILLOSCOPES/TEKTRONIX/MDO3XXX/BASIC/MEASUREMENTS_MDO3XXX/MEASUREMENTS_MDO3XXX.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="MEASUREMENTS_MDO3XXX" client:visible />

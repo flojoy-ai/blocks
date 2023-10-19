@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="MEASURE_VOLTAGE" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -68,5 +67,6 @@ def MEASURE_VOLTAGE(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/PROTOCOLS/SCPI/MEASURE_VOLTAGE/MEASURE_VOLTAGE.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="MEASURE_VOLTAGE" client:visible />

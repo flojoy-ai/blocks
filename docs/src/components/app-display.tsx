@@ -43,14 +43,10 @@ const AppDisplay = ({ app, blockName }: AppDisplayProps) => {
   };
 
   return (
-    <div className="mt-6">
-      <div className="flex items-center">
-        <h4>Example app</h4>
-        <Download onClick={download} className="ml-2 cursor-pointer !mt-1" />
-      </div>
+    <div className="mt-6 flex flex-col not-content">
       <div>
         <div className="flex justify-center">
-          <div style={{ width: "100vw", height: 400 }} className="not-content">
+          <div style={{ width: "100vw", height: 400 }} className="">
             <ReactFlow
               nodes={nodes}
               nodeTypes={nodeTypes}
@@ -66,6 +62,13 @@ const AppDisplay = ({ app, blockName }: AppDisplayProps) => {
           </div>
         </div>
       </div>
+      <button
+        className="flex items-center rounded p-2 justify-center gap-2"
+        onClick={download}
+      >
+        <div>Download this Flojoy App</div>
+        <Download />
+      </button>
     </div>
   );
 };

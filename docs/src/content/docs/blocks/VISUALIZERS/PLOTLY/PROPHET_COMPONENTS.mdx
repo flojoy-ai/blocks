@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="PROPHET_COMPONENTS" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -141,5 +140,6 @@ def PROPHET_COMPONENTS(default: DataFrame, periods: int = 365) -> Plotly:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/VISUALIZERS/PLOTLY/PROPHET_COMPONENTS/PROPHET_COMPONENTS.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="PROPHET_COMPONENTS" client:visible />

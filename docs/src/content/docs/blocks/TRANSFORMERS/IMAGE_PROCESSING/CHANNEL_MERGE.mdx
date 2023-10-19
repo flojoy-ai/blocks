@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="CHANNEL_MERGE" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -74,5 +73,6 @@ def CHANNEL_MERGE(red: Image, green: Image, blue: Image, alpha: Image) -> Image:
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/IMAGE_PROCESSING/CHANNEL_MERGE/CHANNEL_MERGE.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="CHANNEL_MERGE" client:visible />

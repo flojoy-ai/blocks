@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="READ_N_PINS" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -66,5 +65,6 @@ def READ_N_PINS(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/INSTRUMENTS/DAQ_BOARDS/PHIDGET/INTERFACEKIT/BASIC/READ_N_PINS/READ_N_PINS.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="READ_N_PINS" client:visible />

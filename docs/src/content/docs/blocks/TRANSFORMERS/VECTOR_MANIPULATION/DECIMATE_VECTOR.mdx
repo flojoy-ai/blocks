@@ -9,7 +9,6 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
 
 <PythonDocsDisplay docstring={docstring} />
-<AppDisplay app={app} blockName="DECIMATE_VECTOR" client:visible />
 
 <details>
 <summary>Python Code</summary>
@@ -48,5 +47,6 @@ def DECIMATE_VECTOR(
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/VECTOR_MANIPULATION/DECIMATE_VECTOR/DECIMATE_VECTOR.py)
 </details>
 
-
 ## Example
+
+<AppDisplay app={app} blockName="DECIMATE_VECTOR" client:visible />
