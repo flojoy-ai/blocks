@@ -15,8 +15,10 @@ export default defineConfig({
       title: "Flojoy Docs",
       customCss: [
         // Path to your Tailwind base styles:
-        "./src/index.css",
         "./src/tailwind.css",
+        // Some reactflow styles
+        "./src/index.css",
+        // Joey: Please do not add any more custom css files
       ],
       social: {
         github: "https://github.com/flojoy-ai",
@@ -25,6 +27,7 @@ export default defineConfig({
       lastUpdated: true,
       head: [
         {
+          // Tag to support Latex display
           tag: "link",
           attrs: {
             rel: "stylesheet",
@@ -36,6 +39,8 @@ export default defineConfig({
         },
       ],
       sidebar: [
+        // Joey: IMPORTANT, always use autogenerate unless
+        // there is a very good reason not to use it
         {
           label: "Flojoy Studio",
           autogenerate: {
@@ -74,28 +79,24 @@ export default defineConfig({
       },
     }),
     tailwind({
-      // Disable the default base styles:
+      // Disable the default base styles, otherwise CSS will break
       applyBaseStyles: false,
     }),
     react(),
   ],
   markdown: {
     shikiConfig: {
-      // Choose from Shiki's built-in themes (or add your own)
-      // https://github.com/shikijs/shiki/blob/main/docs/themes.md
       theme: "dracula",
-      // Add custom languages
-      // Note: Shiki has countless langs built-in, including .astro!
-      // https://github.com/shikijs/shiki/blob/main/docs/languages.md
       langs: ["python"],
-      // Enable word wrap to prevent horizontal scrolling
-      wrap: true,
+      wrap: true, // Enable word wrap to prevent horizontal scrolling
     },
+    // 2 plugins for math support
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
   },
   vite: {
     resolve: {
+      // Very import alias to make @blocks work for rollup
       alias: {
         "@blocks": path.resolve("../blocks/"),
       },
