@@ -43,10 +43,13 @@ import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <details>
 <summary>Python Code</summary>
+
 ```python
 {python_code}
 ```
+
 [Find this Flojoy Block on GitHub]({github_link})
+
 </details>
 
 ## Example

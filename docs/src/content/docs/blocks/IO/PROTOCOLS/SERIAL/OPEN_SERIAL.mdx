@@ -13,6 +13,7 @@ import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <details>
 <summary>Python Code</summary>
+
 ```python
 import json
 import serial
@@ -48,7 +49,9 @@ def OPEN_SERIAL(device: SerialDevice, baudrate: int = 9600) -> TextBlob:
     return TextBlob(text_blob=json.dumps(ser.get_settings()))
 
 ```
+
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/PROTOCOLS/SERIAL/OPEN_SERIAL/OPEN_SERIAL.py)
+
 </details>
 
 ## Example

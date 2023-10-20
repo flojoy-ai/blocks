@@ -13,6 +13,7 @@ import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <details>
 <summary>Python Code</summary>
+
 ```python
 import serial
 from flojoy import flojoy, SerialConnection, TextBlob, DataContainer
@@ -52,7 +53,9 @@ def IDN(
     return TextBlob(text_blob=ser.readline().decode())
 
 ```
+
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/PROTOCOLS/SCPI/IDN/IDN.py)
+
 </details>
 
 ## Example
