@@ -7,6 +7,7 @@ import docstring from "@blocks/VISUALIZERS/PLOTLY/SCATTER3D/docstring.json";
 import app from "@blocks/VISUALIZERS/PLOTLY/SCATTER3D/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -65,6 +66,8 @@ def SCATTER3D(default: OrderedTriple | DataFrame) -> Plotly:
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="SCATTER3D" client:visible />
 

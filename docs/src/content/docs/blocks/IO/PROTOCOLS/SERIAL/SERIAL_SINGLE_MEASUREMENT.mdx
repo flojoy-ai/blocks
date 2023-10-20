@@ -7,6 +7,7 @@ import docstring from "@blocks/IO/PROTOCOLS/SERIAL/SERIAL_SINGLE_MEASUREMENT/doc
 import app from "@blocks/IO/PROTOCOLS/SERIAL/SERIAL_SINGLE_MEASUREMENT/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -58,6 +59,8 @@ def SERIAL_SINGLE_MEASUREMENT(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="SERIAL_SINGLE_MEASUREMENT" client:visible />
 

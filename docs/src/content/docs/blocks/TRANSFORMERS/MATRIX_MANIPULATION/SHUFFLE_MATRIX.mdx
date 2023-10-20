@@ -7,6 +7,7 @@ import docstring from "@blocks/TRANSFORMERS/MATRIX_MANIPULATION/SHUFFLE_MATRIX/d
 import app from "@blocks/TRANSFORMERS/MATRIX_MANIPULATION/SHUFFLE_MATRIX/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -56,6 +57,8 @@ def SHUFFLE_MATRIX(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="SHUFFLE_MATRIX" client:visible />
 

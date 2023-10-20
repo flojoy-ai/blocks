@@ -7,6 +7,7 @@ import docstring from "@blocks/LOADERS/CLOUD_DATABASE/FLOJOY_CLOUD_UPLOAD/docstr
 import app from "@blocks/LOADERS/CLOUD_DATABASE/FLOJOY_CLOUD_UPLOAD/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -76,6 +77,8 @@ def FLOJOY_CLOUD_UPLOAD(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="FLOJOY_CLOUD_UPLOAD" client:visible />
 

@@ -7,6 +7,7 @@ import docstring from "@blocks/LOGIC_GATES/LOOPS/APPEND/docstring.json";
 import app from "@blocks/LOGIC_GATES/LOOPS/APPEND/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -101,6 +102,8 @@ def APPEND(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="APPEND" client:visible />
 

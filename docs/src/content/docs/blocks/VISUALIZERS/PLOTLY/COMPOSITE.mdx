@@ -7,6 +7,7 @@ import docstring from "@blocks/VISUALIZERS/PLOTLY/COMPOSITE/docstring.json";
 import app from "@blocks/VISUALIZERS/PLOTLY/COMPOSITE/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -238,6 +239,8 @@ def add_scatter_trace(fig: go.Figure, dc: OrderedPair | Matrix | DataFrame | Vec
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="COMPOSITE" client:visible />
 

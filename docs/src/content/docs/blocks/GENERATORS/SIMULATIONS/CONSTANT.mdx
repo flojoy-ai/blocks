@@ -7,6 +7,7 @@ import docstring from "@blocks/GENERATORS/SIMULATIONS/CONSTANT/docstring.json";
 import app from "@blocks/GENERATORS/SIMULATIONS/CONSTANT/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -75,6 +76,8 @@ def CONSTANT(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="CONSTANT" client:visible />
 

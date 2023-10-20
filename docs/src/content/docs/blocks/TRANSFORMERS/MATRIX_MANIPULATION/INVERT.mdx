@@ -7,6 +7,7 @@ import docstring from "@blocks/TRANSFORMERS/MATRIX_MANIPULATION/INVERT/docstring
 import app from "@blocks/TRANSFORMERS/MATRIX_MANIPULATION/INVERT/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -71,6 +72,8 @@ def INVERT(default: OrderedPair | Matrix, rcond: float = 1.0) -> OrderedPair | M
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="INVERT" client:visible />
 

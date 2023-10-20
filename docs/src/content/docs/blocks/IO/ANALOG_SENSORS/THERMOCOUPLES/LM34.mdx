@@ -7,6 +7,7 @@ import docstring from "@blocks/IO/ANALOG_SENSORS/THERMOCOUPLES/LM34/docstring.js
 import app from "@blocks/IO/ANALOG_SENSORS/THERMOCOUPLES/LM34/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -50,6 +51,8 @@ def LM34(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="LM34" client:visible />
 

@@ -7,6 +7,7 @@ import docstring from "@blocks/LOADERS/LOCAL_FILE_SYSTEM/LOCAL_FILE/docstring.js
 import app from "@blocks/LOADERS/LOCAL_FILE_SYSTEM/LOCAL_FILE/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -126,6 +127,8 @@ def LOCAL_FILE(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="LOCAL_FILE" client:visible />
 

@@ -7,6 +7,7 @@ import docstring from "@blocks/GENERATORS/SIMULATIONS/SINE/docstring.json";
 import app from "@blocks/GENERATORS/SIMULATIONS/SINE/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -81,6 +82,8 @@ def SINE(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="SINE" client:visible />
 

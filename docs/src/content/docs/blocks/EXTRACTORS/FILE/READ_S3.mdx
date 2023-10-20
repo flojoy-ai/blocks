@@ -7,6 +7,7 @@ import docstring from "@blocks/EXTRACTORS/FILE/READ_S3/docstring.json";
 import app from "@blocks/EXTRACTORS/FILE/READ_S3/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -72,6 +73,8 @@ def READ_S3(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="READ_S3" client:visible />
 

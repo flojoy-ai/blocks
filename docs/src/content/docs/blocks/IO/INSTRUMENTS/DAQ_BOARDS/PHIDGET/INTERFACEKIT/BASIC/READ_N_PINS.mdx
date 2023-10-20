@@ -7,6 +7,7 @@ import docstring from "@blocks/IO/INSTRUMENTS/DAQ_BOARDS/PHIDGET/INTERFACEKIT/BA
 import app from "@blocks/IO/INSTRUMENTS/DAQ_BOARDS/PHIDGET/INTERFACEKIT/BASIC/READ_N_PINS/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -66,6 +67,8 @@ def READ_N_PINS(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="READ_N_PINS" client:visible />
 

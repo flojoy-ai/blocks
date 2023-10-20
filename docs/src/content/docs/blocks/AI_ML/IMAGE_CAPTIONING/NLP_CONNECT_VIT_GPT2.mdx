@@ -7,6 +7,7 @@ import docstring from "@blocks/AI_ML/IMAGE_CAPTIONING/NLP_CONNECT_VIT_GPT2/docst
 import app from "@blocks/AI_ML/IMAGE_CAPTIONING/NLP_CONNECT_VIT_GPT2/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -74,6 +75,8 @@ def NLP_CONNECT_VIT_GPT2(default: Image) -> DataFrame:
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="NLP_CONNECT_VIT_GPT2" client:visible />
 

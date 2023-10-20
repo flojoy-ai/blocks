@@ -7,6 +7,7 @@ import docstring from "@blocks/TRANSFORMERS/TYPE_CASTING/DF_2_ORDERED_TRIPLE/doc
 import app from "@blocks/TRANSFORMERS/TYPE_CASTING/DF_2_ORDERED_TRIPLE/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -65,6 +66,8 @@ def DF_2_ORDERED_TRIPLE(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="DF_2_ORDERED_TRIPLE" client:visible />
 

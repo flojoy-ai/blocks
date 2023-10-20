@@ -7,6 +7,7 @@ import docstring from "@blocks/TRANSFORMERS/TYPE_CASTING/ORDERED_TRIPLE_2_SURFAC
 import app from "@blocks/TRANSFORMERS/TYPE_CASTING/ORDERED_TRIPLE_2_SURFACE/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -57,6 +58,8 @@ def ORDERED_TRIPLE_2_SURFACE(default: OrderedTriple) -> Surface:
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="ORDERED_TRIPLE_2_SURFACE" client:visible />
 

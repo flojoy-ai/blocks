@@ -7,6 +7,7 @@ import docstring from "@blocks/EXTRACTORS/FILE/OPEN_IMAGE/docstring.json";
 import app from "@blocks/EXTRACTORS/FILE/OPEN_IMAGE/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -64,6 +65,8 @@ def OPEN_IMAGE(file_path: str = "") -> Image:
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="OPEN_IMAGE" client:visible />
 

@@ -7,6 +7,7 @@ import docstring from "@blocks/IO/ROBOTICS/ARMS/MECADEMIC/MOVE_LIN/docstring.jso
 import app from "@blocks/IO/ROBOTICS/ARMS/MECADEMIC/MOVE_LIN/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -67,6 +68,8 @@ def MOVE_LIN(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="MOVE_LIN" client:visible />
 

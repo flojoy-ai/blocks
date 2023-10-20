@@ -7,6 +7,7 @@ import docstring from "@blocks/TRANSFORMERS/ORDERED_PAIR_MANIPULATION/ORDERED_PA
 import app from "@blocks/TRANSFORMERS/ORDERED_PAIR_MANIPULATION/ORDERED_PAIR_XY_INVERT/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -40,6 +41,8 @@ def ORDERED_PAIR_XY_INVERT(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="ORDERED_PAIR_XY_INVERT" client:visible />
 

@@ -7,6 +7,7 @@ import docstring from "@blocks/EXTRACTORS/DEBUGGING/PRINT_DATACONTAINER/docstrin
 import app from "@blocks/EXTRACTORS/DEBUGGING/PRINT_DATACONTAINER/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -37,6 +38,8 @@ def PRINT_DATACONTAINER(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="PRINT_DATACONTAINER" client:visible />
 

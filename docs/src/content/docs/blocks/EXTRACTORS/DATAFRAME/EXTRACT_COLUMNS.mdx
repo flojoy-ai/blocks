@@ -7,6 +7,7 @@ import docstring from "@blocks/EXTRACTORS/DATAFRAME/EXTRACT_COLUMNS/docstring.js
 import app from "@blocks/EXTRACTORS/DATAFRAME/EXTRACT_COLUMNS/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -52,6 +53,8 @@ def EXTRACT_COLUMNS(default: DataFrame | Matrix, columns: Array) -> DataFrame:
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="EXTRACT_COLUMNS" client:visible />
 

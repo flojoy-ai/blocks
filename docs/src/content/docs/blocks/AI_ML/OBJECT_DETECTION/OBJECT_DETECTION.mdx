@@ -7,6 +7,7 @@ import docstring from "@blocks/AI_ML/OBJECT_DETECTION/OBJECT_DETECTION/docstring
 import app from "@blocks/AI_ML/OBJECT_DETECTION/OBJECT_DETECTION/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -76,6 +77,8 @@ def OBJECT_DETECTION(default: Image) -> Image:
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="OBJECT_DETECTION" client:visible />
 

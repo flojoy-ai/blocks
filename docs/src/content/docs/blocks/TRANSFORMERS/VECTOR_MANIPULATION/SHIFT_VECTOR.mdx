@@ -7,6 +7,7 @@ import docstring from "@blocks/TRANSFORMERS/VECTOR_MANIPULATION/SHIFT_VECTOR/doc
 import app from "@blocks/TRANSFORMERS/VECTOR_MANIPULATION/SHIFT_VECTOR/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -45,6 +46,8 @@ def SHIFT_VECTOR(default: Vector, shift: int = 1) -> Vector:
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="SHIFT_VECTOR" client:visible />
 

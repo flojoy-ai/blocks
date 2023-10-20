@@ -7,6 +7,7 @@ import docstring from "@blocks/EXTRACTORS/FILE/OPEN_PARQUET/docstring.json";
 import app from "@blocks/EXTRACTORS/FILE/OPEN_PARQUET/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -52,6 +53,8 @@ def OPEN_PARQUET(file_path: str = "") -> DataFrame:
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="OPEN_PARQUET" client:visible />
 

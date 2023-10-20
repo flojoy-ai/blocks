@@ -13,14 +13,14 @@ const HandleComponent = ({
 
   return (
     <>
-      <div className="!m-0 absolute -left-1 top-0 flex h-full flex-col justify-evenly">
+      <div className="absolute -left-1 top-0 !m-0 flex h-full flex-col justify-evenly">
         {inputs.map((param) => (
           <div
             className="relative flex items-center"
             key={`input-${data.id}-${param.name}`}
           >
             <CustomHandle
-              className="!m-0 left-0"
+              className="left-0 !m-0"
               position={Position.Left}
               type="target"
               param={param}
@@ -30,14 +30,14 @@ const HandleComponent = ({
         ))}
       </div>
 
-      <div className="!m-0 absolute -right-1 top-0 flex h-full flex-col justify-evenly">
+      <div className="absolute -right-1 top-0 !m-0 flex h-full flex-col justify-evenly">
         {outputs.map((param) => (
           <div
             className="relative flex items-center"
             key={`input-${data.id}-${param.name}`}
           >
             <CustomHandle
-              className="!m-0 right-0"
+              className="right-0 !m-0"
               position={Position.Right}
               type="source"
               param={param}

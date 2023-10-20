@@ -7,6 +7,7 @@ import docstring from "@blocks/TRANSFORMERS/VECTOR_MANIPULATION/INTERLEAVE_VECTO
 import app from "@blocks/TRANSFORMERS/VECTOR_MANIPULATION/INTERLEAVE_VECTOR/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -50,6 +51,8 @@ def INTERLEAVE_VECTOR(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="INTERLEAVE_VECTOR" client:visible />
 

@@ -7,6 +7,7 @@ import docstring from "@blocks/TRANSFORMERS/CALCULUS/DIFFERENTIATE/docstring.jso
 import app from "@blocks/TRANSFORMERS/CALCULUS/DIFFERENTIATE/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -62,6 +63,8 @@ def DIFFERENTIATE(default: OrderedPair | Vector) -> OrderedPair:
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="DIFFERENTIATE" client:visible />
 

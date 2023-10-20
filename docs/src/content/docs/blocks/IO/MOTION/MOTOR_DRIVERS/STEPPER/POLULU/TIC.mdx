@@ -7,6 +7,7 @@ import docstring from "@blocks/IO/MOTION/MOTOR_DRIVERS/STEPPER/POLULU/TIC/docstr
 import app from "@blocks/IO/MOTION/MOTOR_DRIVERS/STEPPER/POLULU/TIC/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -70,6 +71,8 @@ def TIC(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="TIC" client:visible />
 

@@ -7,6 +7,7 @@ import docstring from "@blocks/GENERATORS/SAMPLE_DATASETS/SCIKIT_LEARN_DATASET/d
 import app from "@blocks/GENERATORS/SAMPLE_DATASETS/SCIKIT_LEARN_DATASET/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -82,6 +83,8 @@ def SCIKIT_LEARN_DATASET(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="SCIKIT_LEARN_DATASET" client:visible />
 

@@ -7,6 +7,7 @@ import docstring from "@blocks/TRANSFORMERS/TYPE_CASTING/MAT_2_DF/docstring.json
 import app from "@blocks/TRANSFORMERS/TYPE_CASTING/MAT_2_DF/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -44,6 +45,8 @@ def MAT_2_DF(default: Matrix) -> DataFrame:
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="MAT_2_DF" client:visible />
 

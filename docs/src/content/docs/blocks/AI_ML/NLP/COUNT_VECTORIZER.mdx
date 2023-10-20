@@ -7,6 +7,7 @@ import docstring from "@blocks/AI_ML/NLP/COUNT_VECTORIZER/docstring.json";
 import app from "@blocks/AI_ML/NLP/COUNT_VECTORIZER/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -56,6 +57,8 @@ def COUNT_VECTORIZER(default: DataFrame | Matrix | Vector) -> CountVectorizerOut
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="COUNT_VECTORIZER" client:visible />
 

@@ -7,6 +7,7 @@ import docstring from "@blocks/AI_ML/CLASSIFICATION/TRAIN_TEST_SPLIT/docstring.j
 import app from "@blocks/AI_ML/CLASSIFICATION/TRAIN_TEST_SPLIT/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -51,6 +52,8 @@ def TRAIN_TEST_SPLIT(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="TRAIN_TEST_SPLIT" client:visible />
 

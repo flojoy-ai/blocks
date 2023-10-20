@@ -7,6 +7,7 @@ import docstring from "@blocks/AI_ML/SEGMENTATION/DEEPLAB_V3/docstring.json";
 import app from "@blocks/AI_ML/SEGMENTATION/DEEPLAB_V3/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -99,6 +100,8 @@ def DEEPLAB_V3(default: Image) -> Image:
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="DEEPLAB_V3" client:visible />
 

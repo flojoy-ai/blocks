@@ -7,6 +7,7 @@ import docstring from "@blocks/IO/INSTRUMENTS/MULTIMETERS/NI/USB_4065/BASIC/AC_C
 import app from "@blocks/IO/INSTRUMENTS/MULTIMETERS/NI/USB_4065/BASIC/AC_CURRENT_USB4065/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -74,6 +75,8 @@ def AC_CURRENT_USB4065(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="AC_CURRENT_USB4065" client:visible />
 

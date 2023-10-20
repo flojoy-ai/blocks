@@ -7,6 +7,7 @@ import docstring from "@blocks/IO/INSTRUMENTS/OSCILLOSCOPES/TEKTRONIX/MDO3XXX/BA
 import app from "@blocks/IO/INSTRUMENTS/OSCILLOSCOPES/TEKTRONIX/MDO3XXX/BASIC/MEASURE_PHASE_MDO3XXX/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -62,6 +63,8 @@ def MEASURE_PHASE_MDO3XXX(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="MEASURE_PHASE_MDO3XXX" client:visible />
 

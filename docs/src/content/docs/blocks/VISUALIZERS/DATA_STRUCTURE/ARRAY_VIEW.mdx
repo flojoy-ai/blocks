@@ -7,6 +7,7 @@ import docstring from "@blocks/VISUALIZERS/DATA_STRUCTURE/ARRAY_VIEW/docstring.j
 import app from "@blocks/VISUALIZERS/DATA_STRUCTURE/ARRAY_VIEW/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -111,6 +112,8 @@ def ARRAY_VIEW(default: OrderedPair | Matrix | DataFrame | Image) -> Plotly:
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="ARRAY_VIEW" client:visible />
 

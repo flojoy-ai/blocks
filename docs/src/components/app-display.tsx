@@ -43,7 +43,7 @@ const AppDisplay = ({ app, blockName }: AppDisplayProps) => {
   };
 
   return (
-    <div className="mt-6 flex flex-col not-content">
+    <div className="not-content mt-6 flex flex-col">
       <div>
         <div className="flex justify-center">
           <div style={{ width: "100vw", height: 400 }} className="">
@@ -64,7 +64,7 @@ const AppDisplay = ({ app, blockName }: AppDisplayProps) => {
       </div>
       <div className="py-2" />
       <button
-        className="flex items-center rounded p-2 justify-center gap-2 bg-gray-100 dark:bg-gray-800 hover:border-accent1 border border-transparent transition duration-300"
+        className="flex items-center justify-center gap-2 rounded border border-transparent bg-gray-100 p-2 transition duration-300 hover:border-accent1 dark:bg-gray-800"
         onClick={download}
       >
         <div>Download this Flojoy App</div>

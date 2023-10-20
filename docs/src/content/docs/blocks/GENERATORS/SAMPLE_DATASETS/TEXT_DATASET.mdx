@@ -7,6 +7,7 @@ import docstring from "@blocks/GENERATORS/SAMPLE_DATASETS/TEXT_DATASET/docstring
 import app from "@blocks/GENERATORS/SAMPLE_DATASETS/TEXT_DATASET/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -96,6 +97,8 @@ def TEXT_DATASET(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="TEXT_DATASET" client:visible />
 

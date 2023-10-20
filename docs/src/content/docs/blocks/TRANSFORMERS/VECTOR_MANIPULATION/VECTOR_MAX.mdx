@@ -7,6 +7,7 @@ import docstring from "@blocks/TRANSFORMERS/VECTOR_MANIPULATION/VECTOR_MAX/docst
 import app from "@blocks/TRANSFORMERS/VECTOR_MANIPULATION/VECTOR_MAX/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -39,6 +40,8 @@ def VECTOR_MAX(default: Vector) -> Scalar:
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="VECTOR_MAX" client:visible />
 

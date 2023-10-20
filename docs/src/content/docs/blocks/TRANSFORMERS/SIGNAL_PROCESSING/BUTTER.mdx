@@ -7,6 +7,7 @@ import docstring from "@blocks/TRANSFORMERS/SIGNAL_PROCESSING/BUTTER/docstring.j
 import app from "@blocks/TRANSFORMERS/SIGNAL_PROCESSING/BUTTER/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -71,6 +72,8 @@ def BUTTER(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="BUTTER" client:visible />
 

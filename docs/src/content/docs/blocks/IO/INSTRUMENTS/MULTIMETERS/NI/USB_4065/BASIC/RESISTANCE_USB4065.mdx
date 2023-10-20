@@ -7,6 +7,7 @@ import docstring from "@blocks/IO/INSTRUMENTS/MULTIMETERS/NI/USB_4065/BASIC/RESI
 import app from "@blocks/IO/INSTRUMENTS/MULTIMETERS/NI/USB_4065/BASIC/RESISTANCE_USB4065/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -77,6 +78,8 @@ def RESISTANCE_USB4065(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="RESISTANCE_USB4065" client:visible />
 

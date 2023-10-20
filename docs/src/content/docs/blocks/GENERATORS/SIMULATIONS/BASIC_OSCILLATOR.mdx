@@ -7,6 +7,7 @@ import docstring from "@blocks/GENERATORS/SIMULATIONS/BASIC_OSCILLATOR/docstring
 import app from "@blocks/GENERATORS/SIMULATIONS/BASIC_OSCILLATOR/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 
@@ -76,6 +77,8 @@ def BASIC_OSCILLATOR(
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={app} blockName="BASIC_OSCILLATOR" client:visible />
 

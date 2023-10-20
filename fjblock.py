@@ -37,6 +37,7 @@ import docstring from "@blocks/{block_folder_path}/docstring.json";
 import app from "@blocks/{block_folder_path}/app.json";
 import PythonDocsDisplay from "@/components/python-docs-display.astro";
 import AppDisplay from "@/components/app-display.tsx";
+import GetHelpWidget from "@/components/get-help-widget.astro";
 
 <PythonDocsDisplay docstring={{docstring}} />
 
@@ -49,6 +50,8 @@ import AppDisplay from "@/components/app-display.tsx";
 </details>
 
 ## Example
+
+<GetHelpWidget />
 
 <AppDisplay app={{app}} blockName="{block_name}" client:visible />
 
