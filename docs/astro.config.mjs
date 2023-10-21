@@ -62,6 +62,18 @@ export default defineConfig({
             collapsed: true,
           },
         },
+        {
+          label: "Contribution Guide",
+          items: [
+            {
+              label: "Contribute to Docs",
+              autogenerate: {
+                directory: "contribution/docs",
+                collapsed: true,
+              },
+            },
+          ],
+        },
       ],
       defaultLocale: "root",
       locales: {
