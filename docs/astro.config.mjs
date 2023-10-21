@@ -66,6 +66,13 @@ export default defineConfig({
           label: "Contribution Guide",
           items: [
             {
+              label: "Contribute to Blocks",
+              autogenerate: {
+                directory: "contribution/blocks",
+                collapsed: true,
+              },
+            },
+            {
               label: "Contribute to Docs",
               autogenerate: {
                 directory: "contribution/docs",
