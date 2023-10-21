@@ -16,6 +16,11 @@ However, if you are trying to add a doc page for the block you made, or edit the
 doc page for a specific block, you must do that in the `blocks/` directory. You
 can find more instructions below.
 
+## Contribution Guide
+
+**TLDR: Just update whatever file in your block's folder (within the `blocks/` directory)
+and run `poetry run python3 fjblock.py sync` to auto generate the docs.**
+
 Each block's documentation page is made of the following components:
 
 ##### 1. A prettified docstring display for this block
