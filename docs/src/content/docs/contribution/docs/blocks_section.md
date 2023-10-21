@@ -42,4 +42,8 @@ Same idea as before, you can add an `example.md` file in the same folder as the
 block's Python code. Or simply update the existing `example.md` file. Run
 `poetry run python3 fjblock.py sync` once you are done!
 
+Note: If you encounter any error while running the sync command, don't panic!
+The error should be very self explanatory and you should treat the error message
+as your best friend when debugging.
+
 Happy contributing, we cannot wait to see the Flojoy Block you made!
