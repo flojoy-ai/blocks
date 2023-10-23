@@ -56,13 +56,6 @@ export default defineConfig({
           },
         },
         {
-          label: "Instruments Database",
-          autogenerate: {
-            directory: "instruments",
-            collapsed: true,
-          },
-        },
-        {
           label: "Contribution Guide",
           items: [
             {
