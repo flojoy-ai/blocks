@@ -26,6 +26,17 @@ const FlowMiniMap = () => {
 
 const AppDisplay = ({ app, blockName }: AppDisplayProps) => {
   const appObject = app["rfInstance"];
+
+  if (!appObject) {
+    const errMsg = `Invalid app.json found for ${blockName}, please double check and try again.`;
+    console.error(errMsg);
+    return (
+      <div className="flex items-center justify-center gap-2 rounded border border-transparent bg-gray-100 p-2 transition duration-300 hover:border-accent1 dark:bg-gray-800">
+        {errMsg}
+      </div>
+    );
+  }
+
   const nodes = appObject["nodes"];
   const edges = appObject["edges"];
 
