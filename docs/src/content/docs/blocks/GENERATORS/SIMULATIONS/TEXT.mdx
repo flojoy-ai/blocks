@@ -14,32 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-from flojoy import TextBlob, flojoy, DataContainer
-from typing import Optional
+import pythonCode from "@blocks/GENERATORS/SIMULATIONS/TEXT/TEXT.py?raw";
 
+import { Code } from 'astro:components';
 
-@flojoy
-def TEXT(
-    _: Optional[DataContainer] = None,
-    value: str = "Hello World!",
-) -> TextBlob:
-    """The TEXT node returns a TextBlob DataContainer.
-
-    Parameters
-    ----------
-    value : str
-        The value set in Parameters.
-
-    Returns
-    -------
-    TextBlob
-        Return the value being set in Parameters.
-    """
-
-    return TextBlob(text_blob=value)
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/GENERATORS/SIMULATIONS/TEXT/TEXT.py)
 

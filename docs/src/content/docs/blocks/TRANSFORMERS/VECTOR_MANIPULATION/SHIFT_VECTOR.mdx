@@ -14,35 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-from numpy import roll
-from flojoy import flojoy, Vector
+import pythonCode from "@blocks/TRANSFORMERS/VECTOR_MANIPULATION/SHIFT_VECTOR/SHIFT_VECTOR.py?raw";
 
+import { Code } from 'astro:components';
 
-@flojoy
-def SHIFT_VECTOR(default: Vector, shift: int = 1) -> Vector:
-    """The SHIFT_VECTOR node shifts the elements in the vector by the amount specified
-
-    Inputs
-    ------
-    v : Vector
-        The input vector to shift elements from
-
-    Parameters
-    ----------
-    shift: int
-        the number of places in which elements are moved (negative values will shift them to the left)
-
-    Returns
-    -------
-    Vector
-        The new vector with elements shifted
-    """
-
-    v = roll(default.v, shift)
-    return Vector(v=v)
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/VECTOR_MANIPULATION/SHIFT_VECTOR/SHIFT_VECTOR.py)
 

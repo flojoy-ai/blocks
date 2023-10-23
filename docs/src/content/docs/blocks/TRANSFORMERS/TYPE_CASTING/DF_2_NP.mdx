@@ -14,32 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-import pandas as pd
-from flojoy import flojoy, DataFrame, Matrix
+import pythonCode from "@blocks/TRANSFORMERS/TYPE_CASTING/DF_2_NP/DF_2_NP.py?raw";
 
+import { Code } from 'astro:components';
 
-@flojoy
-def DF_2_NP(default: DataFrame) -> Matrix:
-    """The DF_2_NP node takes one dataframe type data and converts it to a matrix type data.
-
-    Inputs
-    ------
-    default : DataFrame
-        The input dataframe to which we apply the conversion to.
-
-    Returns
-    -------
-    Matrix
-        The matrix result from the conversion of the input.
-    """
-
-    df = default.m
-    df_to_numpy = df.to_numpy(dtype=object)
-
-    return Matrix(m=df_to_numpy)
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/TYPE_CASTING/DF_2_NP/DF_2_NP.py)
 

@@ -14,29 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-from flojoy import flojoy, Vector, Matrix
+import pythonCode from "@blocks/TRANSFORMERS/TYPE_CASTING/MATRIX_2_VECTOR/MATRIX_2_VECTOR.py?raw";
 
+import { Code } from 'astro:components';
 
-@flojoy
-def MATRIX_2_VECTOR(default: Matrix) -> Vector:
-    """The MATRIX_2_VECTOR node takes a matrix and flatten it into vector type data.
-
-    Inputs
-    ------
-    default: Matrix
-        The input matrix that will be transformed into vector data type.
-
-    Returns
-    -------
-    Vector
-        Vector that is flatten from input matrix.
-    """
-    rVector = default.m.flatten()
-
-    return Vector(v=rVector)
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/TYPE_CASTING/MATRIX_2_VECTOR/MATRIX_2_VECTOR.py)
 

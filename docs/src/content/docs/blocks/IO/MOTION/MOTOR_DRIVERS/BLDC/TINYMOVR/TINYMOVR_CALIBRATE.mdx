@@ -14,45 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-from flojoy import flojoy, TextBlob
+import pythonCode from "@blocks/IO/MOTION/MOTOR_DRIVERS/BLDC/TINYMOVR/TINYMOVR_CALIBRATE/TINYMOVR_CALIBRATE.py?raw";
 
-import can, traceback
-from tinymovr.tee import init_tee, destroy_tee
-from tinymovr.config import get_bus_config, create_device
+import { Code } from 'astro:components';
 
-
-@flojoy(deps={"tinymovr": "1.6.2"})
-def TINYMOVR_CALIBRATE() -> TextBlob:
-    """Discover and calibrate a connected tinymovr BLDC driver through a CANine USB-to-CAN controller.
-
-    Parameters
-    ----------
-    None
-
-    Returns
-    -------
-    TextBlob
-        Traceback error
-    """
-
-    bitrate = 1000000
-    params = get_bus_config(["canine", "slcan_disco"])
-    params["bitrate"] = bitrate
-    tb = ""
-
-    try:
-        with can.Bus(**params) as bus:
-            init_tee(can.Bus(**params))
-            tm = create_device(node_id=1)
-            tm.controller.calibrate()
-            destroy_tee()
-    except:
-        tb = traceback.format_exc()
-
-    return TextBlob(text_blob=tb)
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/MOTION/MOTOR_DRIVERS/BLDC/TINYMOVR/TINYMOVR_CALIBRATE/TINYMOVR_CALIBRATE.py)
 

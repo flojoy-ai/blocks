@@ -14,42 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-from os import path
-from flojoy import flojoy, DataFrame
-import pandas as pd
+import pythonCode from "@blocks/EXTRACTORS/FILE/OPEN_PARQUET/OPEN_PARQUET.py?raw";
 
+import { Code } from 'astro:components';
 
-@flojoy(deps={"pyarrow": "12.0.1", "fastparquet": "2023.7.0"})
-def OPEN_PARQUET(file_path: str = "") -> DataFrame:
-    """The OPEN_PARQUET node loads a local file of the .parquet file format. It then returns the file as a pandas.Dataframe type.
-
-    Inputs
-    ------
-    default: None
-
-    Parameters
-    ----------
-    file_path : str
-        File path to the .parquet file or an URL of a .parquet file.
-
-    Returns
-    -------
-    DataFrame
-        DataFrame loaded from .parquet file
-    """
-
-    if file_path[-8:] != ".parquet":
-        raise ValueError(f"File type {file_path[-8:]} unsupported.")
-
-    if not path.exists(file_path):
-        raise ValueError("File path does not exist!")
-
-    read_parquet = pd.read_parquet(file_path)
-
-    return DataFrame(df=read_parquet)
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/EXTRACTORS/FILE/OPEN_PARQUET/OPEN_PARQUET.py)
 

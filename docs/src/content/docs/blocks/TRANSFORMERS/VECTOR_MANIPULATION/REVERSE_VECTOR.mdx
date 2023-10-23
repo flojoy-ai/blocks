@@ -14,32 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-from numpy import flip
-from flojoy import flojoy, Vector
+import pythonCode from "@blocks/TRANSFORMERS/VECTOR_MANIPULATION/REVERSE_VECTOR/REVERSE_VECTOR.py?raw";
 
+import { Code } from 'astro:components';
 
-@flojoy
-def REVERSE_VECTOR(
-    default: Vector,
-) -> Vector:
-    """The REVERSE_VECTOR node returns the input vector where
-    the elements are in the reverse order
-
-    Inputs
-    ------
-    default : Vector
-        The input vector
-
-    Returns
-    -------
-    Vector
-        Reversed input vector
-    """
-
-    return Vector(v=flip(default.v))
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/VECTOR_MANIPULATION/REVERSE_VECTOR/REVERSE_VECTOR.py)
 

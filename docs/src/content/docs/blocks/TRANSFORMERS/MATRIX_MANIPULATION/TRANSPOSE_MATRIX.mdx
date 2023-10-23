@@ -14,29 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-from numpy import transpose
-from flojoy import flojoy, Matrix
+import pythonCode from "@blocks/TRANSFORMERS/MATRIX_MANIPULATION/TRANSPOSE_MATRIX/TRANSPOSE_MATRIX.py?raw";
 
+import { Code } from 'astro:components';
 
-@flojoy
-def TRANSPOSE_MATRIX(default: Matrix) -> Matrix:
-    """The TRANSPOSE_MATRIX node takes an input 2D matrix and transposes it.
-
-    Inputs
-    ------
-    a : Matrix
-        The input matrix to be transposed
-
-    Returns
-    -------
-    Matrix
-        The transposed matrix
-    """
-
-    return Matrix(m=transpose(default.m, (1, 0)))
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/MATRIX_MANIPULATION/TRANSPOSE_MATRIX/TRANSPOSE_MATRIX.py)
 

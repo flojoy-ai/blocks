@@ -64,21 +64,25 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
         )
         return self
 
-    def add_python_code(self, python_code):
+    def add_python_code(self):
         self.template += """\
 <details>
 <summary>Python Code</summary>
 
-```python
-{python_code}
-```
+import pythonCode from "@blocks/{block_folder_path}/{block_name}.py?raw";
+
+import {{ Code }} from 'astro:components';
+
+<Code code={{pythonCode}} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub]({github_link})
 
 </details>
 
 """.format(
-            python_code=python_code, github_link=self.github_link
+            github_link=self.github_link,
+            block_folder_path=self.block_folder_path,
+            block_name=self.block_name,
         )
         return self
 
@@ -186,7 +190,7 @@ def sync():
                                 block_folder_path=block_folder_path,
                             )
                             .add_python_docs_display()
-                            .add_python_code(python_code)
+                            .add_python_code()
                             .build()
                         )
                     else:
@@ -196,7 +200,7 @@ def sync():
                                 block_folder_path=block_folder_path,
                             )
                             .add_python_docs_display()
-                            .add_python_code(python_code)
+                            .add_python_code()
                             .add_example_app()
                             .build()
                         )

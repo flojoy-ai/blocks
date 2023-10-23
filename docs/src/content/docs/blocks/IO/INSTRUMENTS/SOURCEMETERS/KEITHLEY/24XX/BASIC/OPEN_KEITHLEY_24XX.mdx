@@ -14,43 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-import serial
-from typing import Optional
-from flojoy import SerialDevice, flojoy, DataContainer
-from flojoy.connection_manager import DeviceConnectionManager
+import pythonCode from "@blocks/IO/INSTRUMENTS/SOURCEMETERS/KEITHLEY/24XX/BASIC/OPEN_KEITHLEY_24XX/OPEN_KEITHLEY_24XX.py?raw";
 
+import { Code } from 'astro:components';
 
-@flojoy(deps={"pyserial": "3.5"})
-def OPEN_KEITHLEY_24XX(
-    device: SerialDevice, baudrate: int = 9600
-) -> Optional[DataContainer]:
-    """The OPEN_KEITHLEY_24XX node opens a connection with the Keithley 2400 source meter.
-
-    Parameters
-    ----------
-    device: Serial
-        The connected serial device corresponding to the Keithley 2400 source meter.
-
-    Returns
-    -------
-    None
-    """
-
-    ser = serial.Serial(
-        port=device.get_port(),
-        baudrate=baudrate,
-        bytesize=serial.EIGHTBITS,
-        parity=serial.PARITY_NONE,
-        stopbits=serial.STOPBITS_ONE,
-        timeout=1,
-    )
-
-    DeviceConnectionManager.register_connection(device, ser)
-
-    return None
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/IO/INSTRUMENTS/SOURCEMETERS/KEITHLEY/24XX/BASIC/OPEN_KEITHLEY_24XX/OPEN_KEITHLEY_24XX.py)
 

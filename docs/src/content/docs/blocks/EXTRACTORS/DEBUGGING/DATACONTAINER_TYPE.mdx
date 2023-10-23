@@ -14,27 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-from flojoy import flojoy, DataContainer, TextBlob
+import pythonCode from "@blocks/EXTRACTORS/DEBUGGING/DATACONTAINER_TYPE/DATACONTAINER_TYPE.py?raw";
 
+import { Code } from 'astro:components';
 
-@flojoy()
-def DATACONTAINER_TYPE(
-    default: DataContainer,
-) -> TextBlob:
-    """The DATACONTAINER_TYPE node returns a TextBlob containing the input DataContainer type (e.g. Vector).
-
-    Must use the TEXT_VIEW node to view the text.
-
-    Returns
-    -------
-    DataContainer
-        TextBlob: Input DataContainer type
-    """
-
-    return TextBlob(text_blob=default.type)
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/EXTRACTORS/DEBUGGING/DATACONTAINER_TYPE/DATACONTAINER_TYPE.py)
 

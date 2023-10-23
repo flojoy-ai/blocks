@@ -14,27 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-from flojoy import flojoy, DataContainer, TextBlob
+import pythonCode from "@blocks/EXTRACTORS/DEBUGGING/PRINT_DATACONTAINER/PRINT_DATACONTAINER.py?raw";
 
+import { Code } from 'astro:components';
 
-@flojoy()
-def PRINT_DATACONTAINER(
-    default: DataContainer,
-) -> TextBlob:
-    """The PRINT_DATACONTAINER node returns a TextBlob containing input DataContainer information.
-
-    Must use the TEXT_VIEW node to view the text.
-
-    Returns
-    -------
-    DataContainer
-        TextBlob: Input datacontainer information
-    """
-
-    return TextBlob(text_blob=str(default))
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/EXTRACTORS/DEBUGGING/PRINT_DATACONTAINER/PRINT_DATACONTAINER.py)
 

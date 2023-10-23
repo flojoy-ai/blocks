@@ -14,29 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-import numpy as np
-from flojoy import Scalar, Vector, flojoy
+import pythonCode from "@blocks/TRANSFORMERS/VECTOR_MANIPULATION/VECTOR_MIN/VECTOR_MIN.py?raw";
 
+import { Code } from 'astro:components';
 
-@flojoy
-def VECTOR_MIN(default: Vector) -> Scalar:
-    """The VECTOR_MIN node returns the minimum value from the Vector
-
-    Parameters
-    ----------
-    v : Vector
-        The input vector to use min peration
-
-    Returns
-    -------
-    Scalar
-        The minimum value found from the input vector
-    """
-
-    return Scalar(c=np.min(default.v))
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/VECTOR_MANIPULATION/VECTOR_MIN/VECTOR_MIN.py)
 

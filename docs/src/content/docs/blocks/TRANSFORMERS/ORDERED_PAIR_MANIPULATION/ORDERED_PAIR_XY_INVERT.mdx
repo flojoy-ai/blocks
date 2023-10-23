@@ -14,30 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-from flojoy import flojoy, OrderedPair
+import pythonCode from "@blocks/TRANSFORMERS/ORDERED_PAIR_MANIPULATION/ORDERED_PAIR_XY_INVERT/ORDERED_PAIR_XY_INVERT.py?raw";
 
+import { Code } from 'astro:components';
 
-@flojoy
-def ORDERED_PAIR_XY_INVERT(
-    default: OrderedPair,
-) -> OrderedPair:
-    """The ORDERED_PAIR_XY_INVERT node returns the OrderedPair where the axes are inverted.
-
-    Inputs
-    ------
-    default : OrderedPair
-        The input OrderedPair that we would like to invert the axes.
-
-    Returns
-    -------
-    OrderedPair
-        The OrderedPair that is inverted.
-    """
-
-    return OrderedPair(x=default.y, y=default.x)
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/TRANSFORMERS/ORDERED_PAIR_MANIPULATION/ORDERED_PAIR_XY_INVERT/ORDERED_PAIR_XY_INVERT.py)
 

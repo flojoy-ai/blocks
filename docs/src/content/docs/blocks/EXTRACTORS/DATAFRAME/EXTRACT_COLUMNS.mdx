@@ -14,42 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-from flojoy import flojoy, DataFrame, Matrix, Array
-import numpy as np
+import pythonCode from "@blocks/EXTRACTORS/DATAFRAME/EXTRACT_COLUMNS/EXTRACT_COLUMNS.py?raw";
 
+import { Code } from 'astro:components';
 
-@flojoy
-def EXTRACT_COLUMNS(default: DataFrame | Matrix, columns: Array) -> DataFrame:
-    """The EXTRACT_COLUMNS node takes an input dataframe/matrix and returns a dataframe/matrix with only the specified columns.
-
-    Inputs
-    ------
-    default : DataFrame|Matrix
-        Input to use as the table for column extraction
-
-    Parameters
-    ----------
-    columns : list of str or list of int
-        The columns to extract from the input dataframe
-
-    Returns
-    -------
-    DataFrame|Matrix
-        DataFrame or Matrix with only the specified columns
-    """
-
-    if isinstance(default, DataFrame):
-        df = default.m
-        new_df = df[columns.unwrap()] if columns else df
-        return DataFrame(df=new_df)
-    else:
-        matrix = default.m
-        indices = np.array(columns.unwrap(), dtype=int)
-        new_matrix = matrix[:, indices] if columns else matrix
-        return Matrix(m=new_matrix)
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/EXTRACTORS/DATAFRAME/EXTRACT_COLUMNS/EXTRACT_COLUMNS.py)
 

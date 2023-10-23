@@ -14,43 +14,11 @@ import PythonDocsDisplay from "@/components/python-docs-display.astro";
 <details>
 <summary>Python Code</summary>
 
-```python
-from flojoy import flojoy, DataFrame
-from plotly.express import data
-from typing import Literal
+import pythonCode from "@blocks/GENERATORS/SAMPLE_DATASETS/PLOTLY_DATASET/PLOTLY_DATASET.py?raw";
 
+import { Code } from 'astro:components';
 
-@flojoy
-def PLOTLY_DATASET(
-    dataset_key: Literal[
-        "wind",
-        "iris",
-        "carshare",
-        "tips",
-        "election",
-        "experiment",
-        "gapminder",
-        "medals_long",
-        "medals_wide",
-        "stocks",
-    ] = "wind"
-) -> DataFrame:
-    """The PLOTLY_DATASET node retrieves a pandas DataFrame from a Plotly built-in dataset using the provided dataset_key parameter and returns it wrapped in a Flojoy DataFrame class.
-
-    Parameters
-    ----------
-    dataset_key : str
-
-    Returns
-    -------
-    DataFrame
-    """
-
-    df = getattr(data, dataset_key)()
-
-    return DataFrame(df=df)
-
-```
+<Code code={pythonCode} lang="py" wrap theme="dracula" />
 
 [Find this Flojoy Block on GitHub](https://github.com/flojoy-ai/blocks/blob/main/blocks/GENERATORS/SAMPLE_DATASETS/PLOTLY_DATASET/PLOTLY_DATASET.py)
 
