@@ -155,10 +155,6 @@ def sync():
 
                 block_category = block_folder_path.split("/")[0]
 
-                # Read the Python file
-                with open(os.path.join(root, file), "r") as f:
-                    python_code = f.read()
-
                 if not os.path.exists(os.path.join(root, "example.md")):
                     if block_category in auto_gen_categories:
                         pass
