@@ -149,25 +149,19 @@ def sync():
                 with open(os.path.join(root, file), "r") as f:
                     python_code = f.read()
 
-                # Read the example.md file
-                try:
-                    with open(os.path.join(root, "example.md"), "r") as f:
-                        example = f.read()
-                except FileNotFoundError:
+                if not os.path.exists(os.path.join(root, "example.md")):
                     if block_category in auto_gen_categories:
-                        example = ""
+                        pass
                     else:
                         print(f"{err_string} No example.md found for {file_name}")
-                        example = ""
-                        # sys.exit(1)
+                        sys.exit(1)
 
                 if not os.path.exists(os.path.join(root, "app.json")):
                     if block_category in auto_gen_categories:
-                        # continue
                         pass
                     else:
                         print(f"{err_string} No app.json found for {file_name}")
-                        # sys.exit(1)
+                        sys.exit(1)
 
                 # Create the markdown template file in docs
 
