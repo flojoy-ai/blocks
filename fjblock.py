@@ -239,24 +239,13 @@ def add(block: str):
 
     # if it is valid, we can start scaffolding the boilerplate
 
-    # let's first start with the docs
-
-    docs_target_path = os.path.dirname(
-        os.path.join(docs_folder_prefix, block.replace(".", "/"))
-    )
-    os.makedirs(docs_target_path, exist_ok=True)
-    with open(os.path.join(docs_target_path, f"{block_name}.md"), "w+") as f:
-        f.write(docs_template.format(block_name=block_name))
-
     # lastly we finish with the python block code
     blocks_target_path = os.path.join(blocks_folder_prefix, block.replace(".", "/"))
     os.makedirs(blocks_target_path, exist_ok=True)
     with open(os.path.join(blocks_target_path, f"{block_name}.py"), "w+") as f:
         f.write(block_template.format(block_name=block_name))
 
-    print(
-        f"Done! Checkout your '{docs_target_path}' and '{blocks_target_path}' folders for the boiletplates."
-    )
+    print(f"Done! Your Flojoy Block is ready at '{blocks_target_path}'")
 
 
 @app.callback()
