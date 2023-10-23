@@ -13,8 +13,6 @@ state = {"verbose": False}
 warn_string = "[bold orange]Warning![/bold orange]"
 err_string = "[bold red]Error![/bold red]"
 
-github_base = "https://github.com/flojoy-ai/blocks/blob/main/blocks/{block_folder_path}/{block_name}.py"
-
 docs_folder_prefix = "docs/src/content/docs/blocks/"
 blocks_folder_prefix = "blocks/"
 
@@ -32,9 +30,11 @@ def {block_name}(
 
 class DocsTemplateBuilder:
     def __init__(self, block_name, block_folder_path):
+        self.github_base = "https://github.com/flojoy-ai/blocks/blob/main/blocks/{block_folder_path}/{block_name}.py"
+
         self.block_name = block_name
         self.block_folder_path = block_folder_path
-        self.github_link = github_base.format(
+        self.github_link = self.github_base.format(
             block_name=block_name, block_folder_path=block_folder_path
         )
 
