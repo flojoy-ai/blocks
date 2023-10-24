@@ -33,9 +33,9 @@ export default defineConfig({
           tag: "link",
           attrs: {
             rel: "stylesheet",
-            href: "https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.css",
+            href: "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css",
             integrity:
-              "sha384-WsHMgfkABRyG494OmuiNmkAOk8nhO1qE+Y6wns6v+EoNoTNxrWxYpl5ZYWFOLPCM",
+              "sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV",
             crossorigin: "anonymous",
           },
         },
