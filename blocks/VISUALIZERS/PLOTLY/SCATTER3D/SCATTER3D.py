@@ -1,6 +1,6 @@
-import plotly.graph_objects as go
 import plotly.express as px
-from flojoy import OrderedTriple, DataFrame, Plotly, flojoy
+import plotly.graph_objects as go
+from flojoy import DataFrame, OrderedTriple, Plotly, flojoy
 from nodes.VISUALIZERS.template import plot_layout
 
 
@@ -8,8 +8,8 @@ from nodes.VISUALIZERS.template import plot_layout
 def SCATTER3D(default: OrderedTriple | DataFrame) -> Plotly:
     """The SCATTER3D node creates a Plotly 3D Scatter visualization for a given input DataContainer.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : OrderedTriple|DataFrame
         the DataContainer to be visualized
 

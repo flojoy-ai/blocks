@@ -1,4 +1,4 @@
-from flojoy import flojoy, run_in_venv, Image
+from flojoy import Image, flojoy, run_in_venv
 
 
 @flojoy
@@ -17,19 +17,26 @@ def DEEPLAB_V3(default: Image) -> Image:
 
     The output is a DataContainer of an 'image' type with the same dimensions as the input image, but with the red, green, and blue channels replaced with the segmentation mask.
 
+    Parameters
+    ----------
+    default : Image
+        The input image to be segmented.
+
     Returns
     -------
     Image
+        The segmented image.
     """
 
     import os
+
     import numpy as np
     import PIL.Image
     import torch
-    from torchvision import transforms
     import torchvision.transforms.functional as TF
     from flojoy import Image
     from flojoy.utils import FLOJOY_CACHE_DIR
+    from torchvision import transforms
 
     # Parse input image
     input_image = default

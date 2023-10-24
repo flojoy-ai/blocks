@@ -1,16 +1,16 @@
-from flojoy import flojoy, Plotly, OrderedPair, DataFrame, Matrix, Vector
-from numpy import arange
 import plotly.graph_objects as go
-from pandas.api.types import is_datetime64_any_dtype
+from flojoy import DataFrame, Matrix, OrderedPair, Plotly, Vector, flojoy
 from nodes.VISUALIZERS.template import plot_layout
+from numpy import arange
+from pandas.api.types import is_datetime64_any_dtype
 
 
 @flojoy
 def LINE(default: OrderedPair | DataFrame | Matrix | Vector) -> Plotly:
     """The LINE node creates a Plotly Line visualization for a given input DataContainer.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : OrderedPair|DataFrame|Matrix|Vector
         the DataContainer to be visualized
 

@@ -1,4 +1,4 @@
-from flojoy import flojoy, run_in_venv, Image, DataFrame
+from flojoy import DataFrame, Image, flojoy, run_in_venv
 
 
 @flojoy
@@ -15,7 +15,7 @@ def TORCHSCRIPT_CLASSIFIER(
 ) -> DataFrame:
     """Execute a torchscript classifier against an input image.
 
-    Inputs
+    Parameters
     ----------
     input_image : Image
         The image to classify.
@@ -33,11 +33,11 @@ def TORCHSCRIPT_CLASSIFIER(
         A dataframe containing the class name and confidence score.
     """
 
+    import numpy as np
+    import pandas as pd
+    import PIL.Image
     import torch
     import torchvision
-    import pandas as pd
-    import numpy as np
-    import PIL.Image
 
     # Load model
     model = torch.jit.load(model_path)

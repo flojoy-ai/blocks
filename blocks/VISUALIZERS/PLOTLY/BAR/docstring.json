@@ -1,7 +1,13 @@
 {
-  "long_description": "Inputs\n------\ndefault : OrderedPair|DataFrame|Matrix|Vector\n    the DataContainer to be visualized in a bar chart",
+  "long_description": "",
   "short_description": "The BAR node creates a Plotly Bar visualization for a given input DataContainer.",
-  "parameters": [],
+  "parameters": [
+    {
+      "name": "default",
+      "type": "OrderedPair|DataFrame|Matrix|Vector",
+      "description": "the DataContainer to be visualized in a bar chart"
+    }
+  ],
   "returns": [
     {
       "name": null,

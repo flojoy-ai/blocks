@@ -1,6 +1,6 @@
-from flojoy import flojoy, OrderedPair, OrderedTriple, DataFrame, Vector, Scalar, Plotly
-import plotly.graph_objects as go
 import pandas as pd
+import plotly.graph_objects as go
+from flojoy import DataFrame, OrderedPair, OrderedTriple, Plotly, Scalar, Vector, flojoy
 from nodes.VISUALIZERS.template import plot_layout
 
 
@@ -8,8 +8,8 @@ from nodes.VISUALIZERS.template import plot_layout
 def TABLE(default: OrderedTriple | OrderedPair | DataFrame | Vector) -> Plotly:
     """The TABLE node creates a Plotly Table visualization for a given input DataContainer.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : OrderedTriple|OrderedPair|DataFrame|Vector|Scalar
         the DataContainer to be visualized
 

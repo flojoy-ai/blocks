@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
-from flojoy import DataFrame, Matrix, OrderedPair, Plotly, flojoy, Vector
+from flojoy import DataFrame, Matrix, OrderedPair, Plotly, Vector, flojoy
 from nodes.VISUALIZERS.template import plot_layout
 
 
@@ -9,8 +9,8 @@ from nodes.VISUALIZERS.template import plot_layout
 def SCATTER(default: OrderedPair | DataFrame | Matrix | Vector) -> Plotly:
     """The SCATTER node creates a Plotly Scatter visualization for a given input DataContainer.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : OrderedPair|DataFrame|Matrix|Vector
         the DataContainer to be visualized
 

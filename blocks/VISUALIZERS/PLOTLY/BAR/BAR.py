@@ -1,16 +1,16 @@
-from flojoy import flojoy, OrderedPair, DataFrame, Matrix, Plotly, Vector
-import plotly.graph_objects as go
-import pandas as pd
-from nodes.VISUALIZERS.template import plot_layout
 import numpy as np
+import pandas as pd
+import plotly.graph_objects as go
+from flojoy import DataFrame, Matrix, OrderedPair, Plotly, Vector, flojoy
+from nodes.VISUALIZERS.template import plot_layout
 
 
 @flojoy
 def BAR(default: OrderedPair | DataFrame | Matrix | Vector) -> Plotly:
     """The BAR node creates a Plotly Bar visualization for a given input DataContainer.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : OrderedPair|DataFrame|Matrix|Vector
         the DataContainer to be visualized in a bar chart
 

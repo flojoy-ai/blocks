@@ -1,6 +1,6 @@
 import pandas as pd
 import plotly.graph_objects as go
-from flojoy import flojoy, OrderedPair, DataFrame, Matrix, Plotly, Vector
+from flojoy import DataFrame, Matrix, OrderedPair, Plotly, Vector, flojoy
 from nodes.VISUALIZERS.template import plot_layout
 
 
@@ -8,8 +8,8 @@ from nodes.VISUALIZERS.template import plot_layout
 def HISTOGRAM(default: OrderedPair | DataFrame | Matrix | Vector) -> Plotly:
     """The HISTOGRAM node creates a Plotly Histogram visualization for a given input DataContainer.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : OrderedPair|DataFrame|Matrix|Vector
         the DataContainer to be visualized
 
