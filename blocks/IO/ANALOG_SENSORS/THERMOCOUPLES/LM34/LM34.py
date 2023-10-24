@@ -1,5 +1,4 @@
-from flojoy import flojoy, OrderedPair, DataContainer
-from typing import Optional
+from flojoy import OrderedPair, flojoy
 
 
 @flojoy()
@@ -13,8 +12,15 @@ def LM34(
 
     Parameters
     ----------
-    Calibration1, Calibration2, Calibration3 : float
-        Calibration parameters to convert voltage into temperature in Celcius.
+    default : OrderedPair, optional
+
+    calibration1, calibration2, calibration3 : float
+        Calibration parameters to convert voltage into temperature in Celsius.
+
+    Returns
+    -------
+    OrderedPair
+        The output of the node is a list of temperatures measured from the sensors.
     """
 
     temperatures_celsius: list[float] = []
