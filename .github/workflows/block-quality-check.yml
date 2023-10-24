@@ -38,6 +38,15 @@ jobs:
       - name: Check if there is any missing Block component
         run: poetry run python3 fjblock.py sync
 
+      - name: Check if everything is in sync
+        run: |
+          if git diff --quiet; then
+            echo "No changes found, we are good to go!"
+          else
+            echo "Error: Changes detected. Please make sure to run the sync command and commit the changes"
+            exit 1
+          fi
+
   block-code-style-check:
     runs-on: ubuntu-latest
     steps:

@@ -1,5 +1,6 @@
-from flojoy import flojoy, DataFrame
 from typing import Optional
+
+from flojoy import DataFrame, flojoy
 
 
 @flojoy
