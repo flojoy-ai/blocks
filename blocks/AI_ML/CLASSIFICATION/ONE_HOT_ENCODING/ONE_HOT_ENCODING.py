@@ -1,6 +1,7 @@
-from flojoy import flojoy, DataFrame
 from typing import Optional
+
 import pandas as pd
+from flojoy import DataFrame, flojoy
 
 
 @flojoy
@@ -10,13 +11,10 @@ def ONE_HOT_ENCODING(
 ) -> DataFrame:
     """The ONE_HOT_ENCODING node creates a one hot encoding from a dataframe containing categorical features.
 
-    Inputs
-    ------
-    data : DataFrame
-        The input dataframe containing the categorical features.
-
     Parameters
     ----------
+    data : DataFrame
+        The input dataframe containing the categorical features.
     feature_col: DataFrame, optional
         A dataframe whose columns are used to create the one hot encoding.
         For example, if 'data' has columns ['a', 'b', 'c'] and 'feature_col' has columns ['a', 'b'],

@@ -1,7 +1,12 @@
 {
-  "long_description": "Inputs\n------\ndata : DataFrame\n    The input dataframe containing the categorical features.",
+  "long_description": "",
   "short_description": "The ONE_HOT_ENCODING node creates a one hot encoding from a dataframe containing categorical features.",
   "parameters": [
+    {
+      "name": "data",
+      "type": "DataFrame",
+      "description": "The input dataframe containing the categorical features."
+    },
     {
       "name": "feature_col",
       "type": "DataFrame",
