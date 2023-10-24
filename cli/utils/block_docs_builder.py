@@ -11,7 +11,6 @@ class BlockDocsBuilder:
 
         self.template = """\
 ---
-layout: "@/layouts/block-docs-layout.astro"
 title: {block_name}
 description: "{description}"
 slug: {slug}
