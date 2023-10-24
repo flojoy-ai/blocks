@@ -76,28 +76,19 @@ def sync():
 
                 with open(target_md_file, "w") as f:
                     # Write the content of the markdown file
-                    if block_category in auto_gen_categories:
-                        result = (
-                            BlockDocsBuilder(
-                                block_name=file_name,
-                                block_folder_path=block_folder_path,
-                            )
-                            .add_python_docs_display()
-                            .add_python_code()
-                            .build()
+                    result = (
+                        BlockDocsBuilder(
+                            block_name=file_name,
+                            block_folder_path=block_folder_path,
                         )
-                    else:
-                        result = (
-                            BlockDocsBuilder(
-                                block_name=file_name,
-                                block_folder_path=block_folder_path,
-                            )
-                            .add_python_docs_display()
-                            .add_python_code()
-                            .add_example_app()
-                            .build()
-                        )
-                    f.write(result)
+                        .add_python_docs_display()
+                        .add_python_code()
+                    )
+
+                    if block_category not in auto_gen_categories:
+                        result = result.add_example_app()
+
+                    f.write(result.build())
 
                 total_synced_pages += 1
 
