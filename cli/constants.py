@@ -1,4 +1,4 @@
-warn_string = "[bold orange]Warning![/bold orange]"
+warn_string = "[bold yellow]Warning![/bold yellow]"
 err_string = "[bold red]Error![/bold red]"
 
 docs_folder_prefix = "docs/src/content/docs/blocks/"

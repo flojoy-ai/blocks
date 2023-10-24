@@ -1,7 +1,28 @@
 {
   "long_description": null,
   "short_description": "The CHANNEL_MERGE node returns the merged rgba channels of an image.",
-  "parameters": [],
+  "parameters": [
+    {
+      "name": "red",
+      "type": "Image",
+      "description": "The red channel of the image."
+    },
+    {
+      "name": "green",
+      "type": "Image",
+      "description": "The green channel of the image."
+    },
+    {
+      "name": "blue",
+      "type": "Image",
+      "description": "The blue channel of the image."
+    },
+    {
+      "name": "alpha",
+      "type": "Image",
+      "description": "The alpha channel of the image."
+    }
+  ],
   "returns": [
     {
       "name": null,

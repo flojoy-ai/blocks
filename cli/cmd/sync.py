@@ -6,6 +6,7 @@ from rich import print
 from cli.constants import blocks_folder_prefix, docs_folder_prefix, err_string
 from cli.state import state
 from cli.utils.block_docs_builder import BlockDocsBuilder
+from cli.utils.generate_docstring_json import generate_docstring_json
 
 
 def sync():
@@ -18,6 +19,9 @@ def sync():
     # We would like to NOT modify the following files
     keep_files = ["overview.md"]
     auto_gen_categories = ["NUMPY", "SCIPY"]
+
+    print("Generating docstring.json for all the blocks...")
+    generate_docstring_json()
 
     print(f"Cleaning the blocks section except all the {keep_files} files.")
     for root, _, files in os.walk(docs_folder_prefix, topdown=False):

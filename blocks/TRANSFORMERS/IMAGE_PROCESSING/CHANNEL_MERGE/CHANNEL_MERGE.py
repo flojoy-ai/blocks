@@ -1,10 +1,21 @@
-from flojoy import flojoy, Image
 import numpy as np
+from flojoy import Image, flojoy
 
 
 @flojoy
 def CHANNEL_MERGE(red: Image, green: Image, blue: Image, alpha: Image) -> Image:
     """The CHANNEL_MERGE node returns the merged rgba channels of an image.
+
+    Parameters
+    ----------
+    red : Image
+        The red channel of the image.
+    green : Image
+        The green channel of the image.
+    blue : Image
+        The blue channel of the image.
+    alpha : Image
+        The alpha channel of the image.
 
     Returns
     -------
