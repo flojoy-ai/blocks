@@ -21,7 +21,10 @@ def sync():
     auto_gen_categories = ["NUMPY", "SCIPY"]
 
     print("Generating docstring.json for all the blocks...")
-    generate_docstring_json()
+    success = generate_docstring_json()
+    if not success:
+        print(f"{err_string} Please fix all the docstring errors before syncing.")
+        sys.exit(1)
 
     print(f"Cleaning the blocks section except all the {keep_files} files.")
     for root, _, files in os.walk(docs_folder_prefix, topdown=False):
