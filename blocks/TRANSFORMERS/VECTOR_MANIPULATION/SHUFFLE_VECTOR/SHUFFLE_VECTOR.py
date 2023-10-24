@@ -3,7 +3,9 @@ from flojoy import flojoy, Vector
 
 
 @flojoy
-def SHUFFLE_VECTOR(default: Vector, ) -> Vector:
+def SHUFFLE_VECTOR(
+    default: Vector,
+) -> Vector:
     """The SHUFFLE_VECTOR node returns a vector that is randomly shuffled.
 
     Parameters

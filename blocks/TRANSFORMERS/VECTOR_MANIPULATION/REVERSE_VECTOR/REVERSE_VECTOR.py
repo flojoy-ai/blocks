@@ -3,7 +3,9 @@ from flojoy import flojoy, Vector
 
 
 @flojoy
-def REVERSE_VECTOR(default: Vector, ) -> Vector:
+def REVERSE_VECTOR(
+    default: Vector,
+) -> Vector:
     """The REVERSE_VECTOR node returns a vector equal to the input vector but reversed.
 
     Parameters

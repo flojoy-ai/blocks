@@ -6,7 +6,7 @@ from flojoy import flojoy, Matrix
 def MATMUL(a: Matrix, b: Matrix) -> Matrix:
     """The MATMUL node takes two input matrices, multiplies them, and returns the result.
 
-    Parameters 
+    Parameters
     ----------
     a : Matrix
         The matrix on the left of the multiplication.

@@ -3,7 +3,9 @@ from flojoy import flojoy, Vector
 
 
 @flojoy
-def REMOVE_DUPLICATES_VECTOR(default: Vector, ) -> Vector:
+def REMOVE_DUPLICATES_VECTOR(
+    default: Vector,
+) -> Vector:
     """The REMOVE_DUPLICATES_VECTOR node returns a vector with only unique elements.
 
     Parameters

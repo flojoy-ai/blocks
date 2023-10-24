@@ -177,8 +177,8 @@ def EXTREMA_DETERMINATION(
             image = np.stack((r, g, b, a), axis=2)
         image = PILImage.fromarray(image)
         image = np.array(
-            image.convert("L"),
-            dtype=np.uint8)  # a greyscale image that can be processed
+            image.convert("L"), dtype=np.uint8
+        )  # a greyscale image that can be processed
     elif isinstance(default, Grayscale) or isinstance(default, Matrix):
         image = np.array(default.m)  # explicit typing just to be extra safe
 
@@ -189,8 +189,7 @@ def EXTREMA_DETERMINATION(
     else:
         mask = image_mask.m
         if mask.shape != image.shape:
-            raise IndexError(
-                "Provided mask is not the same shape as the input image.")
+            raise IndexError("Provided mask is not the same shape as the input image.")
     blob_mask = np.zeros(image.shape, dtype=np.uint8)
     match algorithm:
         case "high_symmetry":
@@ -204,17 +203,12 @@ def EXTREMA_DETERMINATION(
 
             with catch_warnings():
                 simplefilter("ignore", category=RuntimeWarning)
-                im /= gaussian_filter(input=im,
-                                      sigma=min(image.shape) / 20,
-                                      truncate=2)
+                im /= gaussian_filter(input=im, sigma=min(image.shape) / 20, truncate=2)
             im = np.nan_to_num(im, copy=False)
 
             autocorr = np.abs(
-                cross_correlate_masked(arr1=im,
-                                       arr2=im,
-                                       m1=mask,
-                                       m2=mask,
-                                       mode="same"))
+                cross_correlate_masked(arr1=im, arr2=im, m1=mask, m2=mask, mode="same")
+            )
             autocorr = shift(
                 autocorr,
                 shift=np.asarray(center) - np.array(im.shape) / 2,
@@ -232,14 +226,12 @@ def EXTREMA_DETERMINATION(
             labels = label(regions, return_num=False)
             props = regionprops(label_image=labels, intensity_image=im)
             candidates = [
-                prop for prop in props
-                if not np.any(np.isnan(prop.weighted_centroid))
+                prop for prop in props if not np.any(np.isnan(prop.weighted_centroid))
             ]
             peaks = list()
             for prop in candidates:
                 pos = np.asarray(prop.weighted_centroid)
-                if any(
-                    (np.linalg.norm(peak - pos) < min_dist) for peak in peaks):
+                if any((np.linalg.norm(peak - pos) < min_dist) for peak in peaks):
                     continue
                 else:
                     if prop.area_convex < 0.2 * np.prod(image.shape):
@@ -247,7 +239,8 @@ def EXTREMA_DETERMINATION(
                             blob_mask[coord[0], coord[1]] = 1
                     peaks.append(pos[::-1])
             peaks = np.array([peaks]).reshape(
-                -1, 2)  # now gives us the final array of peaks
+                -1, 2
+            )  # now gives us the final array of peaks
         case "persistence":  # we use the persistence algorithm
             g0 = Persistence(image).persistence
             birth_death = list()
@@ -272,19 +265,19 @@ def EXTREMA_DETERMINATION(
             if min_dist > 0.0:
                 combos = combinations(candidates, 2)
                 points_to_remove = [
-                    point2 for point1, point2 in combos
-                    if np.linalg.norm(np.array(point1) -
-                                      np.array(point2)) < min_dist
+                    point2
+                    for point1, point2 in combos
+                    if np.linalg.norm(np.array(point1) - np.array(point2)) < min_dist
                 ]
                 candidates = [
-                    point for point in candidates
-                    if point not in points_to_remove
+                    point for point in candidates if point not in points_to_remove
                 ]
             peaks = np.array(candidates).reshape(-1, 2)
             # remove peaks that are within the masked area
             if mask.sum() != mask.shape[0] * mask.shape[1]:
-                peaks = np.array([p for p in candidates
-                                  if mask[p[1], p[0]]]).reshape(-1, 2)
+                peaks = np.array([p for p in candidates if mask[p[1], p[0]]]).reshape(
+                    -1, 2
+                )
 
         case "log":
             # This is the most expensive algorithm!!
@@ -296,15 +289,17 @@ def EXTREMA_DETERMINATION(
             ):  # first define the laplacian of a gaussian filter
                 # window size
                 n = np.ceil(sigma * 6)
-                y, x = np.ogrid[-n // 2:n // 2 + 1, -n // 2:n // 2 + 1]
+                y, x = np.ogrid[-n // 2 : n // 2 + 1, -n // 2 : n // 2 + 1]
                 y_filter = np.exp(-(y**2 / (2.0 * sigma * sigma)))
                 x_filter = np.exp(-(x**2 / (2.0 * sigma * sigma)))
-                return ((-(2 * sigma**2) + (x * x + y * y)) *
-                        (x_filter * y_filter) * (1 / (2 * np.pi * sigma**4)))
+                return (
+                    (-(2 * sigma**2) + (x * x + y * y))
+                    * (x_filter * y_filter)
+                    * (1 / (2 * np.pi * sigma**4))
+                )
 
             # Step 2: perform the convolution with the LOG filters for increasing powers of sigma
-            log_images = np.zeros(
-                (max_power, *image.shape))  # to store responses
+            log_images = np.zeros((max_power, *image.shape))  # to store responses
             with scipy.fft.set_backend(customFFTBackend):
                 for i in range(max_power):
                     log_images[i, ...] = np.square(
@@ -312,20 +307,19 @@ def EXTREMA_DETERMINATION(
                             image,
                             laplacian_of_gaussian(sigma * np.power(k, i)),
                             mode="same",
-                        ))  # squaring the response
+                        )
+                    )  # squaring the response
             # Step 3: detect the blobs
             peaks_with_radius = list()
             (h, w) = image.shape
             for i in range(1, h):
                 for j in range(1, w):
-                    slice_img = log_images[:, i - 1:i + 2, j - 1:j + 2]
+                    slice_img = log_images[:, i - 1 : i + 2, j - 1 : j + 2]
                     result = np.amax(slice_img)
                     # result_1 = np.amin(slice_img)
                     if result >= prominence:
-                        z, x, y = np.unravel_index(slice_img.argmax(),
-                                                   slice_img.shape)
-                        peaks_with_radius.append(
-                            (i + x - 1, j + y - 1, k**z * sigma))
+                        z, x, y = np.unravel_index(slice_img.argmax(), slice_img.shape)
+                        peaks_with_radius.append((i + x - 1, j + y - 1, k**z * sigma))
             candidates = np.array(list(set(peaks_with_radius)))
             if min_dist > 0.0:
                 sigma = candidates[:, -1].max()
@@ -337,8 +331,7 @@ def EXTREMA_DETERMINATION(
                 else:
                     for i, j in pairs:
                         blob1, blob2 = candidates[i], candidates[j]
-                        if np.linalg.norm(blob1[:-1] -
-                                          np.array(blob2[:-1])) < min_dist:
+                        if np.linalg.norm(blob1[:-1] - np.array(blob2[:-1])) < min_dist:
                             if blob1[-1] > blob2[-1]:
                                 blob2[-1] = 0
                             else:
@@ -356,8 +349,7 @@ def EXTREMA_DETERMINATION(
             rprops = regionprops(label_image=labels, intensity_image=blob_mask)
             peaks = list()
             for region in [
-                    prop for prop in rprops
-                    if not np.any(np.isnan(prop.weighted_centroid))
+                prop for prop in rprops if not np.any(np.isnan(prop.weighted_centroid))
             ]:
                 peaks.append(region.weighted_centroid)
             peaks = np.array(peaks).reshape(-1, 2)
@@ -367,8 +359,9 @@ def EXTREMA_DETERMINATION(
     # that's black and white so we can render it. First, scale image to
     # range 0-255.
 
-    rgb_image = np.zeros((*image.shape, 3),
-                         dtype=np.uint8)  # only generated for plotting
+    rgb_image = np.zeros(
+        (*image.shape, 3), dtype=np.uint8
+    )  # only generated for plotting
     rgb_image[..., 0] = image * 255  # Red channel
     rgb_image[..., 1] = image * 255  # Green channel
     rgb_image[..., 2] = image * 255  # Blue channel
@@ -456,7 +449,6 @@ class UnionFind:
 
 
 class Persistence:
-
     def __init__(self, im):
         self.image = im
         self.calculate()
@@ -476,12 +468,8 @@ class Persistence:
         # Process pixels from high to low
         for i, p in enumerate(indices):
             v = self.get(p)
-            ni = [
-                self.uf[q] for q in self.iter_neighbors(p, w, h)
-                if q in self.uf
-            ]
-            nc = sorted([(self.get_comp_birth(q), q) for q in set(ni)],
-                        reverse=True)
+            ni = [self.uf[q] for q in self.iter_neighbors(p, w, h) if q in self.uf]
+            nc = sorted([(self.get_comp_birth(q), q) for q in set(ni)], reverse=True)
 
             if i == 0:
                 self._groups0[p] = (v, v, None)
@@ -499,8 +487,10 @@ class Persistence:
                         self._groups0[self.uf[q]] = (bl, bl - v, p)
                     self.uf.union(oldp, q)
 
-        self._groups0 = [(k, self._groups0[k][0], self._groups0[k][1],
-                          self._groups0[k][2]) for k in self._groups0]
+        self._groups0 = [
+            (k, self._groups0[k][0], self._groups0[k][1], self._groups0[k][2])
+            for k in self._groups0
+        ]
         self._groups0.sort(key=lambda g: g[2], reverse=True)
         self.persistence = self._groups0
 
@@ -562,9 +552,7 @@ def autocenter(im: DCNpArrayType, mask: Optional[DCNpArrayType] = None):
     # 1. Some images are not centered, and so there's a lot
     # of image area that cannot be used for registration.
     # 2. radial inversion becomes simple inversion of dimensions
-    side_length = floor(
-        min([r_, abs(r_ - im.shape[0]), c_,
-             abs(c_ - im.shape[1])]))
+    side_length = floor(min([r_, abs(r_ - im.shape[0]), c_, abs(c_ - im.shape[1])]))
     rs = slice(r_ - side_length, r_ + side_length)
     cs = slice(c_ - side_length, c_ + side_length)
     im = im[rs, cs]
