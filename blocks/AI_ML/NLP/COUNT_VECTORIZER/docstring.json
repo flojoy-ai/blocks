@@ -1,5 +1,5 @@
 {
-  "long_description": null,
+  "long_description": "",
   "short_description": "The COUNT_VECTORIZER node receives a collection (matrix, vector or dataframe) of text documents and converts it to a matrix of token counts.",
   "parameters": [],
   "returns": [

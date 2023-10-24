@@ -1,5 +1,5 @@
 {
-  "long_description": null,
+  "long_description": "",
   "short_description": "The TIMESERIES node generates a random timeseries vector (as a DataFrame).",
   "parameters": [
     {

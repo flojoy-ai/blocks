@@ -1,5 +1,5 @@
 {
-  "long_description": null,
+  "long_description": "",
   "short_description": "The OPEN_KEITHLEY_24XX node opens a connection with the Keithley 2400 source meter.",
   "parameters": [
     {

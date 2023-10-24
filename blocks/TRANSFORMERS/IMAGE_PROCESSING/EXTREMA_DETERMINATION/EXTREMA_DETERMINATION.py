@@ -97,7 +97,6 @@ def EXTREMA_DETERMINATION(
 
     Parameters
     ----------
-
     default : Image | Grayscale | Matrix
         The input DataContainer that contains the image to be processed.
         Can either be RGBA, greyscale, or a matrix type.
@@ -183,7 +182,7 @@ def EXTREMA_DETERMINATION(
     elif isinstance(default, Grayscale) or isinstance(default, Matrix):
         image = np.array(default.m)  # explicit typing just to be extra safe
 
-    # This now produces an (M, N) array that we can then process! The algorthims
+    # This now produces an (M, N) array that we can then process! The algorithms
     # have no specificity on input data type unlike the `REGION_PROPERTIES` node.
     if image_mask is None:
         mask = np.ones(image.shape)
@@ -196,7 +195,7 @@ def EXTREMA_DETERMINATION(
         case "high_symmetry":
             if center is None:
                 center = autocenter(im=image, mask=mask)
-                # Then we need to autodetermine the center of the iamge
+                # Then we need to autodetermine the center of the image
                 # raise ValueError("For the crossed correlated mask algorithm, the center of the peaks \
                 #                   in the image must be specified")
             im = np.array(image, copy=True, dtype=float)
@@ -458,7 +457,7 @@ class Persistence:
     def calculate(self):
         h, w = self.image.shape
 
-        # Get indices orderd by value from high to low
+        # Get indices ordered by value from high to low
         indices = [(i, j) for i in range(h) for j in range(w)]
         indices.sort(key=lambda p: self.get(p), reverse=True)
 

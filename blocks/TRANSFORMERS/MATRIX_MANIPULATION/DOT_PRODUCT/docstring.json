@@ -1,7 +1,18 @@
 {
-  "long_description": "To multiply a scalar, use the MULTIPLY node.\n\nInputs\n------\na : Matrix\n    The input matrix to be multiplied to input b.\nb : Matrix\n    The input matrix to be multiplied to input a.",
+  "long_description": "To multiply a scalar, use the MULTIPLY node.",
   "short_description": "The DOT_PRODUCT node takes two input matrices, multiplies them (by dot product), and returns the result.",
-  "parameters": [],
+  "parameters": [
+    {
+      "name": "a",
+      "type": "Matrix",
+      "description": "The input matrix to be multiplied to input b."
+    },
+    {
+      "name": "b",
+      "type": "Matrix",
+      "description": "The input matrix to be multiplied to input a."
+    }
+  ],
   "returns": [
     {
       "name": null,

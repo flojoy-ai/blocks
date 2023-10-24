@@ -1,6 +1,5 @@
 import numpy as np
-from flojoy import flojoy, Vector, Matrix, Scalar
-from typing import Union
+from flojoy import Matrix, Scalar, Vector, flojoy
 
 
 @flojoy
@@ -9,8 +8,8 @@ def DOT_PRODUCT(a: Matrix | Vector, b: Matrix | Vector) -> Matrix | Vector | Sca
 
     To multiply a scalar, use the MULTIPLY node.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     a : Matrix
         The input matrix to be multiplied to input b.
     b : Matrix

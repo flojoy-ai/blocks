@@ -1,5 +1,5 @@
 {
-  "long_description": null,
+  "long_description": "",
   "short_description": "The CHANNEL_MERGE node returns the merged rgba channels of an image.",
   "parameters": [
     {

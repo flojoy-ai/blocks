@@ -1,5 +1,5 @@
 {
-  "long_description": null,
+  "long_description": "",
   "short_description": "The FLOJOY_CLOUD_DOWNLOAD node downloads a DataContainer from Flojoy Cloud.",
   "parameters": [
     {

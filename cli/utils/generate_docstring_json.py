@@ -59,10 +59,8 @@ def generate_docstring_json() -> bool:
                                 error += 1
 
                             if not parsed_docstring.long_description:
-                                print(
-                                    f"{warn_string} long_description not found for {function_name}"
-                                )
-                                warning += 1
+                                # it is okay to not have a long description
+                                parsed_docstring.long_description = ""
 
                             if not parsed_docstring.params:
                                 print(

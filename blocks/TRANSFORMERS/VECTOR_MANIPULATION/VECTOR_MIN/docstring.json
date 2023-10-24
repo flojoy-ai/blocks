@@ -1,5 +1,5 @@
 {
-  "long_description": null,
+  "long_description": "",
   "short_description": "The VECTOR_MIN node returns the minimum value from the Vector",
   "parameters": [
     {
