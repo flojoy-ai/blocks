@@ -1,7 +1,7 @@
 import plotly.express as px
 import plotly.graph_objects as go
 from flojoy import DataFrame, OrderedTriple, Plotly, flojoy
-from blocks.VISUALIZERS.template import plot_layout
+from blocks.DATA.VISUALIZATION.template import plot_layout
 
 
 @flojoy
