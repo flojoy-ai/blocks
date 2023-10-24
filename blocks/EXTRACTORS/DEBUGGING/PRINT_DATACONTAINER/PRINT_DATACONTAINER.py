@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob
+from flojoy import DataContainer, TextBlob, flojoy
 
 
 @flojoy()
@@ -8,6 +8,11 @@ def PRINT_DATACONTAINER(
     """The PRINT_DATACONTAINER node returns a TextBlob containing input DataContainer information.
 
     Must use the TEXT_VIEW node to view the text.
+
+    Parameters
+    ----------
+    default : DataContainer
+        The input DataContainer to print.
 
     Returns
     -------

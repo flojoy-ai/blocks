@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob
+from flojoy import DataContainer, TextBlob, flojoy
 
 
 @flojoy()
@@ -8,6 +8,11 @@ def DATACONTAINER_TYPE(
     """The DATACONTAINER_TYPE node returns a TextBlob containing the input DataContainer type (e.g. Vector).
 
     Must use the TEXT_VIEW node to view the text.
+
+    Parameters
+    ----------
+    default : DataContainer
+        The input DataContainer to check the type.
 
     Returns
     -------

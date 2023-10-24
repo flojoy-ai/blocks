@@ -1,7 +1,13 @@
 {
   "long_description": "Must use the TEXT_VIEW node to view the text.",
   "short_description": "The DATACONTAINER_TYPE node returns a TextBlob containing the input DataContainer type (e.g. Vector).",
-  "parameters": [],
+  "parameters": [
+    {
+      "name": "default",
+      "type": "DataContainer",
+      "description": "The input DataContainer to check the type."
+    }
+  ],
   "returns": [
     {
       "name": null,

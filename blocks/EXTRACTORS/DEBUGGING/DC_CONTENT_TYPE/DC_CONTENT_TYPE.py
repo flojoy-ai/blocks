@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob
+from flojoy import DataContainer, TextBlob, flojoy
 
 
 @flojoy()
@@ -8,6 +8,11 @@ def DC_CONTENT_TYPE(
     """The DC_CONTENT_TYPE node returns a TextBlob containing the type of the input DataContainer's content.
 
     Must use the TEXT_VIEW node to view the text.
+
+    Parameters
+    ----------
+    default : DataContainer
+        The input DataContainer to check the content type.
 
     Returns
     -------

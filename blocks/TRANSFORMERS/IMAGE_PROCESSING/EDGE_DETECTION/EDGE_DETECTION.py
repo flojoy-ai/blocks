@@ -1,7 +1,8 @@
-from flojoy import flojoy, Image
 import cv2
 import numpy as np
-from PIL import ImageFilter, Image as PILImage
+from flojoy import Image, flojoy
+from PIL import Image as PILImage
+from PIL import ImageFilter
 
 
 @flojoy(deps={"opencv-python": "4.8.0"})
@@ -12,8 +13,8 @@ def EDGE_DETECTION(default: Image) -> Image:
 
     Note that the image is converted to greyscale during this processing.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : Image
         The input image to apply edge detection to.
 
