@@ -5,7 +5,7 @@ import os
 from docstring_parser import parse
 from rich import print
 
-from cli.constants import blocks_folder_prefix, err_string, warn_string
+from cli.constants import blocks_folder_prefix, err_string
 
 
 def generate_docstring_json() -> bool:
@@ -14,7 +14,6 @@ def generate_docstring_json() -> bool:
     False if there is any docstring format error
     """
     error = 0
-    warning = 0
     # Walk through all the folders and files in the current directory
     for root, _, files in os.walk(blocks_folder_prefix):
         # Iterate through the files
@@ -70,9 +69,9 @@ def generate_docstring_json() -> bool:
 
                             if not parsed_docstring.many_returns:
                                 print(
-                                    f"{warn_string} 'Returns' not found for {function_name}"
+                                    f"{err_string} 'Returns' not found for {function_name}"
                                 )
-                                warning += 1
+                                error += 1
 
                             # Build the JSON data
                             json_data = {
@@ -108,10 +107,9 @@ def generate_docstring_json() -> bool:
                             )
                             error += 1
 
-    print(
-        f"Summary: found {error} [bold red]ERRORS[/bold red] and {warning} [bold yellow]WARNINGS[/bold yellow] with docstring formatting"
-    )
-
     if error > 0:
+        print(f"Found {error} [bold red]ERRORS[/bold red] with docstring formatting!")
         return False
+
+    print("All docstring are formatted correctly!")
     return True
