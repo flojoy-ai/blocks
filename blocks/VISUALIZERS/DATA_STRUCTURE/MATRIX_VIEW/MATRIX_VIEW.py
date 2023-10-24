@@ -36,8 +36,6 @@ def numpy_2d_array_as_table(
 
         new_arr[MAX_ALLOWED_SHAPE - 2, 0] = v_dot
         new_arr[MAX_ALLOWED_SHAPE - 2, MAX_ALLOWED_SHAPE - 1] = v_dot
-    else:
-        new_arr
 
     return new_arr.T
 

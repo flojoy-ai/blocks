@@ -14,12 +14,19 @@ def FEEDBACK(
     referred_node: NodeReference,
     default: Optional[DataContainer] = None,
 ) -> Any:
-    """The FEEDBACK node captures the result of the specified node ID. If the result is not found, it passes the result of the parent node.
+    """The FEEDBACK node captures the result of the specified node ID.
+
+    If the result is not found, it passes the result of the parent node.
 
     Parameters
     ----------
     referred_node : str
         The node ID to capture the result from.
+
+    Returns
+    -------
+    DataContainer
+        The result of the specified node ID, or the result of the parent node if it was not found.
     """
 
     result = get_job_result(referred_node.ref)
