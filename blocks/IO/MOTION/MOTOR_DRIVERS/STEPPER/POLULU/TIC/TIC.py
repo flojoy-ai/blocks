@@ -1,9 +1,10 @@
-from flojoy import flojoy, OrderedPair
+from time import sleep
 from typing import Optional
+
+from flojoy import OrderedPair, flojoy
 from ticlib import (
     TicUSB,
 )  # Import the TicUSB library to send command to Tic drivers with USB connection
-from time import sleep
 
 
 @flojoy(deps={"ticlib": "0.2.2"})
@@ -21,12 +22,18 @@ def TIC(
 
     Parameters
     ----------
+    default : OrderedPair, optional
+        The default positions to move the stepper motor to, by default None
     current_limit : int
         Defines the current limitation that the stepper motor will receive.
     sleep_time : int
         Defines the sleep time after moving to each position.
     speed : int
         Defines the speed of the motor movement (between 0 and 200000).
+
+    Returns
+    -------
+    OrderedPair
     """
 
     # Setting default positions
