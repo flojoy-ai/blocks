@@ -18,6 +18,10 @@ def CONNECTION_2000(
     Note the P2000 nodes require a device specific driver/SDK downloaded from:
     https://www.picotech.com/downloads.
 
+    Parameters
+    ----------
+    None
+
     Returns
     -------
     TextBlob
