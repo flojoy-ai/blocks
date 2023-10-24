@@ -15,9 +15,11 @@ export default defineConfig({
       title: "Flojoy Docs",
       customCss: [
         // Path to your Tailwind base styles:
-        "./src/tailwind.css",
+        "./src/styles/tailwind.css",
         // Some reactflow styles
-        "./src/index.css",
+        "./src/styles/reactflow.css",
+        // Our own custom CSS
+        "./src/styles/custom.css",
         // Joey: Please do not add any more custom css files
       ],
       social: {
@@ -42,13 +44,13 @@ export default defineConfig({
         // Joey: IMPORTANT, always use autogenerate unless
         // there is a very good reason not to use it
         {
-          label: "Flojoy Studio",
+          label: "🕹️ Flojoy Studio",
           autogenerate: {
             directory: "studio",
           },
         },
         {
-          label: "Flojoy Blocks",
+          label: "🔮 Flojoy Blocks",
           collapsed: false,
           autogenerate: {
             directory: "blocks",
@@ -56,7 +58,7 @@ export default defineConfig({
           },
         },
         {
-          label: "Contribution Guide",
+          label: "📚 Contribution Guide",
           items: [
             {
               label: "Contribute to Blocks",

@@ -1,7 +1,13 @@
 {
   "long_description": "",
   "short_description": "The NLP_CONNECT_VIT_GPT2 node captions an input image and produces an output string wrapped in a dataframe.",
-  "parameters": [],
+  "parameters": [
+    {
+      "name": "default",
+      "type": "Image",
+      "description": "The image to caption."
+    }
+  ],
   "returns": [
     {
       "name": null,

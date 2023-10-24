@@ -1,0 +1,18 @@
+{
+  "long_description": "",
+  "short_description": "The MAT_2_DF node takes one matrix type data and converts it to a dataframe type data.",
+  "parameters": [
+    {
+      "name": "default",
+      "type": "Matrix",
+      "description": "The input matrix to which we apply the conversion to."
+    }
+  ],
+  "returns": [
+    {
+      "name": null,
+      "type": "DataFrame",
+      "description": "The dataframe result from the conversion of the input."
+    }
+  ]
+}

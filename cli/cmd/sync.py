@@ -21,7 +21,10 @@ def sync():
     auto_gen_categories = ["NUMPY", "SCIPY"]
 
     print("Generating docstring.json for all the blocks...")
-    generate_docstring_json()
+    success = generate_docstring_json()
+    if not success:
+        print(f"{err_string} Please fix all the docstring errors before syncing.")
+        sys.exit(1)
 
     print(f"Cleaning the blocks section except all the {keep_files} files.")
     for root, _, files in os.walk(docs_folder_prefix, topdown=False):
@@ -73,34 +76,38 @@ def sync():
 
                 with open(target_md_file, "w") as f:
                     # Write the content of the markdown file
-                    if block_category in auto_gen_categories:
-                        result = (
-                            BlockDocsBuilder(
-                                block_name=file_name,
-                                block_folder_path=block_folder_path,
-                            )
-                            .add_python_docs_display()
-                            .add_python_code()
-                            .build()
+                    result = (
+                        BlockDocsBuilder(
+                            block_name=file_name,
+                            block_folder_path=block_folder_path,
                         )
-                    else:
-                        result = (
-                            BlockDocsBuilder(
-                                block_name=file_name,
-                                block_folder_path=block_folder_path,
-                            )
-                            .add_python_docs_display()
-                            .add_python_code()
-                            .add_example_app()
-                            .build()
-                        )
-                    f.write(result)
+                        .add_python_docs_display()
+                        .add_python_code()
+                    )
+
+                    if block_category not in auto_gen_categories:
+                        result = result.add_example_app()
+
+                    f.write(result.build())
 
                 total_synced_pages += 1
 
     # Remove all empty folders
     print("Almost done! Doing some housekeeping...")
+
+    for root, _, files in os.walk("."):
+        for file in files:
+            if file == ".DS_Store":
+                file_path = os.path.join(root, file)
+                os.remove(file_path)
+
     for dirpath, dirnames, filenames in os.walk(docs_folder_prefix):
+        if (
+            not filenames and not dirnames
+        ):  # Check if the directory has no files or subdirectories
+            os.rmdir(dirpath)  # Remove the directory
+
+    for dirpath, dirnames, filenames in os.walk(blocks_folder_prefix):
         if (
             not filenames and not dirnames
         ):  # Check if the directory has no files or subdirectories

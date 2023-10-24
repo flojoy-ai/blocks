@@ -13,6 +13,11 @@ class CountVectorizerOutput(TypedDict):
 def COUNT_VECTORIZER(default: DataFrame | Matrix | Vector) -> CountVectorizerOutput:
     """The COUNT_VECTORIZER node receives a collection (matrix, vector or dataframe) of text documents and converts it to a matrix of token counts.
 
+    Parameters
+    ----------
+    default : DataFrame|Matrix|Vector
+        The corpus to vectorize.
+
     Returns
     -------
     tokens: DataFrame

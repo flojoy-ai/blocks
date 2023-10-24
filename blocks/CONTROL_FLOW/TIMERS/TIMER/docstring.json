@@ -1,0 +1,18 @@
+{
+  "long_description": "",
+  "short_description": "The TIMER node sleeps for a specified number of seconds.",
+  "parameters": [
+    {
+      "name": "sleep_time",
+      "type": "float",
+      "description": "number of seconds to sleep"
+    }
+  ],
+  "returns": [
+    {
+      "name": null,
+      "type": "Optional[DataContainer]",
+      "description": "Returns the input if one was passed in."
+    }
+  ]
+}

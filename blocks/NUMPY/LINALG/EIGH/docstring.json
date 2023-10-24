@@ -1,7 +1,13 @@
 {
   "long_description": "The description of that function is as follows:\n\n    Return the eigenvalues and eigenvectors of a complex Hermitian (conjugate symmetric) or a real symmetric matrix.",
   "short_description": "The EIGH node is based on a numpy or scipy function.",
-  "parameters": [],
+  "parameters": [
+    {
+      "name": "default",
+      "type": "Matrix",
+      "description": "The matrix to find the eigenvectors and eigenvalues of."
+    }
+  ],
   "returns": [
     {
       "name": null,
