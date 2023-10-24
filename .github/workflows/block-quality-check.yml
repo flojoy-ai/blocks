@@ -38,6 +38,12 @@ jobs:
       - name: Check if there is any missing Block component
         run: poetry run python3 fjblock.py sync
 
+      - name: Check if everything is in sync
+        id: changed-files
+        uses: tj-actions/changed-files@v39
+        with:
+          fail_on_initial_diff_error: true
+
   block-code-style-check:
     runs-on: ubuntu-latest
     steps:

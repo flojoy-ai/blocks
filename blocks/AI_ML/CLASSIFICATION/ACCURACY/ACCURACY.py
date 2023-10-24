@@ -1,5 +1,6 @@
-from flojoy import flojoy, DataFrame
 from typing import Optional
+
+from flojoy import DataFrame, flojoy
 
 
 @flojoy
@@ -9,7 +10,9 @@ def ACCURACY(
     true_label: Optional[str] = None,
     predicted_label: Optional[str] = None,
 ) -> DataFrame:
-    """The ACCURACY node takes two dataframes with the true and predicted labels from a classification task, and indicates whether the prediction was correct or not.
+    """The ACCURACY node takes two dataframes with the true and predicted
+    labels from a classification task, and indicates whether the prediction
+    was correct or not.
 
     These dataframes should both be single columns.
 
