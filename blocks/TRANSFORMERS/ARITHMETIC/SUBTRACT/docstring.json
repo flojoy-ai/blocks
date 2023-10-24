@@ -1,7 +1,18 @@
 {
-  "long_description": "Inputs\n------\na : OrderedPair|Scalar|Vector\n    The input a use in the subtraction of a by b.\nb : OrderedPair|Scalar|Vector\n    The input b use in the subtraction of a by b.",
+  "long_description": "",
   "short_description": "The SUBTRACT node subtracts two numeric arrays, vectors, matrices, or constants element-wise and returns the result.",
-  "parameters": [],
+  "parameters": [
+    {
+      "name": "a",
+      "type": "OrderedPair|Scalar|Vector",
+      "description": "The input a use in the subtraction of a by b."
+    },
+    {
+      "name": "b",
+      "type": "OrderedPair|Scalar|Vector",
+      "description": "The input b use in the subtraction of a by b."
+    }
+  ],
   "returns": [
     {
       "name": null,

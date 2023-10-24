@@ -8,5 +8,16 @@
       "description": "number of times to iterate through body nodes, default is \"-1\" meaning infinity."
     }
   ],
-  "returns": []
+  "returns": [
+    {
+      "name": "body",
+      "type": "DataContainer",
+      "description": "Forwards the input DataContainer to the body."
+    },
+    {
+      "name": "end",
+      "type": "DataContainer",
+      "description": "Forwards the input DataContainer to the end."
+    }
+  ]
 }

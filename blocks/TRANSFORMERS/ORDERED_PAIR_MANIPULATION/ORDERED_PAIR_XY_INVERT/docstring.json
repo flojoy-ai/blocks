@@ -1,7 +1,13 @@
 {
-  "long_description": "Inputs\n------\ndefault : OrderedPair\n    The input OrderedPair that we would like to invert the axes.",
+  "long_description": "",
   "short_description": "The ORDERED_PAIR_XY_INVERT node returns the OrderedPair where the axes are inverted.",
-  "parameters": [],
+  "parameters": [
+    {
+      "name": "default",
+      "type": "OrderedPair",
+      "description": "The input OrderedPair that we would like to invert the axes."
+    }
+  ],
   "returns": [
     {
       "name": null,
