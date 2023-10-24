@@ -1,4 +1,4 @@
-from flojoy import flojoy, TextBlob
+from flojoy import TextBlob, flojoy
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 
 
@@ -10,17 +10,17 @@ def DELAY(
     """
     The DELAY node delays the action between two nodes.
 
-    Inputs
-    ------
-    ip_address: TextBlob
+    Parameters
+    ----------
+    ip_address : TextBlob
         The IP address of the robot arm.
 
-    time: float
+    time : float
         The time of delay in seconds.
 
     Returns
     -------
-    ip_address
+    ip_address : TextBlob
         The IP address of the robot arm.
 
     """

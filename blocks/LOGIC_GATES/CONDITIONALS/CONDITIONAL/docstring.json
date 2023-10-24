@@ -8,5 +8,16 @@
       "description": "Specifies the type of comparison to be performed between the two inputs. The default value is \">=\"."
     }
   ],
-  "returns": []
+  "returns": [
+    {
+      "name": "true",
+      "type": "DataContainer",
+      "description": "Forwards the first value to the true branch."
+    },
+    {
+      "name": "False",
+      "type": "DataContainer",
+      "description": "Forwards the second value to the false branch."
+    }
+  ]
 }

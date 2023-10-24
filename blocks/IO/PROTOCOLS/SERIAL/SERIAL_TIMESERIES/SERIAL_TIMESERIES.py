@@ -1,9 +1,10 @@
-from flojoy import flojoy, OrderedPair
+from datetime import datetime
 from time import sleep
 from typing import Optional
-import serial
+
 import numpy as np
-from datetime import datetime
+import serial
+from flojoy import OrderedPair, flojoy
 
 
 @flojoy(deps={"pyserial": "3.5"})
@@ -29,17 +30,21 @@ def SERIAL_TIMESERIES(
 
     num_readings * record_period :
         Is roughly the run length in seconds.
+
+    Returns
+    -------
+    OrderedPair
     """
 
-    ser = serial.Serial(comport, timeout=1, baudrate=baudrate)
+    set = serial.Serial(comport, timeout=1, baudrate=baudrate)
     readings = []
     times = []
     # The first reading is commonly empty.
-    s = ser.readline().decode()
+    s = set.readline().decode()
 
     for i in range(num_readings):
         ts = datetime.now()
-        s = ser.readline().decode()
+        s = set.readline().decode()
         # Some readings may be empty.
         if s != "":
             reading = s[:-2].split(",")

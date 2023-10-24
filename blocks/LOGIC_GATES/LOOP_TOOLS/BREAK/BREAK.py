@@ -12,7 +12,6 @@ def BREAK(
     """The BREAK node is designed to end the iteration of a loop.
 
     It should be used in conjunction with conditionals to determine when to break the loop.
-
     It is needed to be able to generate 'while loops' in Flojoy (combined with an 'infinite loop').
 
     Parameters
@@ -24,6 +23,10 @@ def BREAK(
     default : DataContainer
         This node simply requires an input (most likely from
         the return of a CONDITIONAL node) so that it is executed.
+
+    Returns
+    -------
+    None
     """
 
     # this is the loop ID we want to break

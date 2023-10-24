@@ -5,8 +5,8 @@ from flojoy import flojoy, Vector, Matrix
 def MATRIX_2_VECTOR(default: Matrix) -> Vector:
     """The MATRIX_2_VECTOR node takes a matrix and flatten it into vector type data.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default: Matrix
         The input matrix that will be transformed into vector data type.
 

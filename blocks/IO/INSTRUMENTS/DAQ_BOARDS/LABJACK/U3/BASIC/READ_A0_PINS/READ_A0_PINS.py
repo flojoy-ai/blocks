@@ -1,6 +1,7 @@
-from flojoy import flojoy, OrderedPair, node_initialization, NodeInitContainer
 from typing import Optional
+
 import u3  # Import the library from LabJackPython in order to use our U3-LV device
+from flojoy import NodeInitContainer, OrderedPair, flojoy, node_initialization
 
 
 @flojoy(deps={"labjackpython": "2.1.0"})
@@ -15,8 +16,15 @@ def READ_A0_PINS(
 
     Parameters
     ----------
+    default : OrderedPair, optional
+
     number : int
         Defines the number of temperature sensors connected to the LabJack U3 device.
+
+    Returns
+    -------
+    OrderedPair
+        The output of the node is a list of voltages measured from the sensors.
     """
 
     voltages: list[float] = []

@@ -18,6 +18,11 @@ def TIMER(
     ----------
     sleep_time : float
         number of seconds to sleep
+
+    Returns
+    -------
+    Optional[DataContainer]
+        Returns the input if one was passed in.
     """
 
     time.sleep(sleep_time)

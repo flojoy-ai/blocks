@@ -18,6 +18,11 @@ def EIGH(
 
         Return the eigenvalues and eigenvectors of a complex Hermitian (conjugate symmetric) or a real symmetric matrix.
 
+    Parameters
+    ----------
+    default : Matrix
+        The matrix to find the eigenvectors and eigenvalues of.
+
     Returns
     -------
     DataContainer

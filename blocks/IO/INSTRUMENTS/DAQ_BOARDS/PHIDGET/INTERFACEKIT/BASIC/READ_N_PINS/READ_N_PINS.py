@@ -1,5 +1,6 @@
-from flojoy import flojoy, OrderedPair
 from typing import Optional
+
+from flojoy import OrderedPair, flojoy
 from Phidget22.Devices.VoltageRatioInput import VoltageRatioInput
 
 
@@ -17,8 +18,15 @@ def READ_N_PINS(
 
     Parameters
     ----------
+    default : OrderedPair, optional
+        Default value to be used if no input is connected to the node, by default None
     n_sensors : int
         Defines the number of pressure sensors connected to the Phidget InterfaceKit.
+
+    Returns
+    -------
+    OrderedPair
+        The output of the node is a list of voltages measured from the sensors.
     """
 
     voltage: list[float] = []

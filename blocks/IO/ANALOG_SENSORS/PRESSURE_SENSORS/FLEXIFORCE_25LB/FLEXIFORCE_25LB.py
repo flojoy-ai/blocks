@@ -1,5 +1,6 @@
-from flojoy import flojoy, OrderedPair, DataContainer
 from typing import Optional
+
+from flojoy import DataContainer, OrderedPair, flojoy
 
 
 @flojoy(deps={"pyserial": "3.5"})
@@ -16,6 +17,10 @@ def FLEXIFORCE_25LB(
         Calibration parameters to convert voltage into pressure.
     calibration2 : float
         Calibration parameters to convert voltage into pressure.
+
+    Returns
+    -------
+    OrderedPair
     """
 
     # Example of a Calibration to convert Voltage into pressions :

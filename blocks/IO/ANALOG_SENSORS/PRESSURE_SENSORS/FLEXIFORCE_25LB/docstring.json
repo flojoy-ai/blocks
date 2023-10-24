@@ -13,5 +13,11 @@
       "description": "Calibration parameters to convert voltage into pressure."
     }
   ],
-  "returns": []
+  "returns": [
+    {
+      "name": null,
+      "type": "OrderedPair",
+      "description": null
+    }
+  ]
 }

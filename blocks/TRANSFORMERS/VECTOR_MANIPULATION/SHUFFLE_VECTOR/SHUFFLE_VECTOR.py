@@ -6,12 +6,12 @@ from flojoy import flojoy, Vector
 def SHUFFLE_VECTOR(
     default: Vector,
 ) -> Vector:
-    """The SHUFFLE_VECTOR node returns a vector that is randomly shuffled
+    """The SHUFFLE_VECTOR node returns a vector that is randomly shuffled.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : Vector
-        The input vector
+        The vector to shuffle.
 
     Returns
     -------

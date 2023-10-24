@@ -7,8 +7,8 @@ def ORDERED_PAIR_XY_INVERT(
 ) -> OrderedPair:
     """The ORDERED_PAIR_XY_INVERT node returns the OrderedPair where the axes are inverted.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : OrderedPair
         The input OrderedPair that we would like to invert the axes.
 

@@ -4,12 +4,12 @@ from flojoy import flojoy, Vector, Scalar
 
 @flojoy
 def VECTOR_MAX(default: Vector) -> Scalar:
-    """The VECTOR_MAX node returns the maximum value from the Vector
+    """The VECTOR_MAX node returns the maximum value from the Vector.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     v : Vector
-        The input vector to use max peration
+        The input vector to find the max of.
 
     Returns
     -------

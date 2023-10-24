@@ -6,10 +6,10 @@ from flojoy import flojoy, Vector
 def REMOVE_DUPLICATES_VECTOR(
     default: Vector,
 ) -> Vector:
-    """The REMOVE_DUPLICATES_VECTOR node returns a vector with only unique elements
+    """The REMOVE_DUPLICATES_VECTOR node returns a vector with only unique elements.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : Vector
         The input vector
 

@@ -28,5 +28,11 @@
       "description": "Is roughly the run length in seconds."
     }
   ],
-  "returns": []
+  "returns": [
+    {
+      "name": null,
+      "type": "OrderedPair",
+      "description": null
+    }
+  ]
 }

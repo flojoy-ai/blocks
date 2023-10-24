@@ -6,12 +6,12 @@ from flojoy import flojoy, Matrix
 def MATMUL(a: Matrix, b: Matrix) -> Matrix:
     """The MATMUL node takes two input matrices, multiplies them, and returns the result.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     a : Matrix
-        The input matrix to be multiplied to input b.
+        The matrix on the left of the multiplication.
     b : Matrix
-        The input matrix to be multiplied to input a.
+        The matrix on the right of the multiplication.
 
     Returns
     -------

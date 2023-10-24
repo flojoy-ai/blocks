@@ -8,5 +8,11 @@
       "description": "number of seconds to sleep"
     }
   ],
-  "returns": []
+  "returns": [
+    {
+      "name": null,
+      "type": "Optional[DataContainer]",
+      "description": "Returns the input if one was passed in."
+    }
+  ]
 }

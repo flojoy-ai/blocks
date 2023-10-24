@@ -3,7 +3,7 @@ from typing import TypedDict
 import numpy as np
 
 
-class IMAGE_CHANNEL_OUTPUTS(TypedDict):
+class ChannelSplitOutput(TypedDict):
     r: Image
     g: Image
     b: Image
@@ -11,20 +11,28 @@ class IMAGE_CHANNEL_OUTPUTS(TypedDict):
 
 
 @flojoy
-def CHANNEL_SPLIT(default: Image | Matrix) -> IMAGE_CHANNEL_OUTPUTS:
+def CHANNEL_SPLIT(default: Image | Matrix) -> ChannelSplitOutput:
     """The CHANNEL_SPLIT node returns the rgba channels of an image into 4 separate images for direct visualization.
 
     While the notion of "splitting an image into RGBA channels" is inherently tied to coloured pictures, this function will attempt to make sense of multiple input types.
-
     Should the input be of type 'Image', then the function will return the RGBA channels.
-
     Should the input be of type 'Matrix', meaning ideally a 3D 'numpy' array of size (L, M, 3) or (L, M, 4), then the function will return each channel respectively.
+
+    Parameters
+    ----------
+    default : Image | Matrix
+        The image to split.
 
     Returns
     -------
-    IMAGE_CHANNEL_OUTPUTS
-        The images, each channel itself is rendered with alpha=1,
-        except the alpha channel itself.
+    r : Image
+        The red channel.
+    g : Image
+        The green channel.
+    b : Image
+        The blue channel.
+    a : Image
+        The alpha channel.
     """
 
     try:
@@ -50,7 +58,7 @@ def CHANNEL_SPLIT(default: Image | Matrix) -> IMAGE_CHANNEL_OUTPUTS:
         zeros = np.zeros(r.shape, np.uint8)
         ones = 255 * np.ones(r.shape, np.uint8)
 
-        return IMAGE_CHANNEL_OUTPUTS(
+        return ChannelSplitOutput(
             r=Image(
                 r=r,
                 g=zeros,

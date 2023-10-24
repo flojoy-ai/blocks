@@ -1,7 +1,13 @@
 {
-  "long_description": "Inputs\n------\nv : vector\n    The input vector to find the length of.",
-  "short_description": "The VECTOR_LENGTH node returns the length of the input.",
-  "parameters": [],
+  "long_description": "",
+  "short_description": "The VECTOR_LENGTH node returns the length of the input vector.",
+  "parameters": [
+    {
+      "name": "v",
+      "type": "Vector",
+      "description": "The input vector to find the length of."
+    }
+  ],
   "returns": [
     {
       "name": null,
