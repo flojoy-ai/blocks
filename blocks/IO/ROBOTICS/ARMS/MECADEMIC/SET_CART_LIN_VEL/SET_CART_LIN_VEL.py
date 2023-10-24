@@ -1,4 +1,4 @@
-from flojoy import flojoy, TextBlob
+from flojoy import TextBlob, flojoy
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 
 
@@ -7,19 +7,16 @@ def SET_CART_LIN_VEL(ip_address: TextBlob, v: float) -> TextBlob:
     """
     The SET_CART_LIN_VEL node sets the robot arm's linear velocity in Cartesian coordinates.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     ip_address: TextBlob
         The IP address of the robot arm.
-
-    Parameters
-    ------
     v : float
         The velocity to be set.
 
     Returns
     -------
-    ip_address
+    ip_address: TextBlob
         The IP address of the robot arm.
     """
 
