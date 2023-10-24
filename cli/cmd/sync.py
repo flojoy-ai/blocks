@@ -1,3 +1,4 @@
+import json
 import os
 import sys
 
@@ -66,6 +67,13 @@ def sync():
                         print(f"{err_string} No app.json found for {file_name}")
                         sys.exit(1)
 
+                if not os.path.exists(os.path.join(root, "docstring.json")):
+                    print(f"{err_string} No docstring.json found for {file_name}")
+                    sys.exit(1)
+
+                with open(os.path.join(root, "docstring.json"), "r") as f:
+                    description = json.load(f)["short_description"]
+
                 # Create the markdown template file in docs
 
                 target_md_file = docs_folder_prefix + os.path.join(
@@ -80,6 +88,7 @@ def sync():
                         BlockDocsBuilder(
                             block_name=file_name,
                             block_folder_path=block_folder_path,
+                            description=description,
                         )
                         .add_python_docs_display()
                         .add_python_code()

@@ -1,9 +1,10 @@
 class BlockDocsBuilder:
-    def __init__(self, block_name, block_folder_path):
+    def __init__(self, block_name, block_folder_path, description):
         self.github_base = "https://github.com/flojoy-ai/blocks/blob/main/blocks/{block_folder_path}/{block_name}.py"
 
         self.block_name = block_name
         self.block_folder_path = block_folder_path
+        self.description = description
         self.github_link = self.github_base.format(
             block_name=block_name, block_folder_path=block_folder_path
         )
@@ -12,6 +13,7 @@ class BlockDocsBuilder:
 ---
 layout: "@/layouts/block-docs-layout.astro"
 title: {block_name}
+description: "{description}"
 slug: {slug}
 ---
 
@@ -21,6 +23,7 @@ slug: {slug}
 """.format(
             block_name=block_name,
             slug="blocks/" + block_folder_path.replace("_", "-").lower(),
+            description=description.replace('"', '\\"'),
         )
 
     def add_python_docs_display(self):
