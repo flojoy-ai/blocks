@@ -24,7 +24,7 @@ and run `poetry run python3 fjblock.py sync` to auto generate the docs.**
 
 Each block's documentation page is made of the following components:
 
-##### 1. A prettified docstring display for this block
+### 1. A prettified docstring display for this block
 
 To update this component, you need to add/update the docstring on the block's Python
 code itself, and then run `poetry run python3 fjblock.py sync` to regenerate the
@@ -36,7 +36,7 @@ to create a valid docstring :)
 Example: the [docstring](https://github.com/flojoy-ai/blocks/blob/main/blocks/AI_ML/CLASSIFICATION/ACCURACY/ACCURACY.py)
 for the `ACCURACY` block.
 
-##### 2. The Python source code for the block
+### 2. The Python source code for the block
 
 Same as point above, just edit the block's Python code directly and run
 `poetry run python3 fjblock.py sync`.
@@ -44,7 +44,7 @@ Same as point above, just edit the block's Python code directly and run
 Example: the [source code](https://github.com/flojoy-ai/blocks/blob/main/blocks/AI_ML/CLASSIFICATION/ACCURACY/ACCURACY.py)
 for the `ACCURACY` block.
 
-##### 3. An example Flojoy app using this block
+### 3. An example Flojoy app using this block
 
 To add/update the example app, you will have to add an `app.json` file which
 sits in the same folder at the block's Python code. Or simply update the
@@ -54,7 +54,7 @@ the sync command in this case.
 Example: the [app.json](https://github.com/flojoy-ai/blocks/blob/main/blocks/AI_ML/CLASSIFICATION/ACCURACY/app.json)
 for the `ACCURACY` block.
 
-##### 4. A breakdown of this example app
+### 4. A breakdown of this example app
 
 Same idea as before, you can add an `example.md` file in the same folder as the
 block's Python code. Or simply update the existing `example.md` file. Run
