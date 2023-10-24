@@ -1,17 +1,17 @@
-from flojoy import flojoy, DataContainer, Scalar, TextBlob
-import time, can, traceback
-from typing import Optional
+import traceback
 
-from tinymovr.tee import init_tee, destroy_tee
-from tinymovr.config import get_bus_config, create_device
+import can
+from flojoy import Scalar, TextBlob, flojoy
+from tinymovr.config import create_device, get_bus_config
+from tinymovr.tee import destroy_tee, init_tee
 
 
 @flojoy(deps={"tinymovr": "1.6.2"})
 def TINYMOVR_SET_VELOCITY(default: Scalar) -> TextBlob:
     """Direct a tinymovr BLDC driver to a set velocity.
 
-    Input
-    -----
+    Parameters
+    ----------
     velocity : Scalar
         Servo velocity (10k ticks/sec [1, 15]).
 

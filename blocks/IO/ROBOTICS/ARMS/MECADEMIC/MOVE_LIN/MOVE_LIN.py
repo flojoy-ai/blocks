@@ -1,5 +1,6 @@
-from flojoy import flojoy, TextBlob
 from typing import Optional
+
+from flojoy import TextBlob, flojoy
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 
 
@@ -16,13 +17,10 @@ def MOVE_LIN(
     """
     The MOVE_LIN node linearly moves the robot's tool to an absolute Cartesian position.
 
-    Inputs
-    ------
-    ip_address: TextBlob
-        The IP address of the robot arm.
-
     Parameters
-    ------
+    ----------
+    ip_address : TextBlob
+        The IP address of the robot arm.
     x : float
         The x coordinate of the position to move to
     y : float
@@ -38,7 +36,7 @@ def MOVE_LIN(
 
     Returns
     -------
-    ip_address
+    ip_address : TextBlob
         The IP address of the robot arm.
 
     """

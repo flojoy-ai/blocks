@@ -1,4 +1,4 @@
-from flojoy import flojoy, TextBlob
+from flojoy import TextBlob, flojoy
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 
 
@@ -7,19 +7,16 @@ def ACTIVATE(ip_address: TextBlob, simulator: bool = False) -> TextBlob:
     """
     The ACTIVATE node activates the robot arm.
 
-    Inputs
-    ------
-    ip_address: TextBlob
-        The IP address of the robot arm.
-
     Parameters
-    ------
-    simulator
+    ----------
+    ip_address : TextBlob
+        The IP address of the robot arm.
+    simulator : bool, default=False
         Whether to activate the simulator or not. Defaults to False.
 
     Returns
     -------
-    ip
+    ip : TextBlob
         The IP address of the robot arm.
 
     """

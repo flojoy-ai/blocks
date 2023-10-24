@@ -1,11 +1,22 @@
 {
-  "long_description": "Inputs\n------\nip_address: TextBlob\n    The IP address of the robot arm.\n\ntime: float\n    The time of delay in seconds.",
+  "long_description": "",
   "short_description": "The DELAY node delays the action between two nodes.",
-  "parameters": [],
+  "parameters": [
+    {
+      "name": "ip_address",
+      "type": "TextBlob",
+      "description": "The IP address of the robot arm."
+    },
+    {
+      "name": "time",
+      "type": "float",
+      "description": "The time of delay in seconds."
+    }
+  ],
   "returns": [
     {
-      "name": null,
-      "type": "ip_address",
+      "name": "ip_address",
+      "type": "TextBlob",
       "description": "The IP address of the robot arm."
     }
   ]
