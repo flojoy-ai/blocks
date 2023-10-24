@@ -94,7 +94,20 @@ def sync():
 
     # Remove all empty folders
     print("Almost done! Doing some housekeeping...")
+
+    for root, _, files in os.walk("."):
+        for file in files:
+            if file == ".DS_Store":
+                file_path = os.path.join(root, file)
+                os.remove(file_path)
+
     for dirpath, dirnames, filenames in os.walk(docs_folder_prefix):
+        if (
+            not filenames and not dirnames
+        ):  # Check if the directory has no files or subdirectories
+            os.rmdir(dirpath)  # Remove the directory
+
+    for dirpath, dirnames, filenames in os.walk(blocks_folder_prefix):
         if (
             not filenames and not dirnames
         ):  # Check if the directory has no files or subdirectories
