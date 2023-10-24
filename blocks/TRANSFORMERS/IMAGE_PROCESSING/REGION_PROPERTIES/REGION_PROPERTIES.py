@@ -8,7 +8,7 @@ import re
 import numpy as np
 from typing import Optional
 import math
-from nodes.VISUALIZERS.template import plot_layout
+from blocks.VISUALIZERS.template import plot_layout
 from PIL import Image as PILImage
 
 

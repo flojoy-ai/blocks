@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 import scipy.fft
 import skimage.filters as filters
 from flojoy import DCNpArrayType, Grayscale, Image, Matrix, Plotly, flojoy
-from nodes.VISUALIZERS.template import plot_layout
+from blocks.VISUALIZERS.template import plot_layout
 from PIL import Image as PILImage
 from scipy import spatial
 from scipy.fft import _pocketfft

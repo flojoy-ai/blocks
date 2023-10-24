@@ -13,7 +13,7 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 
 import numpy as np
-from nodes.VISUALIZERS.template import plot_layout
+from blocks.VISUALIZERS.template import plot_layout
 
 
 @flojoy
