@@ -21,7 +21,7 @@ def TIMER(
 
     Returns
     -------
-    DataContainer or None
+    Optional[DataContainer]
         Returns the input if one was passed in.
     """
 

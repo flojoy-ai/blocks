@@ -9,13 +9,10 @@ def DF_2_ORDERED_TRIPLE(
 
     It takes one dataframe type data and selects 3 different columns to generate the OrderedTriple type.
 
-    Inputs
-    ------
-    default : DataFrame
-        The input dataframe to which we apply the conversion to.
-
     Parameters
     ----------
+    default : DataFrame
+        The input dataframe to which we apply the conversion to.
     x : int
         The index of the column that represents the x-axis.
     y : int

@@ -12,8 +12,8 @@ def DIVIDE(
 
     When a constant is divided into an array or matrix, each element in the array or matrix will be divided by the constant value.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     a : OrderedPair|Scalar|Vector
         The input that will be divide by b.
     b : OrderedPair|Scalar|Vector

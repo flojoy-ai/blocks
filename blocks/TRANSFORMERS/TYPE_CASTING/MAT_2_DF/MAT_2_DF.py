@@ -7,8 +7,8 @@ from flojoy import flojoy, Matrix, DataFrame
 def MAT_2_DF(default: Matrix) -> DataFrame:
     """The MAT_2_DF node takes one matrix type data and converts it to a dataframe type data.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : Matrix
         The input matrix to which we apply the conversion to.
 

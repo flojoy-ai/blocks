@@ -11,9 +11,10 @@ from utils.object_detection.object_detection import detect_object
 def OBJECT_DETECTION(default: Image) -> Image:
     """The OBJECT_DETECTION node detects objects in the input image, and returns an 'image' DataContainer with those objects highlighted.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : Image
+        The image to analyze for object detection.
 
     Returns
     -------

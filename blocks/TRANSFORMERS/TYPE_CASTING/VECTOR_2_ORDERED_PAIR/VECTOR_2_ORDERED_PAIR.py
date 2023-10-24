@@ -5,8 +5,8 @@ from flojoy import flojoy, Vector, OrderedPair
 def VECTOR_2_ORDERED_PAIR(default: Vector, y: Vector) -> OrderedPair:
     """The VECTOR_2_ORDERED_PAIR node returns the OrderedPair where x and y axes are the input nodes.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : Vector
         The input vector that will be the x axis of OrderedPair.
     y : Vector

@@ -24,6 +24,13 @@ def CONDITIONAL(
     ----------
     operator_type : select
         Specifies the type of comparison to be performed between the two inputs. The default value is ">=".
+
+    Returns
+    -------
+    true : DataContainer
+        Forwards the first value to the true branch.
+    False : DataContainer
+        Forwards the second value to the false branch.
     """
 
     # y_of_x = x.y

@@ -22,8 +22,8 @@ from flojoy import (
 def NP_2_DF(default: DataContainer) -> DataFrame:
     """The NP_2_DF node converts numpy array data into dataframe type data.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : DataContainer
         The input numpy array which we apply the conversion to.
 

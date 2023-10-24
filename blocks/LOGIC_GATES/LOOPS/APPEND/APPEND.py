@@ -13,8 +13,8 @@ def APPEND(
 
     For ordered pair, the single point must have a shape of 1 (or (1,)).
 
-    Inputs
-    ------
+    Parameters
+    ----------
     primary_dp : OrderedPair|Vector|Scalar|Matrix|DataFrame
         Input that ends up "on top" of the resulting DataContainer.
     secondary_dp : OrderedPair|Vector|Scalar|Matrix|DataFrame

@@ -6,8 +6,8 @@ from flojoy import flojoy, DataFrame, Matrix
 def DF_2_NP(default: DataFrame) -> Matrix:
     """The DF_2_NP node takes one dataframe type data and converts it to a matrix type data.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : DataFrame
         The input dataframe to which we apply the conversion to.
 

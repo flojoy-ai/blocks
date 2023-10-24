@@ -13,6 +13,11 @@ from flojoy import flojoy, run_in_venv, DataFrame, Image
 def NLP_CONNECT_VIT_GPT2(default: Image) -> DataFrame:
     """The NLP_CONNECT_VIT_GPT2 node captions an input image and produces an output string wrapped in a dataframe.
 
+    Parameters
+    ----------
+    default : Image
+        The image to caption.
+
     Returns
     -------
     DataFrame
@@ -45,9 +50,15 @@ def NLP_CONNECT_VIT_GPT2(default: Image) -> DataFrame:
     tokenizer = transformers.AutoTokenizer.from_pretrained(local_repo_path)
 
     with torch.inference_mode():
-        pixel_values = feature_extractor(images=[image], return_tensors="pt").pixel_values  # type: ignore
-        output_ids = model.generate(pixel_values, max_length=16, num_beams=4)  # type: ignore
-        preds = tokenizer.batch_decode(output_ids, skip_special_tokens=True)  # type: ignore
+        pixel_values = feature_extractor(
+            images=[image], return_tensors="pt"
+        ).pixel_values  # type: ignore
+        output_ids = model.generate(
+            pixel_values, max_length=16, num_beams=4
+        )  # type: ignore
+        preds = tokenizer.batch_decode(
+            output_ids, skip_special_tokens=True
+        )  # type: ignore
         pred = preds[0].strip()
 
     df_pred = pd.DataFrame.from_records([(pred,)], columns=["caption"])

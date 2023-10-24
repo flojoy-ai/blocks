@@ -10,8 +10,8 @@ def MULTIPLY(
 ) -> OrderedPair | Scalar | Vector:
     """The MULTIPLY node multiplies two numeric arrays, vectors, matrices, or constants element-wise and returns the result.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     a : OrderedPair|Scalar|Vector
         The input a use to compute the product of a and b.
     b : OrderedPair|Scalar|Vector

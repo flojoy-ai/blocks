@@ -11,7 +11,7 @@
   "returns": [
     {
       "name": null,
-      "type": "DataContainer or None",
+      "type": "Optional[DataContainer]",
       "description": "Returns the input if one was passed in."
     }
   ]

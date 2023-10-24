@@ -66,6 +66,13 @@ def LOOP(
     ----------
     num_loops : int
         number of times to iterate through body nodes, default is "-1" meaning infinity.
+
+    Returns
+    -------
+    body : DataContainer
+        Forwards the input DataContainer to the body.
+    end : DataContainer
+        Forwards the input DataContainer to the end.
     """
 
     node_id = default_params.node_id

@@ -10,8 +10,8 @@ def SUBTRACT(
 ) -> OrderedPair | Scalar | Vector:
     """The SUBTRACT node subtracts two numeric arrays, vectors, matrices, or constants element-wise and returns the result.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     a : OrderedPair|Scalar|Vector
         The input a use in the subtraction of a by b.
     b : OrderedPair|Scalar|Vector
