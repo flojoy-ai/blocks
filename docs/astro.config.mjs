@@ -3,7 +3,7 @@ import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
 import path from "path";
 import react from "@astrojs/react";
-
+import robotsTxt from "astro-robots-txt";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 
@@ -97,6 +97,7 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     react(),
+    robotsTxt(),
   ],
   markdown: {
     shikiConfig: {
@@ -104,6 +105,7 @@ export default defineConfig({
       langs: ["python"],
       wrap: true, // Enable word wrap to prevent horizontal scrolling
     },
+
     // 2 plugins for math support
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
