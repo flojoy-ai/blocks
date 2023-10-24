@@ -1,6 +1,6 @@
-from flojoy import flojoy, Image, Plotly, Grayscale
-import plotly.express as px
 import numpy as np
+import plotly.express as px
+from flojoy import Grayscale, Image, Plotly, flojoy
 from nodes.VISUALIZERS.template import plot_layout
 
 
@@ -8,8 +8,8 @@ from nodes.VISUALIZERS.template import plot_layout
 def IMAGE(default: Image | Grayscale) -> Plotly:
     """The IMAGE node creates a Plotly Image visualization for a given input DataContainer type of image.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : Image
         the DataContainer to be visualized
 

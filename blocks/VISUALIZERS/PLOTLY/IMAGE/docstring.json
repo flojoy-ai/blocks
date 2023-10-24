@@ -1,7 +1,13 @@
 {
-  "long_description": "Inputs\n------\ndefault : Image\n    the DataContainer to be visualized",
+  "long_description": "",
   "short_description": "The IMAGE node creates a Plotly Image visualization for a given input DataContainer type of image.",
-  "parameters": [],
+  "parameters": [
+    {
+      "name": "default",
+      "type": "Image",
+      "description": "the DataContainer to be visualized"
+    }
+  ],
   "returns": [
     {
       "name": null,

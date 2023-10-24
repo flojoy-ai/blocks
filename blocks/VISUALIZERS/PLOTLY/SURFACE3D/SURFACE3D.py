@@ -1,15 +1,15 @@
-import plotly.graph_objects as go  # type:ignore
-from flojoy import Plotly, OrderedTriple, DataFrame, flojoy, Surface, Matrix
-from nodes.VISUALIZERS.template import plot_layout
 import numpy as np
+import plotly.graph_objects as go  # type:ignore
+from flojoy import DataFrame, Matrix, OrderedTriple, Plotly, Surface, flojoy
+from nodes.VISUALIZERS.template import plot_layout
 
 
 @flojoy
 def SURFACE3D(default: OrderedTriple | DataFrame | Surface | Matrix) -> Plotly:
     """The SURFACE3D node creates a Plotly 3D Surface visualization for a given input DataContainer.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : OrderedTriple|DataFrame|Surface|Matrix
         the DataContainer to be visualized
 
