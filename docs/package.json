@@ -11,13 +11,14 @@
     "format": "prettier --plugin=prettier-plugin-astro --plugin=prettier-plugin-tailwindcss --write ."
   },
   "dependencies": {
-    "@astrojs/react": "^3.0.3",
+    "@astrojs/react": "^3.0.4",
     "@astrojs/starlight": "^0.11.1",
     "@astrojs/starlight-tailwind": "^2.0.0",
     "@astrojs/tailwind": "^5.0.2",
     "@types/react": "^18.2.31",
     "@types/react-dom": "^18.2.14",
-    "astro": "^3.3.3",
+    "astro": "^3.3.4",
+    "astro-robots-txt": "^1.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "lucide-react": "^0.288.0",
@@ -28,7 +29,7 @@
     "rehype-katex": "^7.0.0",
     "remark-math": "^6.0.0",
     "sharp": "^0.32.6",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.4"
   },
   "devDependencies": {
     "prettier": "^3.0.3",

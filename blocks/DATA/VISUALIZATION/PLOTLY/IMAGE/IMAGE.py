@@ -1,7 +1,7 @@
 import numpy as np
 import plotly.express as px
 from flojoy import Grayscale, Image, Plotly, flojoy
-from nodes.VISUALIZERS.template import plot_layout
+from blocks.DATA.VISUALIZATION.template import plot_layout
 
 
 @flojoy

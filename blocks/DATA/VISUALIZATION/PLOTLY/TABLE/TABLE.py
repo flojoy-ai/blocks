@@ -1,7 +1,7 @@
 import pandas as pd
 import plotly.graph_objects as go
 from flojoy import DataFrame, OrderedPair, OrderedTriple, Plotly, Scalar, Vector, flojoy
-from nodes.VISUALIZERS.template import plot_layout
+from blocks.DATA.VISUALIZATION.template import plot_layout
 
 
 @flojoy

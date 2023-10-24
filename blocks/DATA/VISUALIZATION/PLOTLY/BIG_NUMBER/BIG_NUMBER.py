@@ -9,7 +9,7 @@ from flojoy import (
 )
 from typing import cast
 import plotly.graph_objects as go
-from nodes.VISUALIZERS.template import plot_layout
+from blocks.DATA.VISUALIZATION.template import plot_layout
 
 MEMORY_KEY = "BIG_NUMBER_MEMORY_KEY"
 
