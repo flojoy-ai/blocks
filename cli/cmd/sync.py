@@ -17,7 +17,7 @@ def sync():
     total_synced_pages = 0
 
     # We would like to NOT modify the following files
-    keep_files = ["overview.md"]
+    keep_files = ["overview.mdx"]
     auto_gen_categories = ["NUMPY", "SCIPY"]
 
     print("Generating docstring.json for all the blocks...")
