@@ -1,7 +1,18 @@
 {
-  "long_description": "Inputs\n------\na : Matrix\n    The input matrix to be multiplied to input b.\nb : Matrix\n    The input matrix to be multiplied to input a.",
+  "long_description": "",
   "short_description": "The MATMUL node takes two input matrices, multiplies them, and returns the result.",
-  "parameters": [],
+  "parameters": [
+    {
+      "name": "a",
+      "type": "Matrix",
+      "description": "The matrix on the left of the multiplication."
+    },
+    {
+      "name": "b",
+      "type": "Matrix",
+      "description": "The matrix on the right of the multiplication."
+    }
+  ],
   "returns": [
     {
       "name": null,

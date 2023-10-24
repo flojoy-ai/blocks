@@ -1,14 +1,13 @@
-import numpy as np
 from flojoy import flojoy, Vector, Scalar
 
 
 @flojoy
 def VECTOR_LENGTH(default: Vector) -> Scalar:
-    """The VECTOR_LENGTH node returns the length of the input.
+    """The VECTOR_LENGTH node returns the length of the input vector.
 
-    Inputs
-    ------
-    v : vector
+    Parameters
+    ----------
+    v : Vector
         The input vector to find the length of.
 
     Returns

@@ -7,18 +7,17 @@ def INTERLEAVE_VECTOR(
     default: Vector,
     a: list[Vector],
 ) -> Vector:
-    """The INTERLEAVE_VECTOR node combine multiple vectors
-    into a single vector type by interleaving their elements
+    """The INTERLEAVE_VECTOR node combine multiple vectors into a single vector type by interleaving their elements.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : Vector
         The input vector
 
     Returns
     -------
     Vector
-        Decimated vector
+        Interleaved vector
     """
     interleavedVectors = [default.v]
 

@@ -3,21 +3,18 @@ from flojoy import flojoy, Vector
 
 
 @flojoy
-def REVERSE_VECTOR(
-    default: Vector,
-) -> Vector:
-    """The REVERSE_VECTOR node returns the input vector where
-    the elements are in the reverse order
+def REVERSE_VECTOR(default: Vector, ) -> Vector:
+    """The REVERSE_VECTOR node returns a vector equal to the input vector but reversed.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : Vector
-        The input vector
+        The input vector.
 
     Returns
     -------
     Vector
-        Reversed input vector
+        Reversed input vector.
     """
 
     return Vector(v=flip(default.v))

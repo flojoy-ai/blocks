@@ -3,13 +3,11 @@ from flojoy import flojoy, Vector
 
 
 @flojoy
-def REMOVE_DUPLICATES_VECTOR(
-    default: Vector,
-) -> Vector:
-    """The REMOVE_DUPLICATES_VECTOR node returns a vector with only unique elements
+def REMOVE_DUPLICATES_VECTOR(default: Vector, ) -> Vector:
+    """The REMOVE_DUPLICATES_VECTOR node returns a vector with only unique elements.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : Vector
         The input vector
 

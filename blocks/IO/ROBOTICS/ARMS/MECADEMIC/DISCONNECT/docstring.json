@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The DISCONNECT node disconnect the Mecademic robot arm via its API.",
+  "short_description": "The DISCONNECT node disconnects the Mecademic robot arm via its API.",
   "parameters": [
     {
       "name": "ip_address",

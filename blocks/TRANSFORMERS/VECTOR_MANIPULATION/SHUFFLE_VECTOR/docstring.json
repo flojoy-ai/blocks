@@ -1,7 +1,13 @@
 {
-  "long_description": "Inputs\n------\ndefault : Vector\n    The input vector",
-  "short_description": "The SHUFFLE_VECTOR node returns a vector that is randomly shuffled",
-  "parameters": [],
+  "long_description": "",
+  "short_description": "The SHUFFLE_VECTOR node returns a vector that is randomly shuffled.",
+  "parameters": [
+    {
+      "name": "default",
+      "type": "Vector",
+      "description": "The vector to shuffle."
+    }
+  ],
   "returns": [
     {
       "name": null,

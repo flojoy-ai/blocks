@@ -1,7 +1,13 @@
 {
-  "long_description": "Inputs\n------\na : Matrix\n    The input matrix to be transposed",
+  "long_description": "",
   "short_description": "The TRANSPOSE_MATRIX node takes an input 2D matrix and transposes it.",
-  "parameters": [],
+  "parameters": [
+    {
+      "name": "a",
+      "type": "Matrix",
+      "description": "The input matrix to be transposed"
+    }
+  ],
   "returns": [
     {
       "name": null,
