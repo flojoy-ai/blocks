@@ -13,6 +13,9 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Flojoy Docs",
+      components: {
+        Sidebar: "./src/components/override/Sidebar.astro",
+      },
       customCss: [
         // Path to your Tailwind base styles:
         "./src/styles/tailwind.css",
