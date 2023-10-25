@@ -1,9 +1,10 @@
-import pytest
-from unittest.mock import patch
 import io
+from unittest.mock import patch
+
 import boto3
 import moto
 import pandas as pd
+import pytest
 
 
 # Test dataframe to write as parquet file
@@ -19,7 +20,7 @@ def mock_bucket(test_dataframe):
         "fastparquet",
         reason="A suitable version of pyarrow or fastparquet is required for parquet support used by READ_S3.",
     )
-    with moto.mock_s3() as moto_fake:
+    with moto.mock_s3() as _:
         conn = boto3.resource("s3")
         conn.create_bucket(Bucket="test_bucket")
         test_bucket = conn.Bucket("test_bucket")

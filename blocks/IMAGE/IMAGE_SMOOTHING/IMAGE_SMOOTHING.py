@@ -1,7 +1,8 @@
-from flojoy import flojoy, Image
+from typing import Literal
+
 import cv2
 import numpy as np
-from typing import Literal
+from flojoy import Image, flojoy
 
 
 @flojoy(deps={"opencv-python": "4.8.0.76"})
@@ -59,7 +60,7 @@ def IMAGE_SMOOTHING(
                 image = cv2.bilateralFilter(rgba_image, kernel, kernel * 5, kernel * 5)
         try:
             r, g, b, a = cv2.split(image)
-        except:
+        except Exception:
             r, g, b = cv2.split(image)
         if a is None:
             a = None

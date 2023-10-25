@@ -1,7 +1,8 @@
-import serial
 import traceback
-from flojoy import flojoy, SerialConnection, TextBlob, Scalar, DataContainer
-from typing import cast, Optional
+from typing import Optional, cast
+
+import serial
+from flojoy import DataContainer, Scalar, SerialConnection, TextBlob, flojoy
 
 
 @flojoy(deps={"pyserial": "3.5"}, inject_connection=True)
@@ -27,20 +28,20 @@ def MEASURE_VOLTAGE(
     """
 
     # Start serial communication with the instrument
-    ser = cast(serial.Serial, connection.get_handle())
+    set = cast(serial.Serial, connection.get_handle())
 
-    if ser is None:
+    if set is None:
         raise ValueError("Serial communication is not open")
 
     CMD = "MEASURE:VOLTAGE:DC?\n\r"
 
-    ser.write(CMD.encode())
+    set.write(CMD.encode())
 
-    resp = ser.readline().decode()
+    resp = set.readline().decode()
 
     try:
         resp = float(resp.rstrip("\n"))
-    except:
+    except Exception:
         print(
             "Could not convert instrument response to a float", traceback.format_exc()
         )

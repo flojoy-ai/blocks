@@ -42,7 +42,7 @@ def EDGE_DETECTION(default: Image) -> Image:
 
         try:
             r, g, b, a = cv2.split(image)
-        except:
+        except Exception:
             r, g, b = cv2.split(image)
         if a is None:
             a = None

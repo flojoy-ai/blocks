@@ -1,5 +1,5 @@
 import numpy as np
-from flojoy import flojoy, OrderedPair, Matrix
+from flojoy import Matrix, OrderedPair, flojoy
 
 
 @flojoy
@@ -40,8 +40,8 @@ def INVERT(default: OrderedPair | Matrix, rcond: float = 1.0) -> OrderedPair | M
     elif isinstance(default, Matrix):
         a = default.m
         if not a.shape[0] == a.shape[1]:
-            assert (
-                type(b) == float
+            assert isinstance(
+                b, float
             ), "Need scalar value to compare SVDs for pseudoinversion"
             retval = np.linalg.pinv(a, rcond=b, hermitian=False)
         else:

@@ -4,7 +4,6 @@ import numpy as np
 from flojoy import OrderedPair, Scalar, Vector, flojoy
 
 from blocks.MATH.ARITHMETIC.utils.arithmetic_utils import get_val
-from blocks.MATH.ARITHMETIC.utils.arithmetic_utils import get_val
 
 
 @flojoy

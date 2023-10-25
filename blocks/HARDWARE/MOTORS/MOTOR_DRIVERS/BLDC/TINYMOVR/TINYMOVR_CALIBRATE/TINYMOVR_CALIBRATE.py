@@ -1,8 +1,9 @@
-from flojoy import flojoy, TextBlob
+import traceback
 
-import can, traceback
-from tinymovr.tee import init_tee, destroy_tee
-from tinymovr.config import get_bus_config, create_device
+import can
+from flojoy import TextBlob, flojoy
+from tinymovr.config import create_device, get_bus_config
+from tinymovr.tee import destroy_tee, init_tee
 
 
 @flojoy(deps={"tinymovr": "1.6.2"})
@@ -25,12 +26,12 @@ def TINYMOVR_CALIBRATE() -> TextBlob:
     tb = ""
 
     try:
-        with can.Bus(**params) as bus:
+        with can.Bus(**params) as _:
             init_tee(can.Bus(**params))
             tm = create_device(node_id=1)
             tm.controller.calibrate()
             destroy_tee()
-    except:
+    except Exception:
         tb = traceback.format_exc()
 
     return TextBlob(text_blob=tb)

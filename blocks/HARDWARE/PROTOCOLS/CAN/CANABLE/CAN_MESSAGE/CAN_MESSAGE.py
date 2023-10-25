@@ -1,6 +1,9 @@
-import can, traceback, json
-from flojoy import flojoy, SerialDevice, Vector, DataContainer, TextBlob
+import json
+import traceback
 from typing import Optional
+
+import can
+from flojoy import DataContainer, SerialDevice, TextBlob, Vector, flojoy
 
 
 @flojoy(deps={"python-can": "4.2.2"})
@@ -44,7 +47,7 @@ def CAN_MESSAGE(
 
         with can.Bus() as bus:
             bus.send(msg)
-    except:
+    except Exception:
         s = traceback.format_exc()
 
     return TextBlob(s)

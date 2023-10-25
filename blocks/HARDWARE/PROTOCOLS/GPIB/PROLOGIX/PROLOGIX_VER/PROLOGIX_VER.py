@@ -1,6 +1,8 @@
-import serial, traceback
-from flojoy import flojoy, SerialConnection, TextBlob, DataContainer
-from typing import cast, Optional
+import traceback
+from typing import Optional, cast
+
+import serial
+from flojoy import DataContainer, SerialConnection, TextBlob, flojoy
 
 
 @flojoy(deps={"pyserial": "3.5"}, inject_connection=True)
@@ -28,12 +30,12 @@ def PROLOGIX_VER(
 
     try:
         # Start serial communication with the instrument
-        ser = cast(serial.Serial, connection.get_handle())
-        if ser is None:
+        set = cast(serial.Serial, connection.get_handle())
+        if set is None:
             raise ValueError("Serial communication is not open")
-        ser.write(b"++ver\r\n")
-        s = ser.read(1000).decode()
-    except:
+        set.write(b"++ver\r\n")
+        s = set.read(1000).decode()
+    except Exception:
         s = traceback.format_exc()
 
     return TextBlob(s)

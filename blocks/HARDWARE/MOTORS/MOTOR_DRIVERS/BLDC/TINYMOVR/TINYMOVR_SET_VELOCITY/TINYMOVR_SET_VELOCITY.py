@@ -41,7 +41,7 @@ def TINYMOVR_SET_VELOCITY(default: Scalar) -> TextBlob:
             tm.controller.velocity_mode()
             tm.controller.velocity.setpoint = velocity * velocity_multiplier
             destroy_tee()
-    except:
+    except Exception:
         tb = traceback.format_exc()
 
     return TextBlob(text_blob=tb)

@@ -1,7 +1,8 @@
 import random
-import numpy as np
-from flojoy import flojoy, Scalar, Vector, display, DataContainer
 from typing import Literal, Optional
+
+import numpy as np
+from flojoy import DataContainer, Scalar, Vector, display, flojoy
 
 
 @flojoy
