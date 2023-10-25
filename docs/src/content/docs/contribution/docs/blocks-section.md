@@ -20,7 +20,9 @@ can find more instructions below.
 ## Contribution Guide
 
 **TLDR: Just update whatever file in your block's folder (within the `blocks/` directory)
-and run `poetry run python3 fjblock.py sync` to auto generate the docs.**
+and run `poetry run python3 fjblock.py sync` or `just sync`
+(need to have [just](https://github.com/casey/just) installed) to
+auto generate the docs.**
 
 Each block's documentation page is made of the following components:
 
