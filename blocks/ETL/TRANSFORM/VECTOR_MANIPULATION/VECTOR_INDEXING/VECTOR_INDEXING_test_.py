@@ -1,6 +1,5 @@
 import numpy as np
-from flojoy import Vector, Scalar
-from unittest import TestCase
+from flojoy import Vector
 import pytest
 
 

@@ -1,4 +1,3 @@
-from numpy import reshape
 from flojoy import flojoy, Vector, Matrix
 
 

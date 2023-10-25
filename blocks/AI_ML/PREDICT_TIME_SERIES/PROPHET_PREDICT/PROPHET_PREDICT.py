@@ -81,8 +81,8 @@ def PROPHET_PREDICT(
         try:
             _dummy_df = _make_dummy_dataframe_for_prophet()
             prophet.Prophet().fit(_dummy_df)
-        except RuntimeError as e:
-            print(f"Could not run prophet, applying hotfix...")
+        except RuntimeError:
+            print("Could not run prophet, applying hotfix...")
         else:
             return
 

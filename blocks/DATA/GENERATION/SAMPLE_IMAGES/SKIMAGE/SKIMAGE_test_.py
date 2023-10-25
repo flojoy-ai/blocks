@@ -1,6 +1,5 @@
 from skimage import data
 from flojoy import Image
-import numpy as np
 
 
 # Tests that the function returns the expected 'astronaut' image in DataContainer Image class when called without the 'img_key' parameter

@@ -4,7 +4,6 @@ import io
 import boto3
 import moto
 import pandas as pd
-from flojoy import DataFrame
 
 
 # Test dataframe to write as parquet file

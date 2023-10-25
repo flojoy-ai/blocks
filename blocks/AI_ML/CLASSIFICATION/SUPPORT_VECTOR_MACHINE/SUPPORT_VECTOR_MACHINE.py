@@ -1,6 +1,5 @@
 from flojoy import flojoy, DataFrame, Matrix
 import pandas as pd
-import numpy as np
 from sklearn import svm, preprocessing
 from typing import Literal
 

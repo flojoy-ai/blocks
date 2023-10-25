@@ -1,7 +1,7 @@
 import cv2
 from flojoy import CameraDevice, flojoy, DataContainer
 from flojoy.connection_manager import DeviceConnectionManager
-from typing import Optional, Literal
+from typing import Optional
 
 
 @flojoy(deps={"opencv-python-headless": "4.7.0.72"})

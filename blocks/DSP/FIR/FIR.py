@@ -1,6 +1,6 @@
 from scipy import signal
 from flojoy import flojoy, OrderedPair
-from typing import Literal, Union
+from typing import Literal
 
 
 @flojoy

@@ -86,7 +86,7 @@ def BATCH_PROCESSOR(
             difference = set(new_files).difference(
                 set(old_data["original_files"])
             )  # designed to only catch the addition of files
-            if not all([not d in old_data["original_files"] for d in list(difference)]):
+            if not all([d not in old_data["original_files"] for d in list(difference)]):
                 # this means there are more new files added to the mix
                 SmallMemory().write_to_memory(
                     node_id,

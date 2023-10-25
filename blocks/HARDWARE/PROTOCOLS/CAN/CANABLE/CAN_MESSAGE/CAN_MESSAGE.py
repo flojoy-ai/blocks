@@ -1,5 +1,4 @@
 import can, traceback, json
-from can.interface import Bus
 from flojoy import flojoy, SerialDevice, Vector, DataContainer, TextBlob
 from typing import Optional
 

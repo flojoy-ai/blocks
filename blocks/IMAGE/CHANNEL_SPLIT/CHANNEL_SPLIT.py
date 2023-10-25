@@ -1,4 +1,4 @@
-from flojoy import flojoy, Image, Matrix, DCNpArrayType
+from flojoy import flojoy, Image, Matrix
 from typing import TypedDict
 import numpy as np
 

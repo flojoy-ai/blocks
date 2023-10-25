@@ -1,4 +1,4 @@
-from numpy import concatenate, array
+from numpy import concatenate
 from flojoy import flojoy, Vector
 
 

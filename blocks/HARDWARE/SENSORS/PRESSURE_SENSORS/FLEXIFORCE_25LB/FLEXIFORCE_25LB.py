@@ -1,6 +1,5 @@
-from typing import Optional
 
-from flojoy import DataContainer, OrderedPair, flojoy
+from flojoy import OrderedPair, flojoy
 
 
 @flojoy(deps={"pyserial": "3.5"})

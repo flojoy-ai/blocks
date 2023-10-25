@@ -65,7 +65,7 @@ def FFT(
     """
 
     if sample_rate <= 0:
-        raise ValueError(f"Sample rate must be greater than 0")
+        raise ValueError("Sample rate must be greater than 0")
 
     signal_value = default.y
     x = default.x

@@ -1,5 +1,5 @@
 import numpy as np
-from flojoy import OrderedPair, DefaultParams, Scalar
+from flojoy import DefaultParams, Scalar
 
 
 def test_PID(mock_flojoy_decorator):

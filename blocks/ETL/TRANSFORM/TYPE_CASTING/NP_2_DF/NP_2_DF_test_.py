@@ -129,7 +129,7 @@ def test_NP_2_DF_none(mock_flojoy_decorator):
     vec = Vector(v=[[0, 1], [2, 3], [4, 5], [6, 7]])
     np.testing.assert_raises_regex(
         ValueError,
-        f"unsupported DataContainer type passed for NP_2_DF",
+        "unsupported DataContainer type passed for NP_2_DF",
         NP_2_DF.NP_2_DF,
         vec,
     )

@@ -71,4 +71,4 @@ def NP_2_DF(default: DataContainer) -> DataFrame:
                 df = pd.DataFrame(merge)
                 return DataFrame(df=df)
         case _:
-            raise ValueError(f"unsupported DataContainer type passed for NP_2_DF")
+            raise ValueError("unsupported DataContainer type passed for NP_2_DF")

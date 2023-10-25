@@ -1,5 +1,5 @@
 import numpy as np
-from flojoy import Vector, Scalar
+from flojoy import Vector
 
 
 def test_VECTOR_LENGTH(mock_flojoy_decorator):

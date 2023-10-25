@@ -1,7 +1,7 @@
 import random
 import numpy as np
 from flojoy import flojoy, OrderedPair, Vector, display
-from typing import Literal, Optional
+from typing import Literal
 
 
 @flojoy

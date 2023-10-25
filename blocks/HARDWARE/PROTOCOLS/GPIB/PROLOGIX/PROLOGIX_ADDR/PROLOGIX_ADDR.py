@@ -1,5 +1,4 @@
 import serial
-import traceback
 from flojoy import flojoy, SerialConnection, DataContainer, TextBlob
 from typing import cast, Optional
 

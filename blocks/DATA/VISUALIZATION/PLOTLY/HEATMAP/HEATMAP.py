@@ -194,7 +194,7 @@ def HEATMAP(
         layout.xaxis2 = dict(
             tickmode="array",
             tickvals=[0, histogram[0].max()],
-            ticktext=[f"0", f"{histogram[0].max():.0f}"],
+            ticktext=["0", f"{histogram[0].max():.0f}"],
         )
         layout.yaxis2 = dict(
             tickmode="array",

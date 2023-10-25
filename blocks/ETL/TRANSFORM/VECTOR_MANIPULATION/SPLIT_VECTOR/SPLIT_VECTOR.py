@@ -1,7 +1,5 @@
-from numpy.random import permutation
 from flojoy import flojoy, Vector
 from typing import TypedDict
-from sklearn.model_selection import train_test_split
 
 
 class resultSplit(TypedDict):
