@@ -1,4 +1,4 @@
-from flojoy import flojoy, Image, DataFrame, Grayscale, TextBlob
+from flojoy import flojoy, Image, DataFrame, Grayscale, TextBlob, File
 from typing import Literal, Optional
 import numpy as np
 from PIL import Image as PIL_Image
@@ -25,7 +25,7 @@ def get_file_path(file_path: str, default_path: str | None = None):
     }
 )
 def LOCAL_FILE(
-    file_path: str | None = None,
+    file_path: File | None = None,
     default: Optional[TextBlob] = None,
     file_type: Literal["Image", "Grayscale", "JSON", "CSV"] = "Image",
 ) -> Image | DataFrame | Grayscale:
@@ -33,7 +33,7 @@ def LOCAL_FILE(
 
     Parameters
     ----------
-    file_path : str
+    file_path : File
         The path to the file to be loaded. This can be either an absolute path or
         a path relative to the "nodes" directory.
 
@@ -55,6 +55,8 @@ def LOCAL_FILE(
         Grayscale from file_type 'Grayscale'.
         DataFrame for file_type 'json', 'csv'.
     """
+
+    file_path = file_path.unwrap() if file_path else None
 
     default_image_path = os.path.join(
         os.path.dirname(os.path.abspath(__file__)),
