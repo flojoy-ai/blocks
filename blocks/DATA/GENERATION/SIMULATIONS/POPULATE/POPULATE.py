@@ -1,7 +1,8 @@
 import random
-import numpy as np
-from flojoy import flojoy, OrderedPair, Vector, display
 from typing import Literal
+
+import numpy as np
+from flojoy import OrderedPair, Vector, display, flojoy
 
 
 @flojoy
@@ -76,10 +77,12 @@ def OVERLOAD(lower_bound, upper_bound, distribution="uniform") -> None:
 
 
 @display
-def OVERLOAD(normal_mean, normal_standard_deviation, distribution="normal") -> None:
+def OVERLOAD(  # noqa: F811
+    normal_mean, normal_standard_deviation, distribution="normal"
+) -> None:
     return None
 
 
 @display
-def OVERLOAD(poisson_events, distribution="poisson") -> None:
+def OVERLOAD(poisson_events, distribution="poisson") -> None:  # noqa: F811
     return None

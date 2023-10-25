@@ -80,12 +80,12 @@ def OVERLOAD(size, lower_bound, upper_bound, distribution="uniform") -> None:
 
 
 @display
-def OVERLOAD(
+def OVERLOAD(  # noqa: F811
     size, normal_mean, normal_standard_deviation, distribution="normal"
 ) -> None:
     return None
 
 
 @display
-def OVERLOAD(size, poisson_events, distribution="poisson") -> None:
+def OVERLOAD(size, poisson_events, distribution="poisson") -> None:  # noqa: F811
     return None
