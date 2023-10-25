@@ -19,6 +19,9 @@ should be consistent with the description below.
 
 A one-line summary that does not use variable names or the function name, e.g.
 
+Note that having a good short summary is very important since it will
+be used for SEO.
+
 ```python
 def add(a: Scalar, b: Scalar) -> Scalar:
     """The sum of two Scalar DataContainers.
