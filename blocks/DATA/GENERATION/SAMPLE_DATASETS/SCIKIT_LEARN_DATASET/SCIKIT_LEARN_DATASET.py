@@ -7,7 +7,7 @@ from flojoy import DataFrame, flojoy
 def SCIKIT_LEARN_DATASET(
     dataset_name: Literal[
         "iris", "diabetes", "digits", "linnerud", "wine", "breast_cancer"
-    ] = "iris"
+    ] = "iris",
 ) -> DataFrame:
     """The SCIKIT_LEARN_DATASET node retrieves a pandas DataFrame from
     'sklearn.datasets', using the provided dataset_key parameter, and returns

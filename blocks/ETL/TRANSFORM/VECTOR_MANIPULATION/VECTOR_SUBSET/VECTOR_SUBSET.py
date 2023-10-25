@@ -33,8 +33,8 @@ def VECTOR_SUBSET(default: Vector, indices: Array, length: int = 1) -> Vector:
     assert any(indices >= 0), "The indices must be greater than zero."
 
     if len(indices) == 1:
-        assert (indices[0] + (length - 1)) < len(
-            default.v
+        assert (
+            (indices[0] + (length - 1)) < len(default.v)
         ), "The length of items to delete starting from index parameter must not exceed the length of the Vector."
 
     if len(indices) > 1:

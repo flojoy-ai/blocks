@@ -49,7 +49,7 @@ def SKIMAGE(
         "stereo_motorcycle",
         "text",
         "vortex",
-    ] = "astronaut"
+    ] = "astronaut",
 ) -> Image:
     """The SKIMAGE node is designed to load example images from 'scikit-image'.
 

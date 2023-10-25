@@ -41,18 +41,18 @@ def REPLACE_SUBSET(
     assert any(indices >= 0), "The indices must be greater than zero."
 
     if len(indices) == 1:
-        assert (indices[0] + (length - 1)) < len(
-            default.v
+        assert (
+            (indices[0] + (length - 1)) < len(default.v)
         ), "The length of items to delete starting from index parameter must not exceed the length of the Vector."
 
     if len(indices) > 1:
-        assert len(indices) == len(
-            values
+        assert (
+            len(indices) == len(values)
         ), "The number of indices and the number of correpsonding elements must be equal."
         put(default.v, indices, values)
     else:
-        assert length == len(
-            values
+        assert (
+            length == len(values)
         ), "The number of indices and the number of correpsonding elements must be equal."
         indices = arange(indices[0], length)
         put(default.v, indices, values)
