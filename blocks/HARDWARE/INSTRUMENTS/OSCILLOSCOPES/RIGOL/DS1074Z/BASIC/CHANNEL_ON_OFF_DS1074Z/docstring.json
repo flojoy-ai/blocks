@@ -1,0 +1,38 @@
+{
+  "long_description": "Requires a CONNECTION_DS1074Z node at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis node should also work with compatible DS1000Z oscilloscopes",
+  "short_description": "The CHANNEL_ON_OFF_DS1074Z node turns the channels on or off for the DS1074Z.",
+  "parameters": [
+    {
+      "name": "connection",
+      "type": "VisaConnection",
+      "description": "The VISA address (requires the CONNECTION_DS1074Z node)."
+    },
+    {
+      "name": "ch1",
+      "type": "select",
+      "description": "Turn channel 1 on or off."
+    },
+    {
+      "name": "ch2",
+      "type": "select",
+      "description": "Turn channel 2 on or off."
+    },
+    {
+      "name": "ch3",
+      "type": "select",
+      "description": "Turn channel 3 on or off."
+    },
+    {
+      "name": "ch4",
+      "type": "select",
+      "description": "Turn channel 4 on or off."
+    }
+  ],
+  "returns": [
+    {
+      "name": null,
+      "type": "TextBlob",
+      "description": "Summary of channel settings."
+    }
+  ]
+}
