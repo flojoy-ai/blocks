@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  block-completeness-check:
+  block-completeness:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -47,7 +47,21 @@ jobs:
             exit 1
           fi
 
-  block-code-style-check:
+  block-code-format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout repository 
+
+      - uses: chartboost/ruff-action@v1
+        name: Ruff linter check
+
+      - uses: chartboost/ruff-action@v1
+        name: Ruff format check
+        with:
+          args: format --check .
+
+  block-code-lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
