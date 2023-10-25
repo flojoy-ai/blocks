@@ -11,6 +11,7 @@ def SWEEP_SETTINGS_FSV(
     start: float = 1e7,
     stop: float = 1e8,
     sweep_type: Literal["sweep", "FFT", "auto"] = "auto",
+    sweep_time: float = 0,
     counts: int = 10,
     points: int = 1000,
     default: Optional[DataContainer] = None,
@@ -41,6 +42,8 @@ def SWEEP_SETTINGS_FSV(
         The end point of the x axis, in Hz.
     sweep_type: select
         How the FSV sweeps along the x axis range.
+    sweep_type: float
+        The sweep time (set to auto if = 0), in seconds.
     counts: int
         Number of sweeps to do, (average optional in INIT_SWEEP_FSV).
     points: int
@@ -69,6 +72,11 @@ def SWEEP_SETTINGS_FSV(
     if sweep_type == "sweep":
         sweep_type = "SWE"
     rohde.write(f"SWE:TYPE {sweep_type.upper()}")
+
+    if sweep_time == 0:
+        rohde.write("SWE:TIME:AUTO ON")
+    else:
+        rohde.write(f"SWE:TIME {sweep_time}")
 
     rohde.write(f"SWE:COUN {counts}")
     rohde.write(f"SWE:POIN {points}")
