@@ -122,4 +122,4 @@ def sync():
         ):  # Check if the directory has no files or subdirectories
             os.rmdir(dirpath)  # Remove the directory
 
-    print(f"Successfully synced {total_synced_pages} pages!")
+    print(f"Successfully synced {total_synced_pages} block pages!")
