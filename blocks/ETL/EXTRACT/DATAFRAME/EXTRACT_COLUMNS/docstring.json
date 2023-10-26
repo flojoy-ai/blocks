@@ -1,7 +1,12 @@
 {
-  "long_description": "Inputs\n------\ndefault : DataFrame|Matrix\n    Input to use as the table for column extraction",
+  "long_description": "",
   "short_description": "The EXTRACT_COLUMNS node takes an input dataframe/matrix and returns a dataframe/matrix with only the specified columns.",
   "parameters": [
+    {
+      "name": "default",
+      "type": "DataFrame|Matrix",
+      "description": "Input to use as the table for column extraction"
+    },
     {
       "name": "columns",
       "type": "list of str or list of int",
