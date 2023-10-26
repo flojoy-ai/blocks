@@ -1,11 +1,12 @@
-warn_string = "[bold yellow]Warning![/bold yellow]"
-err_string = "[bold red]Error![/bold red]"
+WARN_STRING = "[bold yellow]Warning![/bold yellow]"
+ERR_STRING = "[bold red]Error![/bold red]"
 
-docs_folder_prefix = "docs/src/content/docs/blocks/"
-blocks_folder_prefix = "blocks/"
+DOCS_FOLDER = "docs/src/content/docs/blocks/"
+BLOCKS_FOLDER = "blocks/"
 
-block_template = """\
-from flojoy import flojoy, DataContainer
+BLOCK_TEMPLATE = """\
+from flojoy import flojoy, DataContainer, OrderedPair, Vector
+from typing import Optional, Literal
 
 
 @flojoy
