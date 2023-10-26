@@ -3,7 +3,7 @@ from flojoy import flojoy, DataContainer, CameraConnection, Image
 from typing import Optional, Literal
 
 
-@flojoy(deps={"opencv-python-headless": "4.7.0.72"}, inject_connection=True)
+@flojoy(deps={"opencv-python-headless": "4.8.1.78"}, inject_connection=True)
 def WEBCAM(
     connection: CameraConnection,
     default: Optional[DataContainer] = None,
