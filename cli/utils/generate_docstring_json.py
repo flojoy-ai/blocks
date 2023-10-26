@@ -1,6 +1,7 @@
 import ast
 import json
 import os
+from typing import cast
 
 from docstring_parser import parse
 from rich import print
@@ -13,102 +14,109 @@ def generate_docstring_json() -> bool:
     Will return True if all the docstrings are formatted correctly
     False if there is any docstring format error
     """
-    error = 0
+
+    errors = 0
+
     # Walk through all the folders and files in the current directory
     for root, _, files in os.walk(BLOCKS_FOLDER):
         # Iterate through the files
         for file in files:
             # Check if the file is a Python file and has the same name as the folder
-            if file.endswith(".py") and file[:-3] == os.path.basename(root):
-                # Construct the file path
-                file_path = os.path.join(root, file)
+            is_block_file = file.endswith(
+                ".py") and file[:-3] == os.path.basename(root)
+            if not is_block_file:
+                continue
 
-                # Read the contents of the Python file
-                with open(file_path, "r") as f:
-                    code = f.read()
+            # Construct the file path
+            file_path = os.path.join(root, file)
 
-                # Parse the code
-                tree = ast.parse(code)
+            # Read the contents of the Python file
+            with open(file_path, "r") as f:
+                code = f.read()
 
-                # Find functions in the code
-                for node in ast.walk(tree):
-                    if isinstance(node, ast.FunctionDef):
-                        function_name = node.name
+            # Parse the code
+            tree = ast.parse(code)
 
-                        if function_name != os.path.basename(root):
-                            # don't parse for any function that has a different
-                            # name than the node file name
-                            continue
+            # Find functions in the code
+            for node in ast.walk(tree):
+                if not isinstance(node, ast.FunctionDef):
+                    continue
 
-                        # Extract docstring if available
-                        if (node.body and isinstance(node.body[0], ast.Expr)
-                                and isinstance(node.body[0].value, ast.Str)):
-                            docstring = node.body[0].value.s
+                # don't parse for any function that has a different
+                # name than the node file name
+                function_name = node.name
+                if function_name != os.path.basename(root):
+                    continue
 
-                            # Process the docstring using docstring_parser
-                            parsed_docstring = parse(docstring)
+                # Extract docstring if available
+                has_docstring = (node.body
+                                 and isinstance(node.body[0], ast.Expr)
+                                 and isinstance(node.body[0].value, ast.Str))
+                if not has_docstring:
+                    print(
+                        f"{ERR_STRING} Docstring not found for {function_name}"
+                    )
+                    errors += 1
+                    continue
 
-                            if not parsed_docstring.short_description:
-                                print(
-                                    f"{ERR_STRING} short_description not found for {function_name}"
-                                )
-                                error += 1
+                docstring_node = cast(ast.Str,
+                                      cast(ast.Expr, node.body[0]).value)
+                docstring = docstring_node.s
 
-                            if not parsed_docstring.long_description:
-                                # it is okay to not have a long description
-                                parsed_docstring.long_description = ""
+                try:
+                    _write_docstring(docstring, root)
+                except ValueError as e:
+                    print(f"{ERR_STRING} {str(e)} for {function_name}")
 
-                            if not parsed_docstring.params:
-                                print(
-                                    f"{ERR_STRING} 'Parameters' not found for {function_name}"
-                                )
-                                error += 1
-
-                            if not parsed_docstring.many_returns:
-                                print(
-                                    f"{ERR_STRING} 'Returns' not found for {function_name}"
-                                )
-                                error += 1
-
-                            # Build the JSON data
-                            json_data = {
-                                "long_description":
-                                parsed_docstring.long_description,
-                                "short_description":
-                                parsed_docstring.short_description,
-                                "parameters": [{
-                                    "name":
-                                    param.arg_name,
-                                    "type":
-                                    param.type_name,
-                                    "description":
-                                    param.description,
-                                } for param in parsed_docstring.params],
-                                "returns": [{
-                                    "name": rtn.return_name,
-                                    "type": rtn.type_name,
-                                    "description": rtn.description,
-                                } for rtn in parsed_docstring.many_returns],
-                            }
-
-                            # Write the data to a JSON file in the same directory
-                            output_file_path = os.path.join(
-                                root, "docstring.json")
-                            with open(output_file_path, "w") as output_file:
-                                json.dump(json_data, output_file, indent=2)
-
-                                # sys.exit(0)
-                        else:
-                            print(
-                                f"{ERR_STRING} Docstring not found for {function_name}"
-                            )
-                            error += 1
-
-    if error > 0:
+    if errors > 0:
         print(
-            f"Found {error} [bold red]ERRORS[/bold red] with docstring formatting!"
+            f"Found {errors} [bold red]ERRORS[/bold red] with docstring formatting!"
         )
         return False
 
     print("All docstring are formatted correctly!")
     return True
+
+
+def _write_docstring(docstring: str, path: str):
+    """Process the docstring using docstring_parser and write it to a file.
+    Raises an error if short_description, parameters, or returns are missing.
+    """
+    # Process the docstring using docstring_parser
+    parsed_docstring = parse(docstring)
+
+    if not parsed_docstring.short_description:
+        raise ValueError("short_description not found")
+
+    # it is okay to not have a long description
+    if not parsed_docstring.long_description:
+        parsed_docstring.long_description = ""
+
+    if not parsed_docstring.params:
+        raise ValueError("'Parameters' not found")
+
+    if not parsed_docstring.many_returns:
+        raise ValueError("'Returns' not found")
+
+    # Build the JSON data
+    json_data = {
+        "long_description":
+        parsed_docstring.long_description,
+        "short_description":
+        parsed_docstring.short_description,
+        "parameters": [{
+            "name": param.arg_name,
+            "type": param.type_name,
+            "description": param.description,
+        } for param in parsed_docstring.params],
+        "returns": [{
+            "name": rtn.return_name,
+            "type": rtn.type_name,
+            "description": rtn.description,
+        } for rtn in parsed_docstring.many_returns],
+    }
+
+    # Write the data to a JSON file in the same directory
+    output_file_path = os.path.join(path, "docstring.json")
+    with open(output_file_path, "w") as output_file:
+        json.dump(json_data, output_file, indent=2)
