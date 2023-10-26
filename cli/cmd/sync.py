@@ -67,10 +67,6 @@ def sync():
                     )
                     sys.exit(1)
 
-            if not os.path.exists(os.path.join(root, "docstring.json")):
-                print(f"{ERR_STRING} No docstring.json found for {file_name}")
-                sys.exit(1)
-
             desc = _get_short_description(root)
             _write_doc_page(block_folder_path, file_name, desc, autogen)
 
