@@ -32,8 +32,7 @@ def sync():
         )
         sys.exit(1)
 
-    print(
-        f"[~] Cleaning the blocks section except all the {KEEP_FILES} files.")
+    print(f"Cleaning the blocks section except all the {KEEP_FILES} files.")
     for root, _, files in os.walk(DOCS_FOLDER, topdown=False):
         for file in files:
             if file in KEEP_FILES:
@@ -41,7 +40,7 @@ def sync():
             file_path = os.path.join(root, file)
             os.remove(file_path)
 
-    print("[~] Populating the blocks section...")
+    print("Populating the blocks section...")
     for root, _, files in os.walk(BLOCKS_FOLDER):
         folder_name = os.path.basename(root)
 
@@ -53,7 +52,7 @@ def sync():
             # In this case we found the Python file that matches the folder
 
             if state["verbose"]:
-                print(f"[~] Processing {file_name}")
+                print(f"Processing {file_name}")
 
             # example: VISUALIZERS/DATA_STRUCTURE/ARRAY_VIEW
             block_folder_path = root.split("blocks", 1)[1].strip("/")
@@ -77,10 +76,11 @@ def sync():
 
             total_synced_pages += 1
 
-    print("[~] Almost done! Doing some housekeeping...")
+    print("Almost done! Doing some housekeeping...")
     _prune_unneeded_files()
 
-    print(f"[~] Successfully synced {total_synced_pages} block pages!")
+    print(
+        f"[bold green] Successfully synced {total_synced_pages} block pages!")
 
 
 def _get_short_description(path: str):

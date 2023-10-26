@@ -74,7 +74,7 @@ def generate_docstring_json() -> bool:
         )
         return False
 
-    print("All docstring are formatted correctly!")
+    print("[bold green] All docstring are formatted correctly!")
     return True
 
 
