@@ -4,7 +4,7 @@ from flojoy.connection_manager import DeviceConnectionManager
 from typing import Optional
 
 
-@flojoy(deps={"opencv-python-headless": "4.7.0.72"})
+@flojoy(deps={"opencv-python-headless": "4.8.1.78"})
 def OPEN_WEBCAM(
     camera: CameraDevice,
     default: Optional[DataContainer] = None,
