@@ -67,6 +67,7 @@ def generate_docstring_json() -> bool:
                     _write_docstring(docstring, root)
                 except ValueError as e:
                     print(f"{ERR_STRING} {str(e)} for {function_name}")
+                    errors += 1
 
     if errors > 0:
         print(
