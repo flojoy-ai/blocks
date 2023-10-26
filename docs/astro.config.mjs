@@ -13,7 +13,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "Flojoy Docs",
-      logo: "./src/assets/logo_purple.svg",
+      logo: { src: "./src/assets/logo_purple.svg" },
       components: {
         Sidebar: "./src/components/override/Sidebar.astro",
       },
