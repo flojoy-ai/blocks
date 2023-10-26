@@ -24,7 +24,7 @@ def sync():
 
     # We would like to NOT modify the following files
 
-    print("[~] Generating docstring.json for all the blocks...")
+    print("Generating docstring.json for all the blocks...")
     success = generate_docstring_json()
     if not success:
         print(
@@ -59,9 +59,7 @@ def sync():
             block_folder_path = root.split("blocks", 1)[1].strip("/")
             block_category = block_folder_path.split("/")[0]
             autogen = block_category in AUTOGEN_CATEGORIES
-            required_files = REQUIRED_EXAMPLE_FILES
-            if not autogen:
-                required_files += REQUIRED_SKIP_IF_AUTOGEN
+            required_files = REQUIRED_EXAMPLE_FILES if autogen else REQUIRED_EXAMPLE_FILES + REQUIRED_SKIP_IF_AUTOGEN
 
             for required_file in required_files:
                 if not os.path.exists(os.path.join(root, required_file)):
