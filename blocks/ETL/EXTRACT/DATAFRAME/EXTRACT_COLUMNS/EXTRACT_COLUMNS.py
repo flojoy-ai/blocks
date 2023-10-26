@@ -1,18 +1,15 @@
-from flojoy import flojoy, DataFrame, Matrix, Array
 import numpy as np
+from flojoy import Array, DataFrame, Matrix, flojoy
 
 
 @flojoy
 def EXTRACT_COLUMNS(default: DataFrame | Matrix, columns: Array) -> DataFrame:
     """The EXTRACT_COLUMNS node takes an input dataframe/matrix and returns a dataframe/matrix with only the specified columns.
 
-    Inputs
-    ------
-    default : DataFrame|Matrix
-        Input to use as the table for column extraction
-
     Parameters
     ----------
+    default : DataFrame|Matrix
+        Input to use as the table for column extraction
     columns : list of str or list of int
         The columns to extract from the input dataframe
 
