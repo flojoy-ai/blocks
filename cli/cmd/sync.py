@@ -72,7 +72,7 @@ def sync():
             with open(os.path.join(root, "docstring.json"), "r") as f:
                 description = json.load(f)["short_description"]
 
-            target_md_file = DOCS_FOLDER + file_name + ".mdx"
+            target_md_file = DOCS_FOLDER + block_folder_path + ".mdx"
             os.makedirs(os.path.dirname(target_md_file), exist_ok=True)
 
             with open(target_md_file, "w") as f:
