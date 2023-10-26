@@ -27,9 +27,7 @@ def sync():
     print("Generating docstring.json for all the blocks...")
     success = generate_docstring_json()
     if not success:
-        print(
-            f"{ERR_STRING} Please fix all the docstring errors before syncing."
-        )
+        print(f"{ERR_STRING} Please fix all the docstring errors before syncing.")
         sys.exit(1)
 
     print(f"Cleaning the blocks section except all the {KEEP_FILES} files.")
@@ -58,15 +56,15 @@ def sync():
             block_folder_path = root.split("blocks", 1)[1].strip("/")
             block_category = block_folder_path.split("/")[0]
             autogen = block_category in AUTOGEN_CATEGORIES
-            required_files = (REQUIRED_EXAMPLE_FILES
-                              if autogen else REQUIRED_EXAMPLE_FILES +
-                              REQUIRED_SKIP_IF_AUTOGEN)
+            required_files = (
+                REQUIRED_EXAMPLE_FILES
+                if autogen
+                else REQUIRED_EXAMPLE_FILES + REQUIRED_SKIP_IF_AUTOGEN
+            )
 
             for required_file in required_files:
                 if not os.path.exists(os.path.join(root, required_file)):
-                    print(
-                        f"{ERR_STRING} No {required_file} found for {file_name}"
-                    )
+                    print(f"{ERR_STRING} No {required_file} found for {file_name}")
                     sys.exit(1)
 
             with open(os.path.join(root, "docstring.json"), "r") as f:
@@ -77,11 +75,15 @@ def sync():
 
             with open(target_md_file, "w") as f:
                 # Write the content of the markdown file
-                result = (BlockDocsBuilder(
-                    block_name=file_name,
-                    block_folder_path=block_folder_path,
-                    description=description,
-                ).add_python_docs_display().add_python_code())
+                result = (
+                    BlockDocsBuilder(
+                        block_name=file_name,
+                        block_folder_path=block_folder_path,
+                        description=description,
+                    )
+                    .add_python_docs_display()
+                    .add_python_code()
+                )
 
                 if not autogen:
                     result = result.add_example_app()
@@ -105,5 +107,4 @@ def sync():
         if not filenames and not dirnames:
             os.rmdir(dirpath)
 
-    print(
-        f"[bold green] Successfully synced {total_synced_pages} block pages!")
+    print(f"[bold green] Successfully synced {total_synced_pages} block pages!")
