@@ -18,7 +18,8 @@ def add(block: str):
     for part in parts:
         if part == "":
             err_console.print(
-                f"{ERR_STRING} you cannot have empty part in your block name!")
+                f"{ERR_STRING} you cannot have empty part in your block name!"
+            )
             sys.exit(1)
 
         match = re.match(pattern, part)

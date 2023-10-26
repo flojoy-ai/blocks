@@ -27,9 +27,7 @@ def sync():
     print("Generating docstring.json for all the blocks...")
     success = generate_docstring_json()
     if not success:
-        print(
-            f"{ERR_STRING} Please fix all the docstring errors before syncing."
-        )
+        print(f"{ERR_STRING} Please fix all the docstring errors before syncing.")
         sys.exit(1)
 
     print(f"Cleaning the blocks section except all the {KEEP_FILES} files.")
@@ -58,13 +56,15 @@ def sync():
             block_folder_path = root.split("blocks", 1)[1].strip("/")
             block_category = block_folder_path.split("/")[0]
             autogen = block_category in AUTOGEN_CATEGORIES
-            required_files = REQUIRED_EXAMPLE_FILES if autogen else REQUIRED_EXAMPLE_FILES + REQUIRED_SKIP_IF_AUTOGEN
+            required_files = (
+                REQUIRED_EXAMPLE_FILES
+                if autogen
+                else REQUIRED_EXAMPLE_FILES + REQUIRED_SKIP_IF_AUTOGEN
+            )
 
             for required_file in required_files:
                 if not os.path.exists(os.path.join(root, required_file)):
-                    print(
-                        f"{ERR_STRING} No {required_file} found for {file_name}"
-                    )
+                    print(f"{ERR_STRING} No {required_file} found for {file_name}")
                     sys.exit(1)
 
             desc = _get_short_description(root)
@@ -75,8 +75,7 @@ def sync():
     print("Almost done! Doing some housekeeping...")
     _prune_unneeded_files()
 
-    print(
-        f"[bold green] Successfully synced {total_synced_pages} block pages!")
+    print(f"[bold green] Successfully synced {total_synced_pages} block pages!")
 
 
 def _get_short_description(path: str):
@@ -86,8 +85,7 @@ def _get_short_description(path: str):
     return description
 
 
-def _write_doc_page(path: str, file_name: str, description: str,
-                    autogen: bool):
+def _write_doc_page(path: str, file_name: str, description: str, autogen: bool):
     """Create the markdown template file in docs"""
 
     target_md_file = DOCS_FOLDER + path + ".mdx"
@@ -96,11 +94,15 @@ def _write_doc_page(path: str, file_name: str, description: str,
 
     with open(target_md_file, "w") as f:
         # Write the content of the markdown file
-        result = (BlockDocsBuilder(
-            block_name=file_name,
-            block_folder_path=path,
-            description=description,
-        ).add_python_docs_display().add_python_code())
+        result = (
+            BlockDocsBuilder(
+                block_name=file_name,
+                block_folder_path=path,
+                description=description,
+            )
+            .add_python_docs_display()
+            .add_python_code()
+        )
 
         if not autogen:
             result = result.add_example_app()

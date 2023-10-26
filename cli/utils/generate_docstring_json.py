@@ -22,8 +22,7 @@ def generate_docstring_json() -> bool:
         # Iterate through the files
         for file in files:
             # Check if the file is a Python file and has the same name as the folder
-            is_block_file = file.endswith(
-                ".py") and file[:-3] == os.path.basename(root)
+            is_block_file = file.endswith(".py") and file[:-3] == os.path.basename(root)
             if not is_block_file:
                 continue
 
@@ -45,9 +44,7 @@ def generate_docstring_json() -> bool:
                 parsed_docstring = parse(docstring)
 
                 if not parsed_docstring.short_description:
-                    print(
-                        f"{ERR_STRING} short_description not found for {block_name}"
-                    )
+                    print(f"{ERR_STRING} short_description not found for {block_name}")
                     errors += 1
 
                 # it is okay to not have a long description
@@ -55,9 +52,7 @@ def generate_docstring_json() -> bool:
                     parsed_docstring.long_description = ""
 
                 if not parsed_docstring.params:
-                    print(
-                        f"{ERR_STRING} 'Parameters' not found for {block_name}"
-                    )
+                    print(f"{ERR_STRING} 'Parameters' not found for {block_name}")
                     errors += 1
 
                 if not parsed_docstring.many_returns:
@@ -66,20 +61,24 @@ def generate_docstring_json() -> bool:
 
                 # Build the JSON data
                 json_data = {
-                    "long_description":
-                    parsed_docstring.long_description,
-                    "short_description":
-                    parsed_docstring.short_description,
-                    "parameters": [{
-                        "name": param.arg_name,
-                        "type": param.type_name,
-                        "description": param.description,
-                    } for param in parsed_docstring.params],
-                    "returns": [{
-                        "name": rtn.return_name,
-                        "type": rtn.type_name,
-                        "description": rtn.description,
-                    } for rtn in parsed_docstring.many_returns],
+                    "long_description": parsed_docstring.long_description,
+                    "short_description": parsed_docstring.short_description,
+                    "parameters": [
+                        {
+                            "name": param.arg_name,
+                            "type": param.type_name,
+                            "description": param.description,
+                        }
+                        for param in parsed_docstring.params
+                    ],
+                    "returns": [
+                        {
+                            "name": rtn.return_name,
+                            "type": rtn.type_name,
+                            "description": rtn.description,
+                        }
+                        for rtn in parsed_docstring.many_returns
+                    ],
                 }
 
                 # Write the data to a JSON file in the same directory
@@ -88,9 +87,7 @@ def generate_docstring_json() -> bool:
                     json.dump(json_data, output_file, indent=2)
 
     if errors > 0:
-        print(
-            f"Found {errors} [bold red]ERRORS[/bold red] with docstring formatting!"
-        )
+        print(f"Found {errors} [bold red]ERRORS[/bold red] with docstring formatting!")
         return False
 
     print("[bold green] All docstring are formatted correctly!")
@@ -113,8 +110,11 @@ def _get_docstring(code: str, block_name: str) -> Optional[str]:
             continue
 
         # Extract docstring if available
-        has_docstring = (node.body and isinstance(node.body[0], ast.Expr)
-                         and isinstance(node.body[0].value, ast.Str))
+        has_docstring = (
+            node.body
+            and isinstance(node.body[0], ast.Expr)
+            and isinstance(node.body[0].value, ast.Str)
+        )
         if not has_docstring:
             return None
 
