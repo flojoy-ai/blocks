@@ -45,8 +45,9 @@ def sync():
     category_tree: CategoryTree = {}
 
     print("Populating the blocks section...")
-    for root, _, files in os.walk(BLOCKS_SOURCE_FOLDER):
+    for root, dirs, files in os.walk(BLOCKS_SOURCE_FOLDER):
         folder_name = os.path.basename(root)
+        dirs.sort()
 
         for file in files:
             file_name = os.path.splitext(file)[0]
