@@ -66,11 +66,11 @@ def make_category_content(
 
 
 class CategoryOverviewDocsBuilder:
-    def __init__(self, title: str, category_name: str, description: str):
+    def __init__(self, title: str, category_name: str, overview_description: str):
         self.category_name = category_name
         self.template = OVERVIEW_TEMPLATE_BASE.format(
             title=f"{title} Overview",
-            description=description.replace('"', '\\"'),
+            description=overview_description.replace('"', '\\"'),
             slug="blocks/" + category_name.replace("_", "-").lower(),
         )
 

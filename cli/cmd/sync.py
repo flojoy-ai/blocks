@@ -129,11 +129,11 @@ def sync():
         )
 
         title = None
-        description = ""
+        overview_description = ""
 
         if os.path.exists(summary_path):
             summary = frontmatter.load(summary_path)
-            description = summary.content
+            overview_description = summary.content
             title = summary["title"]
         else:
             print(
@@ -147,7 +147,7 @@ def sync():
         with open(overview_page_path, "w") as f:
             title = title if title is not None else top_level_category
             f.write(
-                CategoryOverviewDocsBuilder(title, top_level_category, description)
+                CategoryOverviewDocsBuilder(title, top_level_category, overview_description)
                 .add_content(category_tree[top_level_category])
                 .build()
             )
