@@ -21,7 +21,7 @@ slug: {slug}
 
 """.format(
             block_name=block_name,
-            slug="blocks/" + block_folder_path.replace("_", "-").lower(),
+            slug=get_block_slug(block_folder_path),
             description=description.replace('"', '\\"'),
         )
 
@@ -87,3 +87,7 @@ import Example from "@blocks/{block_folder_path}/example.md";
 {{/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}}
 """.format()
         return self.template
+
+
+def get_block_slug(block_folder_path: str):
+    return "blocks/" + block_folder_path.replace("_", "-").lower()
