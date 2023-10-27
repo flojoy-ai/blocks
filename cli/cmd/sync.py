@@ -147,7 +147,9 @@ def sync():
         with open(overview_page_path, "w") as f:
             title = title if title is not None else top_level_category
             f.write(
-                CategoryOverviewDocsBuilder(title, top_level_category, overview_description)
+                CategoryOverviewDocsBuilder(
+                    title, top_level_category, overview_description
+                )
                 .add_content(category_tree[top_level_category])
                 .build()
             )
