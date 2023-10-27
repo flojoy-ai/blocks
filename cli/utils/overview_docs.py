@@ -1,4 +1,8 @@
 import dataclasses
+from rich import print
+import sys
+
+from cli.constants import ERR_STRING
 
 CATEGORY_TEMPLATE = """ \
 {header_level} {title}
@@ -39,6 +43,8 @@ CategoryTree = list[BlockInfo] | dict[str, "CategoryTree"]
 def make_category_content(
     name: str, contents: CategoryTree, depth: int = TOP_LEVEL_DEPTH
 ) -> str:
+    if depth > 6:
+        raise ValueError(f"{name} category depth too nested, must be less than 4 levels deep")
     match contents:
         # leaf (bottom level category)
         case list():
@@ -64,12 +70,17 @@ class CategoryOverviewDocsBuilder:
         self.category_name = category_name
         self.template = OVERVIEW_TEMPLATE_BASE.format(
             title=f"{title} Overview",
-            description=description.replace("\n", " "),
+            description=description.replace('"', '\\"'),
             slug="blocks/" + category_name.replace("_", "-").lower(),
         )
 
     def add_content(self, content: CategoryTree):
-        self.template += make_category_content(self.category_name, content)
+        try:
+            self.template += make_category_content(self.category_name, content)
+        except ValueError as e:
+            print(f"{ERR_STRING} {str(e)}")
+            sys.exit(1)
+        
         return self
 
     def build(self):
