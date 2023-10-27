@@ -42,7 +42,7 @@ def make_category_content(
     name: str, contents: CategoryTree, depth: int = TOP_LEVEL_DEPTH, path: str = ""
 ) -> str:
     if depth > 6:
-        raise ValueError(f"{path + name} category depth too nested, must be less than 4 levels deep")
+        raise ValueError(f"{path}/{name} category depth too nested, must be less than 4 levels deep")
     match contents:
         # leaf (bottom level category)
         case list():
