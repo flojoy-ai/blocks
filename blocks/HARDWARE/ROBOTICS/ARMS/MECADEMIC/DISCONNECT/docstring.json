@@ -1,18 +1,6 @@
 {
-  "long_description": "",
-  "short_description": "The DISCONNECT node disconnects the Mecademic robot arm via its API.",
-  "parameters": [
-    {
-      "name": "ip_address",
-      "type": "TextBlob",
-      "description": "The IP address of the robot arm."
-    }
-  ],
-  "returns": [
-    {
-      "name": null,
-      "type": "None",
-      "description": null
-    }
-  ]
+  "long_description": "Inputs\n------\nip_address\n    The IP address of the robot arm.",
+  "short_description": "The DISCONNECT node disconnect the Mecademic robot arm via its API.",
+  "parameters": [],
+  "returns": []
 }

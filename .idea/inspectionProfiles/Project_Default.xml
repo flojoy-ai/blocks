@@ -1,0 +1,131 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="117">
+            <item index="0" class="java.lang.String" itemvalue="traitlets" />
+            <item index="1" class="java.lang.String" itemvalue="xz" />
+            <item index="2" class="java.lang.String" itemvalue="krb5" />
+            <item index="3" class="java.lang.String" itemvalue="nbclient" />
+            <item index="4" class="java.lang.String" itemvalue="setuptools" />
+            <item index="5" class="java.lang.String" itemvalue="executing" />
+            <item index="6" class="java.lang.String" itemvalue="ncurses" />
+            <item index="7" class="java.lang.String" itemvalue="glib" />
+            <item index="8" class="java.lang.String" itemvalue="libllvm14" />
+            <item index="9" class="java.lang.String" itemvalue="markupsafe" />
+            <item index="10" class="java.lang.String" itemvalue="libclang13" />
+            <item index="11" class="java.lang.String" itemvalue="libwebp-base" />
+            <item index="12" class="java.lang.String" itemvalue="libtiff" />
+            <item index="13" class="java.lang.String" itemvalue="lz4-c" />
+            <item index="14" class="java.lang.String" itemvalue="pyzmq" />
+            <item index="15" class="java.lang.String" itemvalue="gettext" />
+            <item index="16" class="java.lang.String" itemvalue="icu" />
+            <item index="17" class="java.lang.String" itemvalue="libsodium" />
+            <item index="18" class="java.lang.String" itemvalue="prometheus_client" />
+            <item index="19" class="java.lang.String" itemvalue="qt-main" />
+            <item index="20" class="java.lang.String" itemvalue="notebook" />
+            <item index="21" class="java.lang.String" itemvalue="qtconsole" />
+            <item index="22" class="java.lang.String" itemvalue="nbclassic" />
+            <item index="23" class="java.lang.String" itemvalue="python" />
+            <item index="24" class="java.lang.String" itemvalue="libxslt" />
+            <item index="25" class="java.lang.String" itemvalue="pyqt5-sip" />
+            <item index="26" class="java.lang.String" itemvalue="python-fastjsonschema" />
+            <item index="27" class="java.lang.String" itemvalue="sqlite" />
+            <item index="28" class="java.lang.String" itemvalue="libiconv" />
+            <item index="29" class="java.lang.String" itemvalue="nbconvert" />
+            <item index="30" class="java.lang.String" itemvalue="psutil" />
+            <item index="31" class="java.lang.String" itemvalue="asttokens" />
+            <item index="32" class="java.lang.String" itemvalue="nspr" />
+            <item index="33" class="java.lang.String" itemvalue="platformdirs" />
+            <item index="34" class="java.lang.String" itemvalue="widgetsnbextension" />
+            <item index="35" class="java.lang.String" itemvalue="openssl" />
+            <item index="36" class="java.lang.String" itemvalue="qt-webengine" />
+            <item index="37" class="java.lang.String" itemvalue="zeromq" />
+            <item index="38" class="java.lang.String" itemvalue="ca-certificates" />
+            <item index="39" class="java.lang.String" itemvalue="libcxx" />
+            <item index="40" class="java.lang.String" itemvalue="gst-plugins-base" />
+            <item index="41" class="java.lang.String" itemvalue="networkx" />
+            <item index="42" class="java.lang.String" itemvalue="libffi" />
+            <item index="43" class="java.lang.String" itemvalue="libpng" />
+            <item index="44" class="java.lang.String" itemvalue="wcwidth" />
+            <item index="45" class="java.lang.String" itemvalue="libwebp" />
+            <item index="46" class="java.lang.String" itemvalue="numpy" />
+            <item index="47" class="java.lang.String" itemvalue="requests" />
+            <item index="48" class="java.lang.String" itemvalue="pyopenssl" />
+            <item index="49" class="java.lang.String" itemvalue="sniffio" />
+            <item index="50" class="java.lang.String" itemvalue="websocket-client" />
+            <item index="51" class="java.lang.String" itemvalue="nss" />
+            <item index="52" class="java.lang.String" itemvalue="pyrsistent" />
+            <item index="53" class="java.lang.String" itemvalue="zstd" />
+            <item index="54" class="java.lang.String" itemvalue="pcre" />
+            <item index="55" class="java.lang.String" itemvalue="zipp" />
+            <item index="56" class="java.lang.String" itemvalue="lerc" />
+            <item index="57" class="java.lang.String" itemvalue="pyqt" />
+            <item index="58" class="java.lang.String" itemvalue="jpeg" />
+            <item index="59" class="java.lang.String" itemvalue="prompt-toolkit" />
+            <item index="60" class="java.lang.String" itemvalue="qtpy" />
+            <item index="61" class="java.lang.String" itemvalue="stack_data" />
+            <item index="62" class="java.lang.String" itemvalue="xmltodict" />
+            <item index="63" class="java.lang.String" itemvalue="sip" />
+            <item index="64" class="java.lang.String" itemvalue="gstreamer" />
+            <item index="65" class="java.lang.String" itemvalue="llvm-openmp" />
+            <item index="66" class="java.lang.String" itemvalue="libdeflate" />
+            <item index="67" class="java.lang.String" itemvalue="pygments" />
+            <item index="68" class="java.lang.String" itemvalue="readline" />
+            <item index="69" class="java.lang.String" itemvalue="qtwebkit" />
+            <item index="70" class="java.lang.String" itemvalue="prompt_toolkit" />
+            <item index="71" class="java.lang.String" itemvalue="libpq" />
+            <item index="72" class="java.lang.String" itemvalue="pytest" />
+            <item index="73" class="java.lang.String" itemvalue="nbformat" />
+            <item index="74" class="java.lang.String" itemvalue="libxml2" />
+            <item index="75" class="java.lang.String" itemvalue="toml" />
+            <item index="76" class="java.lang.String" itemvalue="libedit" />
+            <item index="77" class="java.lang.String" itemvalue="mistune" />
+            <item index="78" class="java.lang.String" itemvalue="zlib" />
+            <item index="79" class="java.lang.String" itemvalue="mpmath" />
+            <item index="80" class="java.lang.String" itemvalue="tk" />
+            <item index="81" class="java.lang.String" itemvalue="pillow" />
+            <item index="82" class="java.lang.String" itemvalue="pysocks" />
+            <item index="83" class="java.lang.String" itemvalue="giflib" />
+            <item index="84" class="java.lang.String" itemvalue="pytz" />
+            <item index="85" class="java.lang.String" itemvalue="ply" />
+            <item index="86" class="java.lang.String" itemvalue="importlib_metadata" />
+            <item index="87" class="java.lang.String" itemvalue="importlib-metadata" />
+            <item index="88" class="java.lang.String" itemvalue="brotlipy" />
+            <item index="89" class="java.lang.String" itemvalue="json5" />
+            <item index="90" class="java.lang.String" itemvalue="cloudpickle" />
+            <item index="91" class="java.lang.String" itemvalue="filelock" />
+            <item index="92" class="java.lang.String" itemvalue="bleach" />
+            <item index="93" class="java.lang.String" itemvalue="anyio" />
+            <item index="94" class="java.lang.String" itemvalue="entrypoints" />
+            <item index="95" class="java.lang.String" itemvalue="urllib3" />
+            <item index="96" class="java.lang.String" itemvalue="jupyterlab" />
+            <item index="97" class="java.lang.String" itemvalue="beautifulsoup4" />
+            <item index="98" class="java.lang.String" itemvalue="libclang" />
+            <item index="99" class="java.lang.String" itemvalue="jupyter_client" />
+            <item index="100" class="java.lang.String" itemvalue="tzdata" />
+            <item index="101" class="java.lang.String" itemvalue="cryptography" />
+            <item index="102" class="java.lang.String" itemvalue="ipython" />
+            <item index="103" class="java.lang.String" itemvalue="typing-extensions" />
+            <item index="104" class="java.lang.String" itemvalue="ipykernel" />
+            <item index="105" class="java.lang.String" itemvalue="jupyterlab_server" />
+            <item index="106" class="java.lang.String" itemvalue="appnope" />
+            <item index="107" class="java.lang.String" itemvalue="attrs" />
+            <item index="108" class="java.lang.String" itemvalue="pandas" />
+            <item index="109" class="java.lang.String" itemvalue="jedi" />
+            <item index="110" class="java.lang.String" itemvalue="jupyter_server" />
+            <item index="111" class="java.lang.String" itemvalue="jupyterlab_pygments" />
+            <item index="112" class="java.lang.String" itemvalue="typing_extensions" />
+            <item index="113" class="java.lang.String" itemvalue="babel" />
+            <item index="114" class="java.lang.String" itemvalue="charset-normalizer" />
+            <item index="115" class="java.lang.String" itemvalue="debugpy" />
+            <item index="116" class="java.lang.String" itemvalue="gym" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
