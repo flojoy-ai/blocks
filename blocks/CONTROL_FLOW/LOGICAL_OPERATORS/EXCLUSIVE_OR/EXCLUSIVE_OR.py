@@ -1,5 +1,6 @@
 from flojoy import flojoy, Boolean
 
+
 @flojoy
 def EXCLUSIVE_OR(default: Boolean, a: Boolean) -> Boolean:
     """The EXCLUSIVE_OR node takes two boolean data type and computs logical EXCLUSIVE OR operation on them.

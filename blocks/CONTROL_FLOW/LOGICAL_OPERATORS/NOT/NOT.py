@@ -1,5 +1,6 @@
 from flojoy import flojoy, Boolean
 
+
 @flojoy
 def NOT(default: Boolean) -> Boolean:
     """The NOT node takes a boolean data type and computs logical NOT operation on them.
