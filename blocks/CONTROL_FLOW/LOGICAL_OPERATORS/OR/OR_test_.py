@@ -11,6 +11,6 @@ def test_OR(mock_flojoy_decorator):
     return2 = OR.OR(x,x)
     return3 = OR.OR(y,y)
 
-    assert return1.b == True
-    assert return2.b == True
-    assert return3.b == False
+    assert return1.b is True
+    assert return2.b is True
+    assert return3.b is False

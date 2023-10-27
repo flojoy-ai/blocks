@@ -11,6 +11,6 @@ def test_NOT_OR(mock_flojoy_decorator):
     return2 = NOT_OR.NOT_OR(x,x)
     return3 = NOT_OR.NOT_OR(y,y)
 
-    assert return1.b == False
-    assert return2.b == False
-    assert return3.b == True
+    assert return1.b is False
+    assert return2.b is False
+    assert return3.b is True

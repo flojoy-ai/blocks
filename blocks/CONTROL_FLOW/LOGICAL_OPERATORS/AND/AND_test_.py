@@ -11,6 +11,6 @@ def test_AND(mock_flojoy_decorator):
     return2 = AND.AND(x,x)
     return3 = AND.AND(y,y)
 
-    assert return1.b == False
-    assert return2.b == True
-    assert return3.b == False
+    assert return1.b is False
+    assert return2.b is True
+    assert return3.b is False

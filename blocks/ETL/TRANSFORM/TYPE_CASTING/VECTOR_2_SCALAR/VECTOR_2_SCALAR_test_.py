@@ -1,4 +1,4 @@
-from numpy import array, array_equal
+from numpy import array
 from flojoy import Vector
 
 

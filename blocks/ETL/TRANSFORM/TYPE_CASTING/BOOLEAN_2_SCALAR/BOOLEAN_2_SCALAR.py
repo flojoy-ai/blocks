@@ -5,8 +5,9 @@ from flojoy import flojoy, Boolean, Scalar
 def BOOLEAN_2_SCALAR(default: Boolean) -> Scalar:
     """The BOOLEAN_2_SCALAR node takes boolean type data and converts it into scalar data type.
     1 means true and 0 means false
-    Inputs
-    ------
+
+    Parameters
+    ----------
     default : Boolean
         The input boolean to which we apply the conversion to.
     Returns

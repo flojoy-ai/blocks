@@ -10,5 +10,5 @@ def test_NOT(mock_flojoy_decorator):
     return1 = NOT.NOT(x)
     return2 = NOT.NOT(y)
 
-    assert return1.b == False
-    assert return2.b == True
+    assert return1.b is False
+    assert return2.b is True

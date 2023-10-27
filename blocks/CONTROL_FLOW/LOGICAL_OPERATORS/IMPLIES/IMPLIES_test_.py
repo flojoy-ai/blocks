@@ -13,6 +13,6 @@ def test_IMPLIES(mock_flojoy_decorator):
     return3 = IMPLIES.IMPLIES(y,y)
 
 
-    assert return1.b == False
-    assert return2.b == True
-    assert return3.b == True
+    assert return1.b is False
+    assert return2.b is True
+    assert return3.b is True

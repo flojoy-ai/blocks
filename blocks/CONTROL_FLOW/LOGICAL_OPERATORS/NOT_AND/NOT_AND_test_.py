@@ -11,6 +11,6 @@ def test_NOT_AND(mock_flojoy_decorator):
     return2 = NOT_AND.NOT_AND(x,x)
     return3 = NOT_AND.NOT_AND(y,y)
 
-    assert return1.b == True
-    assert return2.b == False
-    assert return3.b == True
+    assert return1.b is True
+    assert return2.b is False
+    assert return3.b is True
