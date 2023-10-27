@@ -5,7 +5,7 @@ import typer
 from rich import print
 
 from cli.cmd import add, sync
-from cli.constants import blocks_folder_prefix, docs_folder_prefix, err_string
+from cli.constants import BLOCKS_DOCS_FOLDER, BLOCKS_SOURCE_FOLDER, ERR_STRING
 from cli.logging import err_console
 from cli.state import state
 
@@ -23,10 +23,10 @@ def main(verbose: bool = False):
 
 if __name__ == "__main__":
     # this is to make sure we are running the cli in the right directory
-    required_folders = [docs_folder_prefix, blocks_folder_prefix]
+    required_folders = [BLOCKS_DOCS_FOLDER, BLOCKS_SOURCE_FOLDER]
     if not all([os.path.isdir(folder) for folder in required_folders]):
         err_console.print(
-            f"{err_string} fjblock.py must be run at a directory where the following folders are present: {required_folders}"
+            f"{ERR_STRING} fjblock.py must be run at a directory where the following folders are present: {required_folders}"
         )
         sys.exit(1)
 
