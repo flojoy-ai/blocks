@@ -19,6 +19,8 @@ sidebar:
 
 import BlockCategory from "@/components/block-category.astro";
 
+{description}
+
 """
 
 TOP_LEVEL_DEPTH = 3
