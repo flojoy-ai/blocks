@@ -122,6 +122,7 @@ def sync():
 
             total_synced_pages += 1
 
+    found_err = False
     print("Generating overview pages...")
     for top_level_category in os.listdir(BLOCKS_SOURCE_FOLDER):
         summary_path = os.path.join(
@@ -146,13 +147,20 @@ def sync():
         )
         with open(overview_page_path, "w") as f:
             title = title if title is not None else top_level_category
-            f.write(
-                CategoryOverviewDocsBuilder(
-                    title, top_level_category, overview_description
+            try:
+                f.write(
+                    CategoryOverviewDocsBuilder(title, top_level_category, overview_description)
+                    .add_content(category_tree[top_level_category])
+                    .build()
                 )
-                .add_content(category_tree[top_level_category])
-                .build()
-            )
+            except ValueError as e:
+                print(str(e))
+                found_err = True
+
+    if found_err:
+        print(f"{ERR_STRING} Found errors when generating overview pages.")
+        sys.exit(1)
+        
 
     # Remove all empty folders
     print("Almost done! Doing some housekeeping...")

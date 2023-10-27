@@ -1,9 +1,6 @@
 import dataclasses
-import sys
 
-from rich import print
 
-from cli.constants import ERR_STRING
 
 CATEGORY_TEMPLATE = """ \
 {header_level} {title}
@@ -42,12 +39,10 @@ CategoryTree = list[BlockInfo] | dict[str, "CategoryTree"]
 
 
 def make_category_content(
-    name: str, contents: CategoryTree, depth: int = TOP_LEVEL_DEPTH
+    name: str, contents: CategoryTree, depth: int = TOP_LEVEL_DEPTH, path: str = ""
 ) -> str:
     if depth > 6:
-        raise ValueError(
-            f"{name} category depth too nested, must be less than 4 levels deep"
-        )
+        raise ValueError(f"{path + name} category depth too nested, must be less than 4 levels deep")
     match contents:
         # leaf (bottom level category)
         case list():
@@ -55,10 +50,18 @@ def make_category_content(
             content = f"<BlockCategory blocks={{{blocks}}} />"
         # inner node (recurse on children)
         case dict():
-            content = "\n".join(
-                make_category_content(key, val, depth + 1)
-                for key, val in contents.items()
-            )
+            errs = []
+            subcontents = []
+            for key, val in contents.items():
+                try:
+                    make_category_content(key, val, depth + 1, path=f"{path}/{name}")
+                except ValueError as e:
+                    errs.append(str(e))
+                    
+            if errs:
+                raise ValueError("\n".join(errs))
+            return "\n".join(subcontents)
+            
     # don't show the title of the top level category
     if depth == TOP_LEVEL_DEPTH:
         return content
@@ -78,12 +81,7 @@ class CategoryOverviewDocsBuilder:
         )
 
     def add_content(self, content: CategoryTree):
-        try:
-            self.template += make_category_content(self.category_name, content)
-        except ValueError as e:
-            print(f"{ERR_STRING} {str(e)}")
-            sys.exit(1)
-
+        self.template += make_category_content(self.category_name, content)
         return self
 
     def build(self):
