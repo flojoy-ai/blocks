@@ -6,10 +6,7 @@ from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 
 @safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
-def SET_BLENDING(
-        ip_address: TextBlob,
-        blending: Optional[float] = 0.0
-) -> TextBlob:
+def SET_BLENDING(ip_address: TextBlob, blending: Optional[float] = 0.0) -> TextBlob:
     """
     The SET_BLENDING to make the moves of the robot arm smoother.
 

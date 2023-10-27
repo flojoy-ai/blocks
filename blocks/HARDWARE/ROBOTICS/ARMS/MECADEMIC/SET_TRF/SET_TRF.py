@@ -6,7 +6,15 @@ from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 
 @safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
-def SET_TRF(ip_address: TextBlob, rf_x: Optional[float] = 0.0, rf_y: Optional[float] = 0.0, rf_z: Optional[float] = 0.0, rf_a: Optional[float] = 0.0, rf_b: Optional[float] = 0.0, rf_g: Optional[float] = 0.0) -> TextBlob:
+def SET_TRF(
+    ip_address: TextBlob,
+    rf_x: Optional[float] = 0.0,
+    rf_y: Optional[float] = 0.0,
+    rf_z: Optional[float] = 0.0,
+    rf_a: Optional[float] = 0.0,
+    rf_b: Optional[float] = 0.0,
+    rf_g: Optional[float] = 0.0,
+) -> TextBlob:
     """
      The SET_TRF node sets the robot arm's reference frame.
 

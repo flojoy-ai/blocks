@@ -8,9 +8,9 @@ from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 @safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def MOVE_CIRCLE(
-        ip_address: TextBlob,
-        radius: Optional[float] = 0.0,
-        revolutions: Optional[float] = 1.0,
+    ip_address: TextBlob,
+    radius: Optional[float] = 0.0,
+    revolutions: Optional[float] = 1.0,
 ) -> TextBlob:
     """
     The Move circle node moves in a circle relative to a reference plane.
@@ -39,8 +39,14 @@ def MOVE_CIRCLE(
 
     positions = get_circle_positions(radius, revolutions, (X, Y, Z))
     for position in positions:
-        robot.MoveLin(x=position[0], y=position[1], z=position[2],
-                      alpha=alpha, beta=beta, gamma=gamma)
+        robot.MoveLin(
+            x=position[0],
+            y=position[1],
+            z=position[2],
+            alpha=alpha,
+            beta=beta,
+            gamma=gamma,
+        )
     robot.MoveLin(x=X, y=Y, z=Z, alpha=alpha, beta=beta, gamma=gamma)
 
     return ip_address

@@ -8,9 +8,7 @@ from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 @safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def MOVE_KEYFRAMES(
-        ip_address: TextBlob,
-        keyframes: DataFrame,
-        blending: Optional[float] = 0.0
+    ip_address: TextBlob, keyframes: DataFrame, blending: Optional[float] = 0.0
 ) -> TextBlob:
     """
     The MOVE_KEYFRAMES node linearly moves the robot's tool according to a set of 3d animation style keyframes.
@@ -40,23 +38,25 @@ def MOVE_KEYFRAMES(
     required_columns = ["x", "y", "z", "alpha", "beta", "gamma", "duration"]
     for column in required_columns:
         if column not in keyframes.columns:
-            raise ValueError(
-                f"Keyframes dataframe must have a {column} column")
+            raise ValueError(f"Keyframes dataframe must have a {column} column")
     # check that all values are numeric
     for column in keyframes.columns:
         if keyframes[column].dtype != "float64":
-            raise ValueError(
-                f"Keyframes dataframe column {column} must be numeric")
+            raise ValueError(f"Keyframes dataframe column {column} must be numeric")
 
     # Set blending
 
     robot.SetBlending(min(blending, 100.0))
     # Move execution
     for index, row in keyframes.iterrows():
-        vel = calculateLimitingMaxVel(robot.GetJoints(), [
-                                      row["x"], row["y"], row["z"], row["alpha"], row["beta"], row["gamma"]], row["duration"])
+        vel = calculateLimitingMaxVel(
+            robot.GetJoints(),
+            [row["x"], row["y"], row["z"], row["alpha"], row["beta"], row["gamma"]],
+            row["duration"],
+        )
         robot.SetJointVel(vel)
-        robot.MoveJoints(row["x"], row["y"], row["z"],
-                         row["alpha"], row["beta"], row["gamma"])
+        robot.MoveJoints(
+            row["x"], row["y"], row["z"], row["alpha"], row["beta"], row["gamma"]
+        )
         robot.WaitIdle(row["duration"])
     return ip_address
