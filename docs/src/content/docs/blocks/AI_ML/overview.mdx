@@ -11,29 +11,29 @@ sidebar:
 
 import BlockCategory from "@/components/block-category.astro";
 
- #### PREDICT_TIME_SERIES
-<BlockCategory blocks={[{'link': 'predict-time-series/prophet-predict', 'name': 'PROPHET_PREDICT', 'description': 'The PROPHET_PREDICT node runs a Prophet model on the incoming dataframe.'}]} />
+ #### CLASSIFICATION
+<BlockCategory blocks={[{'link': 'classification/train-test-split', 'name': 'TRAIN_TEST_SPLIT', 'description': 'The TRAIN_TEST_SPLIT node is used to split the data into test and training according to a size specified before any ML tasks.'}, {'link': 'classification/support-vector-machine', 'name': 'SUPPORT_VECTOR_MACHINE', 'description': 'The SUPPORT_VECTOR_MACHINE node is used to train a support vector machine model for classification tasks.'}, {'link': 'classification/accuracy', 'name': 'ACCURACY', 'description': 'The ACCURACY node takes two dataframes with the true and predicted labels from a classification task, and indicates whether the prediction was correct or not.'}, {'link': 'classification/one-hot-encoding', 'name': 'ONE_HOT_ENCODING', 'description': 'The ONE_HOT_ENCODING node creates a one hot encoding from a dataframe containing categorical features.'}, {'link': 'classification/torchscript-classifier', 'name': 'TORCHSCRIPT_CLASSIFIER', 'description': 'Execute a torchscript classifier against an input image.'}]} />
 
  #### SEGMENTATION
 <BlockCategory blocks={[{'link': 'segmentation/deeplab-v3', 'name': 'DEEPLAB_V3', 'description': 'The DEEPLAB_V3 node returns a segmentation mask from an input image in a dataframe.'}]} />
 
- #### TEXT_SUMMARIZATION
-<BlockCategory blocks={[{'link': 'text-summarization/bart-large-cnn', 'name': 'BART_LARGE_CNN', 'description': 'The BART_LARGE_CNN node takes an input dataframe with multiple rows and a single column, and produces a dataframe with a single "summary_text" column.'}]} />
-
- #### OBJECT_DETECTION
-<BlockCategory blocks={[{'link': 'object-detection/object-detection', 'name': 'OBJECT_DETECTION', 'description': "The OBJECT_DETECTION node detects objects in the input image, and returns an 'image' DataContainer with those objects highlighted."}]} />
-
  #### LOAD_MODEL
 <BlockCategory blocks={[{'link': 'load-model/onnx-model', 'name': 'ONNX_MODEL', 'description': 'ONNX_MODEL loads a serialized ONNX model and uses it to make predictions using ONNX Runtime.'}]} />
-
- #### CLASSIFICATION
-<BlockCategory blocks={[{'link': 'classification/train-test-split', 'name': 'TRAIN_TEST_SPLIT', 'description': 'The TRAIN_TEST_SPLIT node is used to split the data into test and training according to a size specified before any ML tasks.'}, {'link': 'classification/support-vector-machine', 'name': 'SUPPORT_VECTOR_MACHINE', 'description': 'The SUPPORT_VECTOR_MACHINE node is used to train a support vector machine model for classification tasks.'}, {'link': 'classification/one-hot-encoding', 'name': 'ONE_HOT_ENCODING', 'description': 'The ONE_HOT_ENCODING node creates a one hot encoding from a dataframe containing categorical features.'}, {'link': 'classification/torchscript-classifier', 'name': 'TORCHSCRIPT_CLASSIFIER', 'description': 'Execute a torchscript classifier against an input image.'}, {'link': 'classification/accuracy', 'name': 'ACCURACY', 'description': 'The ACCURACY node takes two dataframes with the true and predicted labels from a classification task, and indicates whether the prediction was correct or not.'}]} />
 
  #### NLP
 <BlockCategory blocks={[{'link': 'nlp/count-vectorizer', 'name': 'COUNT_VECTORIZER', 'description': 'The COUNT_VECTORIZER node receives a collection (matrix, vector or dataframe) of text documents and converts it to a matrix of token counts.'}]} />
 
+ #### OBJECT_DETECTION
+<BlockCategory blocks={[{'link': 'object-detection/object-detection', 'name': 'OBJECT_DETECTION', 'description': "The OBJECT_DETECTION node detects objects in the input image, and returns an 'image' DataContainer with those objects highlighted."}]} />
+
+ #### PREDICT_TIME_SERIES
+<BlockCategory blocks={[{'link': 'predict-time-series/prophet-predict', 'name': 'PROPHET_PREDICT', 'description': 'The PROPHET_PREDICT node runs a Prophet model on the incoming dataframe.'}]} />
+
  #### IMAGE_CAPTIONING
 <BlockCategory blocks={[{'link': 'image-captioning/nlp-connect-vit-gpt2', 'name': 'NLP_CONNECT_VIT_GPT2', 'description': 'The NLP_CONNECT_VIT_GPT2 node captions an input image and produces an output string wrapped in a dataframe.'}]} />
+
+ #### TEXT_SUMMARIZATION
+<BlockCategory blocks={[{'link': 'text-summarization/bart-large-cnn', 'name': 'BART_LARGE_CNN', 'description': 'The BART_LARGE_CNN node takes an input dataframe with multiple rows and a single column, and produces a dataframe with a single "summary_text" column.'}]} />
 
  #### REGRESSION
 <BlockCategory blocks={[{'link': 'regression/least-squares', 'name': 'LEAST_SQUARES', 'description': 'The LEAST_SQUARES node computes the coefficients that minimize the distance between the input Matrix or OrderedPair and the regression.'}]} />
