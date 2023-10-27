@@ -133,7 +133,7 @@ def sync():
         if os.path.exists(summary_path):
             summary = frontmatter.load(summary_path)
             description = summary.content
-            title = summary['title']
+            title = summary["title"]
         else:
             print(
                 f"{WARN_STRING} summary.md not found for top level category {top_level_category}!"
