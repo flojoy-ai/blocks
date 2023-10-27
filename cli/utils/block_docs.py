@@ -87,4 +87,3 @@ import Example from "@blocks/{block_folder_path}/example.md";
 {{/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}}
 """.format()
         return self.template
-
