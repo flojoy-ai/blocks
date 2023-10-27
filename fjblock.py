@@ -5,7 +5,7 @@ import typer
 from rich import print
 
 from cli.cmd import add, sync
-from cli.constants import BLOCKS_SOURCE_FOLDER, BLOCKS_DOCS_FOLDER, ERR_STRING
+from cli.constants import BLOCKS_DOCS_FOLDER, BLOCKS_SOURCE_FOLDER, ERR_STRING
 from cli.logging import err_console
 from cli.state import state
 
