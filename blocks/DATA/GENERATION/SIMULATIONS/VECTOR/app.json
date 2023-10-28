@@ -4,10 +4,10 @@
             {
                 "width": 208,
                 "height": 96,
-                "id": "VECTOR-a00ffe62-0713-4d88-bec0-d5245242270a",
+                "id": "VECTOR-c146e798-6347-4fa2-b118-03a9d5a836ed",
                 "type": "DATA",
                 "data": {
-                    "id": "VECTOR-a00ffe62-0713-4d88-bec0-d5245242270a",
+                    "id": "VECTOR-c146e798-6347-4fa2-b118-03a9d5a836ed",
                     "label": "VECTOR",
                     "func": "VECTOR",
                     "type": "DATA",
@@ -20,6 +20,19 @@
                             "functionName": "VECTOR",
                             "param": "elements",
                             "value": "1,2,3"
+                        },
+                        "elements_type": {
+                            "type": "select",
+                            "options": [
+                                "boolean",
+                                "integer"
+                            ],
+                            "default": "boolean",
+                            "desc": null,
+                            "overload": null,
+                            "functionName": "VECTOR",
+                            "param": "elements_type",
+                            "value": "integer"
                         }
                     },
                     "initCtrls": {},
@@ -35,23 +48,23 @@
                     "selected": true
                 },
                 "position": {
-                    "x": -153.3694272661965,
-                    "y": -131.1267442330356
+                    "x": -124.13778740905718,
+                    "y": 35.64806642459058
                 },
                 "selected": true,
                 "positionAbsolute": {
-                    "x": -153.3694272661965,
-                    "y": -131.1267442330356
+                    "x": -124.13778740905718,
+                    "y": 35.64806642459058
                 },
                 "dragging": true
             },
             {
                 "width": 225,
                 "height": 226,
-                "id": "SCATTER-f4b4158d-2ad1-411b-9d26-779e1b4a4b92",
+                "id": "SCATTER-4206ac71-a37f-45ad-822c-d48666211454",
                 "type": "VISUALIZATION",
                 "data": {
-                    "id": "SCATTER-f4b4158d-2ad1-411b-9d26-779e1b4a4b92",
+                    "id": "SCATTER-4206ac71-a37f-45ad-822c-d48666211454",
                     "label": "SCATTER",
                     "func": "SCATTER",
                     "type": "VISUALIZATION",
@@ -78,24 +91,24 @@
                     "selected": false
                 },
                 "position": {
-                    "x": 229.17470727913874,
-                    "y": -197.3937099074387
+                    "x": 255.6843963062027,
+                    "y": -28.471537045095545
                 },
                 "selected": false,
                 "positionAbsolute": {
-                    "x": 229.17470727913874,
-                    "y": -197.3937099074387
+                    "x": 255.6843963062027,
+                    "y": -28.471537045095545
                 },
                 "dragging": true
             }
         ],
         "edges": [
             {
-                "source": "VECTOR-a00ffe62-0713-4d88-bec0-d5245242270a",
+                "source": "VECTOR-c146e798-6347-4fa2-b118-03a9d5a836ed",
                 "sourceHandle": "default",
-                "target": "SCATTER-f4b4158d-2ad1-411b-9d26-779e1b4a4b92",
+                "target": "SCATTER-4206ac71-a37f-45ad-822c-d48666211454",
                 "targetHandle": "default",
-                "id": "reactflow__edge-VECTOR-a00ffe62-0713-4d88-bec0-d5245242270adefault-SCATTER-f4b4158d-2ad1-411b-9d26-779e1b4a4b92default"
+                "id": "reactflow__edge-VECTOR-c146e798-6347-4fa2-b118-03a9d5a836eddefault-SCATTER-4206ac71-a37f-45ad-822c-d48666211454default"
             }
         ],
         "viewport": {
