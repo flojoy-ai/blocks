@@ -11,7 +11,7 @@ def EXCLUSIVE_OR(default: Boolean, a: Boolean) -> Boolean:
         The input boolean to which we apply the EXCLUSIVE OR operation.
     a : Boolean
         The input boolean to which we apply the EXCLUSIVE OR operation.
-        
+
     Returns
     -------
     Boolean

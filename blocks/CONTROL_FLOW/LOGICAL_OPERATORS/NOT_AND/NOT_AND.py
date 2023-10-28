@@ -11,7 +11,7 @@ def NOT_AND(default: Boolean, a: Boolean) -> Boolean:
         The input boolean to which we apply the NOT AND operation.
     a : Boolean
         The input boolean to which we apply the NOT AND operation.
-        
+
     Returns
     -------
     Boolean

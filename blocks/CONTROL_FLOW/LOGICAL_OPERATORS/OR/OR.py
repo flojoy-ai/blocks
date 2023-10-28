@@ -11,7 +11,7 @@ def OR(default: Boolean, a: Boolean) -> Boolean:
         The input boolean to which we apply the OR operation.
     a : Boolean
         The input boolean to which we apply the OR operation.
-        
+
     Returns
     -------
     Boolean

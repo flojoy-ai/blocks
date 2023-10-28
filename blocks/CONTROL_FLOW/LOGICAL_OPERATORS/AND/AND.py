@@ -11,7 +11,7 @@ def AND(default: Boolean, a: Boolean) -> Boolean:
         The input boolean to which we apply the AND operation.
     a : Boolean
         The input boolean to which we apply the AND operation.
-        
+
     Returns
     -------
     Boolean

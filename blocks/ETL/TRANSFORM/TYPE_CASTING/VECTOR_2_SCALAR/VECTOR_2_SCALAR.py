@@ -19,9 +19,9 @@ def VECTOR_2_SCALAR(default: Vector) -> Scalar:
     all_boolean = all(isinstance(element, bool_) for element in default.v)
 
     if all_boolean:
-        binary_string = ''.join(['1' if bit else '0' for bit in default.v])
+        binary_string = "".join(["1" if bit else "0" for bit in default.v])
         print(default.v)
-        decimal_number = int(binary_string, 2)      
+        decimal_number = int(binary_string, 2)
         return Scalar(c=decimal_number)
 
     all_int = all(isinstance(element, int_) for element in default.v)
@@ -29,8 +29,8 @@ def VECTOR_2_SCALAR(default: Vector) -> Scalar:
     if all_int:
         decimal_num = sum(element for element in default.v)
         return Scalar(c=decimal_num)
-    
-    print("---------------------------------------",all_boolean)
+
+    print("---------------------------------------", all_boolean)
     print(default.v)
 
     raise ValueError(f"all elements of the vector must be in boolean or integer type")

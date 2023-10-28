@@ -12,7 +12,7 @@ def IMPLIES(x: Boolean, y: Boolean) -> Boolean:
         The input boolean to which we apply the IMPLIES operation.
     y : Boolean
         The input boolean to which we apply the IMPLIES operation.
-        
+
     Returns
     -------
     Boolean

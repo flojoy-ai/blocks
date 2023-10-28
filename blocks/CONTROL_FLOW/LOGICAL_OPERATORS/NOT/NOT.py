@@ -9,7 +9,7 @@ def NOT(default: Boolean) -> Boolean:
     ----------
     default : Boolean
         The input boolean to which we apply the NOT operation.
-        
+
     Returns
     -------
     Boolean

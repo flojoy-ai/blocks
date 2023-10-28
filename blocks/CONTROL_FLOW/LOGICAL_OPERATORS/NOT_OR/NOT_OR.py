@@ -11,7 +11,7 @@ def NOT_OR(default: Boolean, a: Boolean) -> Boolean:
         The input boolean to which we apply the NOT OR operation.
     a : Boolean
         The input boolean to which we apply the NOT OR operation.
-        
+
     Returns
     -------
     Boolean
