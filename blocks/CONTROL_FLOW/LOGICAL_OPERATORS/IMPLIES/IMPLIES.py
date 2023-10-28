@@ -5,12 +5,14 @@ from flojoy import flojoy, Boolean
 def IMPLIES(x: Boolean, y: Boolean) -> Boolean:
     """The IMPLIES node takes two boolean data type and computs logical IMPLIES operation on them.
     x implies y
-    Inputs
-    ------
-    default : Boolean
+
+    Parameters
+    ----------
+    x : Boolean
         The input boolean to which we apply the IMPLIES operation.
-    a : Boolean
+    y : Boolean
         The input boolean to which we apply the IMPLIES operation.
+        
     Returns
     -------
     Boolean

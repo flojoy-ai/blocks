@@ -4,12 +4,14 @@ from flojoy import flojoy, Boolean
 @flojoy
 def OR(default: Boolean, a: Boolean) -> Boolean:
     """The OR node takes two boolean data type and computs logical OR operation on them.
-    Inputs
-    ------
+
+    Parameters
+    ----------
     default : Boolean
         The input boolean to which we apply the OR operation.
     a : Boolean
         The input boolean to which we apply the OR operation.
+        
     Returns
     -------
     Boolean

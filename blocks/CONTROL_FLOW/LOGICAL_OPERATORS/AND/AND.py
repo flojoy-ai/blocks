@@ -4,12 +4,14 @@ from flojoy import flojoy, Boolean
 @flojoy
 def AND(default: Boolean, a: Boolean) -> Boolean:
     """The AND node takes two boolean data type and computs logical AND operation on them.
-    Inputs
-    ------
+
+    Parameters
+    ----------
     default : Boolean
         The input boolean to which we apply the AND operation.
     a : Boolean
         The input boolean to which we apply the AND operation.
+        
     Returns
     -------
     Boolean

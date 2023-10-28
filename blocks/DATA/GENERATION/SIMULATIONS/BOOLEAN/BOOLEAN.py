@@ -8,7 +8,7 @@ def BOOLEAN(status: bool = True) -> Boolean:
 
     Parameters
     ----------
-    status : True
+    status : bool, default: True
         either True or False value that you want to assign
 
     Returns

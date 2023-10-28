@@ -4,12 +4,14 @@ from flojoy import flojoy, Boolean
 @flojoy
 def NOT_AND(default: Boolean, a: Boolean) -> Boolean:
     """The NOT_AND node takes two boolean data type and computs logical NOT AND operation on them.
-    Inputs
-    ------
+
+    Parameters
+    ----------
     default : Boolean
         The input boolean to which we apply the NOT AND operation.
     a : Boolean
         The input boolean to which we apply the NOT AND operation.
+        
     Returns
     -------
     Boolean

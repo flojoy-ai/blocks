@@ -3,12 +3,12 @@
   "short_description": "The IMPLIES node takes two boolean data type and computs logical IMPLIES operation on them.",
   "parameters": [
     {
-      "name": "default",
+      "name": "x",
       "type": "Boolean",
       "description": "The input boolean to which we apply the IMPLIES operation."
     },
     {
-      "name": "a",
+      "name": "y",
       "type": "Boolean",
       "description": "The input boolean to which we apply the IMPLIES operation."
     }
