@@ -78,7 +78,7 @@ If there is a default value, you can specify it like this:
 
 ```python
 """
-some_parameter: bool, default=True
+some_parameter : bool, default=True
 """
 ```
 
