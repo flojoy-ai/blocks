@@ -23,7 +23,7 @@ import BlockCategory from "@/components/block-category.astro";
 
 """
 
-TOP_LEVEL_DEPTH = 3
+BASE_HEADER_LEVEL = 3
 
 
 @dataclasses.dataclass
@@ -37,7 +37,7 @@ CategoryTree = list[BlockInfo] | dict[str, "CategoryTree"]
 
 
 def make_category_content(
-    name: str, contents: CategoryTree, depth: int = TOP_LEVEL_DEPTH, path: str = ""
+    name: str, contents: CategoryTree, depth: int = BASE_HEADER_LEVEL, path: str = ""
 ) -> str:
     if depth > 6:
         raise ValueError(
@@ -67,7 +67,7 @@ def make_category_content(
             content = "\n".join(subcontents)
 
     # don't show the title of the top level category
-    if depth == TOP_LEVEL_DEPTH:
+    if depth == BASE_HEADER_LEVEL:
         return content
 
     return CATEGORY_TEMPLATE.format(
