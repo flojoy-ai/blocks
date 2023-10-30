@@ -1,3 +1,6 @@
+from get_markdown_slug import get_markdown_slug
+
+
 class BlockDocsBuilder:
     def __init__(self, block_name, block_folder_path, description):
         self.github_base = "https://github.com/flojoy-ai/blocks/blob/main/blocks/{block_folder_path}/{block_name}.py"
@@ -21,7 +24,7 @@ slug: {slug}
 
 """.format(
             block_name=block_name,
-            slug="blocks/" + block_folder_path.replace("_", "-").lower(),
+            slug="blocks/" + get_markdown_slug(block_folder_path),
             description=description.replace('"', '\\"'),
         )
 

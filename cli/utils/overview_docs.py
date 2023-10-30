@@ -1,5 +1,7 @@
 import dataclasses
 
+from cli.utils.get_markdown_slug import get_markdown_slug
+
 CATEGORY_TEMPLATE = """ \
 {header_level} {title}
 {content}
@@ -81,7 +83,7 @@ class CategoryOverviewDocsBuilder:
         self.template = OVERVIEW_TEMPLATE_BASE.format(
             title=f"{title} Overview",
             description=overview_description.replace('"', '\\"'),
-            slug="blocks/" + category_name.replace("_", "-").lower(),
+            slug="blocks/" + get_markdown_slug(category_name),
         )
 
     def add_content(self, content: CategoryTree):
