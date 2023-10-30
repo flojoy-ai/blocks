@@ -25,7 +25,11 @@ import BlockCategory from "@/components/block-category.astro";
 
 """
 
+# This means that for all the headers on the overview page,
+# we will start with ## (h2) and incrementing to at most ##### (h5)
+
 BASE_HEADER_LEVEL = 2
+MAX_HEADER_LEVEL = 5
 
 
 @dataclasses.dataclass
@@ -41,9 +45,9 @@ CategoryTree = list[BlockInfo] | dict[str, "CategoryTree"]
 def make_category_content(
     name: str, contents: CategoryTree, depth: int = BASE_HEADER_LEVEL, path: str = ""
 ) -> str:
-    if depth > 6:
+    if not depth <= MAX_HEADER_LEVEL:
         raise ValueError(
-            f"{path}/{name} category depth too nested, must be less than 5 levels deep"
+            f"{path}/{name} category depth too nested, must be less than or equal to {MAX_HEADER_LEVEL} levels deep"
         )
     match contents:
         # leaf (bottom level category)
