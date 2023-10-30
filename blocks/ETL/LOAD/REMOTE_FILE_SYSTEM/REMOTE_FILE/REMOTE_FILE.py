@@ -31,7 +31,7 @@ def REMOTE_FILE(
     default: Optional[TextBlob] = None,
     file_type: Literal["Image", "Grayscale", "JSON", "CSV", "Excel", "XML"] = "Image",
 ) -> Image | DataFrame:
-    """Load a remote file from an HTTP URL endpoint, infer the tupe, and convert it to a DataContainer class.
+    """Load a remote file from an HTTP URL endpoint, infer the type, and convert it to a DataContainer class.
 
     Note: If both the file_url and default are not specified when file_type="Image", a default image will be loaded.
 
