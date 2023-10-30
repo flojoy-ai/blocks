@@ -54,13 +54,17 @@ def make_category_content(
             subcontents = []
             for key, val in contents.items():
                 try:
-                    make_category_content(key, val, depth + 1, path=f"{path}/{name}")
+                    subcontents.append(
+                        make_category_content(
+                            key, val, depth + 1, path=f"{path}/{name}"
+                        )
+                    )
                 except ValueError as e:
                     errs.append(str(e))
 
             if errs:
                 raise ValueError("\n".join(errs))
-            return "\n".join(subcontents)
+            content = "\n".join(subcontents)
 
     # don't show the title of the top level category
     if depth == TOP_LEVEL_DEPTH:

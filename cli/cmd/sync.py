@@ -136,8 +136,8 @@ def sync():
 
             total_synced_pages += 1
 
-    found_err = False
     print("Generating overview pages...")
+    found_err = False
     for top_level_category in os.listdir(BLOCKS_SOURCE_FOLDER):
         summary_path = os.path.join(
             BLOCKS_SOURCE_FOLDER, top_level_category, "summary.md"
