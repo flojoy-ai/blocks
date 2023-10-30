@@ -1,7 +1,5 @@
 import dataclasses
 
-
-
 CATEGORY_TEMPLATE = """ \
 {header_level} {title}
 {content}
@@ -42,7 +40,9 @@ def make_category_content(
     name: str, contents: CategoryTree, depth: int = TOP_LEVEL_DEPTH, path: str = ""
 ) -> str:
     if depth > 6:
-        raise ValueError(f"{path}/{name} category depth too nested, must be less than 4 levels deep")
+        raise ValueError(
+            f"{path}/{name} category depth too nested, must be less than 4 levels deep"
+        )
     match contents:
         # leaf (bottom level category)
         case list():
@@ -57,11 +57,11 @@ def make_category_content(
                     make_category_content(key, val, depth + 1, path=f"{path}/{name}")
                 except ValueError as e:
                     errs.append(str(e))
-                    
+
             if errs:
                 raise ValueError("\n".join(errs))
             return "\n".join(subcontents)
-            
+
     # don't show the title of the top level category
     if depth == TOP_LEVEL_DEPTH:
         return content

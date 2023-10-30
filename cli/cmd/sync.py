@@ -1,8 +1,8 @@
 import json
 import os
 import sys
-import frontmatter
 
+import frontmatter
 from rich import print
 
 from cli.constants import (
@@ -17,6 +17,14 @@ from cli.utils.generate_docstring_json import generate_docstring_json
 from cli.utils.overview_docs import BlockInfo, CategoryOverviewDocsBuilder, CategoryTree
 
 
+def remove_empty_folders(top_directory):
+    for root, dirs, _ in os.walk(top_directory, topdown=False):
+        for dir in dirs:
+            folder_path = os.path.join(root, dir)
+            if not os.listdir(folder_path):
+                os.rmdir(folder_path)
+
+
 def sync():
     """
     This sync command will only operate on the blocks folder as well as the
@@ -27,6 +35,17 @@ def sync():
     # We would like to NOT modify the following files
     keep_files = ["overview.mdx"]
     auto_gen_categories = ["NUMPY", "SCIPY"]
+
+    # Remove all empty folders
+    print("House keeping before syncing...")
+    for root, _, files in os.walk("."):
+        for file in files:
+            if file == ".DS_Store":
+                file_path = os.path.join(root, file)
+                os.remove(file_path)
+
+    remove_empty_folders(BLOCKS_DOCS_FOLDER)
+    remove_empty_folders(BLOCKS_SOURCE_FOLDER)
 
     print("Generating docstring.json for all the blocks...")
     success = generate_docstring_json()
@@ -138,18 +157,22 @@ def sync():
             title = summary["title"]
         else:
             print(
-                f"{WARN_STRING} summary.md not found for top level category {top_level_category}!"
+                f"{ERR_STRING} summary.md not found for top level category {top_level_category}!"
             )
+            found_err = True
+
         print(f"Generating overview for {top_level_category}...")
 
         overview_page_path = os.path.join(
             BLOCKS_DOCS_FOLDER, top_level_category, "overview.mdx"
         )
-        with open(overview_page_path, "w") as f:
+        with open(overview_page_path, "w+") as f:
             title = title if title is not None else top_level_category
             try:
                 f.write(
-                    CategoryOverviewDocsBuilder(title, top_level_category, overview_description)
+                    CategoryOverviewDocsBuilder(
+                        title, top_level_category, overview_description
+                    )
                     .add_content(category_tree[top_level_category])
                     .build()
                 )
@@ -160,28 +183,6 @@ def sync():
     if found_err:
         print(f"{ERR_STRING} Found errors when generating overview pages.")
         sys.exit(1)
-        
-
-    # Remove all empty folders
-    print("Almost done! Doing some housekeeping...")
-
-    for root, _, files in os.walk("."):
-        for file in files:
-            if file == ".DS_Store":
-                file_path = os.path.join(root, file)
-                os.remove(file_path)
-
-    for dirpath, dirnames, filenames in os.walk(BLOCKS_DOCS_FOLDER):
-        if (
-            not filenames and not dirnames
-        ):  # Check if the directory has no files or subdirectories
-            os.rmdir(dirpath)  # Remove the directory
-
-    for dirpath, dirnames, filenames in os.walk(BLOCKS_SOURCE_FOLDER):
-        if (
-            not filenames and not dirnames
-        ):  # Check if the directory has no files or subdirectories
-            os.rmdir(dirpath)  # Remove the directory
 
     print(f"Successfully synced {total_synced_pages} block pages!")
 
