@@ -11,7 +11,7 @@ def DC_VOLTAGE_USB4065(
     voltage_limit: Literal["0.1", "1", "10", "100", "300"] = "10",
     default: Optional[DataContainer] = None,
 ) -> Scalar:
-    """The DC_VOLTAGE_USB4065 node reads the DC voltage from a USB-4065.
+    """Read the DC voltage from an NI USB-4065 DAQ board.
 
     The USB-4065 is a NI (National Instruments) multimeter. It is possible that
     the node will work with other NI DMMs (digital multimeters) such as the

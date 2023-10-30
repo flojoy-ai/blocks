@@ -11,11 +11,11 @@ def CONNECTION_MDO3XXX(
     num_channels: int = 4,
     default: Optional[DataContainer] = None,
 ) -> Optional[DataContainer]:
-    """The CONNECTION_MDO3XXX node connects Flojoy to a MDO3XXX oscilloscope.
+    """Connect Flojoy to a MDO3XXX oscilloscope.
 
     The connection is made with the VISA address in the Flojoy UI.
 
-    This node should also work with compatible Tektronix scopes (untested):
+    This block should also work with compatible Tektronix scopes (untested):
     MDO4xxx, MSO4xxx, and DPO4xxx.
 
     Parameters

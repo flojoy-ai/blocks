@@ -29,24 +29,24 @@ def MEASUREMENT_DS1074Z(
     stat: Literal["MAX", "MIN", "CURR", "AVER", "DEV"] = "CURR",
     default: Optional[DataContainer] = None,
 ) -> Scalar:
-    """The MEASUREMENT_DS1074Z node extracts waveform measurements from a DS1074Z.
+    """Extract waveform measurements from a DS1074Z oscilloscope.
 
     Also available are statistics for the measurement such as average and max.
     See the docs page for information on each measurement.
 
     TODO: add link to docs page
 
-    TODO: ADV_MEASUREMENT node + reference to it here
+    TODO: ADV_MEASUREMENT block + reference to it here
 
-    Requires a CONNECTION_DS1074Z node at the start of the app to connect with
+    Requires a CONNECTION_DS1074Z block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible DS1000Z oscilloscopes
+    This block should also work with compatible DS1000Z oscilloscopes
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_DS1074Z node).
+        The VISA address (requires the CONNECTION_DS1074Z block).
     channel: select
         The channel to measure.
     measurement: select

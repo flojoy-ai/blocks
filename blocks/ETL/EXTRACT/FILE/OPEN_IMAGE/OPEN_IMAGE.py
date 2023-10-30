@@ -6,7 +6,7 @@ from numpy import asarray
 
 @flojoy
 def OPEN_IMAGE(file_path: str = "") -> Image:
-    """The OPEN_IMAGE node loads an image file from disk and returns an image type DataContainer object.
+    """Load an image file from disk and return a DataContainer of type 'image'.
 
     Inputs
     ------

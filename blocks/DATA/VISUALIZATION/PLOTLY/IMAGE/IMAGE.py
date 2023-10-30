@@ -6,7 +6,7 @@ from blocks.DATA.VISUALIZATION.template import plot_layout
 
 @flojoy
 def IMAGE(default: Image | Grayscale) -> Plotly:
-    """The IMAGE node creates a Plotly Image visualization for a given input DataContainer type of image.
+    """Create a Plotly Image visualization for a given input DataContainer type of image.
 
     Parameters
     ----------

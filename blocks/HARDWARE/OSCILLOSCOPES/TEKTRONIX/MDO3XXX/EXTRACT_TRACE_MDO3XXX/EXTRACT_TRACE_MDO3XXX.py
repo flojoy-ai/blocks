@@ -10,23 +10,23 @@ def EXTRACT_TRACE_MDO3XXX(
     length_type: Literal["pixels", "nanoseconds"] = "pixels",
     default: Optional[DataContainer] = None,
 ) -> OrderedPair:
-    """The EXTRACT_TRACE_MDO3XXX node extracts the trace from an MDO3xxx oscilloscope.
+    """Extract a trace from an MDO3xxx oscilloscope.
 
     The number of points in the x axis is defined by x_length and length_type
     parameters. A length_type of pixels and a x_length of 5000 will result in
     a trace with 5000 points. A length_type of nanoseconds instead results in
     a trace with a length of defined by the number of (nano)seconds.
 
-    Requires a CONNECTION_MDO3XXX node at the start of the app to connect with
+    Requires a CONNECTION_MDO3XXX block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible Tektronix scopes (untested):
+    This block should also work with compatible Tektronix scopes (untested):
     MDO4xxx, MSO4xxx, and DPO4xxx.
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_MDO3XXX node).
+        The VISA address (requires the CONNECTION_MDO3XXX block).
     x_length: int
         The length of the trace to extract.
     length_type: select

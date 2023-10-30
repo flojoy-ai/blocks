@@ -10,9 +10,9 @@ def ADVANCED_MEASUREMENTS_MDO3XXX(
     statistic: Literal["instant", "mean", "max", "min", "stdev"] = "instant",
     default: Optional[DataContainer] = None,
 ) -> Scalar:
-    """The ADVANCED_MEASUREMENTS_MDO3XXX node extracts waveform measurements from an MDO3xxx oscilloscope.
+    """Extract waveform measurements from an MDO3xxx oscilloscope.
 
-    This node is similar to MEASUREMENTS_MDO3XXX node but more measurements
+    This block is similar to MEASUREMENTS_MDO3XXX block but more measurements
     are availble. The available measurements are as follows:
 
     amplitude, area, burst, carea, cmean, crms, delay, distduty, extinctdb,
@@ -27,17 +27,17 @@ def ADVANCED_MEASUREMENTS_MDO3XXX(
     instant, mean, max, min, and stdev where instant is a single measurement
     and stdev is the standard deviation of the mean.
 
-    Requires a CONNECTION_MDO3XXX node at the start of the app to connect with
+    Requires a CONNECTION_MDO3XXX block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible Tektronix scopes (untested):
+    This block should also work with compatible Tektronix scopes (untested):
     MDO4xxx, MSO4xxx, and DPO4xxx. Many of the advanced measurements are likely
     to not function with different model numbers.
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_MDO3XXX node).
+        The VISA address (requires the CONNECTION_MDO3XXX block).
     channel: int
         The channel with which to create a measurement for.
     measurement: str

@@ -10,7 +10,7 @@ def SIGNAL_FACTOR_DS1074Z(
     probe_factor: float = 1,
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The SIGNAL_FACTOR_DS1074Z node sets the "probe" setting for the DS1074Z.
+    """Set the "probe" settings for the DS1074Z oscilloscope.
 
     Note that only select values are available. If the selected value isn't
     available, the instrument will default to 10.
@@ -19,15 +19,15 @@ def SIGNAL_FACTOR_DS1074Z(
     By default the setting is 10 on instrument startup. It is recommened to set
     it to 1 inside Flojoy, unless the probe requires a correction.
 
-    Requires a CONNECTION_DS1074Z node at the start of the app to connect with
+    Requires a CONNECTION_DS1074Z block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible DS1000Z oscilloscopes
+    This block should also work with compatible DS1000Z oscilloscopes
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_DS1074Z node).
+        The VISA address (requires the CONNECTION_DS1074Z block).
     query_set: select:
         "query" or "set" the setting.
     channel: select

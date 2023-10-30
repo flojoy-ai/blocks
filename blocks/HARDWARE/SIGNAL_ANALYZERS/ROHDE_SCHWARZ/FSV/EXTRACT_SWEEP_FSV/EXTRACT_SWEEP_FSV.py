@@ -9,17 +9,17 @@ def EXTRACT_SWEEP_FSV(
     connection: VisaConnection,
     default: Optional[DataContainer] = None,
 ) -> OrderedPair:
-    """The EXTRACT_SWEEP_FSV node extracts the sweep trace from a FSV network analyzer.
+    """Extract the sweep trace from an FSV network analyzer.
 
-    Requires a CONNECTION_FSV node at the start of the app to connect with
+    Requires a CONNECTION_FSV block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible R&S network analyzers.
+    This block should also work with compatible R&S network analyzers.
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_FSV node).
+        The VISA address (requires the CONNECTION_FSV block).
 
     Returns
     -------

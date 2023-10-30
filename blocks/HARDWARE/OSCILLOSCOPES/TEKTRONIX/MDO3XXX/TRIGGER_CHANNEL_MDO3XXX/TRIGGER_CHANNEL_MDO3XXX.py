@@ -9,18 +9,18 @@ def TRIGGER_CHANNEL_MDO3XXX(
     query_set: Literal["query", "set"] = "query",
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The TRIGGER_CHANNEL_MDO3XXX node sets the triggering channel (or queries it).
+    """Set the triggering channel of a MDO3XXX oscilloscope (or query it).
 
-    Requires a CONNECTION_MDO3XXX node at the start of the app to connect with
+    Requires a CONNECTION_MDO3XXX block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible Tektronix scopes (untested):
+    This block should also work with compatible Tektronix scopes (untested):
     MDO4xxx, MSO4xxx, and DPO4xxx.
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_MDO3XXX node).
+        The VISA address (requires the CONNECTION_MDO3XXX block).
     channel: int
         The channel to set as the triggering channel (used if set=True).
     query_set: str

@@ -31,7 +31,7 @@ def REMOTE_FILE(
     default: Optional[TextBlob] = None,
     file_type: Literal["Image", "Grayscale", "JSON", "CSV", "Excel", "XML"] = "Image",
 ) -> Image | DataFrame:
-    """The REMOTE_FILE node loads a remote file using an HTTP URL and converts it to a DataContainer class.
+    """Load a remote file from an HTTP URL endpoint, infer the tupe, and convert it to a DataContainer class.
 
     Note: If both the file_url and default are not specified when file_type="Image", a default image will be loaded.
 

@@ -10,12 +10,12 @@ def SCPI_WRITE(
     default: Optional[DataContainer] = None,
     command: str = "*IDN?",
 ) -> Scalar | TextBlob:
-    """The SCPI_WRITE node writes a SCPI command to a connected bench-top instrument and returns the result.
+    """Write a SCPI command to a connected bench-top instrument and return the result.
 
     Inputs
     ------
     default: DataContainer
-        Any DataContainer - likely connected to the output of the OPEN_SERIAL node.
+        Any DataContainer - likely connected to the output of the OPEN_SERIAL block.
 
     Parameters
     ----------

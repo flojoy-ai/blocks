@@ -9,14 +9,14 @@ def PROLOGIX_AUTO(
     default: Optional[DataContainer] = None,
     auto: Literal["On", "Off", "Current state"] = "Current state",
 ) -> TextBlob:
-    """The PROLOGIX_AUTO node toggles "Read-After-Write" mode on or off.
+    """Toggle "Read-After-Write" mode on or off.
 
     When Read-After-Write is on, the Prologix USB-to-GPIB controller automatically reads a bench-top instrument's response after writing a command to it.
 
     Inputs
     ------
     default: DataContainer
-        Any DataContainer - likely connected to the output of the OPEN_SERIAL node.
+        Any DataContainer - likely connected to the output of the OPEN_SERIAL block.
 
     Parameters
     ----------

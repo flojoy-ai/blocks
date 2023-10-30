@@ -10,7 +10,7 @@ def READ_A0_PINS(
     default: Optional[OrderedPair] = None,
     sensor_number: int = 1,
 ) -> OrderedPair:
-    """The READ_A0_PINS node allows you to record and return voltages from a sensor connected to a LABJACK U3 device.
+    """Read voltages from a sensor connected to a LABJACK U3 device.
 
     The SENSOR node can be used to convert voltage into temperature measurements.
 

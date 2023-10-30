@@ -4,7 +4,7 @@ from flojoy import flojoy, Matrix
 
 @flojoy
 def MATMUL(a: Matrix, b: Matrix) -> Matrix:
-    """The MATMUL node takes two input matrices, multiplies them, and returns the result.
+    """Take two input matrices, multiply them, and return the result.
 
     Parameters
     ----------

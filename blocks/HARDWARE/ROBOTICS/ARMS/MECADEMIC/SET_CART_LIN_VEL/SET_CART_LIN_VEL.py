@@ -5,7 +5,7 @@ from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def SET_CART_LIN_VEL(ip_address: TextBlob, v: float) -> TextBlob:
     """
-    The SET_CART_LIN_VEL node sets the robot arm's linear velocity in Cartesian coordinates.
+    Set the robot arm's linear velocity in Cartesian coordinates.
 
     Parameters
     ----------

@@ -18,11 +18,11 @@ def FUNCTION_GENERATION_2000(
     sweeps: int = 0,
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The FUNCTION_GENERATION_2000 node controls wavefunction generation.
+    """Control wavefunction generation from a PicoScope.
 
-    Note this node requires the CONNECTION_2000 node.
+    Note that this block requires the CONNECTION_2000 block.
 
-    Note the P2000 nodes require a device specific driver/SDK downloaded from:
+    Also note that the P2000 blocks require a device specific driver/SDK downloaded from:
     https://www.picotech.com/downloads.
 
     Parameters

@@ -10,7 +10,7 @@ def TIME_AXIS_DS1074Z(
     scale: float = 1e-3,
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The TIME_AXIS_DS1074Z node changes the time axis for the DS1074Z.
+    """Change the time axis for the DS1074Z oscilloscope.
 
     Both the scale and offset can be changed. The scale sets the size
     of one section. The full window is 12 times the scale. The offset and scale
@@ -19,15 +19,15 @@ def TIME_AXIS_DS1074Z(
     If 'query_set' is set to query the trigger settings will be queried and
     left unchanged.
 
-    Requires a CONNECTION_DS1074Z node at the start of the app to connect with
+    Requires a CONNECTION_DS1074Z block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible DS1000Z oscilloscopes
+    This block should also work with compatible DS1000Z oscilloscopes
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_DS1074Z node).
+        The VISA address (requires the CONNECTION_DS1074Z block).
     query_set: select:
         "query" or "set" the trigger settings.
     offset: float

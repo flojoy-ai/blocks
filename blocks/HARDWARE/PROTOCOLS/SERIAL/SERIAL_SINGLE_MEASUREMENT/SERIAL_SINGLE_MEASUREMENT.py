@@ -11,7 +11,7 @@ def SERIAL_SINGLE_MEASUREMENT(
     default: Optional[OrderedPair] = None,
     baudrate: int = 9600,
 ) -> OrderedPair:
-    """The SERIAL_SINGLE_MEASUREMENT node takes a single reading of data from an Arduino or a similar serial device.
+    """Take a single data reading from a connected serial device (such as an Arduino connected by USB).
 
     Parameters
     ----------

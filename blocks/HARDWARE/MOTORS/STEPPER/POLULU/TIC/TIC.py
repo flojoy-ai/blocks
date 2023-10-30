@@ -14,7 +14,7 @@ def TIC(
     sleep_time: int = 2,
     speed: int = 100000,
 ) -> OrderedPair:
-    """The STEPPER_DRIVER_TIC node controls a stepper motor's movement with a TIC driver.
+    """Control a stepper motor's movement through a Polulu TIC driver.
 
     The user defines the speed and the sleep time between movements.
 
