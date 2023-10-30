@@ -1,5 +1,7 @@
 ---
 title: Math
+description: "Welcome to Flojoy's Math Blocks page. Here you can find all the blocks that performs arithmetic and calculus operations."
 ---
 
-Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+Welcome to Flojoy's Math Blocks page.
+Here you can find all the blocks that performs arithmetic and calculus operations.

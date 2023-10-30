@@ -1,5 +1,7 @@
 ---
 title: ETL
+description: "Welcome to Flojoy's ETL Blocks page. Here you can find all the information on how to handle ETL tasks using Flojoy."
 ---
 
-Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+Welcome to Flojoy's ETL Blocks page.
+Here you can find all the information on how to handle ETL tasks using Flojoy.

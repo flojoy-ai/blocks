@@ -1,5 +1,7 @@
 ---
 title: Hardware
+description: "Welcome to Flojoy's Hardware Blocks page. Here you can explore all the hardware that Flojoy supports!"
 ---
 
-Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+Welcome to Flojoy's Hardware Blocks page.
+Here you can explore all the hardware that Flojoy supports!

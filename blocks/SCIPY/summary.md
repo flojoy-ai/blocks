@@ -1,5 +1,7 @@
 ---
 title: SciPy
+description: "Welcome to Flojoy's SciPy Blocks. Here are all the SciPy functions we support out of the box!"
 ---
 
-Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+Welcome to Flojoy's SciPy Blocks.
+Here are all the SciPy functions we support out of the box!

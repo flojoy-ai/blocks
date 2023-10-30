@@ -1,5 +1,7 @@
 ---
 title: Data
+description: "Welcome to Flojoy's Data Blocks page. Here you can find all the blocks related to data generation and visualization."
 ---
 
-Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+Welcome to Flojoy's Data Blocks page.
+Here you can find all the blocks related to data generation and visualization.

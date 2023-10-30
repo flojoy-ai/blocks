@@ -1,5 +1,7 @@
 ---
 title: Control Flow
+description: "Welcome to Flojoy's Control Flow Blocks page. Here you can find all the information to handle control flows in Flojoy."
 ---
 
-Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+Welcome to Flojoy's Control Flow Blocks page. Here you can find all the
+information to handle control flows in Flojoy.

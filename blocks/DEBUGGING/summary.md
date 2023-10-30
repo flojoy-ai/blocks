@@ -1,5 +1,8 @@
 ---
 title: Debugging
+description: "Welcome to Flojoy's Debugging Blocks page. Here you can find all the information on how to debug a Flojoy app using one of our helpful debugging blocks."
 ---
 
-Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+Welcome to Flojoy's Debugging Blocks page.
+Here you can find all the information on how to
+debug a Flojoy app using one of our helpful debugging blocks.

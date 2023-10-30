@@ -1,5 +1,7 @@
 ---
 title: NumPy
+description: "Welcome to Flojoy's NumPy Blocks. Here are all the NumPy functions we support out of the box!"
 ---
 
-Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+Welcome to Flojoy's NumPy Blocks.
+Here are all the NumPy functions we support out of the box!

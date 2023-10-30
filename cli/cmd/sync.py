@@ -137,19 +137,31 @@ def sync():
             total_synced_pages += 1
 
     print("Generating overview pages...")
+    required_frontmatters = ["title", "description"]
+
     found_err = False
     for top_level_category in os.listdir(BLOCKS_SOURCE_FOLDER):
         summary_path = os.path.join(
             BLOCKS_SOURCE_FOLDER, top_level_category, "summary.md"
         )
 
-        title = None
-        overview_description = ""
+        overview_title = ""
+        overview_desc = ""
 
         if os.path.exists(summary_path):
             summary = frontmatter.load(summary_path)
-            overview_description = summary.content
-            title = summary["title"]
+            missing = False
+            for fm in required_frontmatters:
+                if fm not in summary:
+                    print(
+                        f"{ERR_STRING} frontmatter '{fm}' is missing in summary.md for {top_level_category}"
+                    )
+                    missing = True
+            if missing:
+                continue
+            overview_title = summary["title"]
+            overview_desc = summary["description"]
+
         else:
             print(
                 f"{ERR_STRING} summary.md not found for top level category {top_level_category}!"
@@ -162,11 +174,10 @@ def sync():
             BLOCKS_DOCS_FOLDER, top_level_category, "overview.mdx"
         )
         with open(overview_page_path, "w+") as f:
-            title = title if title is not None else top_level_category
             try:
                 f.write(
                     CategoryOverviewDocsBuilder(
-                        title, top_level_category, overview_description
+                        overview_title, top_level_category, overview_desc
                     )
                     .add_content(category_tree[top_level_category])
                     .build()

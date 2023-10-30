@@ -1,5 +1,8 @@
 ---
 title: Computer Vision
+description: "Welcome to Flojoy's Computer Vision Blocks page. Here you can find information about all the Flojoy Blocks that can be used to perform computer vision tasks."
 ---
 
-Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+Welcome to Flojoy's Computer Vision Blocks page.
+Here you can find information about all the Flojoy Blocks
+that can be used to perform computer vision tasks.
