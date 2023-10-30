@@ -1,4 +1,4 @@
-from get_markdown_slug import get_markdown_slug
+from cli.utils.markdown_helper import get_markdown_slug
 
 
 class BlockDocsBuilder:
