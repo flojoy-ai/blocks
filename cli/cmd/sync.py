@@ -5,12 +5,7 @@ import sys
 import frontmatter
 from rich import print
 
-from cli.constants import (
-    BLOCKS_DOCS_FOLDER,
-    BLOCKS_SOURCE_FOLDER,
-    ERR_STRING,
-    WARN_STRING,
-)
+from cli.constants import BLOCKS_DOCS_FOLDER, BLOCKS_SOURCE_FOLDER, ERR_STRING
 from cli.state import state
 from cli.utils.block_docs import BlockDocsBuilder
 from cli.utils.generate_docstring_json import generate_docstring_json
