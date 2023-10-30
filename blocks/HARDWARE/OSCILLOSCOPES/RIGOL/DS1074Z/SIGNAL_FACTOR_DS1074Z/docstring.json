@@ -1,11 +1,11 @@
 {
-  "long_description": "Note that only select values are available. If the selected value isn't\navailable, the instrument will default to 10.\n\nThis setting multiplies the y axis of the selected channel by this factor.\nBy default the setting is 10 on instrument startup. It is recommened to set\nit to 1 inside Flojoy, unless the probe requires a correction.\n\nRequires a CONNECTION_DS1074Z node at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis node should also work with compatible DS1000Z oscilloscopes",
-  "short_description": "The SIGNAL_FACTOR_DS1074Z node sets the \"probe\" setting for the DS1074Z.",
+  "long_description": "Note that only select values are available. If the selected value isn't\navailable, the instrument will default to 10.\n\nThis setting multiplies the y axis of the selected channel by this factor.\nBy default the setting is 10 on instrument startup. It is recommened to set\nit to 1 inside Flojoy, unless the probe requires a correction.\n\nRequires a CONNECTION_DS1074Z block at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis block should also work with compatible DS1000Z oscilloscopes",
+  "short_description": "Set the \"probe\" settings for the DS1074Z oscilloscope.",
   "parameters": [
     {
       "name": "connection",
       "type": "VisaConnection",
-      "description": "The VISA address (requires the CONNECTION_DS1074Z node)."
+      "description": "The VISA address (requires the CONNECTION_DS1074Z block)."
     },
     {
       "name": "query_set",

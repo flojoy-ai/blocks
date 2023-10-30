@@ -1,6 +1,6 @@
 {
-  "long_description": "Note this node requires the CONNECTION_2000 node.\n\nNote the P2000 nodes require a device specific driver/SDK downloaded from:\nhttps://www.picotech.com/downloads.",
-  "short_description": "The FUNCTION_GENERATION_2000 node controls wavefunction generation.",
+  "long_description": "Note that this block requires the CONNECTION_2000 block.\n\nAlso note that the P2000 blocks require a device specific driver/SDK downloaded from:\nhttps://www.picotech.com/downloads.",
+  "short_description": "Control wavefunction generation from a PicoScope.",
   "parameters": [
     {
       "name": "offset_voltage",

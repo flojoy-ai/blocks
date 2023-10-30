@@ -1,6 +1,6 @@
 {
-  "long_description": "The connection is made with the VISA address in the Flojoy UI.\n\nThis node should also work with compatible R&S network analyzers.",
-  "short_description": "The CONNECTION_FSV node connects Flojoy to a FSV network analyzer.",
+  "long_description": "The connection is made with the VISA address in the Flojoy UI.\n\nThis block should also work with compatible R&S network analyzers.",
+  "short_description": "Connect Flojoy to a FSV network analyzer.",
   "parameters": [
     {
       "name": "device",

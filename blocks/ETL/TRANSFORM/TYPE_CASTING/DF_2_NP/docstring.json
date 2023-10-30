@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The DF_2_NP node takes one dataframe type data and converts it to a matrix type data.",
+  "short_description": "Convert a DataFrame DataContainer to a Matrix DataContainer.",
   "parameters": [
     {
       "name": "default",

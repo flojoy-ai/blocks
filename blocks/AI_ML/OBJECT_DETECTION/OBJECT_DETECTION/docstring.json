@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The OBJECT_DETECTION node detects objects in the input image, and returns an 'image' DataContainer with those objects highlighted.",
+  "short_description": "Detect objects in an input image with YOLOv3, then return an image DataContainer with those objects highlighted.",
   "parameters": [
     {
       "name": "default",

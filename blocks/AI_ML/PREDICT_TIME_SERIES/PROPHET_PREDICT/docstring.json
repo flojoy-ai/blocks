@@ -1,6 +1,6 @@
 {
   "long_description": "The DataContainer input type must be a dataframe, and the first column (or index) of the dataframe must be of a datetime type.\n\nThis node always returns a DataContainer of a dataframe type. It will also always return an 'extra' field with a key 'prophet' of which the value is the JSONified Prophet model.\nThis model can be loaded as follows:",
-  "short_description": "The PROPHET_PREDICT node runs a Prophet model on the incoming dataframe.",
+  "short_description": "Run a Prophet time series prediction model on an incoming dataframe.",
   "parameters": [
     {
       "name": "run_forecast",

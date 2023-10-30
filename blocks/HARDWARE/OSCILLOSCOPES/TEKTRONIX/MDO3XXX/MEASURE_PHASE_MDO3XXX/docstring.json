@@ -1,11 +1,11 @@
 {
-  "long_description": "Requires a CONNECTION_MDO3XXX node at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis node should also work with compatible Tektronix scopes (untested):\nMDO4xxx, MSO4xxx, and DPO4xxx.",
-  "short_description": "The MEASURE_PHASE_MDO3XXX node measures the phase between two channels.",
+  "long_description": "Requires a CONNECTION_MDO3XXX block at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis block should also work with compatible Tektronix scopes (untested):\nMDO4xxx, MSO4xxx, and DPO4xxx.",
+  "short_description": "Measure the phase between two channels on an MDO3XXX oscilloscope.",
   "parameters": [
     {
       "name": "connection",
       "type": "VisaConnection",
-      "description": "The VISA address (requires the CONNECTION_MDO3XXX node)."
+      "description": "The VISA address (requires the CONNECTION_MDO3XXX block)."
     },
     {
       "name": "channel1",

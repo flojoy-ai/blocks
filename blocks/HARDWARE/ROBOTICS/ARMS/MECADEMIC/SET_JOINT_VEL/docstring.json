@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The SET_JOINT_VEL node sets the robot arm's angular velocity for its joints.",
+  "short_description": "Set the robot arm's angular velocity for its joints.",
   "parameters": [
     {
       "name": "ip_address",

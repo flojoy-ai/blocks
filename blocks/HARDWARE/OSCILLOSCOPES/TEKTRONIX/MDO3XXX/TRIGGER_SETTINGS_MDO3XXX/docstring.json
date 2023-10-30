@@ -1,11 +1,11 @@
 {
-  "long_description": "Note that \"unchanged\" will leave the settings unchanged.\n\nRequires a CONNECTION_MDO3XXX node at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis node should also work with compatible Tektronix scopes (untested):\nMDO4xxx, MSO4xxx, and DPO4xxx.",
-  "short_description": "The TRIGGER_SETTINGS_MDO3XXX node sets advanced trigger settings.",
+  "long_description": "Note that \"unchanged\" will leave the settings unchanged.\n\nRequires a CONNECTION_MDO3XXX block at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis block should also work with compatible Tektronix scopes (untested):\nMDO4xxx, MSO4xxx, and DPO4xxx.",
+  "short_description": "Sets advanced trigger settings for an MDO3XXX oscilloscope.",
   "parameters": [
     {
       "name": "connection",
       "type": "VisaConnection",
-      "description": "The VISA address (requires the CONNECTION_MDO3XXX node)."
+      "description": "The VISA address (requires the CONNECTION_MDO3XXX block)."
     },
     {
       "name": "query_set",

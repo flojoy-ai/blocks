@@ -1,6 +1,6 @@
 {
-  "long_description": "It offers a more straightforward way to generate signals, with sample rate and the time in seconds as parameters, along with all the parameters in the SINE node.",
-  "short_description": "The BASIC_OSCILLATOR node is a combination of the LINSPACE and SINE nodes.",
+  "long_description": "It offers a more straightforward way to generate signals, with sample rate and the time in seconds as parameters, along with all the parameters in the SINE block.",
+  "short_description": "Generate an oscillator signal (a shorthand combination of the SINE and LINSPACE blocks).",
   "parameters": [
     {
       "name": "sample_rate",

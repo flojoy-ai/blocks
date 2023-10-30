@@ -1,6 +1,6 @@
 {
   "long_description": "Inputs\n------\ndefault : Matrix\n    The input Matrix",
-  "short_description": "The SHUFFLE_MATRIX node returns a matrix that is randomly shuffled by the first axis",
+  "short_description": "Return a matrix that is randomly shuffled by the first axis",
   "parameters": [
     {
       "name": "axis",
