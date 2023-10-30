@@ -2,7 +2,7 @@ import dataclasses
 
 from cli.utils.markdown_helper import get_markdown_slug
 
-CATEGORY_TEMPLATE = """ \
+CATEGORY_TEMPLATE = """\
 {header_level} {title}
 {content}
 """
