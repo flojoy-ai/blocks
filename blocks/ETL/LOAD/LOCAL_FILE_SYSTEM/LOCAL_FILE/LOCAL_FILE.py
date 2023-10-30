@@ -29,7 +29,7 @@ def LOCAL_FILE(
     default: Optional[TextBlob] = None,
     file_type: Literal["Image", "Grayscale", "JSON", "CSV"] = "Image",
 ) -> Image | DataFrame | Grayscale:
-    """The LOCAL_FILE node loads a local file of a different type and converts it to a DataContainer class.
+    """Load a local file from disk, infer the type, and convert it to a DataContainer class.
 
     Parameters
     ----------

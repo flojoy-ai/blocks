@@ -1,6 +1,6 @@
 {
-  "long_description": "Inputs\n------\ndefault: DataContainer\n    Any DataContainer - likely connected to the output of the OPEN_SERIAL node.",
-  "short_description": "The IDN node queries a device's identity through the universal *IDN? SCPI command.",
+  "long_description": "Inputs\n------\ndefault: DataContainer\n    Any DataContainer - likely connected to the output of the OPEN_SERIAL block.",
+  "short_description": "Query a device's identity through the universal *IDN? SCPI command.",
   "parameters": [
     {
       "name": "connection",

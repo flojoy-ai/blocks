@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The SCATTER3D node creates a Plotly 3D Scatter visualization for a given input DataContainer.",
+  "short_description": "Create a Plotly 3D Scatter visualization for a given input DataContainer.",
   "parameters": [
     {
       "name": "default",

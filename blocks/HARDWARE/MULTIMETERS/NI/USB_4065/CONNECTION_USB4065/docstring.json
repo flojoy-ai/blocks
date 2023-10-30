@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The CONNECTION_MDO3XXX node connects Flojoy to a",
+  "short_description": "Connect Flojoy to an NI USB4065 DAQ board.",
   "parameters": [
     {
       "name": "NI_address",

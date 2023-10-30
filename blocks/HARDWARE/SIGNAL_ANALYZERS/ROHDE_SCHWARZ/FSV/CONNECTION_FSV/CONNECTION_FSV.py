@@ -9,11 +9,11 @@ def CONNECTION_FSV(
     device: VisaDevice,
     default: Optional[DataContainer] = None,
 ) -> Optional[DataContainer]:
-    """The CONNECTION_FSV node connects Flojoy to a FSV network analyzer.
+    """Connect Flojoy to a FSV network analyzer.
 
     The connection is made with the VISA address in the Flojoy UI.
 
-    This node should also work with compatible R&S network analyzers.
+    This block should also work with compatible R&S network analyzers.
 
     Parameters
     ----------

@@ -11,13 +11,13 @@ def RESISTANCE_USB4065(
     resist_limit: Literal["100", "1000", "1e4", "1e5", "1e6", "1e7", "1e8"] = "1e8",
     default: Optional[DataContainer] = None,
 ) -> Scalar:
-    """The RESISTANCE_USB4065 node reads the two-wire resistance from a USB-4065.
+    """Read two-wire resistance with an NI USB-4065 DAQ board.
 
-    The four-wire resistance is more accurate than two-wire and can be measured
-    with the FOUR_WIRE_RESIST_USB4065 node.
+    Four-wire resistance is more accurate than two-wire and can be measured
+    with the FOUR_WIRE_RESIST_USB4065 block.
 
     The USB-4065 is a NI (National Instruments) multimeter. It is possible that
-    the node will work with other NI DMMs (digital multimeters) such as the
+    the block will work with other NI DMMs (digital multimeters) such as the
     4070 and 4080 series.
 
     This instrument will likely only be compatible with Windows systems due to

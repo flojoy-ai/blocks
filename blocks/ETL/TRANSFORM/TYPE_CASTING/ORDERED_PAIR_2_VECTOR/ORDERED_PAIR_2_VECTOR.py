@@ -3,7 +3,7 @@ from flojoy import flojoy, Vector, OrderedPair
 
 @flojoy
 def ORDERED_PAIR_2_VECTOR(default: OrderedPair) -> Vector:
-    """The ORDERED_PAIR_2_VECTOR return the y component of an ordered pair as a Vector.
+    """Convert an OrderedPair DataContainer to a Vector DataContainer.
 
     Parameters
     ----------

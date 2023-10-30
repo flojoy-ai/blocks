@@ -10,11 +10,11 @@ def CONNECTION_DS1074Z(
     device: VisaDevice,
     default: Optional[DataContainer] = None,
 ) -> Optional[DataContainer]:
-    """The CONNECTION_DS1074Z node connects Flojoy to a DS1074Z oscilloscope.
+    """Connect Flojoy to a DS1074Z oscilloscope.
 
     The connection is made with the VISA address in the Flojoy UI.
 
-    This node should also work with compatible DS1000Z oscilloscopes
+    This block should also work with compatible DS1000Z oscilloscopes
 
     Parameters
     ----------

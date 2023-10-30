@@ -14,7 +14,7 @@ def FEEDBACK(
     referred_node: NodeReference,
     default: Optional[DataContainer] = None,
 ) -> Any:
-    """The FEEDBACK node captures the result of the specified node ID.
+    """Capture and save the results of a specified block over time. This block is almost always used in a LOOP.
 
     If the result is not found, it passes the result of the parent node.
 

@@ -7,7 +7,7 @@ def TEXT(
     _: Optional[DataContainer] = None,
     value: str = "Hello World!",
 ) -> TextBlob:
-    """The TEXT node returns a TextBlob DataContainer.
+    """Return a TextBlob DataContainer with given input text.
 
     Parameters
     ----------

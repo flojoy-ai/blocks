@@ -11,7 +11,7 @@ def DIODE_USB4065(
     voltage_limit: Literal["3.5", "10"] = "10",
     default: Optional[DataContainer] = None,
 ) -> Scalar:
-    """The DIODE_USB4065 node reads the voltage drop across a diode.
+    """Read the voltage drop across a diode with an NI USB4065 DAQ board.
 
     The USB-4065 is a NI (National Instruments) multimeter. It is possible that
     the node will work with other NI DMMs (digital multimeters) such as the

@@ -15,11 +15,11 @@ def EXTRACT_TRACE_2000(
     x_samples: int = 1000,
     default: Optional[DataContainer] = None,
 ) -> OrderedPair:
-    """The EXTRACT_TRACE_2000 node extracts scope traces from the P2000.
+    """Extract scope traces from a P2000 PicoScope.
 
-    Note this node requires the CONNECTION_2000 node.
+    Note that this block requires the CONNECTION_2000 block.
 
-    Note the P2000 nodes require a device specific driver/SDK downloaded from:
+    Also note that the P2000 block require a device specific driver/SDK downloaded from:
     https://www.picotech.com/downloads.
 
     Parameters

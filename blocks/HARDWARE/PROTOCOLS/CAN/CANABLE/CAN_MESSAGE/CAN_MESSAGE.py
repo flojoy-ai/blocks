@@ -13,7 +13,7 @@ def CAN_MESSAGE(
     # arbitration_id: hex = 0xC0FFEE, TODO: Support hex inputs
     is_extended_id: bool = True,
 ) -> TextBlob:
-    """The CAN_MESSAGE node sends a message onto CAN network through a slcan-compatible USB-to-CAN adapter.
+    """Send a message onto a CAN network through a slcan-compatible USB-to-CAN adapter.
 
     Inputs
     ------

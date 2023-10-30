@@ -11,7 +11,7 @@ from flojoy import Image, flojoy, run_in_venv
     ]
 )
 def DEEPLAB_V3(default: Image) -> Image:
-    """The DEEPLAB_V3 node returns a segmentation mask from an input image in a dataframe.
+    """Return a segmentation mask from an input image.
 
     The input image is expected to be a DataContainer of an 'image' type.
 

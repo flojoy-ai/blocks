@@ -17,7 +17,7 @@ def BURST_MODE_33510B(
     burst_polarity: Literal["NORM", "INV"] = "NORM",
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The BURST_MODE_33510B node is used to turn the Burst mode on or off.
+    """Turn the Burst mode of a supported function generator on or off.
 
     You can set various settings for the triggering of the bursts as well.
     The burst mode is way to have signals come in "bursts" that are triggered

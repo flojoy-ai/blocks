@@ -13,7 +13,7 @@ def ATTENUATION_LDA602(
     attenuation: float = 10.0,
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The ATTENUATION_LDA602 node sets or queries the attenuation for the LDA-602 Digital Attenuator.
+    """Set or query the attenuation for the LDA-602 Digital Attenuator.
 
     When setting the attenuation, the attenuation is then queried to ensure
     the attenuation was set correctly.

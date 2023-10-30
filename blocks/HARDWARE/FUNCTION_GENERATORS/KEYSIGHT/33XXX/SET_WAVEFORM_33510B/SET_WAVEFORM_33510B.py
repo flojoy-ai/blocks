@@ -20,7 +20,7 @@ def SET_WAVEFORM_33510B(
     pulse_width: float = 20,
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The SET_WAVEFORM_33510B node is used to set waveform settings for a 33510B.
+    """Set waveform settings for a 33510B function generator.
 
     The Keysight 33510B has a variety of waveform settings available.
 

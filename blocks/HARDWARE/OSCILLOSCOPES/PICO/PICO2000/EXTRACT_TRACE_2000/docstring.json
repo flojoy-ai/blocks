@@ -1,6 +1,6 @@
 {
-  "long_description": "Note this node requires the CONNECTION_2000 node.\n\nNote the P2000 nodes require a device specific driver/SDK downloaded from:\nhttps://www.picotech.com/downloads.",
-  "short_description": "The EXTRACT_TRACE_2000 node extracts scope traces from the P2000.",
+  "long_description": "Note that this block requires the CONNECTION_2000 block.\n\nAlso note that the P2000 block require a device specific driver/SDK downloaded from:\nhttps://www.picotech.com/downloads.",
+  "short_description": "Extract scope traces from a P2000 PicoScope.",
   "parameters": [
     {
       "name": "channel",

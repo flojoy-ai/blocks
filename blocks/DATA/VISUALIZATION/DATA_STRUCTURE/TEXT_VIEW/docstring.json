@@ -1,6 +1,6 @@
 {
   "long_description": "Inputs\n------\ndefault : TextBlob\n    The DataContainer to be visualized in text format",
-  "short_description": "The TEXT_VIEW node creates a text visualization for a given TextBlob DataContainer type.",
+  "short_description": "Create a text visualization for a given TextBlob DataContainer type.",
   "parameters": [
     {
       "name": "prettify",

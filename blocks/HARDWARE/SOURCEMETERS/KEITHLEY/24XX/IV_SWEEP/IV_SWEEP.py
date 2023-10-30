@@ -8,7 +8,7 @@ from typing import cast
 def IV_SWEEP(
     connection: SerialConnection, default: OrderedPair | Vector
 ) -> OrderedPair:
-    """The IV_SWEEP node takes an I-V curve measurement with a Keithley 2400 source meter, send voltages, and measures currents.
+    """Take an I-V curve measurement with a Keithley 2400 source meter (send voltages, measure currents).
 
     Inputs
     ------

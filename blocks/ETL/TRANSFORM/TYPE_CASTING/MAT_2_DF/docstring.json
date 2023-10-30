@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The MAT_2_DF node takes one matrix type data and converts it to a dataframe type data.",
+  "short_description": "Convert a Matrix DataContainer to a DataFrame DataContainer.",
   "parameters": [
     {
       "name": "default",

@@ -6,7 +6,7 @@ from blocks.DATA.VISUALIZATION.template import plot_layout
 
 @flojoy
 def SURFACE3D(default: OrderedTriple | DataFrame | Surface | Matrix) -> Plotly:
-    """The SURFACE3D node creates a Plotly 3D Surface visualization for a given input DataContainer.
+    """Create a Plotly 3D Surface visualization for a given input DataContainer.
 
     Parameters
     ----------
