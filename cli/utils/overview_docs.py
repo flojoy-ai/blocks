@@ -47,7 +47,7 @@ def make_category_content(
         # leaf (bottom level category)
         case list():
             blocks = [dataclasses.asdict(b) for b in contents]
-            content = f"<BlockCategory blocks={{{blocks}}} />"
+            content = "<BlockCategory blocks={{{blocks}}} />".format(blocks=blocks)
         # inner node (recurse on children)
         case dict():
             errs = []
