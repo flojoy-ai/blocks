@@ -47,7 +47,7 @@ def make_category_content(
 ) -> str:
     if not depth <= MAX_HEADER_LEVEL:
         raise ValueError(
-            f"{path}/{name} category depth too nested, must be less than or equal to {MAX_HEADER_LEVEL} levels deep"
+            f"{path}/{name} category is too nested, the block must placed within {MAX_HEADER_LEVEL} levels deep. In this case, the '{name}' category is already at level {MAX_HEADER_LEVEL}!"
         )
     match contents:
         # leaf (bottom level category)
