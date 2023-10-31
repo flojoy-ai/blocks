@@ -5,7 +5,7 @@ from flojoy import flojoy, OrderedPair
 def ORDERED_PAIR_XY_INVERT(
     default: OrderedPair,
 ) -> OrderedPair:
-    """The ORDERED_PAIR_XY_INVERT node returns the OrderedPair where the axes are inverted.
+    """Return an OrderedPair with the axes inverted.
 
     Parameters
     ----------

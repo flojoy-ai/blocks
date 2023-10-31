@@ -4,7 +4,7 @@ from flojoy import OrderedPair, Scalar, Vector, flojoy
 
 @flojoy
 def ABS(default: OrderedPair | Vector | Scalar) -> OrderedPair:
-    """The ABS node take a numeric array, a vector, or a scalar as input and returns its absolute value.
+    """Take an OrderedPair, Vector, or Scalar as input and return its absolute value.
 
     Parameters
     ----------

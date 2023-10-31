@@ -1,6 +1,6 @@
 {
   "long_description": "Inputs\n------\ndefault : OrderedPair|Vector\n    Optional input that defines the size of the output.",
-  "short_description": "The CONSTANT node generates a single x-y vector of numeric (floating point) constants.",
+  "short_description": "Generate a single x-y vector of numeric (floating point) constants.",
   "parameters": [
     {
       "name": "dc_type",

@@ -9,7 +9,7 @@ def PROLOGIX_MODE(
     default: Optional[DataContainer] = None,
     mode: Literal["CONTROLLER", "DEVICE"] = "CONTROLLER",
 ) -> TextBlob:
-    """The PROLOGIX_MODE node sets the mode of the Prologix USB-to-GPIB controller - 1 for CONTROLLER mode and 0 for DEVICE mode.
+    """Set the mode of the Prologix USB-to-GPIB controller - 1 for CONTROLLER mode and 0 for DEVICE mode.
 
     From the Prologix manual:
 
@@ -30,7 +30,7 @@ def PROLOGIX_MODE(
     Inputs
     ------
     default: DataContainer
-        Any DataContainer - likely connected to the output of the OPEN_SERIAL node.
+        Any DataContainer - likely connected to the output of the OPEN_SERIAL block.
 
     Parameters
     ----------

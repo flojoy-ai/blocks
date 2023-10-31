@@ -4,7 +4,7 @@ from flojoy import flojoy, Matrix
 
 @flojoy
 def SORT_MATRIX(a: Matrix, axis: int = -1) -> Matrix:
-    """The SORT_MATRIX node takes a input matrix and sort it along the chosen axis.
+    """Take an input matrix and sort it along the chosen axis.
 
     Inputs
     ------

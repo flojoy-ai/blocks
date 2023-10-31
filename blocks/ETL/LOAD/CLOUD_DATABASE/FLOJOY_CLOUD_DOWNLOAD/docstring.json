@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The FLOJOY_CLOUD_DOWNLOAD node downloads a DataContainer from Flojoy Cloud.",
+  "short_description": "Download a DataContainer from Flojoy Cloud (beta).",
   "parameters": [
     {
       "name": "data_container_id",

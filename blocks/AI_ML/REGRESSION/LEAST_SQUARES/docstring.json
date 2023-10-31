@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The LEAST_SQUARES node computes the coefficients that minimize the distance between the input Matrix or OrderedPair and the regression.",
+  "short_description": "Perform a least squares regression on the input DataContainer (input can be a Matrix or OrderedPair).",
   "parameters": [
     {
       "name": "a",

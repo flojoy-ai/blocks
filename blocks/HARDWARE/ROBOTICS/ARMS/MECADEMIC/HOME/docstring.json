@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The HOME node homes the robot arm. This node is required to be run before any other robot arm movement. It is recommended to run this node immediately after \"ACTIVATE\".",
+  "short_description": "Home the robot arm. This block is required to be run before any other robot arm movement. It is recommended to run this block immediately after \"ACTIVATE\".",
   "parameters": [
     {
       "name": "ip_address",

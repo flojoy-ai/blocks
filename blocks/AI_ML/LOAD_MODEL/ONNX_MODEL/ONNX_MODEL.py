@@ -14,7 +14,7 @@ def ONNX_MODEL(
     file_path: str,
     default: Vector,
 ) -> Vector:
-    """ONNX_MODEL loads a serialized ONNX model and uses it to make predictions using ONNX Runtime.
+    """Load a serialized ONNX model and uses it to make predictions using ONNX Runtime.
 
     This allows supporting a wide range of deep learning frameworks and hardware platforms.
 

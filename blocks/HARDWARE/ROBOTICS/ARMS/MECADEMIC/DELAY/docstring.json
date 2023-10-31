@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The DELAY node delays the action between two nodes.",
+  "short_description": "Delay the action between two blocks.",
   "parameters": [
     {
       "name": "ip_address",

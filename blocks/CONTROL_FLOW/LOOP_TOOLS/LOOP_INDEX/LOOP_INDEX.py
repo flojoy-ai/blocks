@@ -16,7 +16,7 @@ def LOOP_INDEX(
     loop_node: NodeReference,
     default: Optional[OrderedPair | Scalar] = None,
 ) -> Scalar:
-    """The LOOP_INDEX node loads the loop index from the LOOP node.
+    """Load the loop index from the LOOP node.
 
     A loop index in Flojoy starts at 1 and increases by 1 for each loop.
 

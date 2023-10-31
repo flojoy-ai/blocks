@@ -7,7 +7,7 @@ def SCALAR(
     _: Optional[DataContainer] = None,
     value: float = 3.0,
 ) -> Scalar:
-    """The SCALAR node returns a single Scalar value.
+    """Return a single Scalar value.
 
     Parameters
     ----------

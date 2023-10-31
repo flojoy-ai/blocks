@@ -5,7 +5,7 @@ from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def DISCONNECT(ip_address: TextBlob) -> None:
     """
-    The DISCONNECT node disconnects the Mecademic robot arm via its API.
+    Disconnects the Mecademic robot arm via its API.
 
     Parameters
     ----------

@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The Flexiforce node allows you to convert voltages measured with the Phidget Interface Kit into pressures.",
+  "short_description": "Convert voltages measured with the Phidget Interface Kit into pressure units.",
   "parameters": [
     {
       "name": "Calibration1",

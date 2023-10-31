@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The MOVE_POSE node moves the robot to a specified pose in space.",
+  "short_description": "Move the robot to a specified pose in space.",
   "parameters": [
     {
       "name": "ip_address",

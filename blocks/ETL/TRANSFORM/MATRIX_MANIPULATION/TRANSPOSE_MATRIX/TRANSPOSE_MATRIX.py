@@ -4,7 +4,7 @@ from flojoy import flojoy, Matrix
 
 @flojoy
 def TRANSPOSE_MATRIX(default: Matrix) -> Matrix:
-    """The TRANSPOSE_MATRIX node takes an input 2D matrix and transposes it.
+    """Take an input 2D matrix and transpose it.
 
     Parameters
     ----------

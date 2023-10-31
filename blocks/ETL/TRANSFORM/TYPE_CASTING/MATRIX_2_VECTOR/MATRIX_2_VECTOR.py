@@ -3,7 +3,7 @@ from flojoy import flojoy, Vector, Matrix
 
 @flojoy
 def MATRIX_2_VECTOR(default: Matrix) -> Vector:
-    """The MATRIX_2_VECTOR node takes a matrix and flatten it into vector type data.
+    """Convert a Matrix DataContainer to a Vector DataContainer.
 
     Parameters
     ----------

@@ -14,9 +14,9 @@ def contains_only_numbers(column, colName):
 def DOUBLE_INDEFINITE_INTEGRAL(
     default: OrderedTriple, width: int = 3, height: int = 3
 ) -> Matrix:
-    """The DOUBLE_INDEFINITE_INTEGRAL node takes an OrderedTriple (x,y,z) and has width and height parameters.
+    """Compute the indefinite integral of an OrderedTriple (x,y,z).
 
-    The width and height represent the number of columns and rows, respectively, that the x, y, and z reshaped matrices will have.
+    The width and height parameters represent the number of columns and rows, respectively, that the x, y, and z reshaped matrices will have.
     Here it is important to note that the length of x, y, and z is the same, and that the width times the height needs to be equal to the length of x, y, and z.
 
     It computes the double integral approximation according to given dimensions of the matrices, and returns a matrix where each cell represents the volume up to the given point.

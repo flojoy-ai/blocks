@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The CHANNEL_MERGE node returns the merged rgba channels of an image.",
+  "short_description": "Return the merged RGBA channels of an image.",
   "parameters": [
     {
       "name": "red",

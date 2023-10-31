@@ -4,7 +4,7 @@ from flojoy import Array, DataFrame, Matrix, flojoy
 
 @flojoy
 def EXTRACT_COLUMNS(default: DataFrame | Matrix, columns: Array) -> DataFrame:
-    """The EXTRACT_COLUMNS node takes an input dataframe/matrix and returns a dataframe/matrix with only the specified columns.
+    """Take an input dataframe/matrix and returns a dataframe/matrix with only the specified columns.
 
     Parameters
     ----------

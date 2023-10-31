@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The ORDERED_PAIR_XY_INVERT node returns the OrderedPair where the axes are inverted.",
+  "short_description": "Return an OrderedPair with the axes inverted.",
   "parameters": [
     {
       "name": "default",

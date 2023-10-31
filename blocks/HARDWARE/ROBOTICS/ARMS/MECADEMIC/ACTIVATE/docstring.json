@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The ACTIVATE node activates the robot arm.",
+  "short_description": "Activate the robot arm.",
   "parameters": [
     {
       "name": "ip_address",

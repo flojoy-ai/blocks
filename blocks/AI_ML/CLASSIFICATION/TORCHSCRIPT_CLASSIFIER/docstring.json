@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "Execute a torchscript classifier against an input image.",
+  "short_description": "Execute a TorchScript classifier against an input image.",
   "parameters": [
     {
       "name": "input_image",
