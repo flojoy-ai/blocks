@@ -1,6 +1,6 @@
 {
-  "long_description": "Note that these settings will not affect the trace returned by\nEXTRACT_SWEEP_FSV. It will change the view on the instrument itself.\n\nRequires a CONNECTION_FSV node at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis node should also work with compatible R&S network analyzers.",
-  "short_description": "The Y_AXIS_SETTINGS_FSV node sets the y axis range.",
+  "long_description": "Note that span/center and start/stop can be used equivalently if:\nstart = center - (span / 2) and stop = center + (span / 2).\n\nRequires a CONNECTION_FSV node at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis node should also work with compatible R&S network analyzers.",
+  "short_description": "The SWEEP_SETTINGS_FSV node sets sweep settings for a FSV.",
   "parameters": [
     {
       "name": "connection",
@@ -8,26 +8,51 @@
       "description": "The VISA address (requires the CONNECTION_FSV node)."
     },
     {
-      "name": "ref_level",
-      "type": "float",
-      "description": "The reference level (top of the y axis), in dBm."
-    },
-    {
-      "name": "spacing_type",
+      "name": "span_or_range",
       "type": "select",
-      "description": "The type of spacing for the y axis (bottom = ref - spacing)."
+      "description": "X axis range, span (center and span) or range (start and stop)."
     },
     {
-      "name": "spacing",
+      "name": "center",
       "type": "float",
-      "description": "Spacing for the y axis (bottom = ref - spacing), in dB or %."
+      "description": "The center of the x axis range, in Hz."
+    },
+    {
+      "name": "span",
+      "type": "float",
+      "description": "The span of the x axis, in Hz."
+    },
+    {
+      "name": "start",
+      "type": "float",
+      "description": "The start point of the x axis, in Hz."
+    },
+    {
+      "name": "stop",
+      "type": "float",
+      "description": "The end point of the x axis, in Hz."
+    },
+    {
+      "name": "sweep_type",
+      "type": "select",
+      "description": "How the FSV sweeps along the x axis range."
+    },
+    {
+      "name": "counts",
+      "type": "int",
+      "description": "Number of sweeps to do, (average optional in INIT_SWEEP_FSV)."
+    },
+    {
+      "name": "points",
+      "type": "int",
+      "description": "Number of x axis points to sweep."
     }
   ],
   "returns": [
     {
       "name": null,
       "type": "TextBlob",
-      "description": "Y axis settings summary."
+      "description": "Sweep settings summary."
     }
   ]
 }

@@ -38,11 +38,6 @@
       "description": "How the FSV sweeps along the x axis range."
     },
     {
-      "name": "sweep_type",
-      "type": "float",
-      "description": "The sweep time (set to auto if = 0), in seconds."
-    },
-    {
       "name": "counts",
       "type": "int",
       "description": "Number of sweeps to do, (average optional in INIT_SWEEP_FSV)."
