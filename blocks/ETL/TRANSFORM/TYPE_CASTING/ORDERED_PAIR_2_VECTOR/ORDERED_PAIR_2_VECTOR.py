@@ -11,8 +11,8 @@ class resultSplit(TypedDict):
 def ORDERED_PAIR_2_VECTOR(default: OrderedPair) -> resultSplit:
     """Returns the split components (x, y) of an ordered pair as Vectors.
 
-    Inputs
-    ------
+    Parameters
+    ----------
     default : OrderedPair
         The input OrderedPair.
 
