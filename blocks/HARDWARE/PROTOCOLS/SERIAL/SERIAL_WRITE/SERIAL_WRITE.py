@@ -30,7 +30,7 @@ def SERIAL_WRITE(
 
     match encoding:
         case "bytes":
-            ser.write(bytes(write, encoding='utf8'))
+            ser.write(bytes(write, encoding="utf8"))
         case "utf-8":
             ser.write(write)
         case "ascii":
