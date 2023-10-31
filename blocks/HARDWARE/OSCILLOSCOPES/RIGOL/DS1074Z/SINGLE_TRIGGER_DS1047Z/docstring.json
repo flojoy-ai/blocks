@@ -1,6 +1,6 @@
 {
   "long_description": "The oscilloscope will wait for a trigger and then stop aquiring.\nSet the `single` parameter to False to turn back on normal triggering.\n\nRequires a CONNECTION_DS1074Z node at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis node should also work with compatible DS1000Z oscilloscopes",
-  "short_description": "The SINGLE_TRIGGER_DS1047Z node activates single trigger.",
+  "short_description": "Activates the single trigger mode.",
   "parameters": [
     {
       "name": "None",

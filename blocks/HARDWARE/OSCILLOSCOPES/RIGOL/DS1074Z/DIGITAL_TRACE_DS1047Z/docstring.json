@@ -1,6 +1,6 @@
 {
   "long_description": "Requires a CONNECTION_DS1074Z node at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis node should also work with compatible DS1000Z oscilloscopes",
-  "short_description": "The DIGITAL_TRACE_DS1047Z node extracts traces from the digital channels.",
+  "short_description": "Extracts a traces from one of the digital channels (e.g D0).",
   "parameters": [
     {
       "name": "connection",
