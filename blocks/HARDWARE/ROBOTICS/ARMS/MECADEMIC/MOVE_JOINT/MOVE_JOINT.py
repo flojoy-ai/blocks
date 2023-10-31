@@ -15,7 +15,7 @@ def MOVE_JOINT(
     gamma: Optional[float] = 0,
 ) -> TextBlob:
     """
-    The MOVE_JOINT node linearly moves the robot's tool to an absolute Cartesian position.
+    Linearly move the robot's tool to an absolute Cartesian position.
 
 
     Parameters

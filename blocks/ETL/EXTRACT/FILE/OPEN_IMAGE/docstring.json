@@ -1,6 +1,6 @@
 {
   "long_description": "Inputs\n------\ndefault: None",
-  "short_description": "The OPEN_IMAGE node loads an image file from disk and returns an image type DataContainer object.",
+  "short_description": "Load an image file from disk and return a DataContainer of type 'image'.",
   "parameters": [
     {
       "name": "file_path",

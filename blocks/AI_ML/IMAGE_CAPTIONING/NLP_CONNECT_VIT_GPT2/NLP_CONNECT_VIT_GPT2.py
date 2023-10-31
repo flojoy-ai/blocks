@@ -11,7 +11,7 @@ from flojoy import flojoy, run_in_venv, DataFrame, Image
     verbose=True,
 )
 def NLP_CONNECT_VIT_GPT2(default: Image) -> DataFrame:
-    """The NLP_CONNECT_VIT_GPT2 node captions an input image and produces an output string wrapped in a dataframe.
+    """Caption an input image and produce an output string wrapped in a dataframe.
 
     Parameters
     ----------

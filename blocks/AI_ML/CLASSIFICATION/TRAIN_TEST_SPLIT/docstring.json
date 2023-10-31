@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The TRAIN_TEST_SPLIT node is used to split the data into test and training according to a size specified before any ML tasks.",
+  "short_description": "Split an input dataframe into test and training dataframes according to a size parameter.",
   "parameters": [
     {
       "name": "test_size",

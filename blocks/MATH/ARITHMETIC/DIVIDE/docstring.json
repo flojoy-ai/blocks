@@ -1,6 +1,6 @@
 {
   "long_description": "When a constant is divided into an array or matrix, each element in the array or matrix will be divided by the constant value.",
-  "short_description": "The DIVIDE node divides two or more numeric arrays, matrices, dataframes, or constants element-wise.",
+  "short_description": "Divide two or more numeric arrays, matrices, dataframes, or constants element-wise.",
   "parameters": [
     {
       "name": "a",

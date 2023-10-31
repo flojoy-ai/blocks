@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The SURFACE3D node creates a Plotly 3D Surface visualization for a given input DataContainer.",
+  "short_description": "Create a Plotly 3D Surface visualization for a given input DataContainer.",
   "parameters": [
     {
       "name": "default",

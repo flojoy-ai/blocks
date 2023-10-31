@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The IMAGE node creates a Plotly Image visualization for a given input DataContainer type of image.",
+  "short_description": "Create a Plotly Image visualization for a given input DataContainer type of image.",
   "parameters": [
     {
       "name": "default",

@@ -51,7 +51,7 @@ def SKIMAGE(
         "vortex",
     ] = "astronaut",
 ) -> Image:
-    """The SKIMAGE node is designed to load example images from 'scikit-image'.
+    """Load an example image from scikit-image, such as an astronaut, the moon, a horse, etc.
 
     Examples can be found here:
     https://scikit-image.org/docs/stable/auto_examples/index.html

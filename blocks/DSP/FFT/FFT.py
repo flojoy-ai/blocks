@@ -32,7 +32,7 @@ def FFT(
     sample_rate: int = 1,
     display: bool = True,
 ) -> OrderedPair | DataFrame:
-    """The FFT node performs a Discrete Fourier Transform on the input vector.
+    """Perform a Discrete Fourier Transform on the input vector.
 
     Through the FFT algorithm, the input vector will be transformed from a time domain into a frequency domain, which will be an ordered pair of arrays.
 

@@ -18,7 +18,7 @@ def PLOTLY_DATASET(
         "stocks",
     ] = "wind",
 ) -> DataFrame:
-    """The PLOTLY_DATASET node retrieves a pandas DataFrame from a Plotly built-in dataset using the provided dataset_key parameter and returns it wrapped in a Flojoy DataFrame class.
+    """Retrieve a pandas DataFrame from one of Plotly Express's built-in datasets.
 
     Parameters
     ----------

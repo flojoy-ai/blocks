@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The NP_2_DF node converts numpy array data into dataframe type data.",
+  "short_description": "Infer the type of an array-like DataContainer, then convert it to a DataFrame DataContainer'.",
   "parameters": [
     {
       "name": "default",

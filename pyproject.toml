@@ -29,6 +29,7 @@ sympy = "^1.12"
 xlrd = "^2.0.1"
 flojoy = "^0.1.16"
 qcodes = "^0.40.0"
+python-frontmatter = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
 typer = {extras = ["all"], version = "^0.9.0"}

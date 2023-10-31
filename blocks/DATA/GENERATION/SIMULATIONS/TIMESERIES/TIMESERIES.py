@@ -8,7 +8,7 @@ import traceback
 def TIMESERIES(
     start_date: str = "2023-01-01", end_date: str = "2023-07-20"
 ) -> DataFrame:
-    """The TIMESERIES node generates a random timeseries vector (as a DataFrame).
+    """Generate a timeseries with random y values between two dates.
 
     Parameters
     ----------

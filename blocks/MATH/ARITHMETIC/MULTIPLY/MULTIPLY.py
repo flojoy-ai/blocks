@@ -8,7 +8,7 @@ from functools import reduce
 def MULTIPLY(
     a: OrderedPair | Scalar | Vector, b: list[OrderedPair | Scalar | Vector]
 ) -> OrderedPair | Scalar | Vector:
-    """The MULTIPLY node multiplies two numeric arrays, vectors, matrices, or constants element-wise and returns the result.
+    """Multiply two numeric arrays, vectors, matrices, or constants element-wise.
 
     Parameters
     ----------

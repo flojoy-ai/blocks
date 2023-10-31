@@ -5,7 +5,7 @@ from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def ACTIVATE(ip_address: TextBlob, simulator: bool = False) -> TextBlob:
     """
-    The ACTIVATE node activates the robot arm.
+    Activate the robot arm.
 
     Parameters
     ----------

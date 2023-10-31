@@ -60,7 +60,7 @@ def LOOP(
     default: Optional[DataContainer] = None,
     num_loops: int = -1,
 ) -> LoopOutput:
-    """The LOOP node is a specialized node that iterates through the body nodes for a given number of times.
+    """Iterate through the LOOP body blocks a given number of times (or -1 times for infinite looping).
 
     Parameters
     ----------

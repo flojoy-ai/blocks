@@ -8,7 +8,7 @@ from functools import reduce
 def DIVIDE(
     a: OrderedPair | Scalar | Vector, b: list[OrderedPair | Scalar | Vector]
 ) -> OrderedPair | Scalar | Vector:
-    """The DIVIDE node divides two or more numeric arrays, matrices, dataframes, or constants element-wise.
+    """Divide two or more numeric arrays, matrices, dataframes, or constants element-wise.
 
     When a constant is divided into an array or matrix, each element in the array or matrix will be divided by the constant value.
 

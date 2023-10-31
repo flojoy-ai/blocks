@@ -1,6 +1,6 @@
 {
-  "long_description": "'sklearn.datasets', using the provided dataset_key parameter, and returns\nit wrapped in a DataContainer.",
-  "short_description": "The SCIKIT_LEARN_DATASET node retrieves a pandas DataFrame from",
+  "long_description": "",
+  "short_description": "Retrieve a pandas DataFrame from the scikit-learn sample datasets.",
   "parameters": [
     {
       "name": "dataset_name",

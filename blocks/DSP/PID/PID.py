@@ -12,7 +12,7 @@ def PID(
     Ki: float = 0.0143,
     Kd: float = 356.25,
 ) -> Scalar:
-    """The PID node acts like a PID function.
+    """Model a PID (proportional-integral-derivative) system.
 
     The returned value will be modified according to the PID parameters Kp, Ki, and Kd.
 

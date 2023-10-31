@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The MULTIPLY node multiplies two numeric arrays, vectors, matrices, or constants element-wise and returns the result.",
+  "short_description": "Multiply two numeric arrays, vectors, matrices, or constants element-wise.",
   "parameters": [
     {
       "name": "a",

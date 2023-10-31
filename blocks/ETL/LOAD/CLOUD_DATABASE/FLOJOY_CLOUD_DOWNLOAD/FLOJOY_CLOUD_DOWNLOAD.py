@@ -19,7 +19,7 @@ def preflight():
 def FLOJOY_CLOUD_DOWNLOAD(
     data_container_id: str,
 ) -> DataContainer:
-    """The FLOJOY_CLOUD_DOWNLOAD node downloads a DataContainer from Flojoy Cloud.
+    """Download a DataContainer from Flojoy Cloud (beta).
 
     Parameters
     ----------

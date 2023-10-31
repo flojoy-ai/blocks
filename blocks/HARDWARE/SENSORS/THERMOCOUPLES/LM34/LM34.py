@@ -8,7 +8,7 @@ def LM34(
     calibration2: float = 32.0,
     calibration3: float = 1.8,
 ) -> OrderedPair:
-    """The LM34 node allows you to convert voltages measured with a thermocouple (LM34) connected to a LabJack U3 device into temperatures.
+    """Convert voltages measured with a thermocouple (LM34) connected to a LabJack U3 device into temperature units.
 
     Parameters
     ----------
