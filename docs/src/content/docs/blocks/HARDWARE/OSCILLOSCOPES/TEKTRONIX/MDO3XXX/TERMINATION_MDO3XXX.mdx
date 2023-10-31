@@ -8,7 +8,7 @@ slug: blocks/hardware/oscilloscopes/tektronix/mdo3xxx/termination-mdo3xxx
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/HARDWARE/OSCILLOSCOPES/TEKTRONIX/MDO3XXX/TERMINATION_MDO3XXX/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/HARDWARE/OSCILLOSCOPES/TEKTRONIX/MDO3XXX/TERMINATION_MDO3XXX/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="TERMINATION_MDO3XXX" client:visible />
 

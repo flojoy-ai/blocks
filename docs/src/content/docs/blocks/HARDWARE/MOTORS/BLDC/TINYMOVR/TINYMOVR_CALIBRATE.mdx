@@ -8,7 +8,7 @@ slug: blocks/hardware/motors/bldc/tinymovr/tinymovr-calibrate
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/HARDWARE/MOTORS/BLDC/TINYMOVR/TINYMOVR_CALIBRATE/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/HARDWARE/MOTORS/BLDC/TINYMOVR/TINYMOVR_CALIBRATE/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="TINYMOVR_CALIBRATE" client:visible />
 

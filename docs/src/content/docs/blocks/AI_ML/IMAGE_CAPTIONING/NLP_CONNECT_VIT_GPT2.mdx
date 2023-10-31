@@ -8,7 +8,7 @@ slug: blocks/ai-ml/image-captioning/nlp-connect-vit-gpt2
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/AI_ML/IMAGE_CAPTIONING/NLP_CONNECT_VIT_GPT2/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/AI_ML/IMAGE_CAPTIONING/NLP_CONNECT_VIT_GPT2/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="NLP_CONNECT_VIT_GPT2" client:visible />
 
