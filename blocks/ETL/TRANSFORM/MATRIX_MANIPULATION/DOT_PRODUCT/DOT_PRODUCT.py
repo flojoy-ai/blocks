@@ -4,9 +4,9 @@ from flojoy import Matrix, Scalar, Vector, flojoy
 
 @flojoy
 def DOT_PRODUCT(a: Matrix | Vector, b: Matrix | Vector) -> Matrix | Vector | Scalar:
-    """The DOT_PRODUCT node takes two input matrices, multiplies them (by dot product), and returns the result.
+    """Take two input matrices, multiply them (by dot product), and return the result.
 
-    To multiply a scalar, use the MULTIPLY node.
+    To multiply a scalar, use the MULTIPLY block.
 
     Parameters
     ----------

@@ -1,6 +1,6 @@
 ---
 title: TRAIN_TEST_SPLIT
-description: "The TRAIN_TEST_SPLIT node is used to split the data into test and training according to a size specified before any ML tasks."
+description: "Split an input dataframe into test and training dataframes according to a size parameter."
 slug: blocks/ai-ml/classification/train-test-split
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/ai-ml/classification/train-test-split
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/AI_ML/CLASSIFICATION/TRAIN_TEST_SPLIT/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/AI_ML/CLASSIFICATION/TRAIN_TEST_SPLIT/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="TRAIN_TEST_SPLIT" client:visible />
 

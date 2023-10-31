@@ -10,7 +10,7 @@ def TERMINATION_MDO3XXX(
     query_set: Literal["query", "set"] = "query",
     default: Optional[DataContainer] = None,
 ) -> Scalar:
-    """The TERMINATION_MDO3XXX node sets the termination ohms (or queries it).
+    """The TERMINATION_MDO3XXX block sets the termination ohms (or queries it).
 
     The termination is set by the output, and the set termination
     in the oscilloscope must match that value.
@@ -19,16 +19,16 @@ def TERMINATION_MDO3XXX(
     Note that the 75 Ohm option is not compatible with all model numbers.
 
     If the "VISA_address" parameter is not specified the VISA_index will be
-    used to find the address. The LIST_VISA node can be used to show the
+    used to find the address. The LIST_VISA block can be used to show the
     indicies of all available VISA instruments.
 
-    This node should also work with compatible Tektronix scopes (untested):
+    This block should also work with compatible Tektronix scopes (untested):
     MDO4xxx, MSO4xxx, and DPO4xxx.
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_MDO3XXX node).
+        The VISA address (requires the CONNECTION_MDO3XXX block).
     channel: int
         The channel to query or set the impedance/termination.
     termination: str

@@ -7,12 +7,12 @@ from typing import cast, Optional
 def IDN(
     connection: SerialConnection, default: Optional[DataContainer] = None
 ) -> TextBlob:
-    """The IDN node queries a device's identity through the universal *IDN? SCPI command.
+    """Query a device's identity through the universal *IDN? SCPI command.
 
     Inputs
     ------
     default: DataContainer
-        Any DataContainer - likely connected to the output of the OPEN_SERIAL node.
+        Any DataContainer - likely connected to the output of the OPEN_SERIAL block.
 
     Parameters
     ----------

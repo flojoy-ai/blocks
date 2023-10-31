@@ -1,6 +1,6 @@
 ---
 title: CHANNEL_SPLIT
-description: "The CHANNEL_SPLIT node returns the rgba channels of an image into 4 separate images for direct visualization."
+description: "Return the RGBA channels of an image as 4 separate images for direct visualization."
 slug: blocks/computer-vision/channel-split
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/computer-vision/channel-split
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/COMPUTER_VISION/CHANNEL_SPLIT/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/COMPUTER_VISION/CHANNEL_SPLIT/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="CHANNEL_SPLIT" client:visible />
 

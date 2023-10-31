@@ -22,7 +22,7 @@ def HEATMAP(
     show_text: bool = False,
     histogram: bool = False,
 ) -> Plotly:
-    """The HEATMAP node creates a Plotly Heatmap visualization for a given input DataContainer.
+    """Create a Plotly Heatmap visualization for a given input DataContainer.
 
     Inputs
     ------

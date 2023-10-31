@@ -1,6 +1,6 @@
 ---
 title: ATTENUATION_LDA602
-description: "The ATTENUATION_LDA602 node sets or queries the attenuation for the LDA-602 Digital Attenuator."
+description: "Set or query the attenuation for the LDA-602 Digital Attenuator."
 slug: blocks/hardware/attenuators/lda/lda602/attenuation-lda602
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/hardware/attenuators/lda/lda602/attenuation-lda602
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/HARDWARE/ATTENUATORS/LDA/LDA602/ATTENUATION_LDA602/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/HARDWARE/ATTENUATORS/LDA/LDA602/ATTENUATION_LDA602/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="ATTENUATION_LDA602" client:visible />
 

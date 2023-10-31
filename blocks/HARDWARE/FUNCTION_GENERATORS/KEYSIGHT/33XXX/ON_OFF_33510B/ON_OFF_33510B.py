@@ -9,7 +9,7 @@ def ON_OFF_33510B(
     channel: Literal["ch1", "ch2"] = "ch1",
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The ON_OFF_33510B node is used to turn the output on or off.
+    """Turn the output of a supported function generator on or off.
 
     Requires a CONNECTION_33510B node at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.

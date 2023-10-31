@@ -1,6 +1,6 @@
 {
   "long_description": "Inputs\n------\ndefault : OrderedPair|Vector\n    Input to use as the x-axis for the random samples.",
-  "short_description": "The POPULATE node generates random numbers, depending on the distribution selected and the input data.",
+  "short_description": "Generate an OrderedPair of random numbers, depending on the distribution selected and the input data.",
   "parameters": [
     {
       "name": "distribution",

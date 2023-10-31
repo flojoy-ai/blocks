@@ -12,9 +12,7 @@ def SECOND_ORDER_SYSTEM(
     d1: float = 250,
     d2: float = 100,
 ) -> OrderedPair:
-    """The SECOND_ORDER_SYSTEM has a second order exponential function.
-
-    This node is designed to be used in a loop. The data is appended as the loop progresses and written to memory.
+    """This block has a 2nd order exponential function and is designed to be used in a LOOP with an APPEND block.
 
     Inputs
     ------

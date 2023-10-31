@@ -31,7 +31,7 @@ slug: {slug}
     def add_python_docs_display(self):
         self.template += """\
 import docstring from "@blocks/{block_folder_path}/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={{docstring}} />
 """.format(
@@ -65,12 +65,12 @@ import {{ Code }} from 'astro:components';
         self.template += """\
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/{block_folder_path}/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={{app}} blockName="{block_name}" client:visible />
 

@@ -1,6 +1,6 @@
 ---
 title: CONNECTION_2000
-description: "The CONNECTION_2000 node connects Flojoy to an available Picoscope."
+description: "Connect Flojoy to an available Picoscope."
 slug: blocks/hardware/oscilloscopes/pico/pico2000/connection-2000
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/hardware/oscilloscopes/pico/pico2000/connection-2000
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/HARDWARE/OSCILLOSCOPES/PICO/PICO2000/CONNECTION_2000/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/HARDWARE/OSCILLOSCOPES/PICO/PICO2000/CONNECTION_2000/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="CONNECTION_2000" client:visible />
 

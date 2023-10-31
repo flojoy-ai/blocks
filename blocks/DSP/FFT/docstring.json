@@ -1,6 +1,6 @@
 {
   "long_description": "Through the FFT algorithm, the input vector will be transformed from a time domain into a frequency domain, which will be an ordered pair of arrays.\n\nInputs\n------\ndefault : OrderedPair\n    The data to apply FFT to.",
-  "short_description": "The FFT node performs a Discrete Fourier Transform on the input vector.",
+  "short_description": "Perform a Discrete Fourier Transform on the input vector.",
   "parameters": [
     {
       "name": "window",

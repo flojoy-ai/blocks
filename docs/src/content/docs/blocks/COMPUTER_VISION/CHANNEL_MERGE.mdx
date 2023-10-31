@@ -1,6 +1,6 @@
 ---
 title: CHANNEL_MERGE
-description: "The CHANNEL_MERGE node returns the merged rgba channels of an image."
+description: "Return the merged RGBA channels of an image."
 slug: blocks/computer-vision/channel-merge
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/computer-vision/channel-merge
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/COMPUTER_VISION/CHANNEL_MERGE/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/COMPUTER_VISION/CHANNEL_MERGE/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="CHANNEL_MERGE" client:visible />
 

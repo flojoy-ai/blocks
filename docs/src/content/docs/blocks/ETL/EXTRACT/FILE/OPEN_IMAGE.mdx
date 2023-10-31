@@ -1,6 +1,6 @@
 ---
 title: OPEN_IMAGE
-description: "The OPEN_IMAGE node loads an image file from disk and returns an image type DataContainer object."
+description: "Load an image file from disk and return a DataContainer of type 'image'."
 slug: blocks/etl/extract/file/open-image
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/etl/extract/file/open-image
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/ETL/EXTRACT/FILE/OPEN_IMAGE/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/ETL/EXTRACT/FILE/OPEN_IMAGE/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="OPEN_IMAGE" client:visible />
 

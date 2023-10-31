@@ -7,7 +7,7 @@ def APPEND(
     primary_dp: OrderedPair | Matrix | DataFrame | Scalar | Vector,
     secondary_dp: OrderedPair | Matrix | DataFrame | Scalar | Vector,
 ) -> OrderedPair | Matrix | DataFrame | Vector:
-    """The APPEND node appends a single data point to an array.
+    """Append a single data point to an array.
 
     The large array must be passed to the bottom "array" connection.
 

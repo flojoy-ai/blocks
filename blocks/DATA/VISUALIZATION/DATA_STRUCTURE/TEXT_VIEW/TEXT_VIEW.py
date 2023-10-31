@@ -8,7 +8,7 @@ def TEXT_VIEW(default: TextBlob | Boolean, prettify: bool = False) -> TextBlob:
 
     Inputs
     ------
-    default : TextBlob
+    default : TextBlob | Boolean
         The DataContainer to be visualized in text format
 
     Parameters

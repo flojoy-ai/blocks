@@ -1,6 +1,6 @@
 ---
 title: DIODE_USB4065
-description: "The DIODE_USB4065 node reads the voltage drop across a diode."
+description: "Read the voltage drop across a diode with an NI USB4065 DAQ board."
 slug: blocks/hardware/multimeters/ni/usb-4065/diode-usb4065
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/hardware/multimeters/ni/usb-4065/diode-usb4065
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/HARDWARE/MULTIMETERS/NI/USB_4065/DIODE_USB4065/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/HARDWARE/MULTIMETERS/NI/USB_4065/DIODE_USB4065/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="DIODE_USB4065" client:visible />
 

@@ -9,12 +9,12 @@ from flojoy import DataContainer, Scalar, SerialConnection, TextBlob, flojoy
 def MEASURE_VOLTAGE(
     connection: SerialConnection, default: Optional[DataContainer] = None
 ) -> Scalar | TextBlob:
-    """The MEASURE_VOLTAGE node queries an instrument's measured output voltage, such as a DMM or power supply.
+    """Query an instrument's measured output voltage, such as a DMM or power supply.
 
     Inputs
     ------
     default: DataContainer
-        Any DataContainer - likely connected to the output of the OPEN_SERIAL node.
+        Any DataContainer - likely connected to the output of the OPEN_SERIAL block.
 
     Parameters
     ----------

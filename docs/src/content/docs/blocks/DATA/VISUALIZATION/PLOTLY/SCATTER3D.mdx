@@ -1,6 +1,6 @@
 ---
 title: SCATTER3D
-description: "The SCATTER3D node creates a Plotly 3D Scatter visualization for a given input DataContainer."
+description: "Create a Plotly 3D Scatter visualization for a given input DataContainer."
 slug: blocks/data/visualization/plotly/scatter3d
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/data/visualization/plotly/scatter3d
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/DATA/VISUALIZATION/PLOTLY/SCATTER3D/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/DATA/VISUALIZATION/PLOTLY/SCATTER3D/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="SCATTER3D" client:visible />
 

@@ -9,7 +9,7 @@ def CONNECTION_USB4065(
     NI_address: str = "Dev1",
     default: Optional[DataContainer] = None,
 ) -> Optional[DataContainer]:
-    """The CONNECTION_MDO3XXX node connects Flojoy to a
+    """Connect Flojoy to an NI USB4065 DAQ board.
 
     Parameters
     ----------

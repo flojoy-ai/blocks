@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The EXTRACT_COLUMNS node takes an input dataframe/matrix and returns a dataframe/matrix with only the specified columns.",
+  "short_description": "Take an input dataframe/matrix and returns a dataframe/matrix with only the specified columns.",
   "parameters": [
     {
       "name": "default",

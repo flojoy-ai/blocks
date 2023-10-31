@@ -1,6 +1,6 @@
 ---
 title: PROLOGIX_HELP
-description: "The PROLOGIX_HELP command returns a list of available Prologix USB-to-GPIB firmware commands."
+description: "Return a list of available Prologix USB-to-GPIB firmware commands."
 slug: blocks/hardware/protocols/gpib/prologix/prologix-help
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/hardware/protocols/gpib/prologix/prologix-help
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/HARDWARE/PROTOCOLS/GPIB/PROLOGIX/PROLOGIX_HELP/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/HARDWARE/PROTOCOLS/GPIB/PROLOGIX/PROLOGIX_HELP/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="PROLOGIX_HELP" client:visible />
 

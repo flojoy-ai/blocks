@@ -1,6 +1,6 @@
 ---
 title: BIG_NUMBER
-description: "The BIG_NUMBER node generates a Plotly figure, displaying a big number with an optional prefix and suffix."
+description: "Generate a Plotly figure, displaying a big number with an optional prefix and suffix."
 slug: blocks/data/visualization/plotly/big-number
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/data/visualization/plotly/big-number
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/DATA/VISUALIZATION/PLOTLY/BIG_NUMBER/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/DATA/VISUALIZATION/PLOTLY/BIG_NUMBER/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="BIG_NUMBER" client:visible />
 

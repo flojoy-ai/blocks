@@ -16,17 +16,17 @@ def INIT_SWEEP_FSV(
     continuous: bool = True,
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The INIT_SWEEP_FSV node starts the sweep for the FSV.
+    """Start the sweep for the FSV.
 
-    Requires a CONNECTION_FSV node at the start of the app to connect with
+    Requires a CONNECTION_FSV block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible R&S network analyzers.
+    This block should also work with compatible R&S network analyzers.
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_FSV node).
+        The VISA address (requires the CONNECTION_FSV block).
     display: select
         Choose the trace display setting.
     continuous: bool

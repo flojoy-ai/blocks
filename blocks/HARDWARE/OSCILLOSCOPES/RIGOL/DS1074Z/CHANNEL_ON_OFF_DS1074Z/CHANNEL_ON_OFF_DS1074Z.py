@@ -11,17 +11,17 @@ def CHANNEL_ON_OFF_DS1074Z(
     ch4: Literal["ON", "OFF"] = "ON",
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The CHANNEL_ON_OFF_DS1074Z node turns the channels on or off for the DS1074Z.
+    """Turn the channels on or off for the DS1074Z oscilloscope.
 
-    Requires a CONNECTION_DS1074Z node at the start of the app to connect with
+    Requires a CONNECTION_DS1074Z block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible DS1000Z oscilloscopes
+    This block should also work with compatible DS1000Z oscilloscopes
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_DS1074Z node).
+        The VISA address (requires the CONNECTION_DS1074Z block).
     ch1: select
         Turn channel 1 on or off.
     ch2: select

@@ -15,7 +15,7 @@ def MOVE_LIN(
     gamma: Optional[float] = 0,
 ) -> TextBlob:
     """
-    The MOVE_LIN node linearly moves the robot's tool to an absolute Cartesian position.
+    Linearly move the robot's tool to an absolute Cartesian position.
 
     Parameters
     ----------

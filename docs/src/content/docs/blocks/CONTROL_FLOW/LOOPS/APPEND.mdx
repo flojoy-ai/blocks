@@ -1,6 +1,6 @@
 ---
 title: APPEND
-description: "The APPEND node appends a single data point to an array."
+description: "Append a single data point to an array."
 slug: blocks/control-flow/loops/append
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/control-flow/loops/append
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/CONTROL_FLOW/LOOPS/APPEND/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/CONTROL_FLOW/LOOPS/APPEND/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="APPEND" client:visible />
 

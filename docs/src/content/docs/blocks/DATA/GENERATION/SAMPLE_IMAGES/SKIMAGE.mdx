@@ -1,6 +1,6 @@
 ---
 title: SKIMAGE
-description: "The SKIMAGE node is designed to load example images from 'scikit-image'."
+description: "Load an example image from scikit-image, such as an astronaut, the moon, a horse, etc."
 slug: blocks/data/generation/sample-images/skimage
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/data/generation/sample-images/skimage
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/DATA/GENERATION/SAMPLE_IMAGES/SKIMAGE/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/DATA/GENERATION/SAMPLE_IMAGES/SKIMAGE/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="SKIMAGE" client:visible />
 

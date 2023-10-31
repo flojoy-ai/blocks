@@ -1,6 +1,6 @@
 ---
 title: FUNCTION_GENERATION_2000
-description: "The FUNCTION_GENERATION_2000 node controls wavefunction generation."
+description: "Control wavefunction generation from a PicoScope."
 slug: blocks/hardware/oscilloscopes/pico/pico2000/function-generation-2000
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/hardware/oscilloscopes/pico/pico2000/function-generation-2000
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/HARDWARE/OSCILLOSCOPES/PICO/PICO2000/FUNCTION_GENERATION_2000/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/HARDWARE/OSCILLOSCOPES/PICO/PICO2000/FUNCTION_GENERATION_2000/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="FUNCTION_GENERATION_2000" client:visible />
 

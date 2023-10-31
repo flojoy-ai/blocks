@@ -1,6 +1,6 @@
 ---
 title: INIT_SWEEP_FSV
-description: "The INIT_SWEEP_FSV node starts the sweep for the FSV."
+description: "Start the sweep for the FSV."
 slug: blocks/hardware/signal-analyzers/rohde-schwarz/fsv/init-sweep-fsv
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/hardware/signal-analyzers/rohde-schwarz/fsv/init-sweep-fsv
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/HARDWARE/SIGNAL_ANALYZERS/ROHDE_SCHWARZ/FSV/INIT_SWEEP_FSV/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/HARDWARE/SIGNAL_ANALYZERS/ROHDE_SCHWARZ/FSV/INIT_SWEEP_FSV/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="INIT_SWEEP_FSV" client:visible />
 

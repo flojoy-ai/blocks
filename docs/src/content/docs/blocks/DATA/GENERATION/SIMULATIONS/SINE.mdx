@@ -1,6 +1,6 @@
 ---
 title: SINE
-description: "The SINE node generates a waveform function with the shape being defined by the input."
+description: "Generate a waveform with a given shape (sine, sawtooth, etc)."
 slug: blocks/data/generation/simulations/sine
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/data/generation/simulations/sine
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/DATA/GENERATION/SIMULATIONS/SINE/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/DATA/GENERATION/SIMULATIONS/SINE/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="SINE" client:visible />
 

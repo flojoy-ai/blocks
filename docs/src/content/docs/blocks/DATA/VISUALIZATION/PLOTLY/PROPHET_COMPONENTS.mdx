@@ -1,6 +1,6 @@
 ---
 title: PROPHET_COMPONENTS
-description: "The PROPHET_COMPONENTS node plots the components of the prophet model trained in the PROPHET_PREDICT node."
+description: "Plot the components of a Prophet model trained in the PROPHET_PREDICT block."
 slug: blocks/data/visualization/plotly/prophet-components
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/data/visualization/plotly/prophet-components
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/DATA/VISUALIZATION/PLOTLY/PROPHET_COMPONENTS/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/DATA/VISUALIZATION/PLOTLY/PROPHET_COMPONENTS/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="PROPHET_COMPONENTS" client:visible />
 

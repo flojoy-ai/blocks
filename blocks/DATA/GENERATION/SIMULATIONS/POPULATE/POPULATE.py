@@ -15,7 +15,7 @@ def POPULATE(
     normal_standard_deviation: float = 1,
     poisson_events: float = 1,
 ) -> OrderedPair:
-    """The POPULATE node generates random numbers, depending on the distribution selected and the input data.
+    """Generate an OrderedPair of random numbers, depending on the distribution selected and the input data.
 
     Inputs
     ------

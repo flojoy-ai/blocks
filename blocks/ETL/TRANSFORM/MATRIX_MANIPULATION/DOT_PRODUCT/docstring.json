@@ -1,6 +1,6 @@
 {
-  "long_description": "To multiply a scalar, use the MULTIPLY node.",
-  "short_description": "The DOT_PRODUCT node takes two input matrices, multiplies them (by dot product), and returns the result.",
+  "long_description": "To multiply a scalar, use the MULTIPLY block.",
+  "short_description": "Take two input matrices, multiply them (by dot product), and return the result.",
   "parameters": [
     {
       "name": "a",

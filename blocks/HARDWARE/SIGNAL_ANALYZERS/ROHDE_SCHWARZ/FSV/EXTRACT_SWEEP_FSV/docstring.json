@@ -1,11 +1,11 @@
 {
-  "long_description": "Requires a CONNECTION_FSV node at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis node should also work with compatible R&S network analyzers.",
-  "short_description": "The EXTRACT_SWEEP_FSV node extracts the sweep trace from a FSV network analyzer.",
+  "long_description": "Requires a CONNECTION_FSV block at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis block should also work with compatible R&S network analyzers.",
+  "short_description": "Extract the sweep trace from an FSV network analyzer.",
   "parameters": [
     {
       "name": "connection",
       "type": "VisaConnection",
-      "description": "The VISA address (requires the CONNECTION_FSV node)."
+      "description": "The VISA address (requires the CONNECTION_FSV block)."
     }
   ],
   "returns": [

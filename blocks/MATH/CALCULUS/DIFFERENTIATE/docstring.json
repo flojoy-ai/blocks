@@ -1,6 +1,6 @@
 {
-  "long_description": "It then computes the derivative of the array, y, with respect to x.",
-  "short_description": "The DIFFERENTIATE node takes two lists, x and y, as input.",
+  "long_description": "",
+  "short_description": "Compute the derivative of the input with respect to x.",
   "parameters": [
     {
       "name": "default",

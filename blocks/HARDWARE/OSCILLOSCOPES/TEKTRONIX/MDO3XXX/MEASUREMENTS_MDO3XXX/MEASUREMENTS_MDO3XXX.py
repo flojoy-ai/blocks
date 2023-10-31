@@ -10,25 +10,25 @@ def MEASUREMENTS_MDO3XXX(
     statistic: Literal["instant", "mean", "max", "min", "stdev"] = "instant",
     default: Optional[DataContainer] = None,
 ) -> Scalar:
-    """The MEASUREMENTS_MDO3XXX node extracts waveform measurements from an MDO3XXX oscilloscope.
+    """Extract waveform measurements from an MDO3XXX oscilloscope.
 
-    This node can select from three different waveform measurements:
+    This block can select from three different waveform measurements:
     frequency, period, and amplitude. Also available are 5 statistic modes:
     instant, mean, max, min, and stdev where instant is a single measurement
     and stdev is the standard deviation of the mean.
 
     Units are in seconds, Hz, and V for frequency, period, and amplitude respectively.
 
-    Requires a CONNECTION_MDO3XXX node at the start of the app to connect with
+    Requires a CONNECTION_MDO3XXX block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible Tektronix scopes (untested):
+    This block should also work with compatible Tektronix scopes (untested):
     MDO4xxx, MSO4xxx, and DPO4xxx.
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_MDO3XXX node).
+        The VISA address (requires the CONNECTION_MDO3XXX block).
     measurement: str
         The measurement to extract from the scope.
     statistic: str

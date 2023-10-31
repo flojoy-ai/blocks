@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The MATRIX_2_VECTOR node takes a matrix and flatten it into vector type data.",
+  "short_description": "Convert a Matrix DataContainer to a Vector DataContainer.",
   "parameters": [
     {
       "name": "default",

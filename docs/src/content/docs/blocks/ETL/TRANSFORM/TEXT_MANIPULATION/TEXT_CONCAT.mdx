@@ -1,6 +1,6 @@
 ---
 title: TEXT_CONCAT
-description: "The TEXT_CONCAT node takes in two TextBlob DataContainer type and concatenates the text string."
+description: "Concatenate 2 strings given by 2 TextBlob DataContainers."
 slug: blocks/etl/transform/text-manipulation/text-concat
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/etl/transform/text-manipulation/text-concat
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/ETL/TRANSFORM/TEXT_MANIPULATION/TEXT_CONCAT/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/ETL/TRANSFORM/TEXT_MANIPULATION/TEXT_CONCAT/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="TEXT_CONCAT" client:visible />
 

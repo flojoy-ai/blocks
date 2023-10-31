@@ -1,6 +1,6 @@
 {
   "long_description": "It is designed to have a frequency response that is as flat as possible in the pass band.\n\nInputs\n------\ndefault : OrderedPair\n    The data to apply the butter filter to.",
-  "short_description": "The BUTTER node applies a butterworth filter to an input signal.",
+  "short_description": "Apply a butterworth filter to an input signal.",
   "parameters": [
     {
       "name": "filter_order",

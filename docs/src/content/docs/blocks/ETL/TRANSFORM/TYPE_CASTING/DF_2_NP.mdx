@@ -1,6 +1,6 @@
 ---
 title: DF_2_NP
-description: "The DF_2_NP node takes one dataframe type data and converts it to a matrix type data."
+description: "Convert a DataFrame DataContainer to a Matrix DataContainer."
 slug: blocks/etl/transform/type-casting/df-2-np
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/etl/transform/type-casting/df-2-np
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/ETL/TRANSFORM/TYPE_CASTING/DF_2_NP/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/ETL/TRANSFORM/TYPE_CASTING/DF_2_NP/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="DF_2_NP" client:visible />
 

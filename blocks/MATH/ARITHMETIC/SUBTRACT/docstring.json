@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The SUBTRACT node subtracts two numeric arrays, vectors, matrices, or constants element-wise and returns the result.",
+  "short_description": "Subtract two numeric arrays, vectors, matrices, or constants element-wise.",
   "parameters": [
     {
       "name": "a",

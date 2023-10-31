@@ -5,7 +5,7 @@ from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def SET_JOINT_VEL(ip_address: TextBlob, v: float) -> TextBlob:
     """
-    The SET_JOINT_VEL node sets the robot arm's angular velocity for its joints.
+    Set the robot arm's angular velocity for its joints.
 
     Parameters
     ----------

@@ -11,10 +11,10 @@ def AC_CURRENT_USB4065(
     current_limit: Literal["0.01", "0.1", "0.5", "3"] = "3",
     default: Optional[DataContainer] = None,
 ) -> Scalar:
-    """The AC_CURRENT_USB4065 node reads the AC current from a USB-4065.
+    """Reads the AC current from a National Instrument's USB-4065 DAQ board.
 
     The USB-4065 is a NI (National Instruments) multimeter. It is possible that
-    the node will work with other NI DMMs (digital multimeters) such as the
+    the block will work with other NI DMMs (digital multimeters) such as the
     4070 and 4080 series.
 
     This instrument will likely only be compatible with Windows systems due to
