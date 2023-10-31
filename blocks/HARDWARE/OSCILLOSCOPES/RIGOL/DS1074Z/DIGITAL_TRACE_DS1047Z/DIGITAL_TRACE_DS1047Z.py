@@ -1,5 +1,5 @@
 from flojoy import flojoy, DataContainer, OrderedPair, VisaConnection
-from typing import Optional, Literal
+from typing import Optional
 from numpy import linspace, array, multiply
 
 
