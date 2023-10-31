@@ -1,6 +1,7 @@
 ---
 title: Block Docstring Styleguide
 description: A styleguide for writing docstrings for Flojoy Blocks.
+slug: "contribution/blocks/docstring-styleguide"
 ---
 
 Welcome to the Block Docstring Styleguide to Flojoy Blocks.
@@ -78,7 +79,7 @@ If there is a default value, you can specify it like this:
 
 ```python
 """
-some_parameter: bool, default=True
+some_parameter : bool, default=True
 """
 ```
 
