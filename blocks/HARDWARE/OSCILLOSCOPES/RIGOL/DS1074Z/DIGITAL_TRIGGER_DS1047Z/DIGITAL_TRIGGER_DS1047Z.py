@@ -10,7 +10,7 @@ def DIGITAL_TRIGGER_DS1047Z(
     slope: Literal["positive", "negative", "either", "unchanged"] = "positive",
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The DIGITAL_TRIGGER_DS1047Z node sets the digital triggering channel, and level.
+    """Sets the digital triggering channel and threshold level.
 
     Requires a CONNECTION_DS1074Z node at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.

@@ -33,10 +33,7 @@ def FUNCTION_GENERATOR_DS1047Z(
     duty_cycle: float = 0,
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The SINGLE_TRIGGER_DS1047Z node activates single trigger.
-
-    The oscilloscope will wait for a trigger and then stop aquiring.
-    Set the `single` parameter to False to turn back on normal triggering.
+    """Controls the function generator, AKA 'Source' 1 and 2.
 
     Requires a CONNECTION_DS1074Z node at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.

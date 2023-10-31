@@ -8,7 +8,7 @@ def SINGLE_TRIGGER_DS1047Z(
     single: bool = True,
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The SINGLE_TRIGGER_DS1047Z node activates single trigger.
+    """Activates the single trigger mode.
 
     The oscilloscope will wait for a trigger and then stop aquiring.
     Set the `single` parameter to False to turn back on normal triggering.

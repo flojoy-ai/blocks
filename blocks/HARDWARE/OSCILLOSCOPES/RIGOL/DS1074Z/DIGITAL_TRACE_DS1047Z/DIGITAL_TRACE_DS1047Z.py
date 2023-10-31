@@ -9,7 +9,7 @@ def DIGITAL_TRACE_DS1047Z(
     channel: int = 0,
     default: Optional[DataContainer] = None,
 ) -> OrderedPair:
-    """The DIGITAL_TRACE_DS1047Z node extracts traces from the digital channels.
+    """Extracts a traces from one of the digital channels (e.g D0).
 
     Requires a CONNECTION_DS1074Z node at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
