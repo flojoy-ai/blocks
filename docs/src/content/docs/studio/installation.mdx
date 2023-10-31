@@ -8,6 +8,7 @@ sidebar:
     variant: tip
 ---
 
+import DownloadButton from "@/components/DownloadButton.tsx";
 import { Tabs, TabItem } from "@astrojs/starlight/components";
 
 There are **2 steps** to install Flojoy Studio:
@@ -29,15 +30,16 @@ Once you have Conda/Miniconda installed on your machine, you are ready to instal
 Flojoy Studio. Simply choose the right installer for your machine and follow the
 instructions.
 
+
 <Tabs>
   <TabItem label="Windows">
-    Download for Windows
+    <DownloadButton distro="windows" version="0.1.18" link="https://github.com/flojoy-ai/studio/releases/download/v0.1.18/Flojoy-Studio-Setup-0.1.18.exe"  />
   </TabItem>
   <TabItem label="Mac">
-    Download for Mac
+    <DownloadButton distro="mac" version="0.1.18" link="https://github.com/flojoy-ai/studio/releases/download/v0.1.18/Flojoy-Studio-0.1.18-universal.dmg" />
   </TabItem>
   <TabItem label="Linux">
-    Download for Linux
+    <DownloadButton distro="linux" version="0.1.18" link="https://github.com/flojoy-ai/studio/releases/download/v0.1.18/Flojoy-Studio-0.1.18.AppImage" />
   </TabItem>
 </Tabs>
 
