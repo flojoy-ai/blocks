@@ -5,7 +5,7 @@ from typing import Literal
 
 @flojoy
 def VECTOR(
-    elements: str = "", elements_type: Literal["boolean", "integer"] = "boolean"
+    elements: str = "", elements_type: Literal["boolean", "numeric"] = "boolean"
 ) -> Vector:
     """The VECTOR node creats a vector type data given the elements
 
@@ -29,17 +29,26 @@ def VECTOR(
             return Vector(v=array(all_bool))
 
         raise ValueError(
-            f"all elements of the vector must be in boolean or integer type: {all_bool}"
+            f"all elements of the vector must be in boolean type: {all_bool}"
         )
 
-    elif elements_type == "integer":
-        all_int = [int(element) for element in elements_list if element.isnumeric()]
+    elif elements_type == "numeric":
+        all_numeric = []
 
-        if all(isinstance(element, int) for element in all_int):
-            return Vector(v=array(all_int))
+        for element in elements_list:
+            try:
+                float_element = float(element)
+                int_element = int(float_element)
+                if float_element == int_element:
+                    all_numeric.append(int_element)
+                else:
+                    all_numeric.append(float_element)
 
-        raise ValueError(
-            f"all elements of the vector must be in boolean or integer type: {all_int}"
-        )
+            except ValueError:
+                raise ValueError(
+                    f"all elements of the vector must be numeric: {element}"
+                )
+
+        return Vector(v=array(all_numeric))
 
     raise ValueError("all elements of the vector must be in boolean or integer type")

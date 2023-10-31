@@ -4,10 +4,10 @@
             {
                 "width": 208,
                 "height": 96,
-                "id": "VECTOR-c146e798-6347-4fa2-b118-03a9d5a836ed",
+                "id": "VECTOR-27b23b2b-1a0e-4f61-bcd5-c3e215ca8c0c",
                 "type": "DATA",
                 "data": {
-                    "id": "VECTOR-c146e798-6347-4fa2-b118-03a9d5a836ed",
+                    "id": "VECTOR-27b23b2b-1a0e-4f61-bcd5-c3e215ca8c0c",
                     "label": "VECTOR",
                     "func": "VECTOR",
                     "type": "DATA",
@@ -19,20 +19,20 @@
                             "overload": null,
                             "functionName": "VECTOR",
                             "param": "elements",
-                            "value": "1,2,3"
+                            "value": "1,2,3.34"
                         },
                         "elements_type": {
                             "type": "select",
                             "options": [
                                 "boolean",
-                                "integer"
+                                "numeric"
                             ],
                             "default": "boolean",
                             "desc": null,
                             "overload": null,
                             "functionName": "VECTOR",
                             "param": "elements_type",
-                            "value": "integer"
+                            "value": "numeric"
                         }
                     },
                     "initCtrls": {},
@@ -45,26 +45,26 @@
                         }
                     ],
                     "path": "DATA/GENERATION/SIMULATIONS/VECTOR/VECTOR.py",
-                    "selected": true
+                    "selected": false
                 },
                 "position": {
-                    "x": -124.13778740905718,
-                    "y": 35.64806642459058
+                    "x": -105.84937651070591,
+                    "y": 70.06183953445299
                 },
-                "selected": true,
+                "selected": false,
                 "positionAbsolute": {
-                    "x": -124.13778740905718,
-                    "y": 35.64806642459058
+                    "x": -105.84937651070591,
+                    "y": 70.06183953445299
                 },
                 "dragging": true
             },
             {
                 "width": 225,
                 "height": 226,
-                "id": "SCATTER-4206ac71-a37f-45ad-822c-d48666211454",
+                "id": "SCATTER-bfc90afc-f924-4f33-b5f9-56e94fc538e5",
                 "type": "VISUALIZATION",
                 "data": {
-                    "id": "SCATTER-4206ac71-a37f-45ad-822c-d48666211454",
+                    "id": "SCATTER-bfc90afc-f924-4f33-b5f9-56e94fc538e5",
                     "label": "SCATTER",
                     "func": "SCATTER",
                     "type": "VISUALIZATION",
@@ -88,27 +88,27 @@
                         }
                     ],
                     "path": "DATA/VISUALIZATION/PLOTLY/SCATTER/SCATTER.py",
-                    "selected": false
+                    "selected": true
                 },
                 "position": {
-                    "x": 255.6843963062027,
-                    "y": -28.471537045095545
+                    "x": 257.2295835211114,
+                    "y": 3.6118511073185005
                 },
-                "selected": false,
+                "selected": true,
                 "positionAbsolute": {
-                    "x": 255.6843963062027,
-                    "y": -28.471537045095545
+                    "x": 257.2295835211114,
+                    "y": 3.6118511073185005
                 },
                 "dragging": true
             }
         ],
         "edges": [
             {
-                "source": "VECTOR-c146e798-6347-4fa2-b118-03a9d5a836ed",
+                "source": "VECTOR-27b23b2b-1a0e-4f61-bcd5-c3e215ca8c0c",
                 "sourceHandle": "default",
-                "target": "SCATTER-4206ac71-a37f-45ad-822c-d48666211454",
+                "target": "SCATTER-bfc90afc-f924-4f33-b5f9-56e94fc538e5",
                 "targetHandle": "default",
-                "id": "reactflow__edge-VECTOR-c146e798-6347-4fa2-b118-03a9d5a836eddefault-SCATTER-4206ac71-a37f-45ad-822c-d48666211454default"
+                "id": "reactflow__edge-VECTOR-27b23b2b-1a0e-4f61-bcd5-c3e215ca8c0cdefault-SCATTER-bfc90afc-f924-4f33-b5f9-56e94fc538e5default"
             }
         ],
         "viewport": {

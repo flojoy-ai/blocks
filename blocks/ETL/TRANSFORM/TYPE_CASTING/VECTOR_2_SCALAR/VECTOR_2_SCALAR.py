@@ -4,7 +4,10 @@ from flojoy import flojoy, Vector, Scalar
 
 @flojoy
 def VECTOR_2_SCALAR(default: Vector) -> Scalar:
-    """The VECTOR_2_SCALAR node takes a vector and transform it into scalar data type
+    """The VECTOR_2_SCALAR node takes a vector and transform it into scalar data type.
+    If the vector consists of all boolean type data, then it reads the vector in binary number where True is 1 and False is 0.
+    It then converts the binary number into decimal number.
+    If the vector consists of all integer type data, then it sums up all the data and converts it into a scalar type data.
 
     Parameters
     ----------
