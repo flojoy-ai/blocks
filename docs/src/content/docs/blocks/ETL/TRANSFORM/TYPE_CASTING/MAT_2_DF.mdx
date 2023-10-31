@@ -1,6 +1,6 @@
 ---
 title: MAT_2_DF
-description: "The MAT_2_DF node takes one matrix type data and converts it to a dataframe type data."
+description: "Convert a Matrix DataContainer to a DataFrame DataContainer."
 slug: blocks/etl/transform/type-casting/mat-2-df
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/etl/transform/type-casting/mat-2-df
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/ETL/TRANSFORM/TYPE_CASTING/MAT_2_DF/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/ETL/TRANSFORM/TYPE_CASTING/MAT_2_DF/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="MAT_2_DF" client:visible />
 

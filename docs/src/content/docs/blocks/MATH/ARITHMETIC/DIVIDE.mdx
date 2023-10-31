@@ -1,6 +1,6 @@
 ---
 title: DIVIDE
-description: "The DIVIDE node divides two or more numeric arrays, matrices, dataframes, or constants element-wise."
+description: "Divide two or more numeric arrays, matrices, dataframes, or constants element-wise."
 slug: blocks/math/arithmetic/divide
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/math/arithmetic/divide
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/MATH/ARITHMETIC/DIVIDE/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/MATH/ARITHMETIC/DIVIDE/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="DIVIDE" client:visible />
 

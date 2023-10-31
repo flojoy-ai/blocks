@@ -11,9 +11,9 @@ def WEBCAM(
         "default", "640x360", "640x480", "1280x720", "1920x1080"
     ] = "default",
 ) -> Image:
-    """The CAMERA node acquires an image using the selected camera.
+    """Acquire an image using the selected camera.
 
-    The selected camera must be opened already using the OPEN_WEBCAM node.
+    The selected camera must be opened already using the OPEN_WEBCAM block.
 
     Parameters
     ----------

@@ -1,27 +1,26 @@
 import numpy as np
-from flojoy import flojoy, Matrix
+from flojoy import flojoy, Matrix, Scalar
 
 
 @flojoy
-def MATRIX(row: int = 2, column: int = 2) -> Matrix:
-    """The MATRIX node takes two arguments, 'row' and 'col', as input.
-
-    Based on these inputs, it generates a random matrix where the integers inside the matrix are between 0 and 19.
+def MATRIX(row: Scalar = 100, column: Scalar = 100) -> Matrix:
+    """Generates a random matrix with values between 0 and 1.
 
     Parameters
     ----------
-    row : int
+    row : Scalar
         number of rows
-    column : int
+    column : Scalar
         number of columns
 
     Returns
     -------
-    matrix
-        randomly generated matrix
+    Matrix
+        Randomly generated matrix
     """
 
     np.random.seed()
-    mat = np.random.randint(20, size=(row, column))
+
+    mat = np.random.random_sample(row, column)
 
     return Matrix(m=mat)

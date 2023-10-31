@@ -10,12 +10,12 @@ def PROLOGIX_HELP(
     connection: SerialConnection,
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The PROLOGIX_HELP command returns a list of available Prologix USB-to-GPIB firmware commands.
+    """Return a list of available Prologix USB-to-GPIB firmware commands.
 
     Inputs
     ------
     default: DataContainer
-        Any DataContainer - likely connected to the output of the OPEN_SERIAL node.
+        Any DataContainer - likely connected to the output of the OPEN_SERIAL block.
 
     Parameters
     ----------

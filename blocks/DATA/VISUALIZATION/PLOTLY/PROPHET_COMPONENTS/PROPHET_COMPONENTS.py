@@ -8,12 +8,12 @@ from flojoy import flojoy, run_in_venv, DataFrame, Plotly
     ]
 )
 def PROPHET_COMPONENTS(default: DataFrame, periods: int = 365) -> Plotly:
-    """The PROPHET_COMPONENTS node plots the components of the prophet model trained in the PROPHET_PREDICT node.
+    """Plot the components of a Prophet model trained in the PROPHET_PREDICT block.
 
     This is the output plotly graph from the 'plot_components_plotly' function from 'prophet.plot'.
-    It expects the trained Prophet model from the PROPHET_PREDICT node as input.
+    It expects the trained Prophet model from the PROPHET_PREDICT block as input.
 
-    If 'run_forecast' was True in that node, the forecasted dataframe will be available as the 'm' attribute of the default input.
+    If 'run_forecast' was True in that block, the forecasted dataframe will be available as the 'm' attribute of the default input.
     Otherwise, this will make the predictions on the raw dataframe (in which case it will be the 'm' attribute of the default input).
 
     You can tell if that forecasted dataframe is available via the 'extra' field of data input, 'run_forecast' (data.extra["run_forecast"]).
@@ -31,7 +31,7 @@ def PROPHET_COMPONENTS(default: DataFrame, periods: int = 365) -> Plotly:
     ----------
     periods : int
         The number of periods out to predict.
-        Only used if the node passed into this node (i.e. PROPHET_PREDICT) did NOT return the forecast.
+        Only used if the block passed into this block (i.e. PROPHET_PREDICT) did NOT return the forecast.
         If the forecast was included in the DataContainer, this parameter will be ignored.
 
         Default = 365

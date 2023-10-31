@@ -1,0 +1,18 @@
+{
+  "long_description": "The connection is made with the VISA address in the Flojoy UI.\n\nThis block should also work with compatible R&S network analyzers.",
+  "short_description": "Connect Flojoy to a FSV network analyzer.",
+  "parameters": [
+    {
+      "name": "device",
+      "type": "VisaDevice",
+      "description": "The VISA address to connect to."
+    }
+  ],
+  "returns": [
+    {
+      "name": null,
+      "type": "DataContainer",
+      "description": "None"
+    }
+  ]
+}

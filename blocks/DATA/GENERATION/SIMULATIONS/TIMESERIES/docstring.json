@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The TIMESERIES node generates a random timeseries vector (as a DataFrame).",
+  "short_description": "Generate a timeseries with random y values between two dates.",
   "parameters": [
     {
       "name": "start_date",

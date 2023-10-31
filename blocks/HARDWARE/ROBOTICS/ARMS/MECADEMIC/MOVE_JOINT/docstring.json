@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The MOVE_JOINT node linearly moves the robot's tool to an absolute Cartesian position.",
+  "short_description": "Linearly move the robot's tool to an absolute Cartesian position.",
   "parameters": [
     {
       "name": "ip_address",

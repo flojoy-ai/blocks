@@ -1,6 +1,6 @@
 ---
 title: DATACONTAINER_TYPE
-description: "The DATACONTAINER_TYPE node returns a TextBlob containing the input DataContainer type (e.g. Vector)."
+description: "Return a TextBlob containing the input DataContainer type (e.g. Vector)."
 slug: blocks/debugging/datacontainer-type
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/debugging/datacontainer-type
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/DEBUGGING/DATACONTAINER_TYPE/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/DEBUGGING/DATACONTAINER_TYPE/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="DATACONTAINER_TYPE" client:visible />
 

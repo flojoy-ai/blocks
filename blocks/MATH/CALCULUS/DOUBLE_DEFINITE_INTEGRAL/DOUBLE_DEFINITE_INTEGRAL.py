@@ -11,9 +11,7 @@ def DOUBLE_DEFINITE_INTEGRAL(
     upper_bound_y: float = 0.0,
     lower_bound_y: float = 0.0,
 ) -> Scalar:
-    """The DOUBLE_DEFINITE_INTEGRAL node takes a function, upper, and lower bounds as input.
-
-    It then computes a double integral of the given function.
+    """Compute the double integral of a symbolic input function.
 
     Example of proper syntax for the function input:
     2*x*y

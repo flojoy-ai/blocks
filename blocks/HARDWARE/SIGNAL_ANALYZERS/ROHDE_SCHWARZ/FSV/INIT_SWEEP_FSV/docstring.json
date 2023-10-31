@@ -1,0 +1,28 @@
+{
+  "long_description": "Requires a CONNECTION_FSV block at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis block should also work with compatible R&S network analyzers.",
+  "short_description": "Start the sweep for the FSV.",
+  "parameters": [
+    {
+      "name": "connection",
+      "type": "VisaConnection",
+      "description": "The VISA address (requires the CONNECTION_FSV block)."
+    },
+    {
+      "name": "display",
+      "type": "select",
+      "description": "Choose the trace display setting."
+    },
+    {
+      "name": "continuous",
+      "type": "bool",
+      "description": "Sweep continuously or not."
+    }
+  ],
+  "returns": [
+    {
+      "name": null,
+      "type": "TextBlob",
+      "description": "Display and sweep settings."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 title: LOOP_INDEX
-description: "The LOOP_INDEX node loads the loop index from the LOOP node."
+description: "Load the loop index from the LOOP node."
 slug: blocks/control-flow/loop-tools/loop-index
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/control-flow/loop-tools/loop-index
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/CONTROL_FLOW/LOOP_TOOLS/LOOP_INDEX/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/CONTROL_FLOW/LOOP_TOOLS/LOOP_INDEX/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="LOOP_INDEX" client:visible />
 

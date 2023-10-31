@@ -1,6 +1,6 @@
 ---
 title: OPEN_PARQUET
-description: "The OPEN_PARQUET node loads a local file of the .parquet file format. It then returns the file as a pandas.Dataframe type."
+description: "Load a local parquet file, then return the data as a dataframe."
 slug: blocks/etl/extract/file/open-parquet
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/etl/extract/file/open-parquet
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/ETL/EXTRACT/FILE/OPEN_PARQUET/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/ETL/EXTRACT/FILE/OPEN_PARQUET/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="OPEN_PARQUET" client:visible />
 

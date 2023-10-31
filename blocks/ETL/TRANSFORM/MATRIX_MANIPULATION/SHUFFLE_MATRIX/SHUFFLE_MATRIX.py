@@ -7,7 +7,7 @@ def SHUFFLE_MATRIX(
     default: Matrix,
     axis: int = 0,
 ) -> Matrix:
-    """The SHUFFLE_MATRIX node returns a matrix that is randomly shuffled by the first axis
+    """Return a matrix that is randomly shuffled by the first axis
 
     Inputs
     ------

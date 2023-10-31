@@ -1,6 +1,6 @@
 {
   "long_description": "Inputs\n------\ndefault: None",
-  "short_description": "The OPEN_PARQUET node loads a local file of the .parquet file format. It then returns the file as a pandas.Dataframe type.",
+  "short_description": "Load a local parquet file, then return the data as a dataframe.",
   "parameters": [
     {
       "name": "file_path",

@@ -9,9 +9,7 @@ def SCIKIT_LEARN_DATASET(
         "iris", "diabetes", "digits", "linnerud", "wine", "breast_cancer"
     ] = "iris",
 ) -> DataFrame:
-    """The SCIKIT_LEARN_DATASET node retrieves a pandas DataFrame from
-    'sklearn.datasets', using the provided dataset_key parameter, and returns
-    it wrapped in a DataContainer.
+    """Retrieve a pandas DataFrame from the scikit-learn sample datasets.
 
     Parameters
     ----------

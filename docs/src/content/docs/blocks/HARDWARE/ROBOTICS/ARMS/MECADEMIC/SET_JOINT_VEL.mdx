@@ -1,6 +1,6 @@
 ---
 title: SET_JOINT_VEL
-description: "The SET_JOINT_VEL node sets the robot arm's angular velocity for its joints."
+description: "Set the robot arm's angular velocity for its joints."
 slug: blocks/hardware/robotics/arms/mecademic/set-joint-vel
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/hardware/robotics/arms/mecademic/set-joint-vel
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/HARDWARE/ROBOTICS/ARMS/MECADEMIC/SET_JOINT_VEL/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/HARDWARE/ROBOTICS/ARMS/MECADEMIC/SET_JOINT_VEL/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="SET_JOINT_VEL" client:visible />
 

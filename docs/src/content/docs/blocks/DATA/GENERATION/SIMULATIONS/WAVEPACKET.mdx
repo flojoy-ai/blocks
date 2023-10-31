@@ -1,6 +1,6 @@
 ---
 title: WAVEPACKET
-description: "The WAVEPACKET node approximates the behaviour of a 1D Gaussian wavepacket in an infinite-well potential box."
+description: "Approximate the behaviour of a 1D Gaussian wavepacket in an infinite-well potential box."
 slug: blocks/data/generation/simulations/wavepacket
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/data/generation/simulations/wavepacket
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/DATA/GENERATION/SIMULATIONS/WAVEPACKET/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/DATA/GENERATION/SIMULATIONS/WAVEPACKET/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="WAVEPACKET" client:visible />
 

@@ -6,7 +6,7 @@ from blocks.DATA.VISUALIZATION.template import plot_layout
 
 @flojoy
 def TABLE(default: OrderedTriple | OrderedPair | DataFrame | Vector) -> Plotly:
-    """The TABLE node creates a Plotly Table visualization for a given input DataContainer.
+    """Create a Plotly Table visualization for a given input DataContainer.
 
     Parameters
     ----------

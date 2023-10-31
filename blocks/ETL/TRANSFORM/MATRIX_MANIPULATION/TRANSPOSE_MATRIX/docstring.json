@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The TRANSPOSE_MATRIX node takes an input 2D matrix and transposes it.",
+  "short_description": "Take an input 2D matrix and transpose it.",
   "parameters": [
     {
       "name": "a",

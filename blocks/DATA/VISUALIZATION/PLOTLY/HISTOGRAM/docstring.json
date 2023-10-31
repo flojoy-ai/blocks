@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The HISTOGRAM node creates a Plotly Histogram visualization for a given input DataContainer.",
+  "short_description": "Create a Plotly Histogram visualization for a given input DataContainer.",
   "parameters": [
     {
       "name": "default",

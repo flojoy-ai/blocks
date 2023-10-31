@@ -1,6 +1,6 @@
 ---
 title: ONNX_MODEL
-description: "ONNX_MODEL loads a serialized ONNX model and uses it to make predictions using ONNX Runtime."
+description: "Load a serialized ONNX model and uses it to make predictions using ONNX Runtime."
 slug: blocks/ai-ml/load-model/onnx-model
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/ai-ml/load-model/onnx-model
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/AI_ML/LOAD_MODEL/ONNX_MODEL/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/AI_ML/LOAD_MODEL/ONNX_MODEL/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="ONNX_MODEL" client:visible />
 

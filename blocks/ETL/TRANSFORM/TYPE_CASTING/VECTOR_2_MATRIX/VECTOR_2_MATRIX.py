@@ -3,8 +3,7 @@ from flojoy import flojoy, Vector, Matrix
 
 @flojoy
 def VECTOR_2_MATRIX(default: Vector, row: int, col: int) -> Matrix:
-    """The VECTOR_2_MATRIX node takes a vector and transform it into matrix data type where
-    the shape is chosen by row and col parameters.
+    """Convert a Vector DataContainer to a Matrix DataContainer.
 
     Inputs
     ------

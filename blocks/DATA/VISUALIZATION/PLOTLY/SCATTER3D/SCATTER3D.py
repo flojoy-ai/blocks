@@ -6,7 +6,7 @@ from blocks.DATA.VISUALIZATION.template import plot_layout
 
 @flojoy
 def SCATTER3D(default: OrderedTriple | DataFrame) -> Plotly:
-    """The SCATTER3D node creates a Plotly 3D Scatter visualization for a given input DataContainer.
+    """Create a Plotly 3D Scatter visualization for a given input DataContainer.
 
     Parameters
     ----------

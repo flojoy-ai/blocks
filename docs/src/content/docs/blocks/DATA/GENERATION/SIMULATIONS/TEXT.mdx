@@ -1,6 +1,6 @@
 ---
 title: TEXT
-description: "The TEXT node returns a TextBlob DataContainer."
+description: "Return a TextBlob DataContainer with given input text."
 slug: blocks/data/generation/simulations/text
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/data/generation/simulations/text
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/DATA/GENERATION/SIMULATIONS/TEXT/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/DATA/GENERATION/SIMULATIONS/TEXT/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="TEXT" client:visible />
 

@@ -1,6 +1,6 @@
 {
   "long_description": "",
-  "short_description": "The MATRIX_VIEW node takes a Matrix or OrderedPair DataContainer object as input, and visualizes it using a Plotly table in matrix format.",
+  "short_description": "Take a Matrix or OrderedPair DataContainer object as input, then visualize it in a Plotly table.",
   "parameters": [
     {
       "name": "default",

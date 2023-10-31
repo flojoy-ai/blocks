@@ -1,6 +1,6 @@
 ---
 title: REMOTE_FILE
-description: "The REMOTE_FILE node loads a remote file using an HTTP URL and converts it to a DataContainer class."
+description: "Load a remote file from an HTTP URL endpoint, infer the type, and convert it to a DataContainer class."
 slug: blocks/etl/load/remote-file-system/remote-file
 ---
 
@@ -8,7 +8,7 @@ slug: blocks/etl/load/remote-file-system/remote-file
 {/* PLEASE REFER TO THE CONTRIBUTION GUIDE ON THE DOCS PAGE */}
 
 import docstring from "@blocks/ETL/LOAD/REMOTE_FILE_SYSTEM/REMOTE_FILE/docstring.json";
-import PythonDocsDisplay from "@/components/python-docs-display.astro";
+import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
 <PythonDocsDisplay docstring={docstring} />
 <details>
@@ -26,12 +26,12 @@ import { Code } from 'astro:components';
 
 ## Example
 
-import GetHelpWidget from "@/components/get-help-widget.astro";
+import GetHelpWidget from "@/components/GetHelpWidget.astro";
 
 <GetHelpWidget />
 
 import app from "@blocks/ETL/LOAD/REMOTE_FILE_SYSTEM/REMOTE_FILE/app.json";
-import AppDisplay from "@/components/app-display.tsx";
+import AppDisplay from "@/components/AppDisplay.tsx";
 
 <AppDisplay app={app} blockName="REMOTE_FILE" client:visible />
 

@@ -7,7 +7,7 @@ from blocks.DATA.VISUALIZATION.template import plot_layout
 
 @flojoy
 def BAR(default: OrderedPair | DataFrame | Matrix | Vector) -> Plotly:
-    """The BAR node creates a Plotly Bar visualization for a given input DataContainer.
+    """Create a Plotly Bar visualization for a given input DataContainer.
 
     Parameters
     ----------
