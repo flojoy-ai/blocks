@@ -16,20 +16,19 @@ def SWEEP_SETTINGS_FSV(
     points: int = 1000,
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The SWEEP_SETTINGS_FSV node sets sweep settings for a FSV.
-
+    """Set sweep settings for a FSV.
     Note that span/center and start/stop can be used equivalently if:
     start = center - (span / 2) and stop = center + (span / 2).
 
-    Requires a CONNECTION_FSV node at the start of the app to connect with
+    Requires a CONNECTION_FSV block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible R&S network analyzers.
+    This block should also work with compatible R&S network analyzers.
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_FSV node).
+        The VISA address (requires the CONNECTION_FSV block).
     span_or_range: select
         X axis range, span (center and span) or range (start and stop).
     center: float

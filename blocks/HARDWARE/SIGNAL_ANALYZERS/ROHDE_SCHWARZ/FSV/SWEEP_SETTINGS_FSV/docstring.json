@@ -1,11 +1,11 @@
 {
-  "long_description": "Note that span/center and start/stop can be used equivalently if:\nstart = center - (span / 2) and stop = center + (span / 2).\n\nRequires a CONNECTION_FSV node at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis node should also work with compatible R&S network analyzers.",
-  "short_description": "The SWEEP_SETTINGS_FSV node sets sweep settings for a FSV.",
+  "long_description": "Note that span/center and start/stop can be used equivalently if:\nstart = center - (span / 2) and stop = center + (span / 2).\n\nRequires a CONNECTION_FSV block at the start of the app to connect with\nthe instrument. The VISA address will then be listed under 'connection'.\n\nThis block should also work with compatible R&S network analyzers.",
+  "short_description": "Set sweep settings for a FSV.",
   "parameters": [
     {
       "name": "connection",
       "type": "VisaConnection",
-      "description": "The VISA address (requires the CONNECTION_FSV node)."
+      "description": "The VISA address (requires the CONNECTION_FSV block)."
     },
     {
       "name": "span_or_range",

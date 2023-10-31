@@ -102,11 +102,8 @@ def generate_docstring_json() -> bool:
                 with open(output_file_path, "w") as output_file:
                     json.dump(json_data, output_file, indent=2)
 
-                    # sys.exit(0)
-
     if error > 0:
         print(f"Found {error} [bold red]ERRORS[/bold red] with docstring formatting!")
         return False
 
-    print("All docstring are formatted correctly!")
     return True
