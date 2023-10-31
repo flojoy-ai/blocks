@@ -3,7 +3,7 @@ from flojoy import TextBlob, SerialDevice, flojoy, DataContainer
 
 
 @flojoy(inject_connection=True)
-def SERIAL_SINGLE_MEASUREMENT(
+def SERIAL_WRITE(
     connection: SerialDevice,
     write: str = "",
     encoding: Literal["bytes", "utf-8", "ascii"] = "bytes",
