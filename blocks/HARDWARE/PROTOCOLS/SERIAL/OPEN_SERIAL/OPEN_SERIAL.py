@@ -38,4 +38,6 @@ def OPEN_SERIAL(
         print("debug1: ", connection_time, flush=True)
         sleep(connection_time)
 
+    print("debug1: ", connection_time, flush=True)
+
     return TextBlob(text_blob=json.dumps(ser.get_settings()))
