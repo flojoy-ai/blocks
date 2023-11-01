@@ -35,9 +35,6 @@ def OPEN_SERIAL(
     DeviceConnectionManager.register_connection(device, ser)
 
     if connection_time > 0:
-        print("debug1: ", connection_time, flush=True)
         sleep(connection_time)
-
-    print("debug1: ", connection_time, flush=True)
 
     return TextBlob(text_blob=json.dumps(ser.get_settings()))

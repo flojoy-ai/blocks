@@ -4,65 +4,6 @@
             {
                 "width": 192,
                 "height": 192,
-                "id": "OPEN_SERIAL-b76e4a1f-92f0-4446-9524-82d2748f78c6",
-                "type": "HARDWARE",
-                "data": {
-                    "id": "OPEN_SERIAL-b76e4a1f-92f0-4446-9524-82d2748f78c6",
-                    "label": "OPEN SERIAL",
-                    "func": "OPEN_SERIAL",
-                    "type": "HARDWARE",
-                    "ctrls": {
-                        "device": {
-                            "type": "SerialDevice",
-                            "default": null,
-                            "desc": "The connected serial device.",
-                            "overload": null,
-                            "functionName": "OPEN_SERIAL",
-                            "param": "device",
-                            "value": "COM3"
-                        },
-                        "baudrate": {
-                            "type": "int",
-                            "default": 9600,
-                            "desc": null,
-                            "overload": null,
-                            "functionName": "OPEN_SERIAL",
-                            "param": "baudrate",
-                            "value": 9600
-                        }
-                    },
-                    "initCtrls": {},
-                    "outputs": [
-                        {
-                            "name": "default",
-                            "id": "default",
-                            "type": "TextBlob",
-                            "desc": null
-                        }
-                    ],
-                    "pip_dependencies": [
-                        {
-                            "name": "pyserial",
-                            "v": "3.5"
-                        }
-                    ],
-                    "path": "HARDWARE/PROTOCOLS/SERIAL/OPEN_SERIAL/OPEN_SERIAL.py",
-                    "selected": false
-                },
-                "position": {
-                    "x": -195.9098236580278,
-                    "y": -182.486976423162
-                },
-                "selected": false,
-                "positionAbsolute": {
-                    "x": -195.9098236580278,
-                    "y": -182.486976423162
-                },
-                "dragging": true
-            },
-            {
-                "width": 192,
-                "height": 192,
                 "id": "SERIAL_WRITE-bc7a5dce-aaf9-4de4-9e77-681b1a6ea623",
                 "type": "HARDWARE",
                 "data": {
@@ -393,16 +334,77 @@
                     "y": -170.9287784505403
                 },
                 "dragging": true
+            },
+            {
+                "width": 192,
+                "height": 192,
+                "id": "OPEN_SERIAL-902f7add-251b-46ad-bba3-cc2c288c6cdf",
+                "type": "HARDWARE",
+                "data": {
+                    "id": "OPEN_SERIAL-902f7add-251b-46ad-bba3-cc2c288c6cdf",
+                    "label": "OPEN SERIAL",
+                    "func": "OPEN_SERIAL",
+                    "type": "HARDWARE",
+                    "ctrls": {
+                        "device": {
+                            "type": "SerialDevice",
+                            "default": null,
+                            "desc": "The connected serial device.",
+                            "overload": null,
+                            "functionName": "OPEN_SERIAL",
+                            "param": "device",
+                            "value": "COM3"
+                        },
+                        "baudrate": {
+                            "type": "int",
+                            "default": 9600,
+                            "desc": null,
+                            "overload": null,
+                            "functionName": "OPEN_SERIAL",
+                            "param": "baudrate",
+                            "value": 9600
+                        },
+                        "connection_time": {
+                            "type": "float",
+                            "default": 0,
+                            "desc": null,
+                            "overload": null,
+                            "functionName": "OPEN_SERIAL",
+                            "param": "connection_time",
+                            "value": 2
+                        }
+                    },
+                    "initCtrls": {},
+                    "outputs": [
+                        {
+                            "name": "default",
+                            "id": "default",
+                            "type": "TextBlob",
+                            "desc": null
+                        }
+                    ],
+                    "pip_dependencies": [
+                        {
+                            "name": "pyserial",
+                            "v": "3.5"
+                        }
+                    ],
+                    "path": "HARDWARE/PROTOCOLS/SERIAL/OPEN_SERIAL/OPEN_SERIAL.py",
+                    "selected": false
+                },
+                "position": {
+                    "x": -251.21351812883603,
+                    "y": -192.98718088808147
+                },
+                "selected": false,
+                "positionAbsolute": {
+                    "x": -251.21351812883603,
+                    "y": -192.98718088808147
+                },
+                "dragging": true
             }
         ],
         "edges": [
-            {
-                "source": "OPEN_SERIAL-b76e4a1f-92f0-4446-9524-82d2748f78c6",
-                "sourceHandle": "default",
-                "target": "SERIAL_WRITE-0218a49f-0787-4813-8890-f9b89fc00cb4",
-                "targetHandle": "default",
-                "id": "reactflow__edge-OPEN_SERIAL-b76e4a1f-92f0-4446-9524-82d2748f78c6default-SERIAL_WRITE-0218a49f-0787-4813-8890-f9b89fc00cb4default"
-            },
             {
                 "source": "SERIAL_WRITE-0218a49f-0787-4813-8890-f9b89fc00cb4",
                 "sourceHandle": "default",
@@ -430,6 +432,13 @@
                 "target": "TIMER-47a9cdca-2b4e-4f7e-85c2-3b0ae18c442c",
                 "targetHandle": "default",
                 "id": "reactflow__edge-SERIAL_WRITE-bc7a5dce-aaf9-4de4-9e77-681b1a6ea623default-TIMER-47a9cdca-2b4e-4f7e-85c2-3b0ae18c442cdefault"
+            },
+            {
+                "source": "OPEN_SERIAL-902f7add-251b-46ad-bba3-cc2c288c6cdf",
+                "sourceHandle": "default",
+                "target": "SERIAL_WRITE-0218a49f-0787-4813-8890-f9b89fc00cb4",
+                "targetHandle": "default",
+                "id": "reactflow__edge-OPEN_SERIAL-902f7add-251b-46ad-bba3-cc2c288c6cdfdefault-SERIAL_WRITE-0218a49f-0787-4813-8890-f9b89fc00cb4default"
             }
         ],
         "viewport": {
