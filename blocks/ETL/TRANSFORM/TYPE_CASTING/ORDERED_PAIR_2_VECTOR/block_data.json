@@ -1,0 +1,20 @@
+{
+  "docstring": {
+    "long_description": "",
+    "short_description": "Convert an OrderedPair DataContainer to a Vector DataContainer.",
+    "parameters": [
+      {
+        "name": "default",
+        "type": "OrderedPair",
+        "description": "The input OrderedPair."
+      }
+    ],
+    "returns": [
+      {
+        "name": null,
+        "type": "Vector",
+        "description": "The y component of the input OrderedPair."
+      }
+    ]
+  }
+}
