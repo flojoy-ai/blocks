@@ -7,7 +7,7 @@ from typing import Literal
 def VECTOR(
     elements: str = "", elements_type: Literal["boolean", "numeric"] = "boolean"
 ) -> Vector:
-    """The VECTOR node creats a vector type data given the elements
+    """Creates a vector type data given the elements
 
     Parameters
     ----------

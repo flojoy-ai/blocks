@@ -3,7 +3,7 @@ from flojoy import flojoy, Boolean
 
 @flojoy
 def NOT_AND(default: Boolean, a: Boolean) -> Boolean:
-    """The NOT_AND node takes two boolean data type and computs logical NOT AND operation on them.
+    """Takes two boolean data type and computs logical NOT AND operation on them.
 
     Parameters
     ----------

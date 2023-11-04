@@ -3,7 +3,7 @@ from flojoy import flojoy, Boolean
 
 @flojoy
 def IMPLIES(x: Boolean, y: Boolean) -> Boolean:
-    """The IMPLIES node takes two boolean data type and computs logical IMPLIES operation on them.
+    """Takes two boolean data type and computs logical IMPLIES operation on them.
     x implies y
 
     Parameters

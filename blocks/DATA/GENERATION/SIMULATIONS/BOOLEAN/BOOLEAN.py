@@ -3,7 +3,7 @@ from flojoy import flojoy, Boolean
 
 @flojoy
 def BOOLEAN(status: bool = True) -> Boolean:
-    """The BOOLEAN node takes one argument as input.
+    """Takes one argument as input.
     Based on the input, it generates a boolean type data.
     If the status is True, then it generates true constant, else false constant.
 

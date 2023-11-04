@@ -3,7 +3,7 @@ from flojoy import flojoy, Boolean
 
 @flojoy
 def AND(default: Boolean, a: Boolean) -> Boolean:
-    """The AND node takes two boolean data type and computs logical AND operation on them.
+    """Takes two boolean data type and computs logical AND operation on them.
 
     Parameters
     ----------
