@@ -10,15 +10,16 @@ sidebar:
 
 import DownloadButton from "@/components/DownloadButton.tsx";
 import { Tabs, TabItem } from "@astrojs/starlight/components";
+import packageJSON from "@root/package.json";
 
 There are **2 steps** to install Flojoy Studio:
 
 ## 1. Install Conda/Miniconda
 
-If you haven't yet installed Conda/Miniconda on your machine,
-please install it first. We are using it to manage the underlying Python
-environment for all the magic behind Flojoy Studio. We also recommend
-installing Miniconda since it is more lightweight.
+If you haven't yet installed Conda/Miniconda on your machine, please install it
+first. We are using it to manage the underlying Python environment for all the
+magic behind Flojoy Studio. We also recommend installing Miniconda since it is
+more lightweight.
 
 You can find a detailed instruction [here](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html).
 And if you are comfortable of using command line, you can also find a quick
@@ -30,19 +31,49 @@ Once you have Conda/Miniconda installed on your machine, you are ready to instal
 Flojoy Studio. Simply choose the right installer for your machine and follow the
 instructions.
 
-
 <Tabs>
   <TabItem label="Windows">
-    <DownloadButton distro="windows" version="0.1.18" link="https://github.com/flojoy-ai/studio/releases/download/v0.1.18/Flojoy-Studio-Setup-0.1.18.exe"  />
+    <DownloadButton
+      distro="windows"
+      version={packageJSON.version}
+      link={
+        "https://github.com/flojoy-ai/studio/releases/download/v" +
+        packageJSON.version +
+        "/Flojoy-Studio-Setup-" +
+        packageJSON.version +
+        ".exe"
+      }
+    />
   </TabItem>
   <TabItem label="Mac">
-    <DownloadButton distro="mac" version="0.1.18" link="https://github.com/flojoy-ai/studio/releases/download/v0.1.18/Flojoy-Studio-0.1.18-universal.dmg" />
+    <DownloadButton
+      distro="mac"
+      version={packageJSON.version}
+      link={
+        "https://github.com/flojoy-ai/studio/releases/download/v" +
+        packageJSON.version +
+        "/Flojoy-Studio-" +
+        packageJSON.version +
+        "-universal.dmg"
+      }
+    />
   </TabItem>
   <TabItem label="Linux">
-    <DownloadButton distro="linux" version="0.1.18" link="https://github.com/flojoy-ai/studio/releases/download/v0.1.18/Flojoy-Studio-0.1.18.AppImage" />
+    <DownloadButton
+      distro="linux"
+      version={packageJSON.version}
+      link={
+        "https://github.com/flojoy-ai/studio/releases/download/v" +
+        packageJSON.version +
+        "/Flojoy-Studio-" +
+        packageJSON.version +
+        ".AppImage"
+      }
+    />
   </TabItem>
 </Tabs>
 
 ## 3. Frequently Asked Questions
 
-...
+Having any problems while installing Flojoy Studio?
+Let us know in our [Discord Community](https://discord.gg/7HEBr7yG8c) and we will help you out!

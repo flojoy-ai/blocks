@@ -30,10 +30,10 @@ slug: {slug}
 
     def add_python_docs_display(self):
         self.template += """\
-import docstring from "@blocks/{block_folder_path}/docstring.json";
+import block_data from "@blocks/{block_folder_path}/block_data.json";
 import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 
-<PythonDocsDisplay docstring={{docstring}} />
+<PythonDocsDisplay docstring={{block_data["docstring"]}} />
 """.format(
             block_folder_path=self.block_folder_path,
         )
