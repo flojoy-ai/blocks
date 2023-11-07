@@ -1,0 +1,25 @@
+{
+  "docstring": {
+    "long_description": "",
+    "short_description": "Take a single data reading from a connected serial device (such as an Arduino connected by USB).",
+    "parameters": [
+      {
+        "name": "baudrate",
+        "type": "int",
+        "description": "Baud rate for the serial communication."
+      },
+      {
+        "name": "comport",
+        "type": "string",
+        "description": "Defines the communication port on which the serial device is connected."
+      }
+    ],
+    "returns": [
+      {
+        "name": null,
+        "type": "OrderedPair",
+        "description": "the y axis contains the reading"
+      }
+    ]
+  }
+}

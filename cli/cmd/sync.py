@@ -61,7 +61,7 @@ def sync():
 
         print("Finished cleaning up the workspace.")
 
-    # Generating docstring.json
+    # Generating the docstring key in block_data.json
     with Progress(
         SpinnerColumn(),
         TextColumn("[progress.description]{task.description}"),
@@ -118,12 +118,12 @@ def sync():
                         print(f"{ERR_STRING} No app.json found for {file_name}")
                         sys.exit(1)
 
-                if not os.path.exists(os.path.join(root, "docstring.json")):
-                    print(f"{ERR_STRING} No docstring.json found for {file_name}")
+                if not os.path.exists(os.path.join(root, "block_data.json")):
+                    print(f"{ERR_STRING} No block_data.json found for {file_name}")
                     sys.exit(1)
 
-                with open(os.path.join(root, "docstring.json"), "r") as f:
-                    description = json.load(f)["short_description"]
+                with open(os.path.join(root, "block_data.json"), "r") as f:
+                    description = json.load(f)["docstring"]["short_description"]
 
                 # Keep track of the file tree structure in order to generate
                 # overview pages for all of the top level categories
