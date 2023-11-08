@@ -15,5 +15,5 @@ Once you have **just** installed, head to anywhere in the blocks folder and
 run `just add BLOCK_NAME`.
 
 For example, if I am in the `blocks/AI_ML/CLASSIFICATION/` folder, I can run
-`just add MY_ML_BLOCK` and my new block will be located at
-`blocks/AI_ML/CLASSIFICATION/MY_ML_BLOCK/MY_ML_BLOCK.py`.
+`just add MY_NEW_ML_BLOCK` and my new block will be located at
+`blocks/AI_ML/CLASSIFICATION/MY_NEW_ML_BLOCK/MY_NEW_ML_BLOCK.py`.
