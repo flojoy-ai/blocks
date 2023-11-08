@@ -33,17 +33,22 @@ def generate_docstring_json() -> bool:
             # Parse the code
             tree = ast.parse(code)
 
+            found_function = False
+
+            block_name = os.path.basename(root)
+
             # Find functions in the code
             for node in ast.walk(tree):
                 if not isinstance(node, ast.FunctionDef):
                     continue
                 function_name = node.name
 
-                if function_name != os.path.basename(root):
+                if function_name != block_name:
                     # don't parse for any function that has a different
                     # name than the node file name
                     continue
 
+                found_function = True
                 # Extract docstring if available
                 if not (
                     node.body
@@ -112,6 +117,11 @@ def generate_docstring_json() -> bool:
 
                 with open(output_file_path, "w") as output_file:
                     json.dump(existing_json_data, output_file, indent=2)
+
+            if not found_function:
+                print(
+                    f"{ERR_STRING} Could not find the {block_name} function in {block_name}.py! Please make sure there is a function called {block_name}."
+                )
 
     if error > 0:
         print(f"Found {error} [bold red]ERRORS[/bold red] with docstring formatting!")
