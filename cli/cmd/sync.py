@@ -67,14 +67,14 @@ def sync():
         TextColumn("[progress.description]{task.description}"),
         transient=True,
     ) as progress:
-        progress.add_task("Generating docstring.json for all the blocks...")
+        progress.add_task("Generating block_data.json for all the blocks...")
 
         success = generate_docstring_json()
         if not success:
             print(f"{ERR_STRING} Please fix all the docstring errors before syncing.")
             sys.exit(1)
 
-        print("Finished generating docstring.json for all blocks.")
+        print("Finished generating block_data.json for all blocks.")
 
     category_tree: CategoryTree = {}
 
