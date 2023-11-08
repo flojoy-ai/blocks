@@ -1,6 +1,9 @@
 sync:
   poetry run python3 fjblock.py sync
 
+add args:
+  poetry run python3 fjblock.py add {{args}}
+
 init:
   just init-docs & just init-blocks
 
