@@ -46,14 +46,6 @@ def DIGITAL_TRIGGER_DS1047Z(
     elif slope != ("unchanged" or "either"):
         rigol.trigger_edge_slope(slope)
 
-    s = "Channel: "
-    s += channel
-
-    s += "; Level: "
-    s += str(level)
-    s += "V ;"
-
-    s += "; Slope: "
-    s += slope
+    s = f"Channel: {channel}; Level: {level}; Slope: {slope}"
 
     return TextBlob(text_blob=s)
