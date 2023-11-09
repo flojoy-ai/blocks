@@ -69,10 +69,7 @@ def PEAK_DETECTION(
         y: peaks
     """
 
-    if height == "":
-        height = None
-    else:
-        height = float(height)
+    height = float(height) if height != "" else None
     if threshold == "":
         threshold = None
     else:

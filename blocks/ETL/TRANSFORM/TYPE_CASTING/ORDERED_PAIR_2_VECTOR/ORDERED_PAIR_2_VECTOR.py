@@ -2,13 +2,13 @@ from flojoy import flojoy, Vector, OrderedPair
 from typing import TypedDict
 
 
-class resultSplit(TypedDict):
+class ResultSplit(TypedDict):
     x: Vector
     y: Vector
 
 
 @flojoy
-def ORDERED_PAIR_2_VECTOR(default: OrderedPair) -> resultSplit:
+def ORDERED_PAIR_2_VECTOR(default: OrderedPair) -> ResultSplit:
     """Returns the split components (x, y) of an ordered pair as Vectors.
 
     Parameters
@@ -23,4 +23,4 @@ def ORDERED_PAIR_2_VECTOR(default: OrderedPair) -> resultSplit:
         y: Vector from input y
     """
 
-    return resultSplit(x=Vector(v=default.x), y=Vector(v=default.y))
+    return ResultSplit(x=Vector(v=default.x), y=Vector(v=default.y))
