@@ -27,6 +27,7 @@ def sync():
     blocks folder in the docs folder.
     """
     total_synced_pages = 0
+    err_count = 0
 
     # Cleaning up the workspace before generation
     with Progress(
@@ -67,14 +68,14 @@ def sync():
         TextColumn("[progress.description]{task.description}"),
         transient=True,
     ) as progress:
-        progress.add_task("Generating docstring.json for all the blocks...")
+        progress.add_task("Generating block_data.json for all the blocks...")
 
         success = generate_docstring_json()
         if not success:
             print(f"{ERR_STRING} Please fix all the docstring errors before syncing.")
             sys.exit(1)
 
-        print("Finished generating docstring.json for all blocks.")
+        print("Finished generating block_data.json for all blocks.")
 
     category_tree: CategoryTree = {}
 
@@ -113,10 +114,15 @@ def sync():
                         print(f"{ERR_STRING} No example.md found for {file_name}")
                         sys.exit(1)
 
+                has_app_json = True
                 if not os.path.exists(os.path.join(root, "app.json")):
                     if current_block_category not in auto_gen_categories:
-                        print(f"{ERR_STRING} No app.json found for {file_name}")
-                        sys.exit(1)
+                        print(
+                            f"{ERR_STRING} No app.json found for {file_name}, please add an app.json to demo this block and don't forget to add some description in example.md!"
+                        )
+                        has_app_json = False
+                        err_count += 1
+                        # sys.exit(1)
 
                 if not os.path.exists(os.path.join(root, "block_data.json")):
                     print(f"{ERR_STRING} No block_data.json found for {file_name}")
@@ -156,7 +162,10 @@ def sync():
                         .add_python_code()
                     )
 
-                    if current_block_category not in auto_gen_categories:
+                    if (
+                        current_block_category not in auto_gen_categories
+                        and has_app_json
+                    ):
                         result = result.add_example_app()
 
                     f.write(result.build())
@@ -225,6 +234,12 @@ def sync():
                     sys.exit(1)
 
         print("Finished generating all the overview pages.")
+
+    if err_count > 0:
+        print(
+            f"{ERR_STRING} {err_count} error(s) found during syncing. Please fix them before syncing again."
+        )
+        sys.exit(1)
 
     print(f"Successfully synced {total_synced_pages} pages!")
 
