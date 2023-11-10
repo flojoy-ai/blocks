@@ -166,3 +166,6 @@ cython_debug/
 #.idea/
 
 .vscode/*
+
+# Downloaded model weights
+yolov3.weights
