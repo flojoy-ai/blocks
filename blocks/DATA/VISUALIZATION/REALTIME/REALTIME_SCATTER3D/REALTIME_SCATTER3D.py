@@ -3,7 +3,7 @@ import numpy as np
 
 
 @flojoy(node_type="SCATTER3D", forward_result=True)
-def SCATTER3D(
+def REALTIME_SCATTER3D(
     default: OrderedTriple | DataFrame | Vector,
     point_size: int = 4,
     show_xy_plane: bool = False,

@@ -2,9 +2,11 @@ import numpy as np
 from flojoy import OrderedPair, flojoy, Vector
 
 
-@flojoy(node_type="SCATTER", forward_result=True)
-def REALTIME_SCATTER(default: OrderedPair | Vector) -> OrderedPair:
-    """Creates a scatter plot visualization for a given input DataContainer.
+@flojoy(node_type="LINE", forward_result=True)
+def REALTIME_LINE(
+    default: OrderedPair | Vector, log_y_scale: bool = False
+) -> OrderedPair:
+    """Creates a line plot visualization for a given input DataContainer.
 
     Inputs
     ------
@@ -24,5 +26,5 @@ def REALTIME_SCATTER(default: OrderedPair | Vector) -> OrderedPair:
             return OrderedPair(x=np.arange(len(default.v)), y=default.v)
         case _:
             raise TypeError(
-                f"REALTIME_SCATTER node does not support input of type {type(default)}"
+                f"REALTIME_LINE node does not support input of type {type(default)}"
             )
