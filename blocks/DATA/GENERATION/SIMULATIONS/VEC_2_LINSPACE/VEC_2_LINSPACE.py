@@ -8,9 +8,11 @@ def VEC_2_LINSPACE(
     start: float = -10,
     end: float = 10,
 ) -> Vector:
-    """Generate a Vector of evenly spaced data between two points with a length equal to the input Vector length or Scalar.
+    """Generate a Vector of evenly spaced data between two points with a 
+    length equal to the input Vector length or Scalar.
 
-    This block uses the 'linspace' numpy function. It is useful for generating an x-axis for the OrderedPair data type.
+    This block uses the 'linspace' numpy function. It is useful for 
+    generating an x-axis for the OrderedPair data type.
 
     Inputs
     ------
@@ -32,9 +34,9 @@ def VEC_2_LINSPACE(
         v: the vector between 'start' and 'end' with a 'step' number of points.
     """
 
-    if 'v' in default:
+    if "v" in default:
         step = len(default.v)
-    elif 'c' in default:
+    elif "c" in default:
         step = default.c
 
     v = np.linspace(start, end, step)
