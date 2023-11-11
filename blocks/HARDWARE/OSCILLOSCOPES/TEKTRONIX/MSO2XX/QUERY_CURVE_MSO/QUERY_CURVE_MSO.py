@@ -7,9 +7,9 @@ import numpy as np
 def QUERY_CURVE_MSO(
     connection: VisaConnection,
     default: Optional[DataContainer] = None,
-    channel: int = 1
+    channel: int = 1,
 ) -> Vector:
-    """ Run a SCPI curve query on a MSO2XX oscilloscope.
+    """Run a SCPI curve query on a MSO2XX oscilloscope.
 
     Parameters
     ----------
@@ -27,4 +27,4 @@ def QUERY_CURVE_MSO(
 
     curve = scope.curve_query(channel)
 
-    return Vector(v = np.array(curve))
+    return Vector(v=np.array(curve))

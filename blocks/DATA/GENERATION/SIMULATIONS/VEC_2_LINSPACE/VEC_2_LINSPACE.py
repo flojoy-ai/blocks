@@ -8,10 +8,10 @@ def VEC_2_LINSPACE(
     start: float = -10,
     end: float = 10,
 ) -> Vector:
-    """Generate a Vector of evenly spaced data between two points with a 
+    """Generate a Vector of evenly spaced data between two points with a
     length equal to the input Vector length or Scalar.
 
-    This block uses the 'linspace' numpy function. It is useful for 
+    This block uses the 'linspace' numpy function. It is useful for
     generating an x-axis for the OrderedPair data type.
 
     Inputs

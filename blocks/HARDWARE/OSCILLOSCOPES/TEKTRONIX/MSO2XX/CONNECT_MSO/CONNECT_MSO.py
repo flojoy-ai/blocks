@@ -23,7 +23,7 @@ def CONNECT_MSO(device: VisaDevice) -> TextBlob:
 
     # TCPIP0::169.254.187.99::INSTR vs just 169.254.187.99
     # isolate scope IP
-    IP = device_addr.split('::')[1]
+    IP = device_addr.split("::")[1]
 
     scope = dm.add_scope(IP)
 

@@ -6,9 +6,9 @@ from flojoy import VisaConnection, flojoy, DataContainer
 def HORIZONTAL_SCALE_MSO(
     connection: VisaConnection,
     default: Optional[DataContainer] = None,
-    scale: float = 1E-3
+    scale: float = 1e-3,
 ) -> None:
-    """ Set the MSO2XX oscilloscope viewport.
+    """Set the MSO2XX oscilloscope viewport.
 
     Parameters
     ----------

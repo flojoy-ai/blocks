@@ -9,7 +9,7 @@ def VERTICAL_SCALE_MSO(
     channel: int = 1,
     scale: float = 1.0,
 ) -> None:
-    """ Set the MSO2XX oscilloscope viewport.
+    """Set the MSO2XX oscilloscope viewport.
 
     Parameters
     ----------
