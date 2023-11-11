@@ -7,7 +7,7 @@ def VERTICAL_SCALE_MSO(
     connection: VisaConnection,
     default: Optional[DataContainer] = None,
     channel: int = 1,
-    scale: float = 1.0
+    scale: float = 1.0,
 ) -> None:
     """ Set the MSO2XX oscilloscope viewport.
 

@@ -14,7 +14,7 @@ def QUERY_CURVE_MSO(
     Parameters
     ----------
     channel : int
-        Oscilloscope channel to query (1 or 2 for a 2 channel scope, 1-4 for a 4 channel scope, etc)
+        Oscilloscope channel to query (eg 1 or 2 for a 2 channel scope)
 
     Returns
     -------
