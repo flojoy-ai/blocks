@@ -1,9 +1,8 @@
 ---
-sidebar_position: 2
 id: visa-usb
 title: VISA USB Troubleshooting
 sidebar:
-  order: 1
+  order: 2
 ---
 
 :::note
@@ -33,7 +32,7 @@ print(rm.list_resources())
 
 For Unix systems, it may be required to allow non-root access to USB ports. You can do this for all device with the terminal command:
 
-```bash
+```
 sudo echo 'SUBSYSTEM=="usb", MODE="0666", GROUP="usbusers"' >> /etc/udev/rules.d/99-com.rules
 ```
 
@@ -56,7 +55,7 @@ In both methods ensure your device is plugged in and showing up in `Device Manag
 
 [Detailed Instructions](https://github.com/pbatard/libwdi/wiki/Zadig)
 
-![image](../../../../assets/windowsdriver/zadig.png)
+![image](../../../assets/windowsdriver/zadig.png)
 
 - Install [Zadig](https://zadig.akeo.ie/) (v2.8 as of Sept-22-2023)
 - Run `zadig-2.8.exe`
@@ -82,22 +81,22 @@ You must then chose the driver to install for the device.
 - First go to `Device Manager` (e.g. by using the start menu search bar)
 - Find the device. If no driver is install it will likely appear under `Other devices`.
 
-![image](../../../../assets/windowsdriver/device.png)
+![image](../../../assets/windowsdriver/device.png)
 
 - Right click on the device and select `Update Driver`.
 - In the new window press `Browse my computer for drivers`,
 - and then `Let me pick ...` at the bottom.
 
-![image](../../../../assets/windowsdriver/browse.png)
-![image](../../../../assets/windowsdriver/pick.png)
+![image](../../../assets/windowsdriver/browse.png)
+![image](../../../assets/windowsdriver/pick.png)
 
 - Press `Universal Serial Bus devices`.
 - In the left box click `WinUSB Device`,
 - and in the right box click `WinUSB Device`.
 - Click `Next` and install the driver.
 
-![image](../../../../assets/windowsdriver/busdevice.png)
-![image](../../../../assets/windowsdriver/winusb.png)
+![image](../../../assets/windowsdriver/busdevice.png)
+![image](../../../assets/windowsdriver/winusb.png)
 
 ## Mac
 
