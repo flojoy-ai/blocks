@@ -1,7 +1,7 @@
 {
   "docstring": {
     "long_description": "",
-    "short_description": "Convert an OrderedPair DataContainer to a Vector DataContainer.",
+    "short_description": "Returns the split components (x, y) of an ordered pair as Vectors.",
     "parameters": [
       {
         "name": "default",
@@ -11,9 +11,9 @@
     ],
     "returns": [
       {
-        "name": null,
-        "type": "Vector",
-        "description": "The y component of the input OrderedPair."
+        "name": "TypedDict",
+        "type": "",
+        "description": "x: Vector from input x\ny: Vector from input y"
       }
     ]
   }
