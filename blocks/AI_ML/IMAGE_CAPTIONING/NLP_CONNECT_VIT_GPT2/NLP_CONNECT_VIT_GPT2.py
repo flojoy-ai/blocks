@@ -6,7 +6,7 @@ import transformers
 from flojoy import DataFrame, Image, flojoy, snapshot_download
 
 
-@flojoy
+@flojoy(deps={"torch": "2.0.1", "torchvision": "0.15.2", "transformers": "4.30.2"})
 def NLP_CONNECT_VIT_GPT2(default: Image) -> DataFrame:
     """The NLP_CONNECT_VIT_GPT2 node captions an input image and produces an output string wrapped in a dataframe.
 
