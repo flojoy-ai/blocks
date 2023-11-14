@@ -70,7 +70,7 @@ def get_output_layers(net):
 def draw_prediction(img, class_id, confidence, x, y, x_plus_w, y_plus_h):
     classes = []
     absolute_path = os.path.dirname(__file__)
-    with open(os.path.join(absolute_path, "yolov3.txt"), "r") as f:
+    with open(os.path.join(absolute_path, "assets/yolov3.txt"), "r") as f:
         classes = [line.strip() for line in f.readlines()]
     COLORS = np.random.uniform(0, 255, size=(len(classes), 3))
 
@@ -133,7 +133,7 @@ def detect_object(img_np_array):
         os.path.join(
             os.path.abspath(os.getcwd()), "PYTHON/utils/object_detection/yolov3.weights"
         ),
-        os.path.join(absolute_path, "yolov3.cfg"),
+        os.path.join(absolute_path, "assets/yolov3.cfg"),
     )
 
     # Create a blob from the image
