@@ -1,23 +1,20 @@
-from flojoy import flojoy, run_in_venv, Image, DataFrame
+import os
+from typing import Dict, List
+
+import numpy as np
+import pandas as pd
+import PIL.Image as PILImage
+from flojoy import DataFrame, Image, flojoy
+from flojoy.utils import FLOJOY_CACHE_DIR
 
 
 @flojoy
-@run_in_venv(
-    pip_dependencies=[
-        "transformers~=4.30.2",
-        "torch~=2.0.1",
-        "Pillow",
-        "numpy",
-        "pandas",
-    ],
-    verbose=True,
-)
 def HUGGING_FACE_PIPELINE(
     default: Image,
     model: str = "google/vit-base-patch16-224",
     revision: str = "main",
 ) -> DataFrame:
-    """Use a Hugging Face classification pipeline to process and classify an image.
+    """The HUGGING_FACE_PIPELINE node uses a classification pipeline to process and classify an image.
 
     For more information about Vision Transformers,
     see: https://huggingface.co/google/vit-base-patch16-224
@@ -47,13 +44,6 @@ def HUGGING_FACE_PIPELINE(
         and 'score' (as the confidence score).
         All scores are between 0 and 1, and sum to 1.
     """
-
-    import os
-    import numpy as np
-    import pandas as pd
-    import PIL.Image as PILImage
-    from flojoy.utils import FLOJOY_CACHE_DIR
-    from typing import List, Dict
 
     # Setting transformers cache directory to flojoy cache directory before importing transformers
     # not to pollute the user's cache directory.

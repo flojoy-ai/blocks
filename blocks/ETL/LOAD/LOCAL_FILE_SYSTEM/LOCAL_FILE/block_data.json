@@ -1,11 +1,11 @@
 {
   "docstring": {
     "long_description": "",
-    "short_description": "Load a local file from disk, infer the type, and convert it to a DataContainer class.",
+    "short_description": "The LOCAL_FILE node loads a local file of a different type and converts it to a DataContainer class.",
     "parameters": [
       {
         "name": "file_path",
-        "type": "File",
+        "type": "str",
         "description": "The path to the file to be loaded. This can be either an absolute path or\na path relative to the \"nodes\" directory."
       },
       {

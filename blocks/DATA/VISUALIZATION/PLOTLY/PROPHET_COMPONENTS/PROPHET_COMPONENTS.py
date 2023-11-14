@@ -1,19 +1,22 @@
-from flojoy import flojoy, run_in_venv, DataFrame, Plotly
+import os
+import sys
+
+import numpy as np
+import pandas as pd
+import prophet
+from flojoy import DataFrame, Plotly, flojoy
+from prophet.plot import plot_components_plotly
+from prophet.serialize import model_from_json
 
 
 @flojoy
-@run_in_venv(
-    pip_dependencies=[
-        "prophet==1.1.5",
-    ]
-)
 def PROPHET_COMPONENTS(default: DataFrame, periods: int = 365) -> Plotly:
-    """Plot the components of a Prophet model trained in the PROPHET_PREDICT block.
+    """The PROPHET_COMPONENTS node plots the components of the prophet model trained in the PROPHET_PREDICT node.
 
     This is the output plotly graph from the 'plot_components_plotly' function from 'prophet.plot'.
-    It expects the trained Prophet model from the PROPHET_PREDICT block as input.
+    It expects the trained Prophet model from the PROPHET_PREDICT node as input.
 
-    If 'run_forecast' was True in that block, the forecasted dataframe will be available as the 'm' attribute of the default input.
+    If 'run_forecast' was True in that node, the forecasted dataframe will be available as the 'm' attribute of the default input.
     Otherwise, this will make the predictions on the raw dataframe (in which case it will be the 'm' attribute of the default input).
 
     You can tell if that forecasted dataframe is available via the 'extra' field of data input, 'run_forecast' (data.extra["run_forecast"]).
@@ -31,7 +34,7 @@ def PROPHET_COMPONENTS(default: DataFrame, periods: int = 365) -> Plotly:
     ----------
     periods : int
         The number of periods out to predict.
-        Only used if the block passed into this block (i.e. PROPHET_PREDICT) did NOT return the forecast.
+        Only used if the node passed into this node (i.e. PROPHET_PREDICT) did NOT return the forecast.
         If the forecast was included in the DataContainer, this parameter will be ignored.
 
         Default = 365
@@ -41,16 +44,6 @@ def PROPHET_COMPONENTS(default: DataFrame, periods: int = 365) -> Plotly:
     Plotly
         the DataContainer containing the Plotly visualization of the prophet model
     """
-
-    import os
-    import sys
-    import prophet
-
-    import pandas as pd
-    import numpy as np
-
-    from prophet.plot import plot_components_plotly
-    from prophet.serialize import model_from_json
 
     def _make_dummy_dataframe_for_prophet():
         """Generate random time series data to test if prophet works"""
