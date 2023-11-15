@@ -32,7 +32,7 @@ To update this component, you need to add/update the docstring on the block's Py
 code itself, and then run `poetry run python3 fjblock.py sync` to regenerate the
 docs page. This will auto regenerate the docstring for you.
 
-IMPORRANT: Please refer to our [docstring style guide](http://localhost:4321/contribution/blocks/block-docstring-styleguide/)
+IMPORTANT: Please refer to our [docstring style guide](/contribution/blocks/docstring-styleguide/)
 to create a valid docstring :)
 
 Example: the [docstring](https://github.com/flojoy-ai/blocks/blob/main/blocks/AI_ML/CLASSIFICATION/ACCURACY/ACCURACY.py)
