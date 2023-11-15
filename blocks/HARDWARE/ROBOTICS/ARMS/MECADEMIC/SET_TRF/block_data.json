@@ -1,0 +1,14 @@
+{
+  "docstring": {
+    "long_description": "Inputs\n------\nip_address: TextBlob\n    The IP address of the robot arm.\n\nParameters\n------\nrf_x: Optional[float]\n    The X coordinate of the reference plane. If not specified, the default value of 0.0 is used.\nrf_y: Optional[float]\n    The Y coordinate of the reference plane. If not specified, the default value of 0.0 is used.\nrf_z: Optional[float]\n    The Z coordinate of the reference plane. If not specified, the default value of 0.0 is used.\nrf_a: Optional[float]\n    The alpha angle of the reference plane. If not specified, the default value of 0.0 is used.\nrf_b: Optional[float]\n    The beta angle of the reference plane. If not specified, the default value of 0.0 is used.\nrf_g: Optional[float]\n    The gamma angle of the reference plane. If not specified, the default value of 0.0 is used.",
+    "short_description": " The SET_TRF node sets the robot arm's reference frame.",
+    "parameters": [],
+    "returns": [
+      {
+        "name": null,
+        "type": "ip_address",
+        "description": "The IP address of the robot arm."
+      }
+    ]
+  }
+}

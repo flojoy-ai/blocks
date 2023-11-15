@@ -18,29 +18,29 @@ def SET_TRF(
     """
      The SET_TRF node sets the robot arm's reference frame.
 
-     Inputs
-     ------
-     ip_address
-         The IP address of the robot arm.
+    Inputs
+    ------
+    ip_address: TextBlob
+        The IP address of the robot arm.
 
-     Parameters
-     ------
-    rfX: Optional[float]
+    Parameters
+    ------
+    rf_x: Optional[float]
         The X coordinate of the reference plane. If not specified, the default value of 0.0 is used.
-    rfY: Optional[float]
+    rf_y: Optional[float]
         The Y coordinate of the reference plane. If not specified, the default value of 0.0 is used.
-    rfZ: Optional[float]
+    rf_z: Optional[float]
         The Z coordinate of the reference plane. If not specified, the default value of 0.0 is used.
-    rfAlpha: Optional[float]
+    rf_a: Optional[float]
         The alpha angle of the reference plane. If not specified, the default value of 0.0 is used.
-    rfBeta: Optional[float]
+    rf_b: Optional[float]
         The beta angle of the reference plane. If not specified, the default value of 0.0 is used.
-    rfGamma: Optional[float]
+    rf_g: Optional[float]
         The gamma angle of the reference plane. If not specified, the default value of 0.0 is used.
 
     Returns
-     -------
-     ip_address
+    -------
+    ip_address
          The IP address of the robot arm.
 
     """
