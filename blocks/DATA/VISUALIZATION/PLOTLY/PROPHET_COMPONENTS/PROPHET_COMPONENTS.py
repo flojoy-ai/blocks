@@ -3,13 +3,10 @@ import sys
 
 import numpy as np
 import pandas as pd
-import prophet
 from flojoy import DataFrame, Plotly, flojoy
-from prophet.plot import plot_components_plotly
-from prophet.serialize import model_from_json
 
 
-@flojoy
+@flojoy(deps={"prophet": "1.1.5"})
 def PROPHET_COMPONENTS(default: DataFrame, periods: int = 365) -> Plotly:
     """The PROPHET_COMPONENTS node plots the components of the prophet model trained in the PROPHET_PREDICT node.
 
@@ -44,6 +41,9 @@ def PROPHET_COMPONENTS(default: DataFrame, periods: int = 365) -> Plotly:
     Plotly
         the DataContainer containing the Plotly visualization of the prophet model
     """
+    import prophet
+    from prophet.plot import plot_components_plotly
+    from prophet.serialize import model_from_json
 
     def _make_dummy_dataframe_for_prophet():
         """Generate random time series data to test if prophet works"""
