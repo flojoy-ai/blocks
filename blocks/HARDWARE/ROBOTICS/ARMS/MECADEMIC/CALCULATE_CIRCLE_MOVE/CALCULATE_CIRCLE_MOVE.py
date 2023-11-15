@@ -16,7 +16,7 @@ def CALCULATE_CIRCLE_MOVE(
     point_duration: Optional[int] = 500,
 ) -> DataFrame:
     """
-    The Move circle node moves in a circle relative to a reference plane.
+    The Calculate Circle Move node moves in a circle relative to a reference plane. This node's output can be fed into a move keyframes node to create a movement along a circular path of a given radius and center point. This is not an opertaion on the robot, just generating keyframes.. It can feed into a move keyframes node to define a move for a Mecademic arm. Blending is recommended for a smooth circular move.
 
     Parameters:
     -------

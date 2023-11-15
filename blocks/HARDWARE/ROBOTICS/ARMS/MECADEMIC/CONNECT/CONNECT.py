@@ -9,7 +9,7 @@ from PYTHON.utils.mecademic_state.mecademic_state import (
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def CONNECT(ip_address: str, simulator: bool = False) -> TextBlob:
     """
-    The CONNECT node establishes a connection to the Mecademic robot arm via its API and activates the robot arm.
+    The CONNECT node establishes a connection to the Mecademic robot arm via HTTP and activates the robot arm. The IP Address to use is the same one that is used to access the Mecademic web interface. Example: 192.168.0.100
 
     Parameters
     ----------
@@ -22,7 +22,7 @@ def CONNECT(ip_address: str, simulator: bool = False) -> TextBlob:
     Returns
     -------
     String
-       The IP address of the robot arm.
+       The IP address of the robot arm, used in other Mecademic nodes to establish which arm they are communicating with.
     """
     init_handle_map(allow_reinit=True)
     add_handle(ip_address)

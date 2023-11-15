@@ -13,7 +13,7 @@ def MOVE_CIRCLE(
     revolutions: Optional[float] = 1.0,
 ) -> TextBlob:
     """
-    The Move circle node moves in a circle relative to a reference plane.
+    MOVE CIRCLE is an action node that moves the mecademic robot along a circular path defined by a center point about its current position.. It is equivalent to the combination of generating circle keyframes at the robot's current position and then running move keyframes. This node is useful for executing circular moves in tool relative space. A high blending value is recommended for a smooth circular move.
 
     Inputs
     ------
