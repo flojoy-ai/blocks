@@ -42,12 +42,8 @@ def NLP_CONNECT_VIT_GPT2(default: Image) -> DataFrame:
         pixel_values = feature_extractor(
             images=[image], return_tensors="pt"
         ).pixel_values  # type: ignore
-        output_ids = model.generate(
-            pixel_values, max_length=16, num_beams=4
-        )  # type: ignore
-        preds = tokenizer.batch_decode(
-            output_ids, skip_special_tokens=True
-        )  # type: ignore
+        output_ids = model.generate(pixel_values, max_length=16, num_beams=4)  # type: ignore
+        preds = tokenizer.batch_decode(output_ids, skip_special_tokens=True)  # type: ignore
         pred = preds[0].strip()
 
     df_pred = pd.DataFrame.from_records([(pred,)], columns=["caption"])
