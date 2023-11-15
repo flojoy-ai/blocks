@@ -1,6 +1,5 @@
 import os
 from typing import Dict, List
-
 import numpy as np
 import pandas as pd
 import PIL.Image as PILImage
@@ -8,7 +7,7 @@ from flojoy import DataFrame, Image, flojoy
 from flojoy.utils import FLOJOY_CACHE_DIR
 
 
-@flojoy
+@flojoy(deps={"transformers": "4.30.2"})
 def HUGGING_FACE_PIPELINE(
     default: Image,
     model: str = "google/vit-base-patch16-224",
@@ -48,13 +47,14 @@ def HUGGING_FACE_PIPELINE(
     # Setting transformers cache directory to flojoy cache directory before importing transformers
     # not to pollute the user's cache directory.
     os.environ["TRANSFORMERS_CACHE"] = os.path.join(FLOJOY_CACHE_DIR, "transformers")
-    from transformers import pipeline
+
+    from transformers import pipeline as ts_pipeline
 
     # Using Vision Transformer, a general purpose vision model.
     # See: https://huggingface.co/google/vit-base-patch16-224
     # Lists of revisions: https://huggingface.co/google/vit-base-patch16-224/commits/main
     # TODO: find a way to set the revision and model name as parameters.
-    pipeline = pipeline("image-classification", model=model, revision=revision)
+    pipeline = ts_pipeline("image-classification", model=model, revision=revision)
 
     # Convert input image
     input_image = default

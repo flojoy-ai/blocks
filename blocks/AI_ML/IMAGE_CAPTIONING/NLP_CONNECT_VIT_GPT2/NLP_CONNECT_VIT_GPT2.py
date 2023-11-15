@@ -6,7 +6,7 @@ import transformers
 from flojoy import DataFrame, Image, flojoy, snapshot_download
 
 
-@flojoy
+@flojoy(deps={"torch": "2.0.1", "torchvision": "0.15.2", "transformers": "4.30.2"})
 def NLP_CONNECT_VIT_GPT2(default: Image) -> DataFrame:
     """The NLP_CONNECT_VIT_GPT2 node captions an input image and produces an output string wrapped in a dataframe.
 
@@ -42,12 +42,8 @@ def NLP_CONNECT_VIT_GPT2(default: Image) -> DataFrame:
         pixel_values = feature_extractor(
             images=[image], return_tensors="pt"
         ).pixel_values  # type: ignore
-        output_ids = model.generate(
-            pixel_values, max_length=16, num_beams=4
-        )  # type: ignore
-        preds = tokenizer.batch_decode(
-            output_ids, skip_special_tokens=True
-        )  # type: ignore
+        output_ids = model.generate(pixel_values, max_length=16, num_beams=4)  # type: ignore
+        preds = tokenizer.batch_decode(output_ids, skip_special_tokens=True)  # type: ignore
         pred = preds[0].strip()
 
     df_pred = pd.DataFrame.from_records([(pred,)], columns=["caption"])
