@@ -15,6 +15,9 @@ def MOVE_KEYFRAMES_LIN(
 
     Set a tool reference frame (TRF) to move the robot's tool relative to the TRF. The TRF is set using the SET_TRF node.
 
+
+    Parameters
+    ----------
     Inputs
     ------
     ip_address: TextBlob
@@ -22,11 +25,6 @@ def MOVE_KEYFRAMES_LIN(
     keyframes: DataFrame
         A dataframe containing the keyframes to move to. The dataframe must have the following columns:
         x, y, z, alpha, beta, gamma, duration. The duration column is the time in seconds to move to the next keyframe.
-
-    Parameters
-    ----------
-    blending: Optional[float]
-        The blending factor to use when moving between keyframes. If not specified, the default value of 0.0 is used.
 
     Returns
     -------

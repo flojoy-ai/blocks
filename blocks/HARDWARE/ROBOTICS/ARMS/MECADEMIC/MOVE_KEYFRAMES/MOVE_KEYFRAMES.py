@@ -1,4 +1,3 @@
-from typing import Optional
 from flojoy import flojoy, TextBlob, DataFrame
 from PYTHON.utils.mecademic_state.mecademic_calculations import calculateLimitingMaxVel
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
@@ -7,12 +6,12 @@ from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 
 @safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
-def MOVE_KEYFRAMES(
-    ip_address: TextBlob, keyframes: DataFrame, blending: Optional[float] = 0.0
-) -> TextBlob:
+def MOVE_KEYFRAMES(ip_address: TextBlob, keyframes: DataFrame) -> TextBlob:
     """
     The MOVE_KEYFRAMES node linearly moves the robot's tool according to a set of 3d animation style keyframes.
 
+    Parameters
+    ----------
     Inputs
     ------
     ip_address: TextBlob
@@ -20,11 +19,6 @@ def MOVE_KEYFRAMES(
     keyframes: DataFrame
         A dataframe containing the keyframes to move to. The dataframe must have the following columns:
         x, y, z, alpha, beta, gamma, duration. The duration column is the time in seconds to move to the next keyframe.
-
-    Parameters
-    ----------
-    blending: Optional[float]
-        The blending factor to use when moving between keyframes. If not specified, the default value of 0.0 is used.
 
     Returns
     -------
@@ -44,9 +38,6 @@ def MOVE_KEYFRAMES(
         if keyframes[column].dtype != "float64":
             raise ValueError(f"Keyframes dataframe column {column} must be numeric")
 
-    # Set blending
-
-    robot.SetBlending(min(blending, 100.0))
     # Move execution
     for index, row in keyframes.iterrows():
         vel = calculateLimitingMaxVel(
