@@ -11,24 +11,24 @@ def SWEEP_SETTINGS_FSV(
     start: float = 1e7,
     stop: float = 1e8,
     sweep_type: Literal["sweep", "FFT", "auto"] = "auto",
+    sweep_time: float = 0,
     counts: int = 10,
     points: int = 1000,
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The SWEEP_SETTINGS_FSV node sets sweep settings for a FSV.
-
+    """Set sweep settings for a FSV.
     Note that span/center and start/stop can be used equivalently if:
     start = center - (span / 2) and stop = center + (span / 2).
 
-    Requires a CONNECTION_FSV node at the start of the app to connect with
+    Requires a CONNECTION_FSV block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible R&S network analyzers.
+    This block should also work with compatible R&S network analyzers.
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_FSV node).
+        The VISA address (requires the CONNECTION_FSV block).
     span_or_range: select
         X axis range, span (center and span) or range (start and stop).
     center: float
@@ -41,6 +41,8 @@ def SWEEP_SETTINGS_FSV(
         The end point of the x axis, in Hz.
     sweep_type: select
         How the FSV sweeps along the x axis range.
+    sweep_type: float
+        The sweep time (set to auto if = 0), in seconds.
     counts: int
         Number of sweeps to do, (average optional in INIT_SWEEP_FSV).
     points: int
@@ -69,6 +71,11 @@ def SWEEP_SETTINGS_FSV(
     if sweep_type == "sweep":
         sweep_type = "SWE"
     rohde.write(f"SWE:TYPE {sweep_type.upper()}")
+
+    if sweep_time == 0:
+        rohde.write("SWE:TIME:AUTO ON")
+    else:
+        rohde.write(f"SWE:TIME {sweep_time}")
 
     rohde.write(f"SWE:COUN {counts}")
     rohde.write(f"SWE:POIN {points}")

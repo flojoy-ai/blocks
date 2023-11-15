@@ -13,20 +13,20 @@ def TRIGGER_SETTINGS_MDO3XXX(
     edge_slope: Literal["unchanged", "rise", "fall", "either"] = "unchanged",
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The TRIGGER_SETTINGS_MDO3XXX node sets advanced trigger settings.
+    """Sets advanced trigger settings for an MDO3XXX oscilloscope.
 
     Note that "unchanged" will leave the settings unchanged.
 
-    Requires a CONNECTION_MDO3XXX node at the start of the app to connect with
+    Requires a CONNECTION_MDO3XXX block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible Tektronix scopes (untested):
+    This block should also work with compatible Tektronix scopes (untested):
     MDO4xxx, MSO4xxx, and DPO4xxx.
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_MDO3XXX node).
+        The VISA address (requires the CONNECTION_MDO3XXX block).
     query_set: str
         Whether to query or set the triggering channel.
     edge_couplings: str

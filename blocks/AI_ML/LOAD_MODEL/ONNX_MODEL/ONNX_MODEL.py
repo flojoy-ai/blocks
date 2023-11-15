@@ -1,20 +1,18 @@
-from flojoy import flojoy, run_in_venv, Vector
+from flojoy import flojoy, Vector
 from flojoy.utils import FLOJOY_CACHE_DIR
 
 
-@flojoy
-@run_in_venv(
-    pip_dependencies=[
-        "onnxruntime",
-        "numpy",
-        "onnx",
-    ]
+@flojoy(
+    deps={
+        "onnxruntime": None,
+        "onnx": None,
+    }
 )
 def ONNX_MODEL(
     file_path: str,
     default: Vector,
 ) -> Vector:
-    """ONNX_MODEL loads a serialized ONNX model and uses it to make predictions using ONNX Runtime.
+    """Load a serialized ONNX model and uses it to make predictions using ONNX Runtime.
 
     This allows supporting a wide range of deep learning frameworks and hardware platforms.
 

@@ -1,0 +1,20 @@
+{
+  "docstring": {
+    "long_description": "",
+    "short_description": "Establish a connection to the Mecademic robot arm via its API.",
+    "parameters": [
+      {
+        "name": "ip_address",
+        "type": "str",
+        "description": "The IP address of the robot arm."
+      }
+    ],
+    "returns": [
+      {
+        "name": null,
+        "type": "String",
+        "description": "The IP address of the robot arm."
+      }
+    ]
+  }
+}

@@ -20,7 +20,7 @@ def FLOJOY_CLOUD_UPLOAD(
     default: DataContainer,
     measurement_id: str,
 ) -> DataContainer:
-    """The FLOJOY_CLOUD_UPLOAD node takes a DataContainer as input and uploads it to Flojoy Cloud.
+    """Upload a DataContainer to Flojoy Cloud (beta).
 
     Flojoy Cloud is still in beta, feel free to try it out and give us feedback!
 

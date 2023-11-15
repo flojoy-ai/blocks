@@ -1,19 +1,16 @@
-from flojoy import DataFrame, Image, flojoy, run_in_venv
+from flojoy import DataFrame, Image, flojoy
 
 
-@flojoy
-@run_in_venv(
-    pip_dependencies=[
-        "torch==2.0.1",
-        "torchvision==0.15.2",
-        "numpy",
-        "Pillow",
-    ]
+@flojoy(
+    deps={
+        "torch": "2.0.1",
+        "torchvision": "0.15.2",
+    }
 )
 def TORCHSCRIPT_CLASSIFIER(
     input_image: Image, class_names: DataFrame, model_path: str
 ) -> DataFrame:
-    """Execute a torchscript classifier against an input image.
+    """Execute a TorchScript classifier against an input image.
 
     Parameters
     ----------

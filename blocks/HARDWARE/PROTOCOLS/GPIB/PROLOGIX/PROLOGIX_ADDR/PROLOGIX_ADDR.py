@@ -9,12 +9,12 @@ def PROLOGIX_ADDR(
     default: Optional[DataContainer] = None,
     addr: int = 22,
 ) -> TextBlob:
-    """The PROLOGIX_ADDR node sets the GPIB address of an instrument using the Prologix USB-to-GPIB or USB-to-Ethernet adapter.
+    """Set the GPIB address of an instrument using the Prologix USB-to-GPIB or USB-to-Ethernet adapter.
 
     Inputs
     ------
     default: DataContainer
-        Any DataContainer - likely connected to the output of the OPEN_SERIAL node.
+        Any DataContainer - likely connected to the output of the OPEN_SERIAL block.
 
     Parameters
     ----------

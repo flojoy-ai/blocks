@@ -7,7 +7,7 @@ def RETURN_ERRORS_33510B(
     connection: VisaConnection,
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The RETURN_ERRORS_33510B node returns error messages from the WFG.
+    """Return error messages from a supported function generator.
 
     Error retrival is first-in-first-out (FIFO). Returning errors clears them
     from the instruments queue.

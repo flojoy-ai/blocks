@@ -16,7 +16,7 @@ def MOVE_POSE(
     gamma: Optional[float] = 0,
 ) -> TextBlob:
     """
-    The MOVE_POSE node moves the robot to a specified pose in space.
+    Move the robot to a specified pose in space.
 
     Inputs
     ------

@@ -1,12 +1,12 @@
-from flojoy import flojoy, run_in_venv, DataFrame, Plotly
+import os
+import sys
+
+import numpy as np
+import pandas as pd
+from flojoy import DataFrame, Plotly, flojoy
 
 
-@flojoy
-@run_in_venv(
-    pip_dependencies=[
-        "prophet==1.1.5",
-    ]
-)
+@flojoy(deps={"prophet": "1.1.5"})
 def PROPHET_COMPONENTS(default: DataFrame, periods: int = 365) -> Plotly:
     """The PROPHET_COMPONENTS node plots the components of the prophet model trained in the PROPHET_PREDICT node.
 
@@ -41,14 +41,7 @@ def PROPHET_COMPONENTS(default: DataFrame, periods: int = 365) -> Plotly:
     Plotly
         the DataContainer containing the Plotly visualization of the prophet model
     """
-
-    import os
-    import sys
     import prophet
-
-    import pandas as pd
-    import numpy as np
-
     from prophet.plot import plot_components_plotly
     from prophet.serialize import model_from_json
 

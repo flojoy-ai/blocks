@@ -12,20 +12,20 @@ def TRIGGER_DS1074Z(
     coupling: Literal["AC", "DC", "LFReject", "HFReject", "unchanged"] = "DC",
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The TRIGGER_DS1074Z node changes the trigger settings for the DS1074Z.
+    """Change the trigger settings for the DS1074Z oscilloscope.
 
     If 'query_set' is set to query the trigger settings will be queried and
     left unchanged.
 
-    Requires a CONNECTION_DS1074Z node at the start of the app to connect with
+    Requires a CONNECTION_DS1074Z block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible DS1000Z oscilloscopes
+    This block should also work with compatible DS1000Z oscilloscopes
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_DS1074Z node).
+        The VISA address (requires the CONNECTION_DS1074Z block).
     query_set: select:
         "query" or "set" the trigger settings.
     channel: select

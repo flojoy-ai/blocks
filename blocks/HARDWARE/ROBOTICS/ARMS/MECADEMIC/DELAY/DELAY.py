@@ -10,7 +10,7 @@ def DELAY(
     time: float,
 ) -> TextBlob:
     """
-    The DELAY node delays the action between two nodes.
+    Delay the action between two blocks.
 
     Inputs
     ------

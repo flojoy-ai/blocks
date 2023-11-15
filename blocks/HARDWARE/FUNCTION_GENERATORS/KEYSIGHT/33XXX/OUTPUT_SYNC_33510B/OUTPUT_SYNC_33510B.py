@@ -9,7 +9,7 @@ def OUTPUT_SYNC_33510B(
     channel: Literal["1", "2"] = "1",
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The OUTPUT_SYNC_33510B node is used sync multiple outputs phases.
+    """Sync multiple output phases of a supported function generator.
 
     Can only be turned on for one channel.
 

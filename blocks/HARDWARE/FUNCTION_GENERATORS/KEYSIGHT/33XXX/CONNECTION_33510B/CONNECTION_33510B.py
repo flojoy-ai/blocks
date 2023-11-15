@@ -10,7 +10,7 @@ def CONNECTION_33510B(
     device: VisaDevice,
     default: Optional[DataContainer] = None,
 ) -> Optional[DataContainer]:
-    """The CONNECTION_33510B node connects Flojoy to a 33510B function generator.
+    """Connect Flojoy to a 33510B function generator.
 
     The connection is made with the VISA address in the Flojoy UI.
 

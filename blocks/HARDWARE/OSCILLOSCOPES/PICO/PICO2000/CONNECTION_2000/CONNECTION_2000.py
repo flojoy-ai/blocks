@@ -9,7 +9,7 @@ from picosdk.functions import assert_pico2000_ok
 def CONNECTION_2000(
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The CONNECTION_2000 node connects Flojoy to an available Picoscope.
+    """Connect Flojoy to an available Picoscope.
 
     If more than one P2000 oscilloscope is available, the first one connected
     to the PC will likely be chosen. If you need specific device selection,

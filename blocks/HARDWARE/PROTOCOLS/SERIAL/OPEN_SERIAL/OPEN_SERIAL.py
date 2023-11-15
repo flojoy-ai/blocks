@@ -6,7 +6,7 @@ from flojoy.connection_manager import DeviceConnectionManager
 
 @flojoy(deps={"pyserial": "3.5"})
 def OPEN_SERIAL(device: SerialDevice, baudrate: int = 9600) -> TextBlob:
-    """The OPEN_SERIAL node opens a serial connection through your computer's USB or RS-232 port.
+    """Open a serial connection through your computer's USB or RS-232 port.
 
     Parameters
     ----------

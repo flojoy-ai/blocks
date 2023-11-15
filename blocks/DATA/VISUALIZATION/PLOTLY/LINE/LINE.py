@@ -7,7 +7,7 @@ from pandas.api.types import is_datetime64_any_dtype
 
 @flojoy
 def LINE(default: OrderedPair | DataFrame | Matrix | Vector) -> Plotly:
-    """The LINE node creates a Plotly Line visualization for a given input DataContainer.
+    """Create a Plotly Line visualization for a given input DataContainer.
 
     Parameters
     ----------

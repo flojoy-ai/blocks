@@ -10,12 +10,12 @@ def PROLOGIX_VER(
     connection: SerialConnection,
     default: Optional[DataContainer] = None,
 ) -> TextBlob:
-    """The PROLOGIX_VER command queries the Prologix USB-to-GPIB firmware version.
+    """Query the Prologix USB-to-GPIB firmware version.
 
     Inputs
     ------
     default: DataContainer
-        Any DataContainer - likely connected to the output of the OPEN_SERIAL node.
+        Any DataContainer - likely connected to the output of the OPEN_SERIAL block.
 
     Parameters
     ----------

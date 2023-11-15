@@ -16,7 +16,7 @@ def RAND(
     normal_standard_deviation: float = 1,
     poisson_events: float = 1,
 ) -> Vector | Scalar:
-    """The RAND node generates a random number or a list of random numbers, depending on the distribution selected.
+    """Generate a random number or Vector of random numbers, depending on the distribution selected.
 
     Inputs
     ------

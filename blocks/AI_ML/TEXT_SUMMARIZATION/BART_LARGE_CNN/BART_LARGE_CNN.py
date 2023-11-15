@@ -1,17 +1,9 @@
-from flojoy import flojoy, run_in_venv, DataFrame
+from flojoy import flojoy, DataFrame
 
 
-@flojoy
-@run_in_venv(
-    pip_dependencies=[
-        "transformers==4.30.2",
-        "torch==2.0.1",
-        "torchvision==0.15.2",
-        "pandas",
-    ]
-)
+@flojoy(deps={"transformers": "4.30.2", "torch": "2.0.1", "torchvision": "0.15.2"})
 def BART_LARGE_CNN(default: DataFrame) -> DataFrame:
-    """The BART_LARGE_CNN node takes an input dataframe with multiple rows and a single column, and produces a dataframe with a single "summary_text" column.
+    """Take an input dataframe with multiple rows and a single column, then produce a dataframe with a single "summary_text" column.
 
     The "summary_text" column contains a summary of the text in the corresponding row of the input dataframe.
 

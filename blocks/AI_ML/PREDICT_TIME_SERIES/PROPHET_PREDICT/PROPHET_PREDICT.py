@@ -1,16 +1,11 @@
-from flojoy import DataFrame, flojoy, run_in_venv
+from flojoy import DataFrame, flojoy
 
 
-@flojoy
-@run_in_venv(
-    pip_dependencies=[
-        "prophet==1.1.5",
-    ]
-)
+@flojoy(deps={"prophet": "1.1.5"})
 def PROPHET_PREDICT(
     default: DataFrame, run_forecast: bool = True, periods: int = 365
 ) -> DataFrame:
-    """The PROPHET_PREDICT node runs a Prophet model on the incoming dataframe.
+    """Run a Prophet time series prediction model on an incoming dataframe.
 
     The DataContainer input type must be a dataframe, and the first column (or index) of the dataframe must be of a datetime type.
 

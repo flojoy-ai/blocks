@@ -9,18 +9,18 @@ def MEASURE_PHASE_MDO3XXX(
     channel2: int = 1,
     default: Optional[DataContainer] = None,
 ) -> Scalar:
-    """The MEASURE_PHASE_MDO3XXX node measures the phase between two channels.
+    """Measure the phase between two channels on an MDO3XXX oscilloscope.
 
-    Requires a CONNECTION_MDO3XXX node at the start of the app to connect with
+    Requires a CONNECTION_MDO3XXX block at the start of the app to connect with
     the instrument. The VISA address will then be listed under 'connection'.
 
-    This node should also work with compatible Tektronix scopes (untested):
+    This block should also work with compatible Tektronix scopes (untested):
     MDO4xxx, MSO4xxx, and DPO4xxx.
 
     Parameters
     ----------
     connection: VisaConnection
-        The VISA address (requires the CONNECTION_MDO3XXX node).
+        The VISA address (requires the CONNECTION_MDO3XXX block).
     channel1: int
         The first channel.
     channel2: int

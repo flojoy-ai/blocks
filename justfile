@@ -1,6 +1,9 @@
 sync:
   poetry run python3 fjblock.py sync
 
+add args:
+  poetry run python3 fjblock.py add {{invocation_directory()}}/{{args}}
+
 init:
   just init-docs & just init-blocks
 
@@ -24,3 +27,6 @@ dev:
 
 format:
   poetry run ruff format .
+
+lint:
+  poetry run ruff check .

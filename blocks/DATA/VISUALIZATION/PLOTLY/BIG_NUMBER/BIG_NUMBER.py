@@ -24,7 +24,7 @@ def BIG_NUMBER(
     relative_delta: bool = True,
     scientific_notation: bool = False,
 ) -> Plotly:
-    """The BIG_NUMBER node generates a Plotly figure, displaying a big number with an optional prefix and suffix.
+    """Generate a Plotly figure, displaying a big number with an optional prefix and suffix.
 
     Inputs
     ------

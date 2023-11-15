@@ -7,7 +7,7 @@ from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def HOME(ip_address: TextBlob) -> TextBlob:
     """
-    The HOME node homes the robot arm. This node is required to be run before any other robot arm movement. It is recommended to run this node immediately after "ACTIVATE".
+    Home the robot arm. This block is required to be run before any other robot arm movement. It is recommended to run this block immediately after "ACTIVATE".
 
     Inputs
     ------
