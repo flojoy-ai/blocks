@@ -20,8 +20,8 @@ def MOVE_CIRCLE(
     ip_address: TextBlob
         The IP address of the robot arm.
 
-    Parameters:
-    -------
+    Parameters
+    ----------
     radius: Optional[float]
         The radius of the circle. If not specified, the default value of 0.0 is used.
     revolutions: Optional[float]

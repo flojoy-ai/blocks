@@ -1,8 +1,30 @@
 {
   "docstring": {
-    "long_description": "Inputs\n------\nip_address\n    The IP address of the robot arm.",
+    "long_description": "",
     "short_description": "DISCONNECT disconnects the Mecademic robot arm via its API. This is required if the arm is to be used without rebooting.",
-    "parameters": [],
-    "returns": []
+    "parameters": [
+      {
+        "name": "Inputs",
+        "type": null,
+        "description": null
+      },
+      {
+        "name": "------",
+        "type": null,
+        "description": null
+      },
+      {
+        "name": "ip_address",
+        "type": "TextBlob",
+        "description": "The IP address of the robot arm."
+      }
+    ],
+    "returns": [
+      {
+        "name": null,
+        "type": "None",
+        "description": null
+      }
+    ]
   }
 }

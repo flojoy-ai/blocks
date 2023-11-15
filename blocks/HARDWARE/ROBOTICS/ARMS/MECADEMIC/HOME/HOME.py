@@ -9,18 +9,16 @@ def HOME(ip_address: TextBlob) -> TextBlob:
     """
     Home the robot arm. This block is required to be run before any other robot arm movement. It is recommended to run this block immediately after "ACTIVATE". The robot is expected to move a little bit during the running of this node.
 
-
+    Parameters
+    ----------
     Inputs
     ------
-    ip_address
+    ip_address: TextBlob
         The IP address of the robot arm.
-
-    Parameters
-    ------
 
     Returns
     -------
-    ip_address
+    ip_address: TextBlob
         The IP address of the robot arm.
     """
     robot = query_for_handle(ip_address)

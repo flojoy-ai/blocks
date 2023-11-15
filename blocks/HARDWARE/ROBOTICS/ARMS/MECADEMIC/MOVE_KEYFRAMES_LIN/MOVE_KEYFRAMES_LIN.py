@@ -23,8 +23,8 @@ def MOVE_KEYFRAMES_LIN(
         A dataframe containing the keyframes to move to. The dataframe must have the following columns:
         x, y, z, alpha, beta, gamma, duration. The duration column is the time in seconds to move to the next keyframe.
 
-    Parameters:
-    -------
+    Parameters
+    ----------
     blending: Optional[float]
         The blending factor to use when moving between keyframes. If not specified, the default value of 0.0 is used.
 

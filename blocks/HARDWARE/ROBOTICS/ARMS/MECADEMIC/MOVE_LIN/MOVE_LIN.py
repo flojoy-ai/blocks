@@ -24,7 +24,7 @@ def MOVE_LIN(
         The IP address of the robot arm.
 
     Parameters
-    ------
+    ----------
     x : float
         The x coordinate of the position to move to
     y : float
@@ -40,7 +40,7 @@ def MOVE_LIN(
 
     Returns
     -------
-    ip_address
+    ip_address: TextBlob
         The IP address of the robot arm.
 
     """

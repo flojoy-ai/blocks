@@ -24,7 +24,7 @@ def MOVE_JOINT(
         The IP address of the robot arm.
 
     Parameters
-    ------
+    ----------
     x : float
         The x coordinate of the position to move to
     y : float

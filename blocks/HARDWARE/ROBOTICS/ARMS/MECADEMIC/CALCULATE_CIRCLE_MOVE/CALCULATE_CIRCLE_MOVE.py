@@ -18,8 +18,8 @@ def CALCULATE_CIRCLE_MOVE(
     """
     The Calculate Circle Move node moves in a circle relative to a reference plane. This node's output can be fed into a move keyframes node to create a movement along a circular path of a given radius and center point. This is not an opertaion on the robot, just generating keyframes.. It can feed into a move keyframes node to define a move for a Mecademic arm. Blending is recommended for a smooth circular move.
 
-    Parameters:
-    -------
+    Parameters
+    ----------
     center_X: Optional[float]
         The X coordinate of the center of the circle. If not specified, the default value of 0.0 is used.
     center_Y: Optional[float]

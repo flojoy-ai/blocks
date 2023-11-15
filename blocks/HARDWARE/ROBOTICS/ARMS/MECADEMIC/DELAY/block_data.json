@@ -1,12 +1,33 @@
 {
   "docstring": {
-    "long_description": "Inputs\n------\nip_address: TextBlob\n    The IP address of the robot arm.\n\ntime: float\n    The time of delay in seconds.",
+    "long_description": "",
     "short_description": "Delay the action between two blocks.",
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "Inputs",
+        "type": null,
+        "description": null
+      },
+      {
+        "name": "------",
+        "type": null,
+        "description": null
+      },
+      {
+        "name": "ip_address",
+        "type": "TextBlob",
+        "description": "The IP address of the robot arm."
+      },
+      {
+        "name": "time",
+        "type": "float",
+        "description": "The time of delay in seconds."
+      }
+    ],
     "returns": [
       {
-        "name": null,
-        "type": "ip_address",
+        "name": "ip_address",
+        "type": "TextBlob",
         "description": "The IP address of the robot arm."
       }
     ]

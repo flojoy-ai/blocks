@@ -11,17 +11,17 @@ def SET_JOINT_VEL(ip_address: TextBlob, v: float) -> TextBlob:
 
      Inputs
      ------
-     ip_address
+     ip_address: TextBlob
          The IP address of the robot arm.
 
-     Parameters
-     ------
-     v : float
-         The angular velocity to be set for each joint.
+    Parameters
+    ----------
+    v : float
+        The angular velocity to be set for each joint.
 
     Returns
-     -------
-     ip_address
+    -------
+    ip_address: TextBlob
          The IP address of the robot arm.
 
     """

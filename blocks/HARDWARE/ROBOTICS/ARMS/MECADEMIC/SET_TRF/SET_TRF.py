@@ -24,7 +24,7 @@ def SET_TRF(
         The IP address of the robot arm.
 
     Parameters
-    ------
+    ----------
     rf_x: Optional[float]
         The X coordinate of the reference plane. If not specified, the default value of 0.0 is used.
     rf_y: Optional[float]

@@ -1,8 +1,14 @@
 {
   "docstring": {
-    "long_description": "Inputs\n------\nip_address: TextBlob\n    The IP address of the robot arm.\n\nParameters\n------\nv : float\n    The velocity to be set.",
+    "long_description": "Inputs\n------\nip_address: TextBlob\n    The IP address of the robot arm.",
     "short_description": "Set the robot arm's linear velocity in Cartesian coordinates.",
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "v",
+        "type": "float",
+        "description": "The velocity to be set."
+      }
+    ],
     "returns": [
       {
         "name": null,

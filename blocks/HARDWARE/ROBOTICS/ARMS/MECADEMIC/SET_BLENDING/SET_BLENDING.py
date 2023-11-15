@@ -15,8 +15,8 @@ def SET_BLENDING(ip_address: TextBlob, blending: Optional[float] = 0.0) -> TextB
     ip_address: TextBlob
         The IP address of the robot arm.
 
-    Parameters:
-    -------
+    Parameters
+    ----------
     blending: Optional[float]
         The blending factor to use when moving between keyframes. If not specified, the default value of 0.0 is used.
 

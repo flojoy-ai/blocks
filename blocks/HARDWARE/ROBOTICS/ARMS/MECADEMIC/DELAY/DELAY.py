@@ -11,7 +11,8 @@ def DELAY(
 ) -> TextBlob:
     """
     Delay the action between two blocks.
-
+    Parameters
+    ----------
     Inputs
     ------
     ip_address: TextBlob
@@ -22,7 +23,7 @@ def DELAY(
 
     Returns
     -------
-    ip_address
+    ip_address: TextBlob
         The IP address of the robot arm.
 
     """

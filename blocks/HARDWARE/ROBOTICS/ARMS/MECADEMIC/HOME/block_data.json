@@ -1,12 +1,28 @@
 {
   "docstring": {
-    "long_description": "Inputs\n------\nip_address\n    The IP address of the robot arm.\n\nParameters\n------",
+    "long_description": "",
     "short_description": "Home the robot arm. This block is required to be run before any other robot arm movement. It is recommended to run this block immediately after \"ACTIVATE\". The robot is expected to move a little bit during the running of this node.",
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "Inputs",
+        "type": null,
+        "description": null
+      },
+      {
+        "name": "------",
+        "type": null,
+        "description": null
+      },
+      {
+        "name": "ip_address",
+        "type": "TextBlob",
+        "description": "The IP address of the robot arm."
+      }
+    ],
     "returns": [
       {
-        "name": null,
-        "type": "ip_address",
+        "name": "ip_address",
+        "type": "TextBlob",
         "description": "The IP address of the robot arm."
       }
     ]

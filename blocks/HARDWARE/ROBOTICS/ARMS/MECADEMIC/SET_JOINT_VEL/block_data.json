@@ -1,8 +1,20 @@
 {
   "docstring": {
-    "long_description": "Inputs\n ------\n ip_address\n     The IP address of the robot arm.\n\n Parameters\n ------\n v : float\n     The angular velocity to be set for each joint.\n\nReturns\n -------\n ip_address\n     The IP address of the robot arm.",
+    "long_description": "Inputs\n ------\n ip_address: TextBlob\n     The IP address of the robot arm.",
     "short_description": " The SET_JOINT_VEL node sets the robot arm's angular velocity for its joints.",
-    "parameters": [],
-    "returns": []
+    "parameters": [
+      {
+        "name": "v",
+        "type": "float",
+        "description": "The angular velocity to be set for each joint."
+      }
+    ],
+    "returns": [
+      {
+        "name": "ip_address",
+        "type": "TextBlob",
+        "description": "The IP address of the robot arm."
+      }
+    ]
   }
 }

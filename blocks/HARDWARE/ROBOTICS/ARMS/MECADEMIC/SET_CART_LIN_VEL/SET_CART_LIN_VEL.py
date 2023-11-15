@@ -15,7 +15,7 @@ def SET_CART_LIN_VEL(ip_address: TextBlob, v: float) -> TextBlob:
         The IP address of the robot arm.
 
     Parameters
-    ------
+    ----------
     v : float
         The velocity to be set.
 

@@ -1,8 +1,19 @@
 {
   "docstring": {
-    "long_description": "Inputs\n------\nip_address: TextBlob\n    The IP address of the robot arm.\n\nParameters:\n-------\nradius: Optional[float]\n    The radius of the circle. If not specified, the default value of 0.0 is used.\nrevolutions: Optional[float]\n    The number of revolutions to make. If not specified, the default value of 1.0 is used.",
+    "long_description": "Inputs\n------\nip_address: TextBlob\n    The IP address of the robot arm.",
     "short_description": "MOVE CIRCLE is an action node that moves the mecademic robot along a circular path defined by a center point about its current position.. It is equivalent to the combination of generating circle keyframes at the robot's current position and then running move keyframes. This node is useful for executing circular moves in tool relative space. A high blending value is recommended for a smooth circular move.",
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "radius",
+        "type": "Optional[float]",
+        "description": "The radius of the circle. If not specified, the default value of 0.0 is used."
+      },
+      {
+        "name": "revolutions",
+        "type": "Optional[float]",
+        "description": "The number of revolutions to make. If not specified, the default value of 1.0 is used."
+      }
+    ],
     "returns": [
       {
         "name": null,

@@ -6,12 +6,16 @@ from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 def DISCONNECT(ip_address: TextBlob) -> None:
     """
     DISCONNECT disconnects the Mecademic robot arm via its API. This is required if the arm is to be used without rebooting.
-
+    Parameters
+    ----------
     Inputs
     ------
-    ip_address
+    ip_address: TextBlob
         The IP address of the robot arm.
 
+    Returns
+    -------
+    None
     """
 
     robot = query_for_handle(ip_address.text_blob)
