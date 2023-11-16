@@ -12,5 +12,19 @@ from flojoy import flojoy, DataContainer
 def {block_name}(
     default: DataContainer,
 ) -> DataContainer:
+    \"\"\"A short description for the {block_name} block.
+
+    A long description for the {block_name} block.
+
+    Parameters
+    ----------
+    default: DataContainer
+        The input data container.
+
+    Returns
+    -------
+    DataContainer
+        The output data container
+    \"\"\"
     pass
 """

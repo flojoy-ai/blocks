@@ -12,6 +12,8 @@ def generate_docstring_json() -> bool:
     """
     Will return True if all the docstrings are formatted correctly
     False if there is any docstring format error
+
+    This will also save the JSON data in the docstring key of block_data.json
     """
     error = 0
     # Walk through all the folders and files in the current directory
@@ -31,17 +33,22 @@ def generate_docstring_json() -> bool:
             # Parse the code
             tree = ast.parse(code)
 
+            found_function = False
+
+            block_name = os.path.basename(root)
+
             # Find functions in the code
             for node in ast.walk(tree):
                 if not isinstance(node, ast.FunctionDef):
                     continue
                 function_name = node.name
 
-                if function_name != os.path.basename(root):
+                if function_name != block_name:
                     # don't parse for any function that has a different
                     # name than the node file name
                     continue
 
+                found_function = True
                 # Extract docstring if available
                 if not (
                     node.body
@@ -76,7 +83,7 @@ def generate_docstring_json() -> bool:
                     error += 1
 
                 # Build the JSON data
-                json_data = {
+                docstring_json_data = {
                     "long_description": parsed_docstring.long_description,
                     "short_description": parsed_docstring.short_description,
                     "parameters": [
@@ -98,9 +105,23 @@ def generate_docstring_json() -> bool:
                 }
 
                 # Write the data to a JSON file in the same directory
-                output_file_path = os.path.join(root, "docstring.json")
+                output_file_path = os.path.join(root, "block_data.json")
+
+                if os.path.exists(output_file_path):
+                    with open(output_file_path, "r") as output_file:
+                        existing_json_data = json.load(output_file)
+                else:
+                    existing_json_data = {}
+
+                existing_json_data["docstring"] = docstring_json_data
+
                 with open(output_file_path, "w") as output_file:
-                    json.dump(json_data, output_file, indent=2)
+                    json.dump(existing_json_data, output_file, indent=2)
+
+            if not found_function:
+                print(
+                    f"{ERR_STRING} Could not find the {block_name} function in {block_name}.py! Please make sure there is a function called {block_name}."
+                )
 
     if error > 0:
         print(f"Found {error} [bold red]ERRORS[/bold red] with docstring formatting!")

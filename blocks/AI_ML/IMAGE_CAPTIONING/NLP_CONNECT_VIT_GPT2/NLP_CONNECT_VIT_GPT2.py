@@ -1,17 +1,14 @@
-from flojoy import flojoy, run_in_venv, DataFrame, Image
+import numpy as np
+import pandas as pd
+import torch
+import torchvision.transforms.functional as TF
+import transformers
+from flojoy import DataFrame, Image, flojoy, snapshot_download
 
 
-@flojoy
-@run_in_venv(
-    pip_dependencies=[
-        "transformers==4.30.2",
-        "torch~=2.0.1",
-        "torchvision~=0.15.2",
-    ],
-    verbose=True,
-)
+@flojoy(deps={"torch": "2.0.1", "torchvision": "0.15.2", "transformers": "4.30.2"})
 def NLP_CONNECT_VIT_GPT2(default: Image) -> DataFrame:
-    """Caption an input image and produce an output string wrapped in a dataframe.
+    """The NLP_CONNECT_VIT_GPT2 node captions an input image and produces an output string wrapped in a dataframe.
 
     Parameters
     ----------
@@ -23,14 +20,6 @@ def NLP_CONNECT_VIT_GPT2(default: Image) -> DataFrame:
     DataFrame
         DataFrame containing the caption column and a single row.
     """
-
-    import numpy as np
-    import pandas as pd
-
-    import transformers
-    import torch
-    import torchvision.transforms.functional as TF
-    from flojoy import DataFrame, snapshot_download
 
     r, g, b, a = default.r, default.g, default.b, default.a
     nparray = (

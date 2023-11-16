@@ -8,7 +8,7 @@ def EXTRACT_TRACE_DS1074Z(
     channel: Literal["ch1", "ch2", "ch3", "ch4"] = "ch1",
     default: Optional[DataContainer] = None,
 ) -> OrderedPair:
-    """Extract the trace from an DS1074Z oscilloscope.
+    """Extracts the trace from an DS1074Z oscilloscope.
 
     The trace is defined by the x and y limits as seen on the instrument.
 
