@@ -40,7 +40,7 @@ jobs:
 
       - name: Check if everything is in sync
         run: |
-          if [ -n "$(git status --porcelain)" ]; then
+          if git add . && git diff --quiet && git diff --cached --quiet; then
             echo "No changes found, we are good to go!"
           else
             echo "Error: Changes detected. Please make sure to run the sync command and commit the changes"
