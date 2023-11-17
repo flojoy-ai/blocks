@@ -44,6 +44,7 @@ jobs:
             echo "No changes found, we are good to go!"
           else
             echo "Error: Changes detected. Please make sure to run the sync command and commit the changes"
+            git status --porcelain
             exit 1
           fi
 
