@@ -22,7 +22,7 @@ def SET_JOINT_VEL(ip_address: TextBlob, v: float) -> TextBlob:
 
     Returns
     -------
-    ip_address: TextBlob
+    TextBlob
          The IP address of the robot arm.
 
     """
