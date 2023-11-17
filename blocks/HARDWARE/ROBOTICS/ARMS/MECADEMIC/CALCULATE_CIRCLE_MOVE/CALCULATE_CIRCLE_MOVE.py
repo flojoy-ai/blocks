@@ -20,17 +20,17 @@ def CALCULATE_CIRCLE_MOVE(
 
     Parameters
     ----------
-    center_X: Optional[float]
+    center_X : float
         The X coordinate of the center of the circle. If not specified, the default value of 0.0 is used.
-    center_Y: Optional[float]
+    center_Y : float
         The Y coordinate of the center of the circle. If not specified, the default value of 0.0 is used.
-    center_Z: Optional[float]
+    center_Z : float
         The Z coordinate of the center of the circle. If not specified, the default value of 0.0 is used.
-    radius: Optional[float]
+    radius : float
         The radius of the circle. If not specified, the default value of 0.0 is used.
-    revolutions: Optional[float]
+    revolutions : float
         The number of revolutions to make. If not specified, the default value of 1.0 is used.
-    point_duration: Optional[int]
+    point_duration : int
         The duration of each point in milliseconds. If not specified, the default value of 500 is used.
     Returns
     -------
