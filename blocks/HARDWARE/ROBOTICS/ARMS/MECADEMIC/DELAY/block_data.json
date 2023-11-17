@@ -4,16 +4,6 @@
     "short_description": "Delay the action between two blocks.",
     "parameters": [
       {
-        "name": "Inputs",
-        "type": null,
-        "description": null
-      },
-      {
-        "name": "------",
-        "type": null,
-        "description": null
-      },
-      {
         "name": "ip_address",
         "type": "TextBlob",
         "description": "The IP address of the robot arm."
@@ -26,7 +16,7 @@
     ],
     "returns": [
       {
-        "name": "ip_address",
+        "name": null,
         "type": "TextBlob",
         "description": "The IP address of the robot arm."
       }

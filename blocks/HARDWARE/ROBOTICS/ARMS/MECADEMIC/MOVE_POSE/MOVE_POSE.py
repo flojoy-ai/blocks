@@ -19,7 +19,7 @@ def MOVE_POSE(
     Move the robot to a specified pose in space.
 
     Parameters
-    ---------
+    ----------
     x : float
         The x coordinate of the position to move to
     y : float

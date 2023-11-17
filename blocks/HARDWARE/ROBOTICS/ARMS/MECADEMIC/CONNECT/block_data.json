@@ -17,7 +17,7 @@
     "returns": [
       {
         "name": null,
-        "type": "String",
+        "type": "TextBlob",
         "description": "The IP address of the robot arm, used in other Mecademic nodes to establish which arm they are communicating with."
       }
     ]

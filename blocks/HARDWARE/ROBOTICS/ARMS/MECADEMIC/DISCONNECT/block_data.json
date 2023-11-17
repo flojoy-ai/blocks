@@ -4,16 +4,6 @@
     "short_description": "DISCONNECT disconnects the Mecademic robot arm via its API. This is required if the arm is to be used without rebooting.",
     "parameters": [
       {
-        "name": "Inputs",
-        "type": null,
-        "description": null
-      },
-      {
-        "name": "------",
-        "type": null,
-        "description": null
-      },
-      {
         "name": "ip_address",
         "type": "TextBlob",
         "description": "The IP address of the robot arm."

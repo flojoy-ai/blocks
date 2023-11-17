@@ -4,16 +4,6 @@
     "short_description": "The MOVE_KEYFRAMES node linearly moves the robot's tool according to a set of 3d animation style keyframes.",
     "parameters": [
       {
-        "name": "Inputs",
-        "type": null,
-        "description": null
-      },
-      {
-        "name": "------",
-        "type": null,
-        "description": null
-      },
-      {
         "name": "ip_address",
         "type": "TextBlob",
         "description": "The IP address of the robot arm."
@@ -27,7 +17,7 @@
     "returns": [
       {
         "name": null,
-        "type": "ip_address",
+        "type": "TextBlob",
         "description": "The IP address of the robot arm."
       }
     ]

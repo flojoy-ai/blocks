@@ -1,8 +1,13 @@
 {
   "docstring": {
-    "long_description": "Inputs\n------\nip_address: TextBlob\n    The IP address of the robot arm.",
+    "long_description": "",
     "short_description": "Linearly move the robot's tool to an absolute Cartesian position.",
     "parameters": [
+      {
+        "name": "ip_address",
+        "type": "TextBlob",
+        "description": "The IP address of the robot arm."
+      },
       {
         "name": "x",
         "type": "float",
@@ -37,7 +42,7 @@
     "returns": [
       {
         "name": null,
-        "type": "ip_address",
+        "type": "TextBlob",
         "description": "The IP address of the robot arm."
       }
     ]

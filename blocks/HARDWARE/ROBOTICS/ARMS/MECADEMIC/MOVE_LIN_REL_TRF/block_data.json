@@ -37,7 +37,7 @@
     "returns": [
       {
         "name": null,
-        "type": "ip_address",
+        "type": "TextBlob",
         "description": "The IP address of the robot arm."
       }
     ]
