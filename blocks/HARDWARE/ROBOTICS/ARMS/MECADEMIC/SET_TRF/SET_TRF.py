@@ -25,17 +25,17 @@ def SET_TRF(
 
     Parameters
     ----------
-    rf_x: Optional[float]
+    rf_x: float
         The X coordinate of the reference plane. If not specified, the default value of 0.0 is used.
-    rf_y: Optional[float]
+    rf_y: float
         The Y coordinate of the reference plane. If not specified, the default value of 0.0 is used.
-    rf_z: Optional[float]
+    rf_z: float
         The Z coordinate of the reference plane. If not specified, the default value of 0.0 is used.
-    rf_a: Optional[float]
+    rf_a: float
         The alpha angle of the reference plane. If not specified, the default value of 0.0 is used.
-    rf_b: Optional[float]
+    rf_b: float
         The beta angle of the reference plane. If not specified, the default value of 0.0 is used.
-    rf_g: Optional[float]
+    rf_g: float
         The gamma angle of the reference plane. If not specified, the default value of 0.0 is used.
 
     Returns
