@@ -2,6 +2,8 @@
 title: Block Docstring Styleguide
 description: A styleguide for writing docstrings for Flojoy Blocks.
 slug: "contribution/blocks/docstring-styleguide"
+sidebar:
+  order: 2
 ---
 
 Welcome to the Block Docstring Styleguide to Flojoy Blocks.

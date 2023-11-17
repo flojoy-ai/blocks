@@ -2,6 +2,8 @@
 title: Create a Flojoy Block
 description: Create your own Flojoy Block using Python.
 slug: "contribution/blocks/custom-flojoy-block"
+sidebar:
+  order: 1
 ---
 
 ## Getting Started!

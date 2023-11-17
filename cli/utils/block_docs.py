@@ -1,3 +1,4 @@
+from cli.types.docs_video import DocsVideo
 from cli.utils.markdown_helper import get_markdown_slug
 
 
@@ -37,6 +38,26 @@ import PythonDocsDisplay from "@/components/PythonDocsDisplay.astro";
 """.format(
             block_folder_path=self.block_folder_path,
         )
+        return self
+
+    def add_videos(self, videos: list[DocsVideo]):
+        self.template += """\
+## Videos
+
+import { YouTube } from '@astro-community/astro-embed-youtube';
+
+"""
+        for video in videos:
+            self.template += """\
+### {title}
+
+<div className="not-content">
+<YouTube id="{src}" />
+</div>
+
+""".format(
+                src=video.link, title=video.title
+            )
         return self
 
     def add_python_code(self):
