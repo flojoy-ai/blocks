@@ -1,5 +1,5 @@
 from flojoy import flojoy, TextBlob, DataFrame
-from PYTHON.utils.mecademic_state.mecademic_calculations import calculateLimitingMaxVel
+from PYTHON.utils.mecademic_state.mecademic_calculations import calculate_limiting_max_vel
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 
