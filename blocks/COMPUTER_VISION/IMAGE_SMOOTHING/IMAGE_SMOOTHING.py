@@ -5,7 +5,7 @@ import numpy as np
 from flojoy import Image, flojoy
 
 
-@flojoy(deps={"opencv-python": "4.8.0.76"})
+@flojoy(deps={"opencv-python-headless": "4.8.1.78"})
 def IMAGE_SMOOTHING(
     default: Image,
     kernel: int = 5,
