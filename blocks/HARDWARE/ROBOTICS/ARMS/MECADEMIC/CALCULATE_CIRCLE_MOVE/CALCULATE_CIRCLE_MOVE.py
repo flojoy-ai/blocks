@@ -34,7 +34,7 @@ def CALCULATE_CIRCLE_MOVE(
         The duration of each point in milliseconds. If not specified, the default value of 500 is used.
     Returns
     -------
-    dataframe
+    DataFrame
         A dataframe of keyframes to move to.
 
     """
