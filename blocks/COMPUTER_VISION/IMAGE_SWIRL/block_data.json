@@ -10,13 +10,13 @@
       },
       {
         "name": "gain",
-        "type": "float",
-        "description": "The gain of the logarithmic correction. Default is 1."
+        "type": "float, default=1",
+        "description": "The gain of the logarithmic correction."
       },
       {
         "name": "gamma",
-        "type": "float",
-        "description": "The gamma to correct to. Default is 1."
+        "type": "float, default=1",
+        "description": "The gamma to correct to."
       }
     ],
     "returns": [
