@@ -10,13 +10,13 @@
       },
       {
         "name": "gain",
-        "type": "float",
-        "description": "The gain of the logarithmic correction. Default is 1."
+        "type": "float, default=1",
+        "description": "The gain of the logarithmic correction."
       },
       {
         "name": "inv",
-        "type": "bool",
-        "description": "Perform inverse logarithmic correction?"
+        "type": "bool, default=False",
+        "description": "Perform inverse logarithmic correction."
       }
     ],
     "returns": [

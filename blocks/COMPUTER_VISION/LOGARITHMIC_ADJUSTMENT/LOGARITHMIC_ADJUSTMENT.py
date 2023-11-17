@@ -1,6 +1,6 @@
-from skimage.exposure import adjust_log
 import numpy as np
 from flojoy import Image, flojoy
+from skimage.exposure import adjust_log
 
 
 @flojoy(deps={"scikit-image": "0.21.0"})
@@ -16,10 +16,10 @@ def LOGARITHMIC_ADJUSTMENT(
     ----------
     default: Image
         The input image
-    gain: float
-        The gain of the logarithmic correction. Default is 1.
-    inv: bool
-        Perform inverse logarithmic correction?
+    gain: float, default=1
+        The gain of the logarithmic correction.
+    inv: bool, default=False
+        Perform inverse logarithmic correction.
 
     Returns
     -------
