@@ -1,6 +1,6 @@
-from skimage.transform import swirl
 import numpy as np
 from flojoy import Image, flojoy
+from skimage.transform import swirl
 
 
 @flojoy(deps={"scikit-image": "0.21.0"})
@@ -17,10 +17,10 @@ def IMAGE_SWIRL(
     ----------
     default: Image
         The input image
-    gain: float
-        The gain of the logarithmic correction. Default is 1.
-    gamma: float
-        The gamma to correct to. Default is 1.
+    gain: float, default=1
+        The gain of the logarithmic correction.
+    gamma: float, default=1
+        The gamma to correct to.
 
     Returns
     -------
