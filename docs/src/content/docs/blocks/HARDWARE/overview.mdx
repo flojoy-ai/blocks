@@ -94,7 +94,7 @@ Welcome to Flojoy's Hardware Blocks page. Here you can explore all the hardware 
 <BlockCategory blocks={[{'link': '/blocks/hardware/protocols/scpi/idn', 'name': 'IDN', 'description': "Query a device's identity through the universal *IDN? SCPI command."}, {'link': '/blocks/hardware/protocols/scpi/measure-voltage', 'name': 'MEASURE_VOLTAGE', 'description': "Query an instrument's measured output voltage, such as a DMM or power supply."}, {'link': '/blocks/hardware/protocols/scpi/scpi-write', 'name': 'SCPI_WRITE', 'description': 'Write a SCPI command to a connected bench-top instrument and return the result.'}]} />
 
 #### SERIAL
-<BlockCategory blocks={[{'link': '/blocks/hardware/protocols/serial/open-serial', 'name': 'OPEN_SERIAL', 'description': "Open a serial connection through your computer's USB or RS-232 port."}, {'link': '/blocks/hardware/protocols/serial/serial-single-measurement', 'name': 'SERIAL_SINGLE_MEASUREMENT', 'description': 'Take a single data reading from a connected serial device (such as an Arduino connected by USB).'}, {'link': '/blocks/hardware/protocols/serial/serial-timeseries', 'name': 'SERIAL_TIMESERIES', 'description': 'Extract simple, time-dependent 1D data from an Arduino or a similar serial device.'}]} />
+<BlockCategory blocks={[{'link': '/blocks/hardware/protocols/serial/open-serial', 'name': 'OPEN_SERIAL', 'description': "Open a serial connection through your computer's USB or RS-232 port."}, {'link': '/blocks/hardware/protocols/serial/serial-single-measurement', 'name': 'SERIAL_SINGLE_MEASUREMENT', 'description': 'Takes a single reading of data from a serial device (e.g. Arduino).'}, {'link': '/blocks/hardware/protocols/serial/serial-timeseries', 'name': 'SERIAL_TIMESERIES', 'description': 'Extract simple, time-dependent 1D data from an Arduino or a similar serial device.'}, {'link': '/blocks/hardware/protocols/serial/serial-write', 'name': 'SERIAL_WRITE', 'description': 'Write a custom string to the selected serial device.'}]} />
 
 
 ### ROBOTICS
@@ -107,6 +107,9 @@ Welcome to Flojoy's Hardware Blocks page. Here you can explore all the hardware 
 ### SENSORS
 #### PRESSURE_SENSORS
 <BlockCategory blocks={[{'link': '/blocks/hardware/sensors/pressure-sensors/flexiforce-25lb', 'name': 'FLEXIFORCE_25LB', 'description': 'Convert voltages measured with the Phidget Interface Kit into pressure units.'}]} />
+
+#### THERMISTORS
+<BlockCategory blocks={[{'link': '/blocks/hardware/sensors/thermistors/resistance-to-temperature', 'name': 'RESISTANCE_TO_TEMPERATURE', 'description': 'The RESISTANCE_TO_TEMPERATURE node converts resistance to temperature.'}]} />
 
 #### THERMOCOUPLES
 <BlockCategory blocks={[{'link': '/blocks/hardware/sensors/thermocouples/lm34', 'name': 'LM34', 'description': 'Convert voltages measured with a thermocouple (LM34) connected to a LabJack U3 device into temperature units.'}]} />
