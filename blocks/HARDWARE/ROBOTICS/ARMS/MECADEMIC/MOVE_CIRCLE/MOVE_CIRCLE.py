@@ -9,27 +9,24 @@ from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def MOVE_CIRCLE(
     ip_address: TextBlob,
-    radius: Optional[float] = 0.0,
-    revolutions: Optional[float] = 1.0,
+    radius: float = 0.0,
+    revolutions: float = 1.0,
 ) -> TextBlob:
     """
     MOVE CIRCLE is an action node that moves the mecademic robot along a circular path defined by a center point about its current position.. It is equivalent to the combination of generating circle keyframes at the robot's current position and then running move keyframes. This node is useful for executing circular moves in tool relative space. A high blending value is recommended for a smooth circular move.
 
-    Inputs
-    ------
-    ip_address: TextBlob
-        The IP address of the robot arm.
-
     Parameters
     ----------
-    radius: Optional[float]
+    ip_address: TextBlob
+        The IP address of the robot arm.
+    radius: float
         The radius of the circle. If not specified, the default value of 0.0 is used.
-    revolutions: Optional[float]
+    revolutions: float
         The number of revolutions to make. If not specified, the default value of 1.0 is used.
 
     Returns
     -------
-    ip_address
+    TextBlob
         The IP address of the robot arm.
 
     """

@@ -11,14 +11,14 @@ def HOME(ip_address: TextBlob) -> TextBlob:
 
     Parameters
     ----------
-    Inputs
-    ------
+    Parameters
+    ----------
     ip_address: TextBlob
         The IP address of the robot arm.
 
     Returns
     -------
-    ip_address: TextBlob
+    TextBlob
         The IP address of the robot arm.
     """
     robot = query_for_handle(ip_address)

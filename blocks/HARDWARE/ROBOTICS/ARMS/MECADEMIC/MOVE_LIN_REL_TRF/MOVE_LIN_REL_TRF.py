@@ -11,9 +11,9 @@ def MOVE_LIN_REL_TRF(
     x: float,
     y: float,
     z: float,
-    alpha: Optional[float] = 0,
-    beta: Optional[float] = 0,
-    gamma: Optional[float] = 0,
+    alpha: float = 0,
+    beta: float = 0,
+    gamma: float = 0,
 ) -> TextBlob:
     """
     The MOVE_LIN node linearly moves the robot's tool to an absolute Cartesian position relative to the robot's tool reference frame which is set by the SET_TRF node.
@@ -31,16 +31,16 @@ def MOVE_LIN_REL_TRF(
         The y coordinate of the position to move to
     z : float
         The z coordinate of the position to move to
-    alpha : float, optional
+    alpha : float
         The alpha coordinate (rotation in radians about the x axis) of the position to move to.
-    beta : float, optional
+    beta : float
         The beta coordinate   (rotation in radians about the y axis) of the position to move to.
-    gamma : float, optional
+    gamma : float
         The gamma coordinate (rotation in radians about the z axis) of the position to move to.
 
     Returns
     -------
-    ip_address
+    TextBlob
         The IP address of the robot arm.
 
     """

@@ -40,7 +40,7 @@ def MOVE_JOINT(
 
     Returns
     -------
-    ip_address
+    TextBlob
         The IP address of the robot arm.
 
     """

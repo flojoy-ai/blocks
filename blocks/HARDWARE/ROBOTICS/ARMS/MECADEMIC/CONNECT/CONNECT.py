@@ -21,7 +21,7 @@ def CONNECT(ip_address: str, simulator: bool = False) -> TextBlob:
 
     Returns
     -------
-    String
+    TextBlob
        The IP address of the robot arm, used in other Mecademic nodes to establish which arm they are communicating with.
     """
     init_handle_map(allow_reinit=True)

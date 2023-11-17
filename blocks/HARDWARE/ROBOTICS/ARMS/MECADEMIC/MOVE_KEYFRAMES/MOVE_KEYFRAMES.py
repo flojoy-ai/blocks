@@ -12,8 +12,6 @@ def MOVE_KEYFRAMES(ip_address: TextBlob, keyframes: DataFrame) -> TextBlob:
 
     Parameters
     ----------
-    Inputs
-    ------
     ip_address: TextBlob
         The IP address of the robot arm.
     keyframes: DataFrame
@@ -22,7 +20,7 @@ def MOVE_KEYFRAMES(ip_address: TextBlob, keyframes: DataFrame) -> TextBlob:
 
     Returns
     -------
-    ip_address
+    TextBlob
         The IP address of the robot arm.
 
     """

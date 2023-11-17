@@ -18,8 +18,6 @@ def MOVE_KEYFRAMES_LIN(
 
     Parameters
     ----------
-    Inputs
-    ------
     ip_address: TextBlob
         The IP address of the robot arm.
     keyframes: DataFrame

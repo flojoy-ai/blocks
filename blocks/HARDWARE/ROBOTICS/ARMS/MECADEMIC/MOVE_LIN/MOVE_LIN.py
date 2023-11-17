@@ -40,7 +40,7 @@ def MOVE_LIN(
 
     Returns
     -------
-    ip_address: TextBlob
+    TextBlob
         The IP address of the robot arm.
 
     """
