@@ -11,7 +11,7 @@ init-docs:
   cd docs && pnpm install
 
 init-blocks:
-  poetry install
+  poetry install && poetry run pre-commit install
 
 update:
   just update-docs & just update-blocks
