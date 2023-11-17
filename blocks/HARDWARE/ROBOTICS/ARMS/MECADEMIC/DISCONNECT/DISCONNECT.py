@@ -8,8 +8,8 @@ def DISCONNECT(ip_address: TextBlob) -> None:
     DISCONNECT disconnects the Mecademic robot arm via its API. This is required if the arm is to be used without rebooting.
     Parameters
     ----------
-    Inputs
-    ------
+    Parameters
+    ----------
     ip_address: TextBlob
         The IP address of the robot arm.
 
