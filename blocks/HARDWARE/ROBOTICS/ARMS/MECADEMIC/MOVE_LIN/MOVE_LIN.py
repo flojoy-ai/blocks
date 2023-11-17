@@ -18,11 +18,6 @@ def MOVE_LIN(
     """
     Linearly move the robot's tool to an absolute Cartesian position.
 
-    Inputs
-    ------
-    ip_address: TextBlob
-        The IP address of the robot arm.
-
     Parameters
     ----------
     x : float
@@ -37,6 +32,8 @@ def MOVE_LIN(
         The beta coordinate   (rotation in radians about the y axis) of the position to move to.
     gamma : float, optional
         The gamma coordinate (rotation in radians about the z axis) of the position to move to.
+    ip_address: TextBlob
+        The IP address of the robot arm.
 
     Returns
     -------

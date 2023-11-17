@@ -18,13 +18,10 @@ def MOVE_JOINT(
     """
     Linearly move the robot's tool to an absolute Cartesian position.
 
-    Inputs
-    ------
-    ip_address: TextBlob
-        The IP address of the robot arm.
-
     Parameters
     ----------
+    ip_address: TextBlob
+        The IP address of the robot arm.
     x : float
         The x coordinate of the position to move to
     y : float
