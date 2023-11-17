@@ -1,19 +1,19 @@
 import pandas as pd
 from typing import Optional
 from flojoy import flojoy, DataFrame
-from PYTHON.utils.mecademic_state.mecademic_calculations import getCirclePositions
+from PYTHON.utils.mecademic_state.mecademic_calculations import get_circle_positions
 from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 
 
 @safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def CALCULATE_CIRCLE_MOVE(
-    center_X: Optional[float] = 0.0,
-    center_Y: Optional[float] = 0.0,
-    center_Z: Optional[float] = 0.0,
-    radius: Optional[float] = 0.0,
-    revolutions: Optional[float] = 1.0,
-    point_duration: Optional[int] = 500,
+    center_X: float = 0.0,
+    center_Y: float = 0.0,
+    center_Z: float = 0.0,
+    radius: float = 0.0,
+    revolutions: float = 1.0,
+    point_duration: int = 500,
 ) -> DataFrame:
     """
     The Calculate Circle Move node moves in a circle relative to a reference plane. This node's output can be fed into a move keyframes node to create a movement along a circular path of a given radius and center point. This is not an opertaion on the robot, just generating keyframes.. It can feed into a move keyframes node to define a move for a Mecademic arm. Blending is recommended for a smooth circular move.
