@@ -7,6 +7,7 @@ from rich import print
 from rich.progress import Progress, SpinnerColumn, TextColumn
 
 from cli.constants import BLOCKS_DOCS_FOLDER, BLOCKS_SOURCE_FOLDER, ERR_STRING
+from cli.types.docs_video import DocsVideo
 from cli.utils.block_docs import BlockDocsBuilder
 from cli.utils.generate_docstring_json import generate_docstring_json
 from cli.utils.markdown_helper import get_markdown_slug
@@ -129,7 +130,13 @@ def sync():
                     sys.exit(1)
 
                 with open(os.path.join(root, "block_data.json"), "r") as f:
-                    description = json.load(f)["docstring"]["short_description"]
+                    block_data = json.load(f)
+                    description = block_data["docstring"]["short_description"]
+                    videos = (
+                        [DocsVideo(**video) for video in block_data["videos"]]
+                        if "videos" in block_data
+                        else None
+                    )
 
                 # Keep track of the file tree structure in order to generate
                 # overview pages for all of the top level categories
@@ -161,6 +168,9 @@ def sync():
                         .add_python_docs_display()
                         .add_python_code()
                     )
+
+                    if videos:
+                        result = result.add_videos(videos)
 
                     if (
                         current_block_category not in auto_gen_categories

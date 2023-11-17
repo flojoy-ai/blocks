@@ -36,5 +36,12 @@
         "description": "Summary of channel settings."
       }
     ]
-  }
+  },
+  "videos": [
+    {
+      "title": "Digital Signals Oscilloscope",
+      "source": "youtube",
+      "link": "https://www.youtube.com/watch?v=0KqU-XWji9k"
+    }
+  ]
 }

@@ -1,6 +1,7 @@
-from flojoy import VisaDevice, flojoy, DataContainer
-from flojoy.connection_manager import DeviceConnectionManager
 from typing import Optional
+
+from flojoy import DataContainer, VisaDevice, flojoy
+from flojoy.connection_manager import DeviceConnectionManager
 from qcodes.instrument_drivers.rigol import RigolDS1074Z
 from usb.core import USBError
 
@@ -13,7 +14,6 @@ def CONNECTION_DS1074Z(
     """Connect Flojoy to a DS1074Z oscilloscope.
 
     The connection is made with the VISA address in the Flojoy UI.
-
     This block should also work with compatible DS1000Z oscilloscopes
 
     Parameters

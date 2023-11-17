@@ -1,5 +1,8 @@
 ---
 title: Flojoy Blocks Section
+slug: "contribution/docs/section-guide"
+sidebar:
+  order: 1
 ---
 
 Looking to add/update the docs page for the Flojoy Block you made? Here is a simple
