@@ -1,4 +1,3 @@
-from typing import Optional
 from flojoy import flojoy, TextBlob
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation

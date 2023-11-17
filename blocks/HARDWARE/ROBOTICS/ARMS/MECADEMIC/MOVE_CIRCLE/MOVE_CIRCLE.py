@@ -1,4 +1,3 @@
-from typing import Optional
 from flojoy import flojoy, TextBlob
 from PYTHON.utils.mecademic_state.mecademic_calculations import get_circle_positions
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle

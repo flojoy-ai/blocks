@@ -1,5 +1,7 @@
 from flojoy import flojoy, TextBlob, DataFrame
-from PYTHON.utils.mecademic_state.mecademic_calculations import calculate_limiting_max_vel
+from PYTHON.utils.mecademic_state.mecademic_calculations import (
+    calculate_limiting_max_vel,
+)
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 
@@ -38,7 +40,7 @@ def MOVE_KEYFRAMES(ip_address: TextBlob, keyframes: DataFrame) -> TextBlob:
 
     # Move execution
     for index, row in keyframes.iterrows():
-        vel = calculateLimitingMaxVel(
+        vel = calculate_limiting_max_vel(
             robot.GetJoints(),
             [row["x"], row["y"], row["z"], row["alpha"], row["beta"], row["gamma"]],
             row["duration"],

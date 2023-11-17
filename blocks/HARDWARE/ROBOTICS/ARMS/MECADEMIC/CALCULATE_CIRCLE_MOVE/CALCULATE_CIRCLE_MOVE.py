@@ -1,5 +1,4 @@
 import pandas as pd
-from typing import Optional
 from flojoy import flojoy, DataFrame
 from PYTHON.utils.mecademic_state.mecademic_calculations import get_circle_positions
 from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
@@ -38,7 +37,7 @@ def CALCULATE_CIRCLE_MOVE(
         A dataframe of keyframes to move to.
 
     """
-    positions = getCirclePositions(radius, revolutions, center_X, center_Y, center_Z)
+    positions = get_circle_positions(radius, revolutions, center_X, center_Y, center_Z)
 
     df = pd.DataFrame(
         positions, columns=["x", "y", "z", "alpha", "beta", "gamma", "duration"]
