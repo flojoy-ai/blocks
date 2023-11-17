@@ -13,8 +13,8 @@ def DELAY(
     Delay the action between two blocks.
     Parameters
     ----------
-    Inputs
-    ------
+    Parameters
+    ----------
     ip_address: TextBlob
         The IP address of the robot arm.
 
