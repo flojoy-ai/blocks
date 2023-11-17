@@ -1,39 +1,40 @@
 from typing import Optional
-
-import numpy as np
-import serial
-from flojoy import OrderedPair, SerialDevice, flojoy
+from numpy import array
+from flojoy import Vector, SerialDevice, flojoy, DataContainer
 
 
-@flojoy(deps={"pyserial": "3.5"})
+@flojoy(inject_connection=True)
 def SERIAL_SINGLE_MEASUREMENT(
-    device: SerialDevice,
-    default: Optional[OrderedPair] = None,
-    baudrate: int = 9600,
-) -> OrderedPair:
-    """Take a single data reading from a connected serial device (such as an Arduino connected by USB).
+    connection: SerialDevice,
+    default: Optional[DataContainer] = None,
+) -> Vector:
+    """Takes a single reading of data from a serial device (e.g. Arduino).
+
+    If the data is comma seperated (e.g. 25,26,27) with multiple measurements,
+    a Vector is returned. You should use the VECTOR_INDEXING node to choose
+    the specific measurement you want.
 
     Parameters
     ----------
-    baudrate : int
-        Baud rate for the serial communication.
-    comport : string
+    device : SerialDevice
         Defines the communication port on which the serial device is connected.
 
     Returns
     -------
-    OrderedPair
-        the y axis contains the reading
+    Vector
+        The output from the serial device.
     """
 
-    set = serial.Serial(device.port, timeout=1, baudrate=baudrate)
+    ser = connection.get_handle()
+
     s = ""
     while s == "":
-        s = set.readline().decode()
+        s = ser.readline().decode()
 
     reading = s[:-2].split(",")
-    reading = np.array(reading)  # Create an array
+    reading = array(reading)  # Create an array
     reading = reading.astype("float64")  # Convert the array to float
-    x = np.arange(0, reading.size)  # Create a second array
 
-    return OrderedPair(x=x, y=reading)
+    ser.flush()
+
+    return Vector(v=reading)

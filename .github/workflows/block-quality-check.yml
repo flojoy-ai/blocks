@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        name: Checkout repository 
+        name: Checkout repository
 
       - uses: actions/setup-python@v4
         name: Setup Python 3.10
@@ -40,10 +40,11 @@ jobs:
 
       - name: Check if everything is in sync
         run: |
-          if git diff --quiet; then
+          if git add . && git diff --quiet && git diff --cached --quiet; then
             echo "No changes found, we are good to go!"
           else
             echo "Error: Changes detected. Please make sure to run the sync command and commit the changes"
+            git status --porcelain
             exit 1
           fi
 
@@ -51,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        name: Checkout repository 
+        name: Checkout repository
 
       - uses: chartboost/ruff-action@v1
         name: Ruff format check
@@ -62,8 +63,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        name: Checkout repository 
+        name: Checkout repository
 
       - uses: chartboost/ruff-action@v1
         name: Ruff linter check
-
