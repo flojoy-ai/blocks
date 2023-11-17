@@ -40,7 +40,7 @@ def SET_TRF(
 
     Returns
     -------
-    ip_address
+    TextBlob
          The IP address of the robot arm.
 
     """
