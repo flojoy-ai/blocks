@@ -9,15 +9,12 @@ def SET_CART_LIN_VEL(ip_address: TextBlob, v: float) -> TextBlob:
     """
     Set the robot arm's linear velocity in Cartesian coordinates.
 
-    Inputs
-    ------
-    ip_address: TextBlob
-        The IP address of the robot arm.
-
     Parameters
     ----------
     v : float
         The velocity to be set.
+    ip_address: TextBlob
+        The IP address of the robot arm
 
     Returns
     -------

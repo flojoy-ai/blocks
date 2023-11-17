@@ -10,15 +10,13 @@ def SET_BLENDING(ip_address: TextBlob, blending: float = 0.0) -> TextBlob:
     """
     The SET_BLENDING to make the moves of the robot arm smoother.
 
-    Inputs
-    ------
-    ip_address: TextBlob
-        The IP address of the robot arm.
-
     Parameters
     ----------
     blending: float
         The blending factor to use when moving between keyframes. If not specified, the default value of 0.0 is used.
+    ip_address: TextBlob
+        The IP address of the robot arm.
+
 
     Returns
     -------

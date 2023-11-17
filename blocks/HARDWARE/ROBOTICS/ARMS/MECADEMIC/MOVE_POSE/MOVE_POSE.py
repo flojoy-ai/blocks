@@ -18,13 +18,8 @@ def MOVE_POSE(
     """
     Move the robot to a specified pose in space.
 
-    Inputs
-    ------
-    ip_address
-        The IP address of the robot arm.
-
     Parameters
-    ----------
+    ---------
     x : float
         The x coordinate of the position to move to
     y : float
@@ -37,6 +32,10 @@ def MOVE_POSE(
         The beta coordinate   (rotation in radians about the y axis) of the position to move to.
     gamma : float, optional
         The gamma coordinate (rotation in radians about the z axis) of the position to move to.
+    ip_address
+        The IP address of the robot arm.
+
+
 
     Returns
     -------
