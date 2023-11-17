@@ -1,24 +1,19 @@
 {
   "docstring": {
-    "long_description": "",
-    "short_description": "Take a single data reading from a connected serial device (such as an Arduino connected by USB).",
+    "long_description": "If the data is comma seperated (e.g. 25,26,27) with multiple measurements,\na Vector is returned. You should use the VECTOR_INDEXING node to choose\nthe specific measurement you want.",
+    "short_description": "Takes a single reading of data from a serial device (e.g. Arduino).",
     "parameters": [
       {
-        "name": "baudrate",
-        "type": "int",
-        "description": "Baud rate for the serial communication."
-      },
-      {
-        "name": "comport",
-        "type": "string",
+        "name": "device",
+        "type": "SerialDevice",
         "description": "Defines the communication port on which the serial device is connected."
       }
     ],
     "returns": [
       {
         "name": null,
-        "type": "OrderedPair",
-        "description": "the y axis contains the reading"
+        "type": "Vector",
+        "description": "The output from the serial device."
       }
     ]
   }
