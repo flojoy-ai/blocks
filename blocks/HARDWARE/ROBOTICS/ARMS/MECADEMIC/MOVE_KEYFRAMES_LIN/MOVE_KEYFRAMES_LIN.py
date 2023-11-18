@@ -5,6 +5,7 @@ from PYTHON.utils.mecademic_state.mecademic_calculations import (
     calculate_limiting_max_vel,
 )
 
+
 @safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def MOVE_KEYFRAMES_LIN(
