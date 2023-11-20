@@ -1,15 +1,16 @@
-from flojoy import TextBlob, flojoy
+from flojoy import flojoy, TextBlob
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 
 
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def DISCONNECT(ip_address: TextBlob) -> None:
     """
-    Disconnects the Mecademic robot arm via its API.
-
+    DISCONNECT disconnects the Mecademic robot arm via its API. This is required if the arm is to be used without rebooting.
     Parameters
     ----------
-    ip_address : TextBlob
+    Parameters
+    ----------
+    ip_address: TextBlob
         The IP address of the robot arm.
 
     Returns

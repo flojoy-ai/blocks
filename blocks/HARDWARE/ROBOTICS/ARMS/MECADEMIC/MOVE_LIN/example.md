@@ -1,6 +1,6 @@
 In this example, the `MOVE_LIN` node moves the robot arm in a straight line to a specified Cartesian position.
 
-The node takes in the x, y, and z coordinates, along with optional alpha, beta, and gamma rotations in radians. 
+The node takes in the x, y, and z coordinates, along with optional alpha, beta, and gamma rotations in radians.
 
 After initiating the linear movement, the node waits for the robot arm to become idle, indicating that the movement is complete.
 

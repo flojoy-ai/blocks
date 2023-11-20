@@ -1,7 +1,9 @@
-from flojoy import TextBlob, flojoy
+from flojoy import flojoy, TextBlob
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
+from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 
 
+@safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def DELAY(
     ip_address: TextBlob,
@@ -9,18 +11,19 @@ def DELAY(
 ) -> TextBlob:
     """
     Delay the action between two blocks.
-
     Parameters
     ----------
-    ip_address : TextBlob
+    Parameters
+    ----------
+    ip_address: TextBlob
         The IP address of the robot arm.
 
-    time : float
+    time: float
         The time of delay in seconds.
 
     Returns
     -------
-    ip_address : TextBlob
+    TextBlob
         The IP address of the robot arm.
 
     """

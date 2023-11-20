@@ -1,7 +1,7 @@
 {
   "docstring": {
     "long_description": "",
-    "short_description": "Disconnects the Mecademic robot arm via its API.",
+    "short_description": "DISCONNECT disconnects the Mecademic robot arm via its API. This is required if the arm is to be used without rebooting.",
     "parameters": [
       {
         "name": "ip_address",

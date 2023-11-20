@@ -1,22 +1,22 @@
 {
   "docstring": {
     "long_description": "",
-    "short_description": "Activate the robot arm.",
+    "short_description": "The SET_BLENDING to make the moves of the robot arm smoother.",
     "parameters": [
+      {
+        "name": "blending",
+        "type": "float",
+        "description": "The blending factor to use when moving between keyframes. If not specified, the default value of 0.0 is used."
+      },
       {
         "name": "ip_address",
         "type": "TextBlob",
         "description": "The IP address of the robot arm."
-      },
-      {
-        "name": "simulator",
-        "type": "bool, default=False",
-        "description": "Whether to activate the simulator or not. Defaults to False."
       }
     ],
     "returns": [
       {
-        "name": "ip",
+        "name": null,
         "type": "TextBlob",
         "description": "The IP address of the robot arm."
       }

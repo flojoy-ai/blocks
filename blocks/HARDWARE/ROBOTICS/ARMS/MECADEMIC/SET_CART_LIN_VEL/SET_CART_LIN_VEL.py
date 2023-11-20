@@ -1,7 +1,9 @@
-from flojoy import TextBlob, flojoy
+from flojoy import flojoy, TextBlob
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
+from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 
 
+@safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def SET_CART_LIN_VEL(ip_address: TextBlob, v: float) -> TextBlob:
     """
@@ -9,14 +11,14 @@ def SET_CART_LIN_VEL(ip_address: TextBlob, v: float) -> TextBlob:
 
     Parameters
     ----------
-    ip_address: TextBlob
-        The IP address of the robot arm.
     v : float
         The velocity to be set.
+    ip_address: TextBlob
+        The IP address of the robot arm
 
     Returns
     -------
-    ip_address: TextBlob
+    ip_address
         The IP address of the robot arm.
     """
 

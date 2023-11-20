@@ -4,11 +4,6 @@
     "short_description": "Linearly move the robot's tool to an absolute Cartesian position.",
     "parameters": [
       {
-        "name": "ip_address",
-        "type": "TextBlob",
-        "description": "The IP address of the robot arm."
-      },
-      {
         "name": "x",
         "type": "float",
         "description": "The x coordinate of the position to move to"
@@ -37,11 +32,16 @@
         "name": "gamma",
         "type": "float",
         "description": "The gamma coordinate (rotation in radians about the z axis) of the position to move to."
+      },
+      {
+        "name": "ip_address",
+        "type": "TextBlob",
+        "description": "The IP address of the robot arm."
       }
     ],
     "returns": [
       {
-        "name": "ip_address",
+        "name": null,
         "type": "TextBlob",
         "description": "The IP address of the robot arm."
       }

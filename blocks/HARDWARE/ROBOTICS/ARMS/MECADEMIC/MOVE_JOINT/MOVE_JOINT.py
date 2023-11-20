@@ -1,9 +1,10 @@
 from typing import Optional
-
-from flojoy import TextBlob, flojoy
+from flojoy import flojoy, TextBlob
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
+from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 
 
+@safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def MOVE_JOINT(
     ip_address: TextBlob,
@@ -17,10 +18,9 @@ def MOVE_JOINT(
     """
     Linearly move the robot's tool to an absolute Cartesian position.
 
-
     Parameters
     ----------
-    ip_address : TextBlob
+    ip_address: TextBlob
         The IP address of the robot arm.
     x : float
         The x coordinate of the position to move to
@@ -37,7 +37,7 @@ def MOVE_JOINT(
 
     Returns
     -------
-    ip_address : TextBlob
+    TextBlob
         The IP address of the robot arm.
 
     """

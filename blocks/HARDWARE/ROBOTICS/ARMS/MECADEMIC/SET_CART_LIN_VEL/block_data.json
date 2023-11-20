@@ -4,20 +4,20 @@
     "short_description": "Set the robot arm's linear velocity in Cartesian coordinates.",
     "parameters": [
       {
-        "name": "ip_address",
-        "type": "TextBlob",
-        "description": "The IP address of the robot arm."
-      },
-      {
         "name": "v",
         "type": "float",
         "description": "The velocity to be set."
+      },
+      {
+        "name": "ip_address",
+        "type": "TextBlob",
+        "description": "The IP address of the robot arm"
       }
     ],
     "returns": [
       {
-        "name": "ip_address",
-        "type": "TextBlob",
+        "name": null,
+        "type": "ip_address",
         "description": "The IP address of the robot arm."
       }
     ]
