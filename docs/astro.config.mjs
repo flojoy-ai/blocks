@@ -106,7 +106,7 @@ export default defineConfig({
   markdown: {
     shikiConfig: {
       theme: "dracula",
-      langs: ["python", "json"],
+      langs: ["python", "json", "c"],
       wrap: true, // Enable word wrap to prevent horizontal scrolling
     },
 
