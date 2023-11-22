@@ -19,7 +19,7 @@ The `RESISTANCE_TO_TEMPERATURE` nodes convert the resistance of the thermistor t
 
 The Arduino code used is:
 
-```C
+```
 #define THERMISTORPIN A2
 #define lightsensor A0
 #define THERMISTORNOMINAL 10000

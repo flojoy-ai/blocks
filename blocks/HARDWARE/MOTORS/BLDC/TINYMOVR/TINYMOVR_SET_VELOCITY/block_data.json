@@ -16,5 +16,12 @@
         "description": "Traceback error (if any)"
       }
     ]
-  }
+  },
+  "videos": [
+    {
+      "title": "Control Tinymovr servo motor with Flojoy",
+      "source": "youtube",
+      "link": "https://www.youtube.com/watch?v=T3MGvO0hdL8"
+    }
+  ]
 }
