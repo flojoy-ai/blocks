@@ -26,5 +26,12 @@
         "description": "Scalar: The AC voltage reading."
       }
     ]
-  }
+  },
+  "videos": [
+    {
+      "title": "Control USB-4605 multimeter with Flojoy",
+      "source": "youtube",
+      "link": "https://www.youtube.com/watch?v=FPSkvCFjKR4"
+    }
+  ]
 }

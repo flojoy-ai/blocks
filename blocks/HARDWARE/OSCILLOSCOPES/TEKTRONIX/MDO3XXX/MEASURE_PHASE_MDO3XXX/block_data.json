@@ -26,5 +26,12 @@
         "description": "Scalar: The phase between the two channels."
       }
     ]
-  }
+  },
+  "videos": [
+    {
+      "title": "Control Oscilloscope with Flojoy",
+      "source": "youtube",
+      "link": "https://www.youtube.com/watch?v=NqPW7pG3NZs"
+    }
+  ]
 }
