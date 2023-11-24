@@ -83,13 +83,18 @@ def make_category_content(
 
 class CategoryOverviewDocsBuilder:
     def __init__(
-        self, title: str, category_name: str, overview_description: str, content: str
+        self,
+        title: str,
+        category_name: str,
+        overview_description: str,
+        content: str,
+        category_path: str,
     ):
         self.category_name = category_name
         self.template = OVERVIEW_TEMPLATE_BASE.format(
             title=f"{title} Overview",
             description=overview_description.replace('"', '\\"'),
-            slug="blocks/" + get_markdown_slug(category_name),
+            slug="blocks/" + get_markdown_slug(category_path),
             content=content,
         )
 

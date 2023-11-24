@@ -236,7 +236,11 @@ def sync():
                     try:
                         f.write(
                             CategoryOverviewDocsBuilder(
-                                overview_title, dir, overview_desc, overview_content
+                                overview_title,
+                                dir,
+                                overview_desc,
+                                overview_content,
+                                top_level_category,
                             )
                             .add_content(
                                 _get_nested_dict_value(
