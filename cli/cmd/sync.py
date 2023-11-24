@@ -195,53 +195,60 @@ def sync():
         # required frontmatters in summary.md
         required_frontmatters = ["title", "description"]
 
-        for top_level_category in os.listdir(BLOCKS_SOURCE_FOLDER):
-            summary_path = os.path.join(
-                BLOCKS_SOURCE_FOLDER, top_level_category, "summary.md"
-            )
+        for root, dirs, files in os.walk(BLOCKS_SOURCE_FOLDER):
+            for dir in dirs:
+                # This will be something like HARDWARE, or HARDWARE/ROBOTICS/ARMS
+                top_level_category = os.path.relpath(os.path.join(root, dir), "blocks")
 
-            overview_title = ""
-            overview_desc = ""
+                summary_path = os.path.join("blocks", top_level_category, "summary.md")
 
-            if os.path.exists(summary_path):
-                summary = frontmatter.load(summary_path)
-                for fm in required_frontmatters:
-                    if fm not in summary:
-                        print(
-                            f"{ERR_STRING} frontmatter '{fm}' is missing in summary.md for {top_level_category}"
-                        )
-                        sys.exit(1)
+                if not os.path.exists(summary_path):
+                    continue
 
-                overview_title = summary["title"]
-                overview_desc = summary["description"]
+                overview_title = ""
+                overview_desc = ""
+                overview_content = ""
 
-            else:
-                print(
-                    f"{ERR_STRING} summary.md not found for top level category {top_level_category}!"
+                if os.path.exists(summary_path):
+                    summary = frontmatter.load(summary_path)
+                    for fm in required_frontmatters:
+                        if fm not in summary:
+                            print(
+                                f"{ERR_STRING} frontmatter '{fm}' is missing in summary.md for {top_level_category}"
+                            )
+                            sys.exit(1)
+
+                    overview_title = summary["title"]
+                    overview_desc = summary["description"]
+                    overview_content = summary.content
+
+                task_id = progress.add_task(
+                    f"Generating overview for {top_level_category}..."
                 )
-                sys.exit(1)
 
-            task_id = progress.add_task(
-                f"Generating overview for {top_level_category}..."
-            )
+                overview_page_path = os.path.join(
+                    BLOCKS_DOCS_FOLDER,
+                    top_level_category,
+                    "overview.mdx",
+                )
 
-            overview_page_path = os.path.join(
-                BLOCKS_DOCS_FOLDER, top_level_category, "overview.mdx"
-            )
-
-            with open(overview_page_path, "w+") as f:
-                try:
-                    f.write(
-                        CategoryOverviewDocsBuilder(
-                            overview_title, top_level_category, overview_desc
+                with open(overview_page_path, "w+") as f:
+                    try:
+                        f.write(
+                            CategoryOverviewDocsBuilder(
+                                overview_title, dir, overview_desc, overview_content
+                            )
+                            .add_content(
+                                _get_nested_dict_value(
+                                    category_tree, top_level_category
+                                ),
+                            )
+                            .build()
                         )
-                        .add_content(category_tree[top_level_category])
-                        .build()
-                    )
-                    total_synced_pages += 1
-                except ValueError as e:
-                    print(f"{ERR_STRING} {e}")
-                    sys.exit(1)
+                        total_synced_pages += 1
+                    except ValueError as e:
+                        print(f"{ERR_STRING} {e}")
+                        sys.exit(1)
 
         print("Finished generating all the overview pages.")
 
@@ -264,6 +271,21 @@ def _split_path(path: str) -> list[str]:
             break
 
     return parts
+
+
+def _get_nested_dict_value(data: CategoryTree, path):
+    keys = path.split("/")
+    value = data
+    for key in keys:
+        if key and isinstance(value, dict):
+            value = value.get(key)
+            if value is None:
+                break
+
+    if value is None:
+        raise ValueError(f"Category {path} does not exist in the category tree")
+
+    return value
 
 
 def _tree_insert_block(tree: dict, directory: str, block: BlockInfo):
