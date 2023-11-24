@@ -16,5 +16,12 @@
         "description": "The output from the serial device."
       }
     ]
-  }
+  },
+  "videos": [
+    {
+      "title": "Arduino Temperature Sensor",
+      "source": "youtube",
+      "link": "https://www.youtube.com/watch?v=SD-bmpZVq2c"
+    }
+  ]
 }

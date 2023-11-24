@@ -16,5 +16,12 @@
         "description": "The trace of the oscilloscope."
       }
     ]
-  }
+  },
+  "videos": [
+    {
+      "title": "Control DS1000Z oscilloscope with Flojoy",
+      "source": "youtube",
+      "link": "https://www.youtube.com/watch?v=Bl0DrvaOtgI"
+    }
+  ]
 }

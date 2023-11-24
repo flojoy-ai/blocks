@@ -43,6 +43,14 @@ export default defineConfig({
             crossorigin: "anonymous",
           },
         },
+        {
+          tag: "script",
+          attrs: {
+            src: "https://cdn.usefathom.com/script.js",
+            "data-site": "LCCRNAEW",
+            defer: true,
+          },
+        },
       ],
       sidebar: [
         // Joey: IMPORTANT, always use autogenerate unless
@@ -106,7 +114,7 @@ export default defineConfig({
   markdown: {
     shikiConfig: {
       theme: "dracula",
-      langs: ["python", "json"],
+      langs: ["python", "json", "c"],
       wrap: true, // Enable word wrap to prevent horizontal scrolling
     },
 

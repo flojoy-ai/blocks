@@ -16,5 +16,12 @@
         "description": "A list of available Prologix USB-to-GPIB firmware commands"
       }
     ]
-  }
+  },
+  "videos": [
+    {
+      "title": "Control Agilent 34410A multimeter with Flojoy",
+      "source": "youtube",
+      "link": "https://www.youtube.com/watch?v=jaN89-ijxL0"
+    }
+  ]
 }

@@ -26,5 +26,12 @@
         "description": "Scalar: The waveform measurement in the selected statistic mode."
       }
     ]
-  }
+  },
+  "videos": [
+    {
+      "title": "Control Oscilloscope with Flojoy",
+      "source": "youtube",
+      "link": "https://www.youtube.com/watch?v=NqPW7pG3NZs"
+    }
+  ]
 }
