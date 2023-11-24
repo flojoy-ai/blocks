@@ -16,5 +16,12 @@
         "description": null
       }
     ]
-  }
+  },
+  "videos": [
+    {
+      "title": "Measure voltage from a solar panel using Flojoy ",
+      "source": "youtube",
+      "link": "https://www.youtube.com/watch?v=OEzThwlCU1s"
+    }
+  ]
 }

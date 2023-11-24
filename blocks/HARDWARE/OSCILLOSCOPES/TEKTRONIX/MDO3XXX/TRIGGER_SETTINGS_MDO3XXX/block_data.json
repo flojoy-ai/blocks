@@ -36,5 +36,12 @@
         "description": "TextBlob: Summary of trigger settings."
       }
     ]
-  }
+  },
+  "videos": [
+    {
+      "title": "Control Oscilloscope with Flojoy",
+      "source": "youtube",
+      "link": "https://www.youtube.com/watch?v=NqPW7pG3NZs"
+    }
+  ]
 }
