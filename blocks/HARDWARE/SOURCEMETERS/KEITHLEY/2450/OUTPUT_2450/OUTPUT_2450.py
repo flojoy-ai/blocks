@@ -10,6 +10,8 @@ def OUTPUT_2450(
 ) -> TextBlob:
     """Turns the source output on or off.
 
+    Use the SOURCE_2450 block to change the source settings.
+
     Requires a CONNECT_2450 block to create the connection.
 
     Parameters
