@@ -56,7 +56,7 @@ def SOURCE_2450(
     # Retrieve oscilloscope instrument connection
     smu = connection.get_handle()
 
-    smu.commands.smu.source.protect = f"smu.PROTECT_{protect}"
+    smu.commands.smu.source.protect.level = f"smu.PROTECT_{protect}"
 
     if terminal == "front":
         smu.commands.smu.terminals = "smu.TERMINALS_FRONT"
