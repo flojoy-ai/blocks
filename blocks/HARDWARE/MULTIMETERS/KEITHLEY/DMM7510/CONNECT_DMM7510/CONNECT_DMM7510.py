@@ -25,6 +25,12 @@ def CONNECT_DMM7510(
 
     dmm = DeviceConnectionManager.tm.add_dmm(device_addr)
     dmm.write("*LANG TSP")
+    lang = dmm.query("*LANG?")
+    if lang != "TSP":
+        raise ValueError(
+            "Command set language not set correctly. Try setting to 'TSP' manually."
+        )
+
     DeviceConnectionManager.register_connection(device, dmm)
 
     return TextBlob(text_blob=device_addr)
