@@ -30,7 +30,7 @@ This documentation outlines the key features and functionalities of Flojoy in pr
 
 ## Flojoy Blocks for Meca500
 
-### Initialization & Termination Blocks
+#### Initialization & Termination Blocks
 
 - **`Connect`**: Establishes the connection to the Meca500 using the robot's IP address, initializing the communication link.
 
@@ -38,7 +38,7 @@ This documentation outlines the key features and functionalities of Flojoy in pr
 
 - **`Disconnect`**: Safely disconnects the robot from Flojoy, ensuring no further actions are taken post-programming.
 
-### Configuration Blocks
+#### Configuration Blocks
 
 - **`Set_Cart_Lin_Vel`**: Sets the maximum linear velocity for the robot's Tool Reference Frame (TRF) with respect to its World Reference Frame (WRF), affecting MoveLin and related commands.
 
@@ -48,7 +48,7 @@ This documentation outlines the key features and functionalities of Flojoy in pr
 
 - **`Delay`**: Introduces a pause in the sequence of operations, allowing for timed control of actions.
 
-### Standard Movements Blocks
+#### Standard Movements Blocks
 
 - **`Move_Joint`**: Commands the robot to move its joints to specified angles, taking a linear path in joint space but nonlinear in Cartesian space.
 
@@ -56,11 +56,11 @@ This documentation outlines the key features and functionalities of Flojoy in pr
 
 - **`Move_Pose`**: Moves the robot's TRF to a specific pose with respect to the WRF, calculating the most efficient joint set to reach the desired position.
 
-### Flojoy Custom Movements Blocks
+#### Flojoy Custom Movements Blocks
 - **`Move_Circle`**: Move circle is a node that moves the mecademic robot along a circular path defined by a center point in 3d space and a radius. It is equivalent to the combination of generate circle keyframes and move keyframes. This node is useful for executing circular moves in tool relative space. As a move node, it can be run any time after activation or a mecademic arm. A high blending value is recommended for a smooth circular move. 
 - **`Move_Keyframes`**: Move keyframes executes a sequence of moves as defined in a data frame with columns x, y, z, alpha, beta, gamma, time. Timing is approximated by calculating a velocity based on mecademic’s maximum joint velocities, however the keyframes do not guarantee timing. A move keyframes node can be thought of as a shorthand for a sequence of move and set velocity nodes. As a move node, it can be run any time after the activation of a mecademic arm. 
 
-### Advanced Features
+#### Advanced Features
 Flojoy, integrated with Mecademic's control system, brings the power of Python's core features into the realm of visual robotics programming. This integration not only facilitates traditional programming constructs like loops and conditional logic but also unlocks access to advanced machine learning (ML) functionalities.
 
 ## Future Works
