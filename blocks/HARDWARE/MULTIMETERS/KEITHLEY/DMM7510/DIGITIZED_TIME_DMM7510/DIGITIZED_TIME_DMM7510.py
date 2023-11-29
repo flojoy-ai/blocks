@@ -55,9 +55,6 @@ def DIGITIZED_TIME_DMM7510(
     dmm.commands.buffer_var["defbuffer1"].capacity = num_samples
     dmm.write("defbuffer1.clear()")
     dmm.write("dmm.digitize.read()")
-    dmm.commands.buffer_var["defbuffer1"].n
-    dmm.commands.buffer_var["defbuffer1"]
-    dmm.commands.buffer_var["defbuffer1"].relativetimestamps
 
     time = []
     y = []
