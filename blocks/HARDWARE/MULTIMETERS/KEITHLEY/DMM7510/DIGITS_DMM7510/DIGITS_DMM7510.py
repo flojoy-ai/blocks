@@ -1,5 +1,5 @@
 from typing import Optional, Literal
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(inject_connection=True)
@@ -7,7 +7,7 @@ def DIGITS_DMM7510(
     connection: VisaConnection,
     input: Optional[DataContainer] = None,
     digits: Literal["3.5", "4.5", "5.5", "6.5", "7.5"] = "7.5",
-) -> TextBlob:
+) -> String:
     """Changes the number of digits for measurements for the DMM7510.
 
     Less digits is faster (but less accurate).
@@ -23,7 +23,7 @@ def DIGITS_DMM7510(
 
     Returns
     -------
-    TextBlob
+    String
         Measurement settings
     """
 
@@ -41,4 +41,4 @@ def DIGITS_DMM7510(
         case "7.5":
             dmm.commands.dmm.measure.displaydigits = "dmm.DIGITS_7_5"
 
-    return TextBlob(text_blob=f"Digits: {digits}")
+    return String(s=f"Digits: {digits}")

@@ -601,8 +601,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: Input datacontainer information"
+                            "type": "String",
+                            "desc": "String: Input datacontainer information"
                         }
                     ],
                     "path": "EXTRACTORS/DEBUGGING/PRINT_DATACONTAINER/PRINT_DATACONTAINER.py",
@@ -645,7 +645,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "The DataContainer to be visualized in text format"
                         }
@@ -654,7 +654,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "The DataContainer containing text data"
                         }
                     ],

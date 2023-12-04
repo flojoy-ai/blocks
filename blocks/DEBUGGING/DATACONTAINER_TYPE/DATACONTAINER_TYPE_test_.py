@@ -8,4 +8,4 @@ def test_DATACONTAINER_TYPE(mock_flojoy_decorator):
     input = Vector(v=np.arange(0, 50))
     res = DATACONTAINER_TYPE.DATACONTAINER_TYPE(input)
 
-    assert res.text_blob == "Vector"
+    assert res.s == "Vector"

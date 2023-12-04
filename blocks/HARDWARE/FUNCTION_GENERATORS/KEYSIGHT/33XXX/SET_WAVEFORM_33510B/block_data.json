@@ -68,7 +68,7 @@
       {
         "name": null,
         "type": "DataContainer",
-        "description": "TextBlob: Summary of waveform generator settings."
+        "description": "String: Summary of waveform generator settings."
       }
     ]
   }

@@ -1,4 +1,4 @@
-from flojoy import TextBlob, flojoy
+from flojoy import String, flojoy
 from PYTHON.utils.mecademic_state.mecademic_state import (
     add_handle,
     init_handle_map,
@@ -7,7 +7,7 @@ from PYTHON.utils.mecademic_state.mecademic_state import (
 
 
 @flojoy(deps={"mecademicpy": "1.4.0"})
-def CONNECT(ip_address: str, simulator: bool = False) -> TextBlob:
+def CONNECT(ip_address: str, simulator: bool = False) -> String:
     """
     The CONNECT node establishes a connection to the Mecademic robot arm via HTTP and activates the robot arm. The IP Address to use is the same one that is used to access the Mecademic web interface. Example: 192.168.0.100
 
@@ -21,7 +21,7 @@ def CONNECT(ip_address: str, simulator: bool = False) -> TextBlob:
 
     Returns
     -------
-    TextBlob
+    String
        The IP address of the robot arm, used in other Mecademic nodes to establish which arm they are communicating with.
     """
     init_handle_map(allow_reinit=True)
@@ -34,4 +34,4 @@ def CONNECT(ip_address: str, simulator: bool = False) -> TextBlob:
         handle.ActivateRobot()
     handle.WaitActivated()
 
-    return TextBlob(text_blob=ip_address)
+    return String(s=ip_address)

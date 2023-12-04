@@ -1,11 +1,11 @@
-from flojoy import flojoy, TextBlob
+from flojoy import flojoy, String
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 
 
 @safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
-def SET_BLENDING(ip_address: TextBlob, blending: float = 0.0) -> TextBlob:
+def SET_BLENDING(ip_address: String, blending: float = 0.0) -> String:
     """
     The SET_BLENDING to make the moves of the robot arm smoother.
 
@@ -13,13 +13,13 @@ def SET_BLENDING(ip_address: TextBlob, blending: float = 0.0) -> TextBlob:
     ----------
     blending: float
         The blending factor to use when moving between keyframes. If not specified, the default value of 0.0 is used.
-    ip_address: TextBlob
+    ip_address: String
         The IP address of the robot arm.
 
 
     Returns
     -------
-    TextBlob
+    String
         The IP address of the robot arm.
 
     """

@@ -1,11 +1,11 @@
-from flojoy import DataContainer, TextBlob, flojoy
+from flojoy import DataContainer, String, flojoy
 
 
 @flojoy()
 def PRINT_DATACONTAINER(
     default: DataContainer,
-) -> TextBlob:
-    """Return a TextBlob containing input DataContainer information.
+) -> String:
+    """Return a String containing input DataContainer information.
 
     Must use the TEXT_VIEW block to view the text.
 
@@ -17,7 +17,7 @@ def PRINT_DATACONTAINER(
     Returns
     -------
     DataContainer
-        TextBlob: Input datacontainer information
+        String: Input datacontainer information
     """
 
-    return TextBlob(text_blob=str(default))
+    return String(s=str(default))

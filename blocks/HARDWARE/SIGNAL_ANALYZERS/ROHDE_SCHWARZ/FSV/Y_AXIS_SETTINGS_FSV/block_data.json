@@ -27,7 +27,7 @@
     "returns": [
       {
         "name": null,
-        "type": "TextBlob",
+        "type": "String",
         "description": "Y axis settings summary."
       }
     ]

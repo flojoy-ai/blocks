@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -9,7 +9,7 @@ def DIGITAL_TRIGGER_DS1047Z(
     level: float = 0.1,
     slope: Literal["positive", "negative", "either", "unchanged"] = "positive",
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Sets the digital triggering channel and threshold level.
 
     Requires a CONNECTION_DS1074Z node at the start of the app to connect with
@@ -31,7 +31,7 @@ def DIGITAL_TRIGGER_DS1047Z(
     Returns
     -------
     DataContainer
-        TextBlob: summary of channel settings.
+        String: summary of channel settings.
     """
 
     rigol = connection.get_handle()
@@ -48,4 +48,4 @@ def DIGITAL_TRIGGER_DS1047Z(
 
     s = f"Channel: {channel}; Level: {level}; Slope: {slope}"
 
-    return TextBlob(text_blob=s)
+    return String(s=s)

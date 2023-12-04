@@ -1,5 +1,5 @@
 from typing import Optional, Literal
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(inject_connection=True)
@@ -10,7 +10,7 @@ def MEASUREMENT_FILTER_DMM7510(
     avg_type: Literal["moving", "repeat"] = "moving",
     count: int = 10,
     window: float = 0,
-) -> TextBlob:
+) -> String:
     """Changes the measurement filter settings for the DMM7510.
 
     Requires a CONNECT_DMM7510 block to create the connection.
@@ -30,7 +30,7 @@ def MEASUREMENT_FILTER_DMM7510(
 
     Returns
     -------
-    TextBlob
+    String
         Filter settings
     """
     assert 0.0 <= window <= 100.0, "The window must be between 0 and 100."
@@ -52,4 +52,4 @@ def MEASUREMENT_FILTER_DMM7510(
         case "on":
             dmm.commands.dmm.measure.filter.enable = "dmm.ON"
 
-    return TextBlob(text_blob=f"Filter {on_off}")
+    return String(s=f"Filter {on_off}")

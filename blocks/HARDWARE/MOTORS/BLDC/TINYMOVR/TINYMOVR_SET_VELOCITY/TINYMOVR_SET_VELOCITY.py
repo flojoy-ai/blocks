@@ -1,13 +1,13 @@
 import traceback
 
 import can
-from flojoy import Scalar, TextBlob, flojoy
+from flojoy import Scalar, String, flojoy
 from tinymovr.config import create_device, get_bus_config
 from tinymovr.tee import destroy_tee, init_tee
 
 
 @flojoy(deps={"tinymovr": "1.6.2"})
-def TINYMOVR_SET_VELOCITY(default: Scalar) -> TextBlob:
+def TINYMOVR_SET_VELOCITY(default: Scalar) -> String:
     """Direct a tinymovr BLDC driver to a set velocity.
 
     Parameters
@@ -44,4 +44,4 @@ def TINYMOVR_SET_VELOCITY(default: Scalar) -> TextBlob:
     except Exception:
         tb = traceback.format_exc()
 
-    return TextBlob(text_blob=tb)
+    return String(s=tb)

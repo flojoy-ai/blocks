@@ -1,7 +1,7 @@
 {
   "docstring": {
     "long_description": "",
-    "short_description": "Return a TextBlob DataContainer with given input text.",
+    "short_description": "Return a String DataContainer with given input text.",
     "parameters": [
       {
         "name": "value",
@@ -12,7 +12,7 @@
     "returns": [
       {
         "name": null,
-        "type": "TextBlob",
+        "type": "String",
         "description": "Return the value being set in Parameters."
       }
     ]

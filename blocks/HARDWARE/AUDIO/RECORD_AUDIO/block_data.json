@@ -42,7 +42,7 @@
     "returns": [
       {
         "name": null,
-        "type": "TextBlob",
+        "type": "String",
         "description": "Filename and path of the recording."
       }
     ]

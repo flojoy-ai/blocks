@@ -17,7 +17,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "the DataContainer to be visualized in text format"
                         }
@@ -193,8 +193,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: Summary of trigger settings."
+                            "type": "String",
+                            "desc": "String: Summary of trigger settings."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/OSCILLOSCOPES/TEKTRONIX/MDO3XXX/ADVANCED/TRIGGER_SETTINGS_MDO3XXX/TRIGGER_SETTINGS_MDO3XXX.py",
