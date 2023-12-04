@@ -4,6 +4,7 @@ from flojoy import (
     DataFrame,
     OrderedPair,
     OrderedTriple,
+    Matrix,
     flojoy,
     DataContainer,
     Directory,
@@ -13,7 +14,7 @@ from typing import Optional
 
 @flojoy
 def EXPORT_CSV(
-    dc: OrderedPair | OrderedTriple | DataFrame,
+    dc: OrderedPair | OrderedTriple | DataFrame | Matrix,
     dir: Directory,
     filename: str = "exported.csv",
 ) -> Optional[DataContainer]:
@@ -36,16 +37,22 @@ def EXPORT_CSV(
     if dir is None:
         raise ValueError("Please select a directory to export the data to")
 
+    path = os.path.join(dir.unwrap(), filename)
+
     match dc:
         case OrderedPair() | OrderedTriple():
             df = pd.DataFrame(dc)
             df = df.drop(columns=["type", "extra"])
+            df.to_csv(path, index=False)
         case DataFrame():
             df = dc.m
+            df.to_csv(path, index=False)
+        case Matrix():
+            df = pd.DataFrame(dc.m)
+            df.to_csv(path, index=False, header=False)
         case _:
             raise ValueError(
                 f"Invalid DataContainer type: {dc.type} cannot be exported as CSV."
             )
 
-    df.to_csv(os.path.join(dir.unwrap(), filename), index=False)
     return None
