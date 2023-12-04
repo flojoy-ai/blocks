@@ -14,6 +14,9 @@ Here you can find all the blocks related to data generation and visualization.
 
 import BlockCategory from "@/components/BlockCategory.astro";
 
+### EXPORT
+<BlockCategory blocks={[{'link': '/blocks/data/export/export-csv', 'name': 'EXPORT_CSV', 'description': 'Export a DataContainer into CSV format.'}, {'link': '/blocks/data/export/export-json', 'name': 'EXPORT_JSON', 'description': 'Export data into JSON format.'}]} />
+
 ### GENERATION
 #### SAMPLE_DATASETS
 <BlockCategory blocks={[{'link': '/blocks/data/generation/sample-datasets/plotly-dataset', 'name': 'PLOTLY_DATASET', 'description': "Retrieve a pandas DataFrame from one of Plotly Express's built-in datasets."}, {'link': '/blocks/data/generation/sample-datasets/scikit-learn-dataset', 'name': 'SCIKIT_LEARN_DATASET', 'description': 'Retrieve a pandas DataFrame from the scikit-learn sample datasets.'}, {'link': '/blocks/data/generation/sample-datasets/text-dataset', 'name': 'TEXT_DATASET', 'description': 'Load one of the 20 newsgroup sample datasets from scikit-learn.'}]} />
