@@ -1,5 +1,5 @@
 from typing import Optional, Literal
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(inject_connection=True)
@@ -21,7 +21,7 @@ def FUNCTION_DMM7510(
         "frequency",
         "DCV ratio",
     ] = "DC voltage",
-) -> TextBlob:
+) -> String:
     """Changes the measurement function for the DMM7510.
 
     Requires a CONNECT_DMM7510 block to create the connection.
@@ -35,7 +35,7 @@ def FUNCTION_DMM7510(
 
     Returns
     -------
-    TextBlob
+    String
         Measurement
     """
 
@@ -69,4 +69,4 @@ def FUNCTION_DMM7510(
         case "DCV ratio":
             dmm.commands.dmm.measure.func = "dmm.FUNC_DCV_RATIO"
 
-    return TextBlob(text_blob=f"Measure {function}")
+    return String(s=f"Measure {function}")

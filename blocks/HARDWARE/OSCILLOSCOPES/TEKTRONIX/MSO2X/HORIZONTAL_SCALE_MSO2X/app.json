@@ -339,7 +339,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "The IP address of the VISA device."
                         }
                     ],

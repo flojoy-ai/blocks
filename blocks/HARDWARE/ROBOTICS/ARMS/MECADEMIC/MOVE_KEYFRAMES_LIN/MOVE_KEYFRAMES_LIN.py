@@ -1,4 +1,4 @@
-from flojoy import flojoy, TextBlob, DataFrame
+from flojoy import flojoy, String, DataFrame
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 from PYTHON.utils.mecademic_state.mecademic_calculations import (
@@ -9,9 +9,9 @@ from PYTHON.utils.mecademic_state.mecademic_calculations import (
 @safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def MOVE_KEYFRAMES_LIN(
-    ip_address: TextBlob,
+    ip_address: String,
     keyframes: DataFrame,
-) -> TextBlob:
+) -> String:
     """
     The MOVE_KEYFRAMES node LINEARLY RELATIVE TO A REFERENCE FRAME moves the robot's tool according to a set of 3d animation style keyframes.
 
@@ -20,7 +20,7 @@ def MOVE_KEYFRAMES_LIN(
 
     Parameters
     ----------
-    ip_address: TextBlob
+    ip_address: String
         The IP address of the robot arm.
     keyframes: DataFrame
         A dataframe containing the keyframes to move to. The dataframe must have the following columns:

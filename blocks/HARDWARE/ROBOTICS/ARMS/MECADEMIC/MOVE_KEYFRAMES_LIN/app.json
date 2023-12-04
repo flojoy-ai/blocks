@@ -36,7 +36,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "The IP address of the robot arm, used in other Mecademic nodes to establish which arm they are communicating with."
                         }
                     ],
@@ -75,7 +75,7 @@
                         {
                             "name": "ip_address",
                             "id": "ip_address",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "The IP address of the robot arm."
                         }
@@ -84,7 +84,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "The IP address of the robot arm."
                         }
                     ],
@@ -124,7 +124,7 @@
                         {
                             "name": "ip_address",
                             "id": "ip_address",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "The IP address of the robot arm."
                         }
@@ -260,7 +260,7 @@
                         {
                             "name": "ip_address",
                             "id": "ip_address",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "The IP address of the robot arm."
                         },
@@ -276,7 +276,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "The IP address of the robot arm."
                         }
                     ],

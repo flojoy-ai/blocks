@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -19,7 +19,7 @@ def SET_WAVEFORM_33510B(
     ramp_symmetry: float = 50,
     pulse_width: float = 20,
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Set waveform settings for a 33510B function generator.
 
     The Keysight 33510B has a variety of waveform settings available.
@@ -60,7 +60,7 @@ def SET_WAVEFORM_33510B(
     Returns
     -------
     DataContainer
-        TextBlob: Summary of waveform generator settings.
+        String: Summary of waveform generator settings.
     """
 
     ks = connection.get_handle()
@@ -120,4 +120,4 @@ def SET_WAVEFORM_33510B(
     if on_off == "ON":
         channel.output("ON")
 
-    return TextBlob(text_blob=summary)
+    return String(s=summary)

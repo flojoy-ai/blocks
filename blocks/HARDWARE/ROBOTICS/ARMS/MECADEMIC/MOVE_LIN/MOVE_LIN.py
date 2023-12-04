@@ -1,4 +1,4 @@
-from flojoy import flojoy, TextBlob
+from flojoy import flojoy, String
 from typing import Optional
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
@@ -7,14 +7,14 @@ from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 @safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def MOVE_LIN(
-    ip_address: TextBlob,
+    ip_address: String,
     x: float,
     y: float,
     z: float,
     alpha: Optional[float] = 0,
     beta: Optional[float] = 0,
     gamma: Optional[float] = 0,
-) -> TextBlob:
+) -> String:
     """
     Linearly move the robot's tool to an absolute Cartesian position.
 
@@ -32,12 +32,12 @@ def MOVE_LIN(
         The beta coordinate   (rotation in radians about the y axis) of the position to move to.
     gamma : float, optional
         The gamma coordinate (rotation in radians about the z axis) of the position to move to.
-    ip_address: TextBlob
+    ip_address: String
         The IP address of the robot arm.
 
     Returns
     -------
-    TextBlob
+    String
         The IP address of the robot arm.
 
     """

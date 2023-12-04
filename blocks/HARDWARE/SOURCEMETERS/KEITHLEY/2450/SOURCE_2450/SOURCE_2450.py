@@ -1,5 +1,5 @@
 from typing import Optional, Literal
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(deps={"tm_devices": "1.0"}, inject_connection=True)
@@ -25,7 +25,7 @@ def SOURCE_2450(
         "160V",
         "180V",
     ] = "NONE",
-) -> TextBlob:
+) -> String:
     """Set the source output settings.
 
     Use the OUTPUT_2450 block to turn the output on or off.
@@ -49,7 +49,7 @@ def SOURCE_2450(
 
     Returns
     -------
-    TextBlob
+    String
         Source settings
     """
 
@@ -72,4 +72,4 @@ def SOURCE_2450(
 
     smu.commands.smu.source.level = level
 
-    return TextBlob(text_blob="Source settings")
+    return String(s="Source settings")

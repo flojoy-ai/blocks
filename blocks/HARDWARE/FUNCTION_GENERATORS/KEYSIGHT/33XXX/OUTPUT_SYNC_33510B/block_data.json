@@ -23,7 +23,7 @@
       {
         "name": null,
         "type": "DataContainer",
-        "description": "TextBlob: The channel, and ON or OFF depending on on_off value."
+        "description": "String: The channel, and ON or OFF depending on on_off value."
       }
     ]
   }

@@ -1,6 +1,6 @@
 {
   "docstring": {
-    "long_description": "Inputs\n------\nip_address: TextBlob\n    The IP address of the robot arm.",
+    "long_description": "Inputs\n------\nip_address: String\n    The IP address of the robot arm.",
     "short_description": " The SET_TRF node sets the robot arm's reference frame.",
     "parameters": [
       {
@@ -37,7 +37,7 @@
     "returns": [
       {
         "name": null,
-        "type": "TextBlob",
+        "type": "String",
         "description": "The IP address of the robot arm."
       }
     ]

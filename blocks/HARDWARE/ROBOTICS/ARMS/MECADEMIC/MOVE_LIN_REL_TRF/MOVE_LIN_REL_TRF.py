@@ -1,4 +1,4 @@
-from flojoy import flojoy, TextBlob
+from flojoy import flojoy, String
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 
@@ -6,20 +6,20 @@ from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 @safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def MOVE_LIN_REL_TRF(
-    ip_address: TextBlob,
+    ip_address: String,
     x: float,
     y: float,
     z: float,
     alpha: float = 0,
     beta: float = 0,
     gamma: float = 0,
-) -> TextBlob:
+) -> String:
     """
     The MOVE_LIN node linearly moves the robot's tool to an absolute Cartesian position relative to the robot's tool reference frame which is set by the SET_TRF node.
 
     Inputs
     ------
-    ip_address: TextBlob
+    ip_address: String
         The IP address of the robot arm.
 
     Parameters
@@ -39,7 +39,7 @@ def MOVE_LIN_REL_TRF(
 
     Returns
     -------
-    TextBlob
+    String
         The IP address of the robot arm.
 
     """

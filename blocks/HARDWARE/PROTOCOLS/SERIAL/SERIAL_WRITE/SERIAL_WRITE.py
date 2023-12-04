@@ -1,5 +1,5 @@
 from typing import Optional, Literal
-from flojoy import TextBlob, SerialDevice, flojoy, DataContainer
+from flojoy import String, SerialDevice, flojoy, DataContainer
 
 
 @flojoy(inject_connection=True)
@@ -8,7 +8,7 @@ def SERIAL_WRITE(
     write: str = "",
     encoding: Literal["bytes", "utf-8", "ascii"] = "bytes",
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Write a custom string to the selected serial device.
 
     Parameters
@@ -22,7 +22,7 @@ def SERIAL_WRITE(
 
     Returns
     -------
-    TextBlob
+    String
         The input string.
     """
 
@@ -36,4 +36,4 @@ def SERIAL_WRITE(
         case "ascii":
             ser.write(write.encode(encoding="ascii"))
 
-    return TextBlob(text_blob=write)
+    return String(s=write)

@@ -225,8 +225,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: The triggering settings."
+                            "type": "String",
+                            "desc": "String: The triggering settings."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/OSCILLOSCOPES/RIGOL/DS1074Z/BASIC/TRIGGER_DS1074Z/TRIGGER_DS1074Z.py",
@@ -352,8 +352,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: The triggering settings."
+                            "type": "String",
+                            "desc": "String: The triggering settings."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/OSCILLOSCOPES/RIGOL/DS1074Z/BASIC/TIME_AXIS_DS1074Z/TIME_AXIS_DS1074Z.py",
@@ -451,8 +451,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: The triggering settings."
+                            "type": "String",
+                            "desc": "String: The triggering settings."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/OSCILLOSCOPES/RIGOL/DS1074Z/BASIC/VERTICAL_AXIS_DS1074Z/VERTICAL_AXIS_DS1074Z.py",
@@ -535,8 +535,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: The triggering settings."
+                            "type": "String",
+                            "desc": "String: The triggering settings."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/OSCILLOSCOPES/RIGOL/DS1074Z/BASIC/TIME_AXIS_DS1074Z/TIME_AXIS_DS1074Z.py",
@@ -736,8 +736,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: The triggering settings."
+                            "type": "String",
+                            "desc": "String: The triggering settings."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/OSCILLOSCOPES/RIGOL/DS1074Z/BASIC/SIGNAL_FACTOR_DS1074Z/SIGNAL_FACTOR_DS1074Z.py",
@@ -826,8 +826,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: The triggering settings."
+                            "type": "String",
+                            "desc": "String: The triggering settings."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/OSCILLOSCOPES/RIGOL/DS1074Z/BASIC/SIGNAL_FACTOR_DS1074Z/SIGNAL_FACTOR_DS1074Z.py",
@@ -1531,8 +1531,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: summary of channel settings."
+                            "type": "String",
+                            "desc": "String: summary of channel settings."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/OSCILLOSCOPES/RIGOL/DS1074Z/BASIC/CHANNEL_ON_OFF_DS1074Z/CHANNEL_ON_OFF_DS1074Z.py",

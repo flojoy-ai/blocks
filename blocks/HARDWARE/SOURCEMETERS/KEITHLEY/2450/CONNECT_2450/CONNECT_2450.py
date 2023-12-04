@@ -1,11 +1,11 @@
-from flojoy import VisaDevice, flojoy, TextBlob
+from flojoy import VisaDevice, flojoy, String
 from flojoy.connection_manager import DeviceConnectionManager
 
 
 @flojoy(deps={"tm_devices": "1.0"})
 def CONNECT_2450(
     device: VisaDevice,
-) -> TextBlob:
+) -> String:
     """Open a VISA connection to an Keithley 2450 SourceMeter.
 
     Parameters
@@ -15,7 +15,7 @@ def CONNECT_2450(
 
     Returns
     -------
-    device_addr: TextBlob
+    device_addr: String
         The IP or VISA address of the VISA device.
     """
 
@@ -31,4 +31,4 @@ def CONNECT_2450(
 
     DeviceConnectionManager.register_connection(device, smu)
 
-    return TextBlob(text_blob=device_addr)
+    return String(s=device_addr)

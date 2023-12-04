@@ -1,5 +1,5 @@
 from typing import Optional
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(deps={"tm_devices": "1.0"}, inject_connection=True)
@@ -8,7 +8,7 @@ def BEEP_2450(
     input: Optional[DataContainer] = None,
     duration: float = 0.25,
     frequency: float = 2000,
-) -> TextBlob:
+) -> String:
     """Causes the 2450 to beep audibly.
 
     Requires a CONNECT_2450 block to create the connection.
@@ -24,7 +24,7 @@ def BEEP_2450(
 
     Returns
     -------
-    TextBlob
+    String
         Beep
     """
 
@@ -33,4 +33,4 @@ def BEEP_2450(
 
     smu.commands.beeper.beep(duration=duration, frequency=frequency)
 
-    return TextBlob(text_blob="BEEP")
+    return String(s="BEEP")

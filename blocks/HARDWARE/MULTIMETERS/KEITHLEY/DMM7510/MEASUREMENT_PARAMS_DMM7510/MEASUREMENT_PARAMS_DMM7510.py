@@ -1,5 +1,5 @@
 from typing import Optional
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(inject_connection=True)
@@ -11,7 +11,7 @@ def MEASUREMENT_PARAMS_DMM7510(
     autozero: bool = True,
     count: int = 1,
     NPLC: float = 1,
-) -> TextBlob:
+) -> String:
     """Changes the measurement settings for the DMM7510.
 
     Requires a CONNECT_DMM7510 block to create the connection.
@@ -33,7 +33,7 @@ def MEASUREMENT_PARAMS_DMM7510(
 
     Returns
     -------
-    TextBlob
+    String
         Measurement settings
     """
     assert count > 0, "The count must be greater than 1."
@@ -54,4 +54,4 @@ def MEASUREMENT_PARAMS_DMM7510(
 
     dmm.commands.dmm.measure.inputimpedance = "dmm.IMPEDANCE_AUTO"
 
-    return TextBlob(text_blob=f"Measure range: {dmm.commands.dmm.measure.range}")
+    return String(s=f"Measure range: {dmm.commands.dmm.measure.range}")

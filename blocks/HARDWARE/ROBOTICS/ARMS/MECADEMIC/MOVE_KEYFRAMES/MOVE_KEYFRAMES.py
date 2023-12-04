@@ -1,4 +1,4 @@
-from flojoy import flojoy, TextBlob, DataFrame
+from flojoy import flojoy, String, DataFrame
 from PYTHON.utils.mecademic_state.mecademic_calculations import (
     calculate_limiting_max_vel,
 )
@@ -8,13 +8,13 @@ from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 
 @safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
-def MOVE_KEYFRAMES(ip_address: TextBlob, keyframes: DataFrame) -> TextBlob:
+def MOVE_KEYFRAMES(ip_address: String, keyframes: DataFrame) -> String:
     """
     The MOVE_KEYFRAMES node linearly moves the robot's tool according to a set of 3d animation style keyframes.
 
     Parameters
     ----------
-    ip_address: TextBlob
+    ip_address: String
         The IP address of the robot arm.
     keyframes: DataFrame
         A dataframe containing the keyframes to move to. The dataframe must have the following columns:
@@ -22,7 +22,7 @@ def MOVE_KEYFRAMES(ip_address: TextBlob, keyframes: DataFrame) -> TextBlob:
 
     Returns
     -------
-    TextBlob
+    String
         The IP address of the robot arm.
 
     """

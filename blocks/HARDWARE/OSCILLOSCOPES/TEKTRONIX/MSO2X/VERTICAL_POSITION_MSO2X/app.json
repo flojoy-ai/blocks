@@ -27,7 +27,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "The IP or VISA address of the VISA device."
                         }
                     ],
@@ -95,7 +95,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Horizontal scale"
                         }
                     ],
@@ -172,7 +172,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Vertical scale"
                         }
                     ],
@@ -249,7 +249,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Attenuation"
                         }
                     ],
@@ -326,7 +326,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Attenuation"
                         }
                     ],
@@ -403,7 +403,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Vertical scale"
                         }
                     ],
@@ -568,7 +568,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "AFG settings"
                         }
                     ],
@@ -676,7 +676,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Trigger settings"
                         }
                     ],
@@ -753,7 +753,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Attenuation"
                         }
                     ],
@@ -830,7 +830,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Vertical scale"
                         }
                     ],
@@ -911,7 +911,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Filename"
                         }
                     ],
@@ -1022,7 +1022,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Channel display"
                         }
                     ],

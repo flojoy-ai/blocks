@@ -70,7 +70,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "the DataContainer to be visualized in text format"
                         }
@@ -150,8 +150,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: The channel, and ON or OFF depending on on_off value."
+                            "type": "String",
+                            "desc": "String: The channel, and ON or OFF depending on on_off value."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/FUNCTION_GENERATORS/KEYSIGHT/33XXX/BASIC/OUTPUT_SYNC_33510B/OUTPUT_SYNC_33510B.py",

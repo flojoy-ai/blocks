@@ -1,11 +1,11 @@
-from flojoy import DataContainer, TextBlob, flojoy
+from flojoy import DataContainer, String, flojoy
 
 
 @flojoy()
 def DC_CONTENT_TYPE(
     default: DataContainer,
-) -> TextBlob:
-    """Return a TextBlob containing the type of the input DataContainer's content.
+) -> String:
+    """Return a String containing the type of the input DataContainer's content.
 
     Must use the TEXT_VIEW block to view the text.
 
@@ -17,7 +17,7 @@ def DC_CONTENT_TYPE(
     Returns
     -------
     DataContainer
-        TextBlob: Type of the input DataContainer's content (e.g. float)
+        String: Type of the input DataContainer's content (e.g. float)
     """
 
     dc_type = str(default.type)
@@ -41,11 +41,11 @@ def DC_CONTENT_TYPE(
             s = f"c: {type(default.c)}"
         case "Image":
             s = f"r: {type(default.r)}, \ng: {type(default.g)}, \nb: {type(default.b)}"
-        case "TextBlob":
-            s = f"text_blob: {type(default.text_blob)}"
+        case "String":
+            s = f"s: {type(default.s)}"
         case _:
             raise TypeError(
                 f"Unsupported DC type {dc_type}. Please add it to the node."
             )
 
-    return TextBlob(text_blob=s)
+    return String(s=s)
