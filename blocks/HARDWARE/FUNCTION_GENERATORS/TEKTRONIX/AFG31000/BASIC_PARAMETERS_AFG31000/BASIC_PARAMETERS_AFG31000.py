@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -11,7 +11,7 @@ def BASIC_PARAMETERS_AFG31000(
     offset: float = 0,
     phase: float = 0,
     input: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Set basic parameters such as frequency for a single channel.
 
     This block should also work with compatible Tektronix AFG31XXX instruments.
@@ -33,7 +33,7 @@ def BASIC_PARAMETERS_AFG31000(
 
     Returns
     -------
-    TextBlob
+    String
         Placeholder
     """
 
@@ -46,4 +46,4 @@ def BASIC_PARAMETERS_AFG31000(
     afg.write(f"SOURCE{source}:VOLTAGE:OFFSET {offset}")
     afg.write(f"SOURCE{source}:PHASE:ADJUST {phase}DEG")
 
-    return TextBlob(text_blob="Set FG parameters")
+    return String(s="Set FG parameters")

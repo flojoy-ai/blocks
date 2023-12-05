@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional
 
 
@@ -6,7 +6,7 @@ from typing import Optional
 def RESET_AFG31000(
     connection: VisaConnection,
     input: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Reset the instrument.
 
     This block should also work with compatible Tektronix AFG31XXX instruments.
@@ -18,7 +18,7 @@ def RESET_AFG31000(
 
     Returns
     -------
-    TextBlob
+    String
         Placeholder
     """
 
@@ -26,4 +26,4 @@ def RESET_AFG31000(
 
     afg.write("*RST")
 
-    return TextBlob(text_blob="Reset channel parameters")
+    return String(s="Reset channel parameters")

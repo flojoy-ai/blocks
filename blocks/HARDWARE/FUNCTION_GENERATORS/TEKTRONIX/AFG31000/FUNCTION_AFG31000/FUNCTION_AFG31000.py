@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -27,7 +27,7 @@ def FUNCTION_AFG31000(
     pulse_width: float = 1e-6,
     ramp_symmetry: float = 50,
     input: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Set the parameters for the built-in function generator.
 
     This block should also work with compatible Tektronix AFG31XXX instruments.
@@ -55,7 +55,7 @@ def FUNCTION_AFG31000(
 
     Returns
     -------
-    TextBlob
+    String
         Placeholder
     """
 
@@ -75,4 +75,4 @@ def FUNCTION_AFG31000(
         assert 0 <= ramp_symmetry <= 100.0, "The phase must be between 0 and 100%."
         afg.write(f"SOURCE{source}:FUNCtion:RAMP:SYMMETRY {ramp_symmetry}")
 
-    return TextBlob(text_blob="Set FG parameters")
+    return String(s="Set FG parameters")

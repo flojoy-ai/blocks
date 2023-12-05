@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -8,7 +8,7 @@ def SAVE_STATE_AFG31000(
     save_recall: Literal["save", "recall"] = "save",
     option: Literal["1", "2", "3", "4", "5"] = "1",
     input: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Saves or recalls the state for the AFG31000.
 
     The channel output state is not save (i.e. if the channel was outputing).
@@ -26,7 +26,7 @@ def SAVE_STATE_AFG31000(
 
     Returns
     -------
-    TextBlob
+    String
         Save state
     """
 
@@ -37,4 +37,4 @@ def SAVE_STATE_AFG31000(
     else:
         afg.write(f"*RCL {option}")
 
-    return TextBlob(text_blob=f"Save state {option}")
+    return String(s=f"Save state {option}")

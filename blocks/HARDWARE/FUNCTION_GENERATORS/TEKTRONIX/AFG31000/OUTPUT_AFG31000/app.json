@@ -27,7 +27,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "The IP or VISA address of the VISA device."
                         }
                     ],
@@ -92,7 +92,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Placeholder"
                         }
                     ],
@@ -196,7 +196,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Placeholder"
                         }
                     ],
@@ -277,7 +277,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Save state"
                         }
                     ],
@@ -419,7 +419,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Placeholder"
                         }
                     ],
@@ -561,7 +561,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Placeholder"
                         }
                     ],

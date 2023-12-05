@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -10,7 +10,7 @@ def OUTPUT_AFG31000(
     ch1_impedance: Literal["50", "1e6"] = "50",
     ch2_impedance: Literal["50", "1e6"] = "50",
     input: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Set impedances and turn the outputs on or off.
 
     This block should also work with compatible Tektronix AFG31XXX instruments.
@@ -30,7 +30,7 @@ def OUTPUT_AFG31000(
 
     Returns
     -------
-    TextBlob
+    String
         Placeholder
     """
 
@@ -41,4 +41,4 @@ def OUTPUT_AFG31000(
     afg.write(f"OUTPUT1:STATE {ch1}")
     afg.write(f"OUTPUT2:STATE {ch2}")
 
-    return TextBlob(text_blob="Set output parameters")
+    return String(s="Set output parameters")

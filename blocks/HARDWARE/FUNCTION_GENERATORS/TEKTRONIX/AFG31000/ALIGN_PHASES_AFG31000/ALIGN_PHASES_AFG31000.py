@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -7,7 +7,7 @@ def ALIGN_PHASES_AFG31000(
     connection: VisaConnection,
     channel: Literal["1", "2"] = "1",
     input: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Run this block to align the phases for ch1 and ch2.
 
     This block should also work with compatible Tektronix AFG31XXX instruments.
@@ -21,12 +21,12 @@ def ALIGN_PHASES_AFG31000(
 
     Returns
     -------
-    TextBlob
-        Placeholder
+    String
+        Aligned channel phases
     """
 
     afg = connection.get_handle()
 
     afg.write(f"SOURCE{channel}:PHASE:INIT")
 
-    return TextBlob(text_blob="Aligned channel phases")
+    return String(s="Aligned channel phases")

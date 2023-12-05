@@ -1,4 +1,4 @@
-from flojoy import flojoy, OrderedPair, TextBlob, VisaConnection, Vector
+from flojoy import flojoy, OrderedPair, String, VisaConnection, Vector
 from typing import Literal
 from numpy import max, min
 
@@ -13,7 +13,7 @@ def ARBITRARY_AFG31000(
     amplitude: float = 1,
     offset: float = 0,
     phase: float = 0,
-) -> TextBlob:
+) -> String:
     """Take the input waveform and use it as the arbitrary wavefunction.
 
     This block should also work with compatible Tektronix AFG31XXX instruments.
@@ -37,8 +37,8 @@ def ARBITRARY_AFG31000(
 
     Returns
     -------
-    TextBlob
-        Placeholder
+    String
+        Set FG parameters
     """
 
     assert -180.0 <= phase <= 180.0, "The phase must be between -180 and 180 degrees."
@@ -65,4 +65,4 @@ def ARBITRARY_AFG31000(
     afg.write(f"SOURCE{source}:VOLTAGE:OFFSET {offset}")
     afg.write(f"SOURCE{source}:PHASE:ADJUST {phase}DEG")
 
-    return TextBlob(text_blob="Set FG parameters")
+    return String(s="Set FG parameters")

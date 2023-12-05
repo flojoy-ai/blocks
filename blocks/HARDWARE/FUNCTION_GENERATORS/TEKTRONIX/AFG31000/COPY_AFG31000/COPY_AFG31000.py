@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -7,7 +7,7 @@ def COPY_AFG31000(
     connection: VisaConnection,
     channel: Literal["ch1", "ch2"] = "ch1",
     input: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Copy the setup parameters to the other channel.
 
     This block should also work with compatible Tektronix AFG31XXX instruments.
@@ -21,7 +21,7 @@ def COPY_AFG31000(
 
     Returns
     -------
-    TextBlob
+    String
         Placeholder
     """
 
@@ -32,4 +32,4 @@ def COPY_AFG31000(
     else:
         afg.write("AFGControl:CSCopy CH2,CH1")
 
-    return TextBlob(text_blob="Copied channel parameters")
+    return String(s="Copied channel parameters")
