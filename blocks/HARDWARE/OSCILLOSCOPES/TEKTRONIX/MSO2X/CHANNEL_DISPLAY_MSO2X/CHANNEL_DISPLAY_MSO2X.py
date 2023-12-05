@@ -1,5 +1,5 @@
 from typing import Optional, Literal
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(deps={"tm_devices": "1"}, inject_connection=True)
@@ -10,7 +10,7 @@ def CHANNEL_DISPLAY_MSO2X(
     ch2_display: Literal["1", "0"] = "0",
     ch3_display: Literal["1", "0"] = "0",
     ch4_display: Literal["1", "0"] = "0",
-) -> TextBlob:
+) -> String:
     """Set the MSO2XX channels on (1) or off (0).
 
     Requires a CONNECT_MSO2X block to create the connection.
@@ -32,7 +32,7 @@ def CHANNEL_DISPLAY_MSO2X(
 
     Returns
     -------
-    TextBlob
+    String
         Channel display
     """
 
@@ -44,4 +44,4 @@ def CHANNEL_DISPLAY_MSO2X(
     scope.set_and_check("DISplay:GLObal:CH3:STATE", ch3_display)
     scope.set_and_check("DISplay:GLObal:CH4:STATE", ch4_display)
 
-    return TextBlob(text_blob="Channel display")
+    return String(s="Channel display")

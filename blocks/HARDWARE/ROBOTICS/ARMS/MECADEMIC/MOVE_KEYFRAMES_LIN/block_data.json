@@ -5,7 +5,7 @@
     "parameters": [
       {
         "name": "ip_address",
-        "type": "TextBlob",
+        "type": "String",
         "description": "The IP address of the robot arm."
       },
       {

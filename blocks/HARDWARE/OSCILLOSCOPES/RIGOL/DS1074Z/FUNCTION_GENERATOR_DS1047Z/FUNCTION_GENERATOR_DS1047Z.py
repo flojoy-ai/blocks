@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -32,7 +32,7 @@ def FUNCTION_GENERATOR_DS1047Z(
     ramp_symmetry: float = 0,
     duty_cycle: float = 0,
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Controls the function generator, AKA 'Source' 1 and 2.
 
     Requires a CONNECTION_DS1074Z node at the start of the app to connect with
@@ -70,7 +70,7 @@ def FUNCTION_GENERATOR_DS1047Z(
     Returns
     -------
     DataContainer
-        TextBlob: summary of channel settings.
+        String: summary of channel settings.
     """
 
     rigol = connection.get_handle()
@@ -108,4 +108,4 @@ def FUNCTION_GENERATOR_DS1047Z(
     if align_phases:
         rigol.write(":PHASe:INIT")
 
-    return TextBlob(text_blob=s)
+    return String(s=s)

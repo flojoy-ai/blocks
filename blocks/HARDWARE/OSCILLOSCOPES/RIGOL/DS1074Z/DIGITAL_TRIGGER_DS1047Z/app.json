@@ -136,8 +136,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: summary of channel settings."
+                            "type": "String",
+                            "desc": "String: summary of channel settings."
                         }
                     ],
                     "path": "HARDWARE/INSTRUMENTS/OSCILLOSCOPES/RIGOL/DS1074Z/ADVANCED/DIGITAL_ON_OFF_DS1074Z/DIGITAL_ON_OFF_DS1074Z.py",
@@ -199,7 +199,7 @@
                             "name": "default",
                             "id": "default",
                             "type": "OrderedPair",
-                            "desc": "TextBlob: summary of channel settings."
+                            "desc": "String: summary of channel settings."
                         }
                     ],
                     "path": "HARDWARE/INSTRUMENTS/OSCILLOSCOPES/RIGOL/DS1074Z/ADVANCED/DIGITAL_TRACE_DS1047Z/DIGITAL_TRACE_DS1047Z.py",
@@ -284,8 +284,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: summary of channel settings."
+                            "type": "String",
+                            "desc": "String: summary of channel settings."
                         }
                     ],
                     "path": "HARDWARE/INSTRUMENTS/OSCILLOSCOPES/RIGOL/DS1074Z/ADVANCED/DIGITAL_TRIGGER_DS1047Z/DIGITAL_TRIGGER_DS1047Z.py",

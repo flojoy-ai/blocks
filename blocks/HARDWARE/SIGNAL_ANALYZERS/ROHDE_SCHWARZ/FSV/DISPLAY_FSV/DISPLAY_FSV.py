@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional
 
 
@@ -7,7 +7,7 @@ def DISPLAY_FSV(
     connection: VisaConnection,
     display_on: bool = False,
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """The DISPLAY_FSV block turns the display on or off during remote control.
 
     The instrument may be faster with display_on = False.
@@ -26,7 +26,7 @@ def DISPLAY_FSV(
 
     Returns
     -------
-    TextBlob
+    String
         Display on or off.
     """
 
@@ -39,4 +39,4 @@ def DISPLAY_FSV(
         rohde.write("SYST:DISP:UPD OFF")
         s = "Display: OFF"
 
-    return TextBlob(text_blob=s)
+    return String(s=s)

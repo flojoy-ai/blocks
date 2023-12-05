@@ -1,5 +1,5 @@
 import serial
-from flojoy import flojoy, SerialConnection, DataContainer, TextBlob
+from flojoy import flojoy, SerialConnection, DataContainer, String
 from typing import cast, Optional, Literal
 
 
@@ -8,7 +8,7 @@ def PROLOGIX_AUTO(
     connection: SerialConnection,
     default: Optional[DataContainer] = None,
     auto: Literal["On", "Off", "Current state"] = "Current state",
-) -> TextBlob:
+) -> String:
     """Toggle "Read-After-Write" mode on or off.
 
     When Read-After-Write is on, the Prologix USB-to-GPIB controller automatically reads a bench-top instrument's response after writing a command to it.
@@ -25,7 +25,7 @@ def PROLOGIX_AUTO(
 
     Returns
     -------
-    TextBlob
+    String
         Response from the Prologix USB-to-GPIB controller.
     """
 
@@ -46,4 +46,4 @@ def PROLOGIX_AUTO(
 
     s = ser.read(256)
 
-    return TextBlob(s)
+    return String(s)

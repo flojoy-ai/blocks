@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -9,7 +9,7 @@ def SIGNAL_FACTOR_DS1074Z(
     channel: Literal["ch1", "ch2", "ch3", "ch4"] = "ch1",
     probe_factor: float = 1,
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Set the "probe" settings for the DS1074Z oscilloscope.
 
     Note that only select values are available. If the selected value isn't
@@ -37,7 +37,7 @@ def SIGNAL_FACTOR_DS1074Z(
 
     Returns
     -------
-    TextBlob
+    String
         The probe factor settings.
     """
 
@@ -61,4 +61,4 @@ def SIGNAL_FACTOR_DS1074Z(
             rigol.write_raw(f":{channel}:PROBe {probe_factor}")
             s = probe_factor
 
-    return TextBlob(text_blob=f"Probe factor: {s}")
+    return String(s=f"Probe factor: {s}")

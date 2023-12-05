@@ -23,7 +23,7 @@
       {
         "name": null,
         "type": "DataContainer",
-        "description": "TextBlob: ON or OFF depending on on_off value."
+        "description": "String: ON or OFF depending on on_off value."
       }
     ]
   }

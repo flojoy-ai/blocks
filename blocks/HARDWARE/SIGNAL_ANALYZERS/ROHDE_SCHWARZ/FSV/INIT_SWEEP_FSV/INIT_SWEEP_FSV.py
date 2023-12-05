@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -15,7 +15,7 @@ def INIT_SWEEP_FSV(
     ] = "write",
     continuous: bool = True,
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Start the sweep for the FSV.
 
     Requires a CONNECTION_FSV block at the start of the app to connect with
@@ -34,7 +34,7 @@ def INIT_SWEEP_FSV(
 
     Returns
     -------
-    TextBlob
+    String
         Display and sweep settings.
     """
 
@@ -47,4 +47,4 @@ def INIT_SWEEP_FSV(
         rohde.write("INIT:CONT OFF")
     rohde.write("INIT")
 
-    return TextBlob(text_blob=f"Display: {display}, Continuous: {continuous}")
+    return String(s=f"Display: {display}, Continuous: {continuous}")

@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional
 
 
@@ -8,7 +8,7 @@ def BANDWIDTH_FSV(
     resolution_bandwidth: float = 0,
     video_bandwidth: float = 0,
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """The BANDWIDTH_FSV block sets the bandwidths for the signal analyzer.
 
     If the bandwidths are set to 0, the bandwidths will be automatic.
@@ -29,7 +29,7 @@ def BANDWIDTH_FSV(
 
     Returns
     -------
-    TextBlob
+    String
         Sweep settings summary.
     """
 
@@ -51,4 +51,4 @@ def BANDWIDTH_FSV(
         rohde.write(f"BAND:VID {video_bandwidth}")
         s += f"video bandwidth: {resolution_bandwidth}"
 
-    return TextBlob(text_blob=s)
+    return String(s=s)

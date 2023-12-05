@@ -1,13 +1,13 @@
 import traceback
 
 import can
-from flojoy import TextBlob, flojoy
+from flojoy import String, flojoy
 from tinymovr.config import create_device, get_bus_config
 from tinymovr.tee import destroy_tee, init_tee
 
 
 @flojoy(deps={"tinymovr": "1.6.2"})
-def TINYMOVR_CALIBRATE() -> TextBlob:
+def TINYMOVR_CALIBRATE() -> String:
     """Discover and calibrate a connected tinymovr BLDC driver through a CANine USB-to-CAN controller.
 
     Parameters
@@ -16,7 +16,7 @@ def TINYMOVR_CALIBRATE() -> TextBlob:
 
     Returns
     -------
-    TextBlob
+    String
         Traceback error
     """
 
@@ -34,4 +34,4 @@ def TINYMOVR_CALIBRATE() -> TextBlob:
     except Exception:
         tb = traceback.format_exc()
 
-    return TextBlob(text_blob=tb)
+    return String(s=tb)

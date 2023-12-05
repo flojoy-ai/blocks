@@ -1,7 +1,7 @@
 {
   "docstring": {
-    "long_description": "The TextBlob can be recognized as an optional input to the LOCAL_FILE node, which can then load the file at that path and return the appropriate datatype.",
-    "short_description": "Blob match a pattern in the given input directory, iterate (in a LOOP) over all of the files found, then return each file path as a TextBlob.",
+    "long_description": "The String can be recognized as an optional input to the LOCAL_FILE node, which can then load the file at that path and return the appropriate datatype.",
+    "short_description": "Blob match a pattern in the given input directory, iterate (in a LOOP) over all of the files found, then return each file path as a String.",
     "parameters": [
       {
         "name": "current_iteration",
@@ -32,7 +32,7 @@
     "returns": [
       {
         "name": "fname",
-        "type": "TextBlob",
+        "type": "String",
         "description": "The file name on the current iteration."
       },
       {

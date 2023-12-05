@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional
 
 
@@ -7,7 +7,7 @@ def SINGLE_TRIGGER_DS1047Z(
     connection: VisaConnection,
     single: bool = True,
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Activates the single trigger mode.
 
     The oscilloscope will wait for a trigger and then stop aquiring.
@@ -25,7 +25,7 @@ def SINGLE_TRIGGER_DS1047Z(
     Returns
     -------
     DataContainer
-        TextBlob: summary of channel settings.
+        String: summary of channel settings.
     """
 
     rigol = connection.get_handle()
@@ -37,4 +37,4 @@ def SINGLE_TRIGGER_DS1047Z(
         rigol.write_raw(":TRIG:SWE NORM")
         s = "Normal trigger"
 
-    return TextBlob(text_blob=s)
+    return String(s=s)

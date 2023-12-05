@@ -1,11 +1,11 @@
-from flojoy import DataContainer, TextBlob, flojoy
+from flojoy import DataContainer, String, flojoy
 
 
 @flojoy()
 def DATACONTAINER_TYPE(
     default: DataContainer,
-) -> TextBlob:
-    """Return a TextBlob containing the input DataContainer type (e.g. Vector).
+) -> String:
+    """Return a String containing the input DataContainer type (e.g. Vector).
 
     Must use the TEXT_VIEW block to view the text.
 
@@ -17,7 +17,7 @@ def DATACONTAINER_TYPE(
     Returns
     -------
     DataContainer
-        TextBlob: Input DataContainer type
+        String: Input DataContainer type
     """
 
-    return TextBlob(text_blob=default.type)
+    return String(s=default.type)

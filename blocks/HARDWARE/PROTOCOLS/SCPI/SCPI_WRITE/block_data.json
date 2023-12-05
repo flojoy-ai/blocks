@@ -12,8 +12,8 @@
     "returns": [
       {
         "name": null,
-        "type": "Scalar|TextBlob",
-        "description": "The return value from the bench-top instrument as a Scalar or TextBlob."
+        "type": "Scalar|String",
+        "description": "The return value from the bench-top instrument as a Scalar or String."
       }
     ]
   },

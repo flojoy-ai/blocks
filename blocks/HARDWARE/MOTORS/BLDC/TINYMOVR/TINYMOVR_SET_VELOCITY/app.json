@@ -236,7 +236,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "The DataContainer to be visualized in text format"
                         }
@@ -245,7 +245,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "The DataContainer containing text data"
                         }
                     ],
@@ -350,7 +350,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Traceback error"
                         }
                     ],
@@ -390,7 +390,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Traceback error"
                         }
                     ],

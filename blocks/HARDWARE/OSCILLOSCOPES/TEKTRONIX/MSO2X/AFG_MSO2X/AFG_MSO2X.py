@@ -1,5 +1,5 @@
 from typing import Optional, Literal
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(deps={"tm_devices": "1"}, inject_connection=True)
@@ -29,7 +29,7 @@ def AFG_MSO2X(
     pulse_width: float = 1e-6,
     impedance: Literal["unchanged", "fifty", "highZ"] = "unchanged",
     mode: Literal["off", "continuous", "burst"] = "continuous",
-) -> TextBlob:
+) -> String:
     """Set the MSO2XX Function Generator settings.
 
     Requires a CONNECT_MSO2X block to create the connection.
@@ -61,7 +61,7 @@ def AFG_MSO2X(
 
     Returns
     -------
-    TextBlob
+    String
         AFG settings
     """
 
@@ -84,4 +84,4 @@ def AFG_MSO2X(
 
     scope.commands.afg.output.mode.write(mode)
 
-    return TextBlob(text_blob="AFG settings")
+    return String(s="AFG settings")

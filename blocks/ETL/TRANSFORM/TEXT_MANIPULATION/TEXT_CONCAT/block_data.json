@@ -1,7 +1,7 @@
 {
   "docstring": {
-    "long_description": "Inputs\n------\na: TextBlob\n    The input text to be concatenated to input b\n\nb: TextBlob\n    The input text to be concatenated to input a",
-    "short_description": "Concatenate 2 strings given by 2 TextBlob DataContainers.",
+    "long_description": "Inputs\n------\na: String\n    The input text to be concatenated to input b\n\nb: String\n    The input text to be concatenated to input a",
+    "short_description": "Concatenate 2 strings given by 2 String DataContainers.",
     "parameters": [
       {
         "name": "delimiter",
@@ -12,7 +12,7 @@
     "returns": [
       {
         "name": null,
-        "type": "TextBlob",
+        "type": "String",
         "description": "The text result from concatenation."
       }
     ]
