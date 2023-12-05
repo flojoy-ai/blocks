@@ -3,7 +3,7 @@ import traceback
 from typing import Optional
 
 import can
-from flojoy import DataContainer, SerialDevice, TextBlob, Vector, flojoy
+from flojoy import DataContainer, SerialDevice, String, Vector, flojoy
 
 
 @flojoy(deps={"python-can": "4.2.2"})
@@ -12,7 +12,7 @@ def CAN_MESSAGE(
     message: Vector | Optional[DataContainer] = None,
     # arbitration_id: hex = 0xC0FFEE, TODO: Support hex inputs
     is_extended_id: bool = True,
-) -> TextBlob:
+) -> String:
     """Send a message onto a CAN network through a slcan-compatible USB-to-CAN adapter.
 
     Inputs
@@ -50,4 +50,4 @@ def CAN_MESSAGE(
     except Exception:
         s = traceback.format_exc()
 
-    return TextBlob(s)
+    return String(s)

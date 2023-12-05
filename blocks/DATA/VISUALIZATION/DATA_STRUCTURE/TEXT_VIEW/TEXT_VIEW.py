@@ -1,14 +1,14 @@
 import pprint
-from flojoy import flojoy, TextBlob, Boolean
+from flojoy import flojoy, String, Boolean
 
 
 @flojoy
-def TEXT_VIEW(default: TextBlob | Boolean, prettify: bool = False) -> TextBlob:
-    """The TEXT_VIEW node creates a text visualization for a given TextBlob DataContainer type.
+def TEXT_VIEW(default: String | Boolean, prettify: bool = False) -> String:
+    """The TEXT_VIEW node creates a text visualization for a given String DataContainer type.
 
     Inputs
     ------
-    default : TextBlob | Boolean
+    default : String | Boolean
         The DataContainer to be visualized in text format
 
     Parameters
@@ -18,20 +18,20 @@ def TEXT_VIEW(default: TextBlob | Boolean, prettify: bool = False) -> TextBlob:
 
     Returns
     -------
-    TextBlob
+    String
         The DataContainer containing text data
     """
 
     match default:
-        case TextBlob():
-            s = default.text_blob
+        case String():
+            s = default.s
 
             if prettify:
-                s = pprint.pformat(default.text_blob)
+                s = pprint.pformat(default.s)
 
-            return TextBlob(s)
+            return String(s)
         case Boolean():
             if default.b:
-                return TextBlob("True")
+                return String("True")
 
-            return TextBlob("False")
+            return String("False")

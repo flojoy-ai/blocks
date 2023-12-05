@@ -17,7 +17,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "the DataContainer to be visualized in text format"
                         }
@@ -52,7 +52,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "the DataContainer to be visualized in text format"
                         }
@@ -185,8 +185,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: ON or OFF depending on on_off value."
+                            "type": "String",
+                            "desc": "String: ON or OFF depending on on_off value."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/FUNCTION_GENERATORS/KEYSIGHT/33XXX/BASIC/ON_OFF_33510B/ON_OFF_33510B.py",
@@ -264,8 +264,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: ON or OFF depending on on_off value."
+                            "type": "String",
+                            "desc": "String: ON or OFF depending on on_off value."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/FUNCTION_GENERATORS/KEYSIGHT/33XXX/BASIC/ON_OFF_33510B/ON_OFF_33510B.py",

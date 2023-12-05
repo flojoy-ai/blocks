@@ -115,7 +115,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob|Boolean",
+                            "type": "String|Boolean",
                             "multiple": false,
                             "desc": "The DataContainer to be visualized in text format"
                         }
@@ -124,7 +124,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "The DataContainer containing text data"
                         }
                     ],

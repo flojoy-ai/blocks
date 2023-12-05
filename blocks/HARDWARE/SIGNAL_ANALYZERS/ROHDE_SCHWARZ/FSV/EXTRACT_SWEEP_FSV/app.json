@@ -211,8 +211,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: Display and sweep settings."
+                            "type": "String",
+                            "desc": "String: Display and sweep settings."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/NETWORK_ANALYZERS/ROHDE_SCHWARZ/FSV/BASIC/INIT_SWEEP_FSV/INIT_SWEEP_FSV.py",
@@ -345,8 +345,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: Sweep settings summary."
+                            "type": "String",
+                            "desc": "String: Sweep settings summary."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/NETWORK_ANALYZERS/ROHDE_SCHWARZ/FSV/BASIC/SWEEP_SETTINGS_FSV/SWEEP_SETTINGS_FSV.py",

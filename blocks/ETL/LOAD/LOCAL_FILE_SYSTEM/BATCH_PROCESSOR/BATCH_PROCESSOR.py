@@ -1,4 +1,4 @@
-from flojoy import flojoy, Scalar, SmallMemory, DefaultParams, TextBlob
+from flojoy import flojoy, Scalar, SmallMemory, DefaultParams, String
 import glob
 from typing import Any, TypedDict
 
@@ -6,7 +6,7 @@ memory_key = "batch-processor-info"
 
 
 class BATCH_OUTPUT(TypedDict):
-    fname: TextBlob
+    fname: String
     n_files: Scalar
 
 
@@ -22,9 +22,9 @@ def BATCH_PROCESSOR(
     pattern: str = "",
     refresh: bool = True,
 ) -> BATCH_OUTPUT:
-    """Blob match a pattern in the given input directory, iterate (in a LOOP) over all of the files found, then return each file path as a TextBlob.
+    """Blob match a pattern in the given input directory, iterate (in a LOOP) over all of the files found, then return each file path as a String.
 
-    The TextBlob can be recognized as an optional input to the LOCAL_FILE node, which can then load the file at that path and return the appropriate datatype.
+    The String can be recognized as an optional input to the LOCAL_FILE node, which can then load the file at that path and return the appropriate datatype.
 
     Parameters
     ----------
@@ -48,7 +48,7 @@ def BATCH_PROCESSOR(
 
     Returns
     -------
-    fname : TextBlob
+    fname : String
         The file name on the current iteration.
     n_files : Scalar
         The total number of files matched by the pattern in the given directory.
@@ -59,9 +59,7 @@ def BATCH_PROCESSOR(
     # if iteration 1, pattern find, then write to SmallMemory
     if curr_iter == 1:
         files = get_fnames(directory_path, pattern if pattern else "*")
-        return BATCH_OUTPUT(
-            fname=TextBlob(text_blob=""), n_files=Scalar(c=len(files) + 1)
-        )
+        return BATCH_OUTPUT(fname=String(s=""), n_files=Scalar(c=len(files) + 1))
     elif curr_iter == 2:  # loop index starts at 1, sigh
         files = get_fnames(directory_path, pattern if pattern else "*")
         SmallMemory().write_to_memory(
@@ -108,5 +106,5 @@ def BATCH_PROCESSOR(
         SmallMemory().delete_object(node_id, memory_key)
     # And return the current fname
     return BATCH_OUTPUT(
-        fname=TextBlob(text_blob=fname), n_files=Scalar(c=len(data["original_files"]))
+        fname=String(s=fname), n_files=Scalar(c=len(data["original_files"]))
     )

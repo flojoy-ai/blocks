@@ -58,7 +58,7 @@
       {
         "name": null,
         "type": "DataContainer",
-        "description": "TextBlob: summary of burst mode settings."
+        "description": "String: summary of burst mode settings."
       }
     ]
   }

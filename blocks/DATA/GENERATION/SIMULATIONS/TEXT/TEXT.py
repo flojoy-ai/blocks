@@ -1,4 +1,4 @@
-from flojoy import TextBlob, flojoy, DataContainer
+from flojoy import String, flojoy, DataContainer
 from typing import Optional
 
 
@@ -6,8 +6,8 @@ from typing import Optional
 def TEXT(
     _: Optional[DataContainer] = None,
     value: str = "Hello World!",
-) -> TextBlob:
-    """Return a TextBlob DataContainer with given input text.
+) -> String:
+    """Return a String DataContainer with given input text.
 
     Parameters
     ----------
@@ -16,8 +16,8 @@ def TEXT(
 
     Returns
     -------
-    TextBlob
+    String
         Return the value being set in Parameters.
     """
 
-    return TextBlob(text_blob=value)
+    return String(s=value)

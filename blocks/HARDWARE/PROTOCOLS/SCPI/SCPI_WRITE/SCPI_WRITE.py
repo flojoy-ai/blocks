@@ -1,7 +1,7 @@
 from typing import Optional, cast
 
 import serial
-from flojoy import DataContainer, Scalar, SerialConnection, TextBlob, flojoy
+from flojoy import DataContainer, Scalar, SerialConnection, String, flojoy
 
 
 @flojoy(deps={"pyserial": "3.5"}, inject_connection=True)
@@ -9,7 +9,7 @@ def SCPI_WRITE(
     connection: SerialConnection,
     default: Optional[DataContainer] = None,
     command: str = "*IDN?",
-) -> Scalar | TextBlob:
+) -> Scalar | String:
     """Write a SCPI command to a connected bench-top instrument and return the result.
 
     Inputs
@@ -24,8 +24,8 @@ def SCPI_WRITE(
 
     Returns
     -------
-    Scalar|TextBlob
-        The return value from the bench-top instrument as a Scalar or TextBlob.
+    Scalar|String
+        The return value from the bench-top instrument as a Scalar or String.
     """
 
     # Start serial communication with the instrument
@@ -43,6 +43,6 @@ def SCPI_WRITE(
     try:
         resp = float(resp.rstrip("\n"))
     except Exception:
-        return TextBlob(resp)
+        return String(resp)
 
     return Scalar(resp)

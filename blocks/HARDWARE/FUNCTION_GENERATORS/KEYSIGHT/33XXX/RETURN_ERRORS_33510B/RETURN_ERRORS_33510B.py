@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional
 
 
@@ -6,7 +6,7 @@ from typing import Optional
 def RETURN_ERRORS_33510B(
     connection: VisaConnection,
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Return error messages from a supported function generator.
 
     Error retrival is first-in-first-out (FIFO). Returning errors clears them
@@ -26,7 +26,7 @@ def RETURN_ERRORS_33510B(
     Returns
     -------
     DataContainer
-        TextBlob: Returns all errors in the WFG memory.
+        String: Returns all errors in the WFG memory.
     """
 
     ks = connection.get_handle()
@@ -34,4 +34,4 @@ def RETURN_ERRORS_33510B(
     err_code, err_message = ks.error()
     errors = f"{err_code} {err_message}"
 
-    return TextBlob(text_blob=errors)
+    return String(s=errors)

@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -10,7 +10,7 @@ def VERTICAL_AXIS_DS1074Z(
     offset: float = 0,
     scale: float = 1e-3,
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Change the vertical axis display for the DS1074Z oscilloscope.
 
     Both the scale and offset can be changed. The scale sets the size
@@ -40,7 +40,7 @@ def VERTICAL_AXIS_DS1074Z(
 
     Returns
     -------
-    TextBlob
+    String
         Summary of the vertical axis settings.
     """
 
@@ -81,4 +81,4 @@ def VERTICAL_AXIS_DS1074Z(
             s += str(scale)
             s += unit
 
-    return TextBlob(text_blob=s)
+    return String(s=s)

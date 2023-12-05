@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob
+from flojoy import flojoy, DataContainer, String
 from typing import Optional, Literal
 from qcodes_contrib_drivers.drivers.Vaunix.LDA import Vaunix_LDA
 import platform
@@ -12,7 +12,7 @@ def ATTENUATION_LDA602(
     query_set: Literal["query", "set"] = "query",
     attenuation: float = 10.0,
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Set or query the attenuation for the LDA-602 Digital Attenuator.
 
     When setting the attenuation, the attenuation is then queried to ensure
@@ -33,7 +33,7 @@ def ATTENUATION_LDA602(
     Returns
     -------
     DataContainer
-        TextBlob: The current attenuation value.
+        String: The current attenuation value.
     """
 
     assert (
@@ -69,4 +69,4 @@ def ATTENUATION_LDA602(
 
     attenuator.close()
 
-    return TextBlob(text_blob=s)
+    return String(s=s)

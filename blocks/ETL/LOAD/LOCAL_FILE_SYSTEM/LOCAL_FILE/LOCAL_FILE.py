@@ -3,7 +3,7 @@ from typing import Literal, Optional
 
 import numpy as np
 import pandas as pd
-from flojoy import DataFrame, Grayscale, Image, TextBlob, flojoy
+from flojoy import DataFrame, Grayscale, Image, String, flojoy
 from PIL import Image as PIL_Image
 
 
@@ -15,7 +15,7 @@ def get_file_path(file_path: str, default_path: str | None = None):
     if not f_path:
         raise ValueError(
             "The file path of the input file is missing. "
-            "Please provide a input TextBlob or a provide `file_path` with a value!"
+            "Please provide a input String or a provide `file_path` with a value!"
         )
     if not os.path.isabs(f_path):
         path_to_nodes = __file__[: __file__.rfind("blocks") + 6]
@@ -30,7 +30,7 @@ def get_file_path(file_path: str, default_path: str | None = None):
 )
 def LOCAL_FILE(
     file_path: str | None = None,
-    default: Optional[TextBlob] = None,
+    default: Optional[String] = None,
     file_type: Literal["Image", "Grayscale", "JSON", "CSV"] = "Image",
 ) -> Image | DataFrame | Grayscale:
     """The LOCAL_FILE node loads a local file of a different type and converts it to a DataContainer class.
@@ -41,7 +41,7 @@ def LOCAL_FILE(
         The path to the file to be loaded. This can be either an absolute path or
         a path relative to the "nodes" directory.
 
-    default : Optional[TextBlob]
+    default : Optional[String]
         If this input node is connected, the file name will be taken from
         the output of the connected node.
         To be used in conjunction with batch processing.
@@ -66,7 +66,7 @@ def LOCAL_FILE(
         "astronaut.png",
     )
 
-    file_path = default.text_blob if default else file_path
+    file_path = default.s if default else file_path
     file_path = "" if file_path is None else file_path
 
     match file_type:

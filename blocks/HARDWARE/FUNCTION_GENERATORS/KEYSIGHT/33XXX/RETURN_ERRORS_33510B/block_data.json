@@ -13,7 +13,7 @@
       {
         "name": null,
         "type": "DataContainer",
-        "description": "TextBlob: Returns all errors in the WFG memory."
+        "description": "String: Returns all errors in the WFG memory."
       }
     ]
   }

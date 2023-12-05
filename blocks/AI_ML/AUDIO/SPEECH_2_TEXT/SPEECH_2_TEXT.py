@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, File
+from flojoy import flojoy, DataContainer, String, File
 from typing import Optional
 from huggingsound import SpeechRecognitionModel
 
@@ -17,7 +17,7 @@ def SPEECH_2_TEXT(
 
     Returns
     -------
-    TextBlob
+    String
         Filename and path of the recording.
     """
     file_path = file_path.unwrap() if file_path else None
@@ -26,4 +26,4 @@ def SPEECH_2_TEXT(
     audio_paths = [file_path]
     transcriptions = model.transcribe(audio_paths)
 
-    return TextBlob(text_blob=transcriptions[0]["transcription"])
+    return String(s=transcriptions[0]["transcription"])

@@ -70,7 +70,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "the DataContainer to be visualized in text format"
                         }
@@ -239,8 +239,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: summary of burst mode settings."
+                            "type": "String",
+                            "desc": "String: summary of burst mode settings."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/FUNCTION_GENERATORS/KEYSIGHT/33XXX/ADVANCED/BURST_MODE_33510B/BURST_MODE_33510B.py",

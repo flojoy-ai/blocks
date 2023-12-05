@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -10,7 +10,7 @@ def CHANNEL_ON_OFF_DS1074Z(
     ch3: Literal["ON", "OFF"] = "ON",
     ch4: Literal["ON", "OFF"] = "ON",
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Turn the channels on or off for the DS1074Z oscilloscope.
 
     Requires a CONNECTION_DS1074Z block at the start of the app to connect with
@@ -33,7 +33,7 @@ def CHANNEL_ON_OFF_DS1074Z(
 
     Returns
     -------
-    TextBlob
+    String
         Summary of channel settings.
     """
 
@@ -49,4 +49,4 @@ def CHANNEL_ON_OFF_DS1074Z(
     s += f"Channel 3: {ch3}, "
     s += f"Channel 4: {ch4}"
 
-    return TextBlob(text_blob=s)
+    return String(s=s)

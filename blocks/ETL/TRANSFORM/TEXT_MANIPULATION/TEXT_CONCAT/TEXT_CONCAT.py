@@ -1,23 +1,23 @@
-from flojoy import TextBlob, flojoy
+from flojoy import String, flojoy
 from typing import Literal
 
 
 @flojoy
 def TEXT_CONCAT(
-    a: TextBlob,
-    b: TextBlob,
+    a: String,
+    b: String,
     delimiter: Literal[
         "space", "comma", "semicolon", "colon", "new line", "none"
     ] = "space",
-) -> TextBlob:
-    """Concatenate 2 strings given by 2 TextBlob DataContainers.
+) -> String:
+    """Concatenate 2 strings given by 2 String DataContainers.
 
     Inputs
     ------
-    a: TextBlob
+    a: String
         The input text to be concatenated to input b
 
-    b: TextBlob
+    b: String
         The input text to be concatenated to input a
 
     Parameters
@@ -27,7 +27,7 @@ def TEXT_CONCAT(
 
     Returns
     -------
-    TextBlob
+    String
        The text result from concatenation.
     """
 
@@ -46,4 +46,4 @@ def TEXT_CONCAT(
         case "none":
             delim = ""
 
-    return TextBlob(text_blob=delim.join([a.text_blob, b.text_blob]))
+    return String(s=delim.join([a.s, b.s]))

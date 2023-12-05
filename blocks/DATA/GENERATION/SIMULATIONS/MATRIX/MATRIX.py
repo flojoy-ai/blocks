@@ -21,6 +21,6 @@ def MATRIX(row: Scalar = 100, column: Scalar = 100) -> Matrix:
 
     np.random.seed()
 
-    mat = np.random.random_sample(row, column)
+    mat = np.random.random_sample((row, column))
 
     return Matrix(m=mat)

@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -8,7 +8,7 @@ def ON_OFF_33510B(
     on_off: Literal["ON", "OFF"] = "OFF",
     channel: Literal["ch1", "ch2"] = "ch1",
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Turn the output of a supported function generator on or off.
 
     Requires a CONNECTION_33510B node at the start of the app to connect with
@@ -29,7 +29,7 @@ def ON_OFF_33510B(
     Returns
     -------
     DataContainer
-        TextBlob: ON or OFF depending on on_off value.
+        String: ON or OFF depending on on_off value.
     """
 
     ks = connection.get_handle()
@@ -39,4 +39,4 @@ def ON_OFF_33510B(
 
     channel.output(on_off)
 
-    return TextBlob(text_blob=f"{channel_str}: {on_off}")
+    return String(s=f"{channel_str}: {on_off}")

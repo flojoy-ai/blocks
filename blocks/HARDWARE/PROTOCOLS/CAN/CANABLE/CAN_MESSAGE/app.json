@@ -254,7 +254,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": null
                         }
                     ],
@@ -304,7 +304,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "The DataContainer to be visualized in text format"
                         }
@@ -313,7 +313,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "The DataContainer containing text data"
                         }
                     ],

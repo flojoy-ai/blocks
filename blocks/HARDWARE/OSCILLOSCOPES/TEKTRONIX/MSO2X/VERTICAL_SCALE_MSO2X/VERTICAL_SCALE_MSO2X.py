@@ -1,5 +1,5 @@
 from typing import Optional
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(deps={"tm_devices": "1"}, inject_connection=True)
@@ -8,7 +8,7 @@ def VERTICAL_SCALE_MSO2X(
     input: Optional[DataContainer] = None,
     channel: int = 1,
     scale: float = 1.0,
-) -> TextBlob:
+) -> String:
     """Set the MSO2XX oscilloscope viewport.
 
     Requires a CONNECT_MSO2X block to create the connection.
@@ -26,7 +26,7 @@ def VERTICAL_SCALE_MSO2X(
 
     Returns
     -------
-    TextBlob
+    String
         Vertical scale
     """
 
@@ -35,4 +35,4 @@ def VERTICAL_SCALE_MSO2X(
 
     scope.set_and_check(f":CH{channel}:SCAL", scale)
 
-    return TextBlob(text_blob="Vertical scale")
+    return String(s="Vertical scale")
