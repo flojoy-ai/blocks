@@ -1,12 +1,12 @@
 import serial
-from flojoy import flojoy, SerialConnection, TextBlob, DataContainer
+from flojoy import flojoy, SerialConnection, String, DataContainer
 from typing import cast, Optional
 
 
 @flojoy(deps={"pyserial": "3.5"}, inject_connection=True)
 def IDN(
     connection: SerialConnection, default: Optional[DataContainer] = None
-) -> TextBlob:
+) -> String:
     """Query a device's identity through the universal *IDN? SCPI command.
 
     Inputs
@@ -21,7 +21,7 @@ def IDN(
 
     Returns
     -------
-    TextBlob
+    String
         The result of the *IDN? SCPI command.
     """
 
@@ -33,4 +33,4 @@ def IDN(
 
     ser.write("*IDN?\n".encode())
 
-    return TextBlob(text_blob=ser.readline().decode())
+    return String(s=ser.readline().decode())

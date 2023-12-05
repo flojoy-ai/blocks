@@ -23,7 +23,7 @@
       {
         "name": null,
         "type": "DataContainer",
-        "description": "TextBlob: The current attenuation value."
+        "description": "String: The current attenuation value."
       }
     ]
   }

@@ -1,5 +1,5 @@
 from typing import Optional
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(deps={"tm_devices": "1"}, inject_connection=True)
@@ -8,7 +8,7 @@ def PROBE_ATTENUATION_MSO2X(
     input: Optional[DataContainer] = None,
     channel: int = 1,
     attenuation: float = 1.0,
-) -> TextBlob:
+) -> String:
     """Set the MSO2XX probe attenuation for specific channel.
 
     Requires a CONNECT_MSO2X block to create the connection.
@@ -26,7 +26,7 @@ def PROBE_ATTENUATION_MSO2X(
 
     Returns
     -------
-    TextBlob
+    String
         Attenuation
     """
 
@@ -35,4 +35,4 @@ def PROBE_ATTENUATION_MSO2X(
 
     scope.set_and_check(f":CH{channel}:PROBEFunc:EXTAtten", attenuation)
 
-    return TextBlob(text_blob="Attenuation")
+    return String(s="Attenuation")

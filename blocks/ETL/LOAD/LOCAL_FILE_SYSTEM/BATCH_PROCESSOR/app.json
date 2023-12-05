@@ -201,7 +201,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "If this input node is connected, the filename will be taken from \nthe output of the connected node. To be used in conjunction with batch processing"
                         }
@@ -412,7 +412,7 @@
                         {
                             "name": "fname",
                             "id": "fname",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": null
                         },
                         {
@@ -486,7 +486,7 @@
                         {
                             "name": "fname",
                             "id": "fname",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": null
                         },
                         {
@@ -818,8 +818,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "text_blob: return the value being set in Parameters"
+                            "type": "String",
+                            "desc": "s: return the value being set in Parameters"
                         }
                     ],
                     "path": "PYTHON/nodes/GENERATORS/SIMULATIONS/TEXT/TEXT.py",
@@ -852,7 +852,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "the DataContainer to be visualized in text format"
                         }
@@ -905,8 +905,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "text_blob: return the value being set in Parameters"
+                            "type": "String",
+                            "desc": "s: return the value being set in Parameters"
                         }
                     ],
                     "path": "PYTHON/nodes/GENERATORS/SIMULATIONS/TEXT/TEXT.py",
@@ -939,7 +939,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "the DataContainer to be visualized in text format"
                         }
@@ -1044,8 +1044,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "text_blob: return the value being set in Parameters"
+                            "type": "String",
+                            "desc": "s: return the value being set in Parameters"
                         }
                     ],
                     "path": "PYTHON/nodes/GENERATORS/SIMULATIONS/TEXT/TEXT.py",
@@ -1078,7 +1078,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "the DataContainer to be visualized in text format"
                         }

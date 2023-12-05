@@ -1,5 +1,5 @@
 import serial
-from flojoy import flojoy, SerialConnection, DataContainer, TextBlob
+from flojoy import flojoy, SerialConnection, DataContainer, String
 from typing import cast, Optional, Literal
 
 
@@ -8,7 +8,7 @@ def PROLOGIX_MODE(
     connection: SerialConnection,
     default: Optional[DataContainer] = None,
     mode: Literal["CONTROLLER", "DEVICE"] = "CONTROLLER",
-) -> TextBlob:
+) -> String:
     """Set the mode of the Prologix USB-to-GPIB controller - 1 for CONTROLLER mode and 0 for DEVICE mode.
 
     From the Prologix manual:
@@ -39,7 +39,7 @@ def PROLOGIX_MODE(
 
     Returns
     -------
-    TextBlob
+    String
         Response from the Prologix USB-to-GPIB controller.
     """
 
@@ -58,4 +58,4 @@ def PROLOGIX_MODE(
 
     s = ser.read(256)
 
-    return TextBlob(s)
+    return String(s)

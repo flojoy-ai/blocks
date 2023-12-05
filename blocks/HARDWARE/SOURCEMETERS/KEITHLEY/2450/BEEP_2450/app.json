@@ -54,7 +54,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Beep"
                         }
                     ],
@@ -103,7 +103,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "The IP or VISA address of the VISA device."
                         }
                     ],
@@ -418,7 +418,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Measurement"
                         }
                     ],
@@ -489,7 +489,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Output settings"
                         }
                     ],
@@ -547,7 +547,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Reset"
                         }
                     ],
@@ -667,7 +667,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "Source settings"
                         }
                     ],

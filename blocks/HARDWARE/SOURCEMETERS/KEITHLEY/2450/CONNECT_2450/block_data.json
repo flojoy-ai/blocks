@@ -12,7 +12,7 @@
     "returns": [
       {
         "name": "device_addr",
-        "type": "TextBlob",
+        "type": "String",
         "description": "The IP or VISA address of the VISA device."
       }
     ]

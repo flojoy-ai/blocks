@@ -1,7 +1,7 @@
 {
   "docstring": {
     "long_description": "Must use the TEXT_VIEW block to view the text.",
-    "short_description": "Return a TextBlob containing the type of the input DataContainer's content.",
+    "short_description": "Return a String containing the type of the input DataContainer's content.",
     "parameters": [
       {
         "name": "default",
@@ -13,7 +13,7 @@
       {
         "name": null,
         "type": "DataContainer",
-        "description": "TextBlob: Type of the input DataContainer's content (e.g. float)"
+        "description": "String: Type of the input DataContainer's content (e.g. float)"
       }
     ]
   }

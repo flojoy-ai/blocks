@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -14,7 +14,7 @@ def DIGITAL_ON_OFF_DS1074Z(
     pod1: Literal["ON", "OFF"] = "ON",
     pod2: Literal["ON", "OFF"] = "OFF",
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """The DIGITAL_ON_OFF_DS1074Z node turns digital channels on or off for the DS1074Z.
 
     Requires a CONNECTION_DS1074Z node at the start of the app to connect with
@@ -46,7 +46,7 @@ def DIGITAL_ON_OFF_DS1074Z(
     Returns
     -------
     DataContainer
-        TextBlob: summary of channel settings.
+        String: summary of channel settings.
     """
 
     rigol = connection.get_handle()
@@ -70,4 +70,4 @@ def DIGITAL_ON_OFF_DS1074Z(
         s = f"Pod 1: {pod1}, "
         s += f"Pod 2: {pod2} "
 
-    return TextBlob(text_blob=s)
+    return String(s=s)

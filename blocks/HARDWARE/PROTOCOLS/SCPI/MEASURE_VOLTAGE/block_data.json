@@ -12,8 +12,8 @@
     "returns": [
       {
         "name": null,
-        "type": "Scalar|TextBlob",
-        "description": "The measured voltage as a Scalar or an exception error as a TextBlob."
+        "type": "Scalar|String",
+        "description": "The measured voltage as a Scalar or an exception error as a String."
       }
     ]
   },

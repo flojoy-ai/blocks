@@ -12,7 +12,7 @@
     {
       "name": null,
       "type": "DataContainer",
-      "description": "TextBlob: summary of channel settings."
+      "description": "String: summary of channel settings."
     }
   ]
 }

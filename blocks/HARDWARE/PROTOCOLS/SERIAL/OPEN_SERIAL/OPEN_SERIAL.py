@@ -1,6 +1,6 @@
 import json
 import serial
-from flojoy import SerialDevice, flojoy, TextBlob
+from flojoy import SerialDevice, flojoy, String
 from flojoy.connection_manager import DeviceConnectionManager
 from time import sleep
 
@@ -10,7 +10,7 @@ def OPEN_SERIAL(
     device: SerialDevice,
     baudrate: int = 9600,
     connection_time: float = 0,
-) -> TextBlob:
+) -> String:
     """Open a serial connection through your computer's USB or RS-232 port.
 
     Parameters
@@ -20,7 +20,7 @@ def OPEN_SERIAL(
 
     Returns
     -------
-    TextBlob
+    String
     """
 
     ser = serial.Serial(
@@ -37,4 +37,4 @@ def OPEN_SERIAL(
     if connection_time > 0:
         sleep(connection_time)
 
-    return TextBlob(text_blob=json.dumps(ser.get_settings()))
+    return String(s=json.dumps(ser.get_settings()))

@@ -1,4 +1,4 @@
-from flojoy import flojoy, TextBlob
+from flojoy import flojoy, String
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 
@@ -6,20 +6,20 @@ from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 @safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
 def SET_TRF(
-    ip_address: TextBlob,
+    ip_address: String,
     rf_x: float = 0.0,
     rf_y: float = 0.0,
     rf_z: float = 0.0,
     rf_a: float = 0.0,
     rf_b: float = 0.0,
     rf_g: float = 0.0,
-) -> TextBlob:
+) -> String:
     """
      The SET_TRF node sets the robot arm's reference frame.
 
     Inputs
     ------
-    ip_address: TextBlob
+    ip_address: String
         The IP address of the robot arm.
 
     Parameters
@@ -39,7 +39,7 @@ def SET_TRF(
 
     Returns
     -------
-    TextBlob
+    String
          The IP address of the robot arm.
 
     """

@@ -36,7 +36,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": null
                         }
                     ],
@@ -95,7 +95,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "A list of available Prologix USB-to-GPIB firmware commands"
                         }
                     ],
@@ -145,7 +145,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "The DataContainer to be visualized in text format"
                         }
@@ -154,7 +154,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "The DataContainer containing text data"
                         }
                     ],
@@ -207,7 +207,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "The Prologix controller available commands."
                         }
                     ],
@@ -257,7 +257,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "The DataContainer to be visualized in text format"
                         }
@@ -266,7 +266,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": "The DataContainer containing text data"
                         }
                     ],

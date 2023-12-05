@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -11,7 +11,7 @@ def TRIGGER_DS1074Z(
     slope: Literal["positive", "negative", "either", "unchanged"] = "positive",
     coupling: Literal["AC", "DC", "LFReject", "HFReject", "unchanged"] = "DC",
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Change the trigger settings for the DS1074Z oscilloscope.
 
     If 'query_set' is set to query the trigger settings will be queried and
@@ -39,7 +39,7 @@ def TRIGGER_DS1074Z(
 
     Returns
     -------
-    TextBlob
+    String
         The triggering settings.
     """
 
@@ -85,4 +85,4 @@ def TRIGGER_DS1074Z(
             s += "Coupling: "
             s += coupling
 
-    return TextBlob(text_blob=s)
+    return String(s=s)

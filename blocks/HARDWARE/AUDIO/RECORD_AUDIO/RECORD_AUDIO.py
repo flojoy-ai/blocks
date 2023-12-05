@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, File
+from flojoy import flojoy, DataContainer, String, File
 from typing import Optional, Literal
 import pyaudio
 import wave
@@ -40,7 +40,7 @@ def RECORD_AUDIO(
 
     Returns
     -------
-    TextBlob
+    String
         Filename and path of the recording.
     """
     file_path = file_path.unwrap() if file_path else None
@@ -89,4 +89,4 @@ def RECORD_AUDIO(
     wf.writeframes(b"".join(frames))
     wf.close()
 
-    return TextBlob(text_blob=file_name)
+    return String(s=file_name)

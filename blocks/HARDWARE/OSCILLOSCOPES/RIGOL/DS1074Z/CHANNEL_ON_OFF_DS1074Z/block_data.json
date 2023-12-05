@@ -32,7 +32,7 @@
     "returns": [
       {
         "name": null,
-        "type": "TextBlob",
+        "type": "String",
         "description": "Summary of channel settings."
       }
     ]

@@ -10,7 +10,7 @@
       },
       {
         "name": "default",
-        "type": "Optional[TextBlob]",
+        "type": "Optional[String]",
         "description": "If this input node is connected, the file name will be taken from\nthe output of the connected node.\nTo be used in conjunction with batch processing."
       },
       {

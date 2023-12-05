@@ -1,5 +1,5 @@
 from typing import Optional, Literal
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(deps={"tm_devices": "1.0"}, inject_connection=True)
@@ -10,7 +10,7 @@ def MEASURE_SETTINGS_2450(
     wires: Literal["2", "4"] = "2",
     digits: Literal["3.5", "4.5", "5.5", "6.5"] = "6.5",
     meas_range: float = 0,
-) -> TextBlob:
+) -> String:
     """Changes the measurement settings for the 2450.
 
     Use the MEASURE_READ_2450 block to return a measurement.
@@ -32,7 +32,7 @@ def MEASURE_SETTINGS_2450(
 
     Returns
     -------
-    TextBlob
+    String
         Measurement
     """
 
@@ -61,4 +61,4 @@ def MEASURE_SETTINGS_2450(
     else:
         smu.commands.smu.measure.range = meas_range
 
-    return TextBlob(text_blob=f"Measure {measure}")
+    return String(s=f"Measure {measure}")
