@@ -18,7 +18,7 @@
       {
         "name": null,
         "type": "String",
-        "description": "Placeholder"
+        "description": "Aligned channel phases"
       }
     ]
   }

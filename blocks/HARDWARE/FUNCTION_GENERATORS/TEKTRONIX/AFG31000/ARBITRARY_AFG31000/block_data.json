@@ -43,7 +43,7 @@
       {
         "name": null,
         "type": "String",
-        "description": "Placeholder"
+        "description": "Set FG parameters"
       }
     ]
   }
