@@ -1,7 +1,7 @@
 from flojoy import flojoy, DataContainer, OrderedPair
 from typing import Optional, TypedDict
 from flojoy.instruments.tektronix.RSA_API import *  # noqa: F403
-from ctypes import cdll, c_int, c_bool, c_double, c_float
+from ctypes import cdll, c_int, c_bool, c_double, c_float, byref
 from os import path
 import numpy as np
 
@@ -59,11 +59,11 @@ def BLOCK_IQ_RSA500(
         )
 
     numFound = c_int(0)
-    intArray = c_int * DEVSRCH_MAX_NUM_DEVICES
+    intArray = c_int * DEVSRCH_MAX_NUM_DEVICES  # noqa: F405
     deviceIDs = intArray()
-    deviceSerial = create_string_buffer(DEVSRCH_SERIAL_MAX_STRLEN)
-    deviceType = create_string_buffer(DEVSRCH_TYPE_MAX_STRLEN)
-    apiVersion = create_string_buffer(DEVINFO_MAX_STRLEN)
+    deviceSerial = create_string_buffer(DEVSRCH_SERIAL_MAX_STRLEN)  # noqa: F405
+    deviceType = create_string_buffer(DEVSRCH_TYPE_MAX_STRLEN)  # noqa: F405
+    apiVersion = create_string_buffer(DEVINFO_MAX_STRLEN)  # noqa: F405
 
     rsa.DEVICE_GetAPIVersion(apiVersion)
 
@@ -114,5 +114,5 @@ def BLOCK_IQ_RSA500(
 
 
 def err_check(rs):
-    if ReturnStatus(rs) != ReturnStatus.noError:
-        raise RSAError(ReturnStatus(rs).name)
+    if ReturnStatus(rs) != ReturnStatus.noError:  # noqa: F405
+        raise RSAError(ReturnStatus(rs).name)  # noqa: F405
