@@ -70,7 +70,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "the DataContainer to be visualized in text format"
                         }
@@ -124,8 +124,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: Returns all errors in the WFG memory."
+                            "type": "String",
+                            "desc": "String: Returns all errors in the WFG memory."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/FUNCTION_GENERATORS/KEYSIGHT/33XXX/ADVANCED/RETURN_ERRORS_33510B/RETURN_ERRORS_33510B.py",

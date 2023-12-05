@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -15,7 +15,7 @@ def SWEEP_SETTINGS_FSV(
     counts: int = 10,
     points: int = 1000,
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Set sweep settings for a FSV.
     Note that span/center and start/stop can be used equivalently if:
     start = center - (span / 2) and stop = center + (span / 2).
@@ -50,7 +50,7 @@ def SWEEP_SETTINGS_FSV(
 
     Returns
     -------
-    TextBlob
+    String
         Sweep settings summary.
     """
 
@@ -81,4 +81,4 @@ def SWEEP_SETTINGS_FSV(
     rohde.write(f"SWE:POIN {points}")
     s += f"Counts: {counts}; Points: {points}"
 
-    return TextBlob(text_blob=s)
+    return String(s=s)

@@ -2,14 +2,14 @@ import traceback
 from typing import Optional, cast
 
 import serial
-from flojoy import DataContainer, SerialConnection, TextBlob, flojoy
+from flojoy import DataContainer, SerialConnection, String, flojoy
 
 
 @flojoy(deps={"pyserial": "3.5"}, inject_connection=True)
 def PROLOGIX_VER(
     connection: SerialConnection,
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Query the Prologix USB-to-GPIB firmware version.
 
     Inputs
@@ -24,7 +24,7 @@ def PROLOGIX_VER(
 
     Returns
     -------
-    TextBlob
+    String
         The Prologix controller available commands.
     """
 
@@ -38,4 +38,4 @@ def PROLOGIX_VER(
     except Exception:
         s = traceback.format_exc()
 
-    return TextBlob(s)
+    return String(s)

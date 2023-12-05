@@ -23,7 +23,7 @@
       {
         "name": null,
         "type": "DataContainer",
-        "description": "TextBlob: The triggering channel (e.g. CH1)."
+        "description": "String: The triggering channel (e.g. CH1)."
       }
     ]
   },

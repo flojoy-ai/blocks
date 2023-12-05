@@ -1,5 +1,5 @@
 from typing import Optional, Literal
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(deps={"tm_devices": "1"}, inject_connection=True)
@@ -12,7 +12,7 @@ def EDGE_TRIGGER_MSO2X(
         "unchanged", "dc", "hfrej", "lfrej", "noiserej"
     ] = "unchanged",
     edge_slope: Literal["unchanged", "rise", "fall", "either"] = "unchanged",
-) -> TextBlob:
+) -> String:
     """Set the MSO2XX edge trigger settings.
 
     Requires a CONNECT_MSO2X block to create the connection.
@@ -34,7 +34,7 @@ def EDGE_TRIGGER_MSO2X(
 
     Returns
     -------
-    TextBlob
+    String
         Trigger settings
     """
 
@@ -47,4 +47,4 @@ def EDGE_TRIGGER_MSO2X(
         scope.commands.trigger.a.edge.slope.write(edge_slope)
     scope.commands.trigger.a.level.ch[channel].write(level)
 
-    return TextBlob(text_blob="Trigger settings")
+    return String(s="Trigger settings")

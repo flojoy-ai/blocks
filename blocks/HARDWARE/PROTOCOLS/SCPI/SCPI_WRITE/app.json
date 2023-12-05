@@ -46,8 +46,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "Scalar|TextBlob",
-                            "desc": "The return value from the bench-top instrument as a Scalar or TextBlob."
+                            "type": "Scalar|String",
+                            "desc": "The return value from the bench-top instrument as a Scalar or String."
                         }
                     ],
                     "pip_dependencies": [
@@ -105,7 +105,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "desc": null
                         }
                     ],
@@ -154,8 +154,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: Input datacontainer information"
+                            "type": "String",
+                            "desc": "String: Input datacontainer information"
                         }
                     ],
                     "path": "EXTRACTORS/DEBUGGING/PRINT_DATACONTAINER/PRINT_DATACONTAINER.py",
@@ -188,7 +188,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "the DataContainer to be visualized in text format"
                         }

@@ -1,11 +1,11 @@
-from flojoy import VisaDevice, flojoy, TextBlob
+from flojoy import VisaDevice, flojoy, String
 from flojoy.connection_manager import DeviceConnectionManager
 
 
 @flojoy
 def CONNECT_DMM7510(
     device: VisaDevice,
-) -> TextBlob:
+) -> String:
     """Open a VISA connection to a Keithley DMM7510.
 
     Also sets the communication language to TSP.
@@ -17,7 +17,7 @@ def CONNECT_DMM7510(
 
     Returns
     -------
-    device_addr: TextBlob
+    device_addr: String
         The IP or VISA address of the VISA device.
     """
 
@@ -33,4 +33,4 @@ def CONNECT_DMM7510(
 
     DeviceConnectionManager.register_connection(device, dmm)
 
-    return TextBlob(text_blob=device_addr)
+    return String(s=device_addr)

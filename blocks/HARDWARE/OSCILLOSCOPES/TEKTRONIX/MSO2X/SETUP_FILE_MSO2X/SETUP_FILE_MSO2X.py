@@ -1,5 +1,5 @@
 from typing import Optional, Literal
-from flojoy import VisaConnection, flojoy, TextBlob, DataContainer
+from flojoy import VisaConnection, flojoy, String, DataContainer
 
 
 @flojoy(deps={"tm_devices": "1"}, inject_connection=True)
@@ -8,7 +8,7 @@ def SETUP_FILE_MSO2X(
     save_or_recall: Literal["save", "recall"] = "save",
     filename: str = "flojoy",
     input: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Saves or recalls a instrument setup file (.set).
 
     The file currently can only be located in the instruments C drive (C:/)
@@ -28,7 +28,7 @@ def SETUP_FILE_MSO2X(
 
     Returns
     -------
-    TextBlob
+    String
         Filename
     """
 
@@ -40,4 +40,4 @@ def SETUP_FILE_MSO2X(
     elif save_or_recall == "recall":
         scope.commands.recall.setup.write(f'"c:/{filename}.set"')
 
-    return TextBlob(text_blob=f"{filename}")
+    return String(s=f"{filename}")

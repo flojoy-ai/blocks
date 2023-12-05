@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -9,7 +9,7 @@ def Y_AXIS_SETTINGS_FSV(
     spacing_type: Literal["logarithmic", "linear %", "linear dB"] = "logarithmic",
     spacing: float = 40,
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """The Y_AXIS_SETTINGS_FSV node sets the y axis range.
 
     Note that these settings will not affect the trace returned by
@@ -33,7 +33,7 @@ def Y_AXIS_SETTINGS_FSV(
 
     Returns
     -------
-    TextBlob
+    String
         Y axis settings summary.
     """
 
@@ -54,4 +54,4 @@ def Y_AXIS_SETTINGS_FSV(
 
     rohde.write(f"DISP:TRAC:Y {spacing}")
 
-    return TextBlob(text_blob=s)
+    return String(s=s)

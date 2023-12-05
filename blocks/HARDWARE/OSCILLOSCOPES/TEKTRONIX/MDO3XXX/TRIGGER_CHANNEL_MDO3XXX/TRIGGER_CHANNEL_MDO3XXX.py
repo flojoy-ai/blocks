@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -8,7 +8,7 @@ def TRIGGER_CHANNEL_MDO3XXX(
     channel: int = 0,
     query_set: Literal["query", "set"] = "query",
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Set the triggering channel of a MDO3XXX oscilloscope (or query it).
 
     Requires a CONNECTION_MDO3XXX block at the start of the app to connect with
@@ -29,7 +29,7 @@ def TRIGGER_CHANNEL_MDO3XXX(
     Returns
     -------
     DataContainer
-        TextBlob: The triggering channel (e.g. CH1).
+        String: The triggering channel (e.g. CH1).
     """
 
     tek = connection.get_handle()
@@ -41,4 +41,4 @@ def TRIGGER_CHANNEL_MDO3XXX(
             tek.trigger.source(f"CH{1 + channel}")
             s = f"CH{1 + channel}"
 
-    return TextBlob(text_blob=s)
+    return String(s=s)

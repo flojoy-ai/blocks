@@ -1,12 +1,12 @@
 from typing import Optional
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(inject_connection=True)
 def RESET_2450(
     connection: VisaConnection,
     input: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Resets the 2450 and clears buffers.
 
     Requires a CONNECT_2450 block to create the connection.
@@ -18,11 +18,11 @@ def RESET_2450(
 
     Returns
     -------
-    TextBlob
+    String
         Reset
     """
 
     smu = connection.get_handle()
     smu.commands.reset()
 
-    return TextBlob(text_blob="Reset 2450")
+    return String(s="Reset 2450")

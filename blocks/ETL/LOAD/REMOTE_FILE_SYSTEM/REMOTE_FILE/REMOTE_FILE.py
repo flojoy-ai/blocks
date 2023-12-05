@@ -1,6 +1,6 @@
 from urllib.parse import urlparse
 
-from flojoy import flojoy, Image, DataFrame, Grayscale, TextBlob
+from flojoy import flojoy, Image, DataFrame, Grayscale, String
 from typing import Literal, Optional
 import numpy as np
 from PIL import Image as PIL_Image
@@ -28,7 +28,7 @@ def get_file_url(url: str):
 )
 def REMOTE_FILE(
     file_url: str = None,
-    default: Optional[TextBlob] = None,
+    default: Optional[String] = None,
     file_type: Literal["Image", "Grayscale", "JSON", "CSV", "Excel", "XML"] = "Image",
 ) -> Image | DataFrame:
     """Load a remote file from an HTTP URL endpoint, infer the type, and convert it to a DataContainer class.
@@ -43,7 +43,7 @@ def REMOTE_FILE(
     ----------
     file_url : str
         URL of the file to be loaded.
-    default : Optional[TextBlob]
+    default : Optional[String]
         If this input node is connected, the file URL will be taken from
         the output of the connected node.
         To be used in conjunction with batch processing.
@@ -57,7 +57,7 @@ def REMOTE_FILE(
         DataFrame for file_type 'json', 'csv', 'excel', 'xml'.
     """
 
-    file_url = default.text_blob if default else file_url
+    file_url = default.s if default else file_url
     file_url = "" if file_url is None else file_url
 
     match file_type:

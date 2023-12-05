@@ -145,7 +145,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "An optional SCPI commmand string to override the MEASURE:VOLTAGE:DC? command."
                         }
@@ -154,7 +154,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "Scalar|TextBlob",
+                            "type": "Scalar|String",
                             "desc": null
                         }
                     ],
@@ -307,7 +307,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "An optional SCPI commmand string to override the MEASURE:VOLTAGE:DC? command."
                         }
@@ -316,7 +316,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "Scalar|TextBlob",
+                            "type": "Scalar|String",
                             "desc": null
                         }
                     ],
@@ -612,7 +612,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "the DataContainer to be visualized in text format"
                         }
@@ -656,8 +656,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: Input datacontainer information"
+                            "type": "String",
+                            "desc": "String: Input datacontainer information"
                         }
                     ],
                     "path": "EXTRACTORS/DEBUGGING/PRINT_DATACONTAINER/PRINT_DATACONTAINER.py",
@@ -690,7 +690,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "the DataContainer to be visualized in text format"
                         }
@@ -725,7 +725,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "the DataContainer to be visualized in text format"
                         }
@@ -769,8 +769,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: Input datacontainer information"
+                            "type": "String",
+                            "desc": "String: Input datacontainer information"
                         }
                     ],
                     "path": "EXTRACTORS/DEBUGGING/PRINT_DATACONTAINER/PRINT_DATACONTAINER.py",

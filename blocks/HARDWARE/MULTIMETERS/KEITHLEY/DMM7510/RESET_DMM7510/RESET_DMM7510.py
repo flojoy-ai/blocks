@@ -1,12 +1,12 @@
 from typing import Optional
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(inject_connection=True)
 def RESET_DMM7510(
     connection: VisaConnection,
     input: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Resets the DMM7510 and clears buffers.
 
     Requires a CONNECT_DMM7510 block to create the connection.
@@ -18,11 +18,11 @@ def RESET_DMM7510(
 
     Returns
     -------
-    TextBlob
+    String
         Reset
     """
 
     dmm = connection.get_handle()
     dmm.commands.reset()
 
-    return TextBlob(text_blob="Reset DMM7510")
+    return String(s="Reset DMM7510")

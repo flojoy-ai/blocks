@@ -33,7 +33,7 @@
       {
         "name": null,
         "type": "DataContainer",
-        "description": "TextBlob: Summary of trigger settings."
+        "description": "String: Summary of trigger settings."
       }
     ]
   },
