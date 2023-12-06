@@ -3,7 +3,7 @@ title: Flojoy Robotics
 description: "Flojoy Robotics"
 ---
 
-[ROBOTS VIDEO HERE]
+![Watch a video of Flojoy in action with Mecademic Robotics](https://www.youtube.com/embed/pPCiDQ4IMRU)
 
 Flojoy aims to revolutionize robotics visual programming and make robotics easy, useful, and powerful for all. 
 

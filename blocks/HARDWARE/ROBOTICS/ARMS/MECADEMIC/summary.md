@@ -5,7 +5,8 @@ description: "Everything related to Mecademic"
 
 ## Introduction
 
-[VIDEO]
+![Watch a video of Flojoy in action with Mecademic Robotics](https://www.youtube.com/embed/pPCiDQ4IMRU)
+
 
 Flojoy makes robotics programming easy, useful, and powerful. We've tailored Flojoy to program and control Mecademic's Meca500 robot arm.
 Meca500 is a precise six-axis industrial robot designed for complex tasks in laboratory automation, electronics assembly, and similar precision-dependent environments.
