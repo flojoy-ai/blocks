@@ -5,7 +5,14 @@ description: "Flojoy drivers for the Meca500 robotic arm."
 
 ## Introduction
 
-![Watch a video of Flojoy in action with Mecademic Robotics](https://www.youtube.com/embed/pPCiDQ4IMRU)
+
+Watch a video of Flojoy in action with Mecademic 500.
+
+import { YouTube } from '@astro-community/astro-embed-youtube';
+
+<div className="not-content">
+<YouTube id="pPCiDQ4IMRU" />
+</div>
 
 
 Flojoy makes robotics programming easy, useful, and powerful. We've tailored Flojoy to program and control Mecademic's Meca500 robot arm.
