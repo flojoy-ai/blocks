@@ -57,7 +57,7 @@
     "returns": [
       {
         "name": null,
-        "type": "TextBlob",
+        "type": "String",
         "description": "Sweep settings summary."
       }
     ]

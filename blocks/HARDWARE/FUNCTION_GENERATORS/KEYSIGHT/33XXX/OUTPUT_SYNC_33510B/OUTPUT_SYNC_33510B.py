@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -8,7 +8,7 @@ def OUTPUT_SYNC_33510B(
     on_off: Literal["ON", "OFF"] = "OFF",
     channel: Literal["1", "2"] = "1",
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Sync multiple output phases of a supported function generator.
 
     Can only be turned on for one channel.
@@ -31,7 +31,7 @@ def OUTPUT_SYNC_33510B(
     Returns
     -------
     DataContainer
-        TextBlob: The channel, and ON or OFF depending on on_off value.
+        String: The channel, and ON or OFF depending on on_off value.
     """
 
     ks = connection.get_handle()
@@ -44,4 +44,4 @@ def OUTPUT_SYNC_33510B(
             ks.sync.output("ON")
             ks.write("PHAS:SYNC")
 
-    return TextBlob(text_blob=f"CH{channel} sync: {on_off}")
+    return String(s=f"CH{channel} sync: {on_off}")

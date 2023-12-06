@@ -30,7 +30,7 @@ def DIGITAL_TRACE_DS1047Z(
     Returns
     -------
     DataContainer
-        TextBlob: summary of channel settings.
+        String: summary of channel settings.
     """
 
     rigol = connection.get_handle()

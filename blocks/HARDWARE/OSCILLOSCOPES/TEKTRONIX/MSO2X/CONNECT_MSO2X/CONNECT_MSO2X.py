@@ -1,11 +1,11 @@
-from flojoy import VisaDevice, flojoy, TextBlob
+from flojoy import VisaDevice, flojoy, String
 from flojoy.connection_manager import DeviceConnectionManager
 
 
 @flojoy(deps={"tm_devices": "1"})
 def CONNECT_MSO2X(
     device: VisaDevice,
-) -> TextBlob:
+) -> String:
     """Open a VISA connection to an MSO2X Tektronix oscilloscope.
 
     Parameters
@@ -15,7 +15,7 @@ def CONNECT_MSO2X(
 
     Returns
     -------
-    device_addr: TextBlob
+    device_addr: String
         The IP or VISA address of the VISA device.
     """
 
@@ -24,4 +24,4 @@ def CONNECT_MSO2X(
     scope = DeviceConnectionManager.tm.add_scope(device_addr)
     DeviceConnectionManager.register_connection(device, scope)
 
-    return TextBlob(text_blob=device_addr)
+    return String(s=device_addr)

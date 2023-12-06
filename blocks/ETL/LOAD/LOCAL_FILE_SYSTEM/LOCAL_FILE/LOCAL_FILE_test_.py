@@ -1,5 +1,5 @@
 import pytest
-from flojoy import Image, DataFrame, TextBlob
+from flojoy import Image, DataFrame, String
 import numpy as np
 from PIL import Image as PIL_Image
 from os import path
@@ -61,7 +61,7 @@ def test_LOCAL_FILE_img(
     np.testing.assert_array_equal(None, expected_image.a)
 
     output_from_textblob = LOCAL_FILE.LOCAL_FILE(
-        default=TextBlob(text_blob=image_path), file_type="Image"
+        default=String(s=image_path), file_type="Image"
     )
     np.testing.assert_array_equal(output_from_textblob.r, expected_image.r)
     np.testing.assert_array_equal(output_from_textblob.g, expected_image.g)
@@ -130,7 +130,7 @@ def test_LOCAL_FILE_csv(mock_flojoy_decorator, iris_csv):
     ]
 
     output_from_textblob = LOCAL_FILE.LOCAL_FILE(
-        default=TextBlob(text_blob=iris_csv), file_type="CSV"
+        default=String(s=iris_csv), file_type="CSV"
     )
     assert output.m.equals(output_from_textblob.m)
 
@@ -145,7 +145,7 @@ def test_LOCAL_FILE_csv(mock_flojoy_decorator, iris_csv):
 #     assert output.m["calories"].tolist() == [650, 900, 900, 600, 950]
 
 #     output_from_textblob = LOCAL_FILE.LOCAL_FILE(
-#         default=TextBlob(text_blob=menu_xml), file_type="XML"
+#         default=String(s=menu_xml), file_type="XML"
 #     )
 #     assert output.m.equals(output_from_textblob.m)
 
@@ -171,7 +171,7 @@ def test_LOCAL_FILE_json(mock_flojoy_decorator, employees_json):
     ]
 
     output_from_textblob = LOCAL_FILE.LOCAL_FILE(
-        default=TextBlob(text_blob=employees_json), file_type="JSON"
+        default=String(s=employees_json), file_type="JSON"
     )
     assert output.m.equals(output_from_textblob.m)
 
@@ -196,7 +196,7 @@ def test_LOCAL_FILE_json(mock_flojoy_decorator, employees_json):
 #     ]
 
 #     output_from_textblob = LOCAL_FILE.LOCAL_FILE(
-#         default=TextBlob(text_blob=insurance_excel), file_type="Excel"
+#         default=String(s=insurance_excel), file_type="Excel"
 #     )
 #     assert output.m.equals(output_from_textblob.m)
 

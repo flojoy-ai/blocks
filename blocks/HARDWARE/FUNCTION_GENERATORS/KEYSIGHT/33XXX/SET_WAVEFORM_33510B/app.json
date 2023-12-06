@@ -70,7 +70,7 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
+                            "type": "String",
                             "multiple": false,
                             "desc": "the DataContainer to be visualized in text format"
                         }
@@ -251,8 +251,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: Summary of waveform generator settings."
+                            "type": "String",
+                            "desc": "String: Summary of waveform generator settings."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/FUNCTION_GENERATORS/KEYSIGHT/33XXX/BASIC/SET_WAVEFORM_33510B/SET_WAVEFORM_33510B.py",
@@ -431,8 +431,8 @@
                         {
                             "name": "default",
                             "id": "default",
-                            "type": "TextBlob",
-                            "desc": "TextBlob: Summary of waveform generator settings."
+                            "type": "String",
+                            "desc": "String: Summary of waveform generator settings."
                         }
                     ],
                     "path": "IO/INSTRUMENTS/FUNCTION_GENERATORS/KEYSIGHT/33XXX/BASIC/SET_WAVEFORM_33510B/SET_WAVEFORM_33510B.py",

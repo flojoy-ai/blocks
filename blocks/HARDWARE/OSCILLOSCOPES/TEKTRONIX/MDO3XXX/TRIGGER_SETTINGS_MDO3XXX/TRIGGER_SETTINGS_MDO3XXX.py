@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -12,7 +12,7 @@ def TRIGGER_SETTINGS_MDO3XXX(
     trigger_types: Literal["unchanged", "edge", "logic", "pulse"] = "unchanged",
     edge_slope: Literal["unchanged", "rise", "fall", "either"] = "unchanged",
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Sets advanced trigger settings for an MDO3XXX oscilloscope.
 
     Note that "unchanged" will leave the settings unchanged.
@@ -39,7 +39,7 @@ def TRIGGER_SETTINGS_MDO3XXX(
     Returns
     -------
     DataContainer
-        TextBlob: Summary of trigger settings.
+        String: Summary of trigger settings.
     """
 
     tek = connection.get_handle()
@@ -64,4 +64,4 @@ def TRIGGER_SETTINGS_MDO3XXX(
         f"Edge slope: {edge_slope}"
     )
 
-    return TextBlob(text_blob=s)
+    return String(s=s)

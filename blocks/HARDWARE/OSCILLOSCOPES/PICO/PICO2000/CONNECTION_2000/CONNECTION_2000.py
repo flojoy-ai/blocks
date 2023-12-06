@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob
+from flojoy import flojoy, DataContainer, String
 from typing import Optional
 import ctypes
 from picosdk.ps2000 import ps2000 as ps
@@ -8,7 +8,7 @@ from picosdk.functions import assert_pico2000_ok
 @flojoy(deps={"picosdk": "1.1"})
 def CONNECTION_2000(
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Connect Flojoy to an available Picoscope.
 
     If more than one P2000 oscilloscope is available, the first one connected
@@ -24,7 +24,7 @@ def CONNECTION_2000(
 
     Returns
     -------
-    TextBlob
+    String
         Placeholder return currently
     """
 
@@ -34,4 +34,4 @@ def CONNECTION_2000(
     status["openUnit"] = ps.ps2000_open_unit()
     assert_pico2000_ok(status["openUnit"])
 
-    return TextBlob(text_blob=str(status["openUnit"]))
+    return String(s=str(status["openUnit"]))

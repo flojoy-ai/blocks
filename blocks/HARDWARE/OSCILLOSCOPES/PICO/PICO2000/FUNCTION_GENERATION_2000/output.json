@@ -4,7 +4,7 @@
     "id": "CONNECTION_2000-8a729079-b42a-41b0-b0c9-218b956f8db7",
     "result": {
       "plotly_fig": null,
-      "text_blob": "1"
+      "s": "1"
     }
   },
   {
@@ -12,7 +12,7 @@
     "id": "FUNCTION_GENERATION_2000-6e34d2b5-7245-49f9-a2a0-c7f75385090a",
     "result": {
       "plotly_fig": null,
-      "text_blob": "1"
+      "s": "1"
     }
   },
   {
@@ -2055,7 +2055,7 @@
           }
         }
       },
-      "text_blob": null
+      "s": null
     }
   }
 ]

@@ -1,5 +1,5 @@
 from typing import Optional
-from flojoy import VisaConnection, flojoy, DataContainer, TextBlob
+from flojoy import VisaConnection, flojoy, DataContainer, String
 
 
 @flojoy(deps={"tm_devices": "1"}, inject_connection=True)
@@ -8,7 +8,7 @@ def HORIZONTAL_POSITION_MSO2X(
     input: Optional[DataContainer] = None,
     delay: float = 0,
     position: float = 50,
-) -> TextBlob:
+) -> String:
     """Set the MSO2X oscilloscope horizontal position or delay.
 
     If delay is non-zero, position is unused.
@@ -28,7 +28,7 @@ def HORIZONTAL_POSITION_MSO2X(
 
     Returns
     -------
-    TextBlob
+    String
         Horizontal position
     """
 
@@ -38,4 +38,4 @@ def HORIZONTAL_POSITION_MSO2X(
     scope.commands.horizontal.delay.mode.write(delay)
     scope.commands.horizontal.position.write(position)
 
-    return TextBlob(text_blob="Horizontal position")
+    return String(s="Horizontal position")

@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob, VisaConnection
+from flojoy import flojoy, DataContainer, String, VisaConnection
 from typing import Optional, Literal
 
 
@@ -16,7 +16,7 @@ def BURST_MODE_33510B(
     burst_phase: float = 0,
     burst_polarity: Literal["NORM", "INV"] = "NORM",
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Turn the Burst mode of a supported function generator on or off.
 
     You can set various settings for the triggering of the bursts as well.
@@ -55,7 +55,7 @@ def BURST_MODE_33510B(
     Returns
     -------
     DataContainer
-        TextBlob: summary of burst mode settings.
+        String: summary of burst mode settings.
     """
 
     ks = connection.get_handle()
@@ -96,4 +96,4 @@ def BURST_MODE_33510B(
         channel.burst_state(on_off)
     ks.close()
 
-    return TextBlob(text_blob=f"{channel_str} burst: {on_off}")
+    return String(s=f"{channel_str} burst: {on_off}")

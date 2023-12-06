@@ -1,4 +1,4 @@
-from flojoy import flojoy, DataContainer, TextBlob
+from flojoy import flojoy, DataContainer, String
 from typing import Optional, Literal
 import ctypes
 from picosdk.ps2000 import ps2000 as ps
@@ -17,7 +17,7 @@ def FUNCTION_GENERATION_2000(
     sweep_type: Literal["0", "1", "2", "3"] = "0",
     sweeps: int = 0,
     default: Optional[DataContainer] = None,
-) -> TextBlob:
+) -> String:
     """Control wavefunction generation from a PicoScope.
 
     Note that this block requires the CONNECTION_2000 block.
@@ -48,7 +48,7 @@ def FUNCTION_GENERATION_2000(
 
     Returns
     -------
-    TextBlob
+    String
         Placeholder return currently
     """
 
@@ -72,4 +72,4 @@ def FUNCTION_GENERATION_2000(
 
     assert_pico2000_ok(res)
 
-    return TextBlob(text_blob=str(1))
+    return String(s=str(1))

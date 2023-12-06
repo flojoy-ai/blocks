@@ -1,11 +1,11 @@
-from flojoy import flojoy, TextBlob
+from flojoy import flojoy, String
 from PYTHON.utils.mecademic_state.mecademic_state import query_for_handle
 from PYTHON.utils.mecademic_state.mecademic_helpers import safe_robot_operation
 
 
 @safe_robot_operation
 @flojoy(deps={"mecademicpy": "1.4.0"})
-def SET_JOINT_VEL(ip_address: TextBlob, v: float) -> TextBlob:
+def SET_JOINT_VEL(ip_address: String, v: float) -> String:
     """
     The SET_JOINT_VEL node sets the robot arm's angular velocity for its joints.
 
@@ -16,13 +16,13 @@ def SET_JOINT_VEL(ip_address: TextBlob, v: float) -> TextBlob:
 
     Inputs
     ------
-    ip_address: TextBlob
+    ip_address: String
         The IP address of the robot arm.
 
 
     Returns
     -------
-    TextBlob
+    String
          The IP address of the robot arm.
 
     """

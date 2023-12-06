@@ -1,5 +1,5 @@
 import serial
-from flojoy import flojoy, SerialConnection, DataContainer, TextBlob
+from flojoy import flojoy, SerialConnection, DataContainer, String
 from typing import cast, Optional
 
 
@@ -8,7 +8,7 @@ def PROLOGIX_ADDR(
     connection: SerialConnection,
     default: Optional[DataContainer] = None,
     addr: int = 22,
-) -> TextBlob:
+) -> String:
     """Set the GPIB address of an instrument using the Prologix USB-to-GPIB or USB-to-Ethernet adapter.
 
     Inputs
@@ -23,7 +23,7 @@ def PROLOGIX_ADDR(
 
     Returns
     -------
-    TextBlob
+    String
         Response from the Prologix USB-to-GPIB controller.
     """
 
@@ -38,4 +38,4 @@ def PROLOGIX_ADDR(
 
     s = ser.read(256)
 
-    return TextBlob(s)
+    return String(s)

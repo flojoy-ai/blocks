@@ -22,7 +22,7 @@ from flojoy import SerialDevice, flojoy, DataContainer
 from flojoy.connection_manager import DeviceConnectionManager
 
 @flojoy(deps={"pyserial": "3.5"})
-def OPEN_SERIAL(device: SerialDevice, baudrate: int = 9600) -> TextBlob:
+def OPEN_SERIAL(device: SerialDevice, baudrate: int = 9600) -> String:
     ser = serial.Serial(
         port=device.get_port(),
         baudrate=baudrate,
